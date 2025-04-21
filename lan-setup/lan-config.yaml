@@ -1,0 +1,37 @@
+# LAN Server Configuration for Owlban Group
+
+lan_server:
+  hostname: owlban-lan-server
+  ip_address: 192.168.1.1
+  subnet_mask: 255.255.255.0
+  gateway: 192.168.1.254
+  dns_servers:
+    - 8.8.8.8
+    - 8.8.4.4
+
+subsidiaries:
+  - name: Subsidiary A
+    location: New York
+    ip_range: 192.168.2.0/24
+    connection_type: VPN
+    vpn_endpoint: vpn.subsidiarya.owlban.com
+  - name: Subsidiary B
+    location: London
+    ip_range: 192.168.3.0/24
+    connection_type: VPN
+    vpn_endpoint: vpn.subsidiaryb.owlban.com
+  - name: Subsidiary C
+    location: Tokyo
+    ip_range: 192.168.4.0/24
+    connection_type: MPLS
+    mpls_provider: mpls.subsidiaryc.owlban.com
+  - name: Subsidiary D
+    location: Sydney
+    ip_range: 192.168.5.0/24
+    connection_type: VPN
+    vpn_endpoint: vpn.subsidiaryd.owlban.com
+
+security:
+  firewall_enabled: true
+  vpn_encryption: AES-256
+  monitoring_enabled: true
