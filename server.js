@@ -2,9 +2,17 @@ const express = require('express');
 const fs = require('fs');
 const yaml = require('js-yaml');
 const path = require('path');
+const helmet = require('helmet');
+const morgan = require('morgan');
 
 const app = express();
 const port = 3000;
+
+// Use helmet for security headers
+app.use(helmet());
+
+// Use morgan for HTTP request logging
+app.use(morgan('combined'));
 
 // Serve static files from the dashboard directory at root path
 app.use('/', express.static(path.join(__dirname, 'dashboard')));
@@ -32,7 +40,15 @@ app.get('/api/config', (req, res) => {
   });
 });
 
+// Global error handler
+app.use((err, req, res, next) => {
+  console.error('Unhandled error:', err);
+  res.status(500).json({ error: 'Internal server error' });
+});
+
 // Start the server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+module.exports = app;
