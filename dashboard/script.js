@@ -52,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         statusLog.scrollTop = statusLog.scrollHeight;
     }
 
+    // Expose functions for testing
+    window.loadLanServerDetails = loadLanServerDetails;
+    window.loadSubsidiaries = loadSubsidiaries;
+    window.logStatus = logStatus;
+
     refreshBtn.addEventListener('click', async () => {
         logStatus('Refreshing data...');
         const config = await fetchConfig();

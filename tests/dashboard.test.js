@@ -40,14 +40,14 @@ describe('Dashboard Frontend Tests', () => {
 
   test('logStatus appends messages to status log', () => {
     const statusLog = document.getElementById('status-log');
-    const logStatus = script.__get__('logStatus');
+    const logStatus = window.logStatus;
     logStatus('Test message');
     expect(statusLog.textContent).toMatch(/Test message/);
   });
 
   test('loadLanServerDetails updates LAN server details section', () => {
     const lanServerDetailsDiv = document.getElementById('lan-server-details');
-    const loadLanServerDetails = script.__get__('loadLanServerDetails');
+    const loadLanServerDetails = window.loadLanServerDetails;
     const lanData = {
       hostname: 'test-host',
       ip_address: '192.168.1.1',
@@ -62,7 +62,7 @@ describe('Dashboard Frontend Tests', () => {
 
   test('loadSubsidiaries populates subsidiaries list', () => {
     const subsidiariesListDiv = document.getElementById('subsidiaries-list');
-    const loadSubsidiaries = script.__get__('loadSubsidiaries');
+    const loadSubsidiaries = window.loadSubsidiaries;
     const subsidiaries = [
       { name: 'Sub1', location: 'Loc1', connection_type: 'VPN', vpn_endpoint: 'endpoint1' },
       { name: 'Sub2', location: 'Loc2', connection_type: 'MPLS', mpls_provider: 'provider2' }

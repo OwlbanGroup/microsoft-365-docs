@@ -4,7 +4,7 @@
 
 Use the start script added to package.json to start the server:
 
-```
+```bash
 npm start
 ```
 
