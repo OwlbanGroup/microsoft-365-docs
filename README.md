@@ -48,6 +48,24 @@ This project is a web-based dashboard for visualizing and managing LAN (Local Ar
 - Add automated tests and CI/CD pipeline.
 - Enhance security and error handling.
 
+## Deployment
+
+You can deploy this application using Docker:
+
+1. Build the Docker image:
+
+   ```bash
+   docker build -t lan-setup-dashboard .
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   docker run -p 3000:3000 lan-setup-dashboard
+   ```
+
+3. Open your browser and navigate to `http://localhost:3000` to access the dashboard.
+
 ## License
 
 This project is licensed under the MIT License.
