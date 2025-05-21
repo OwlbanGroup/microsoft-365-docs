@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LAN Setup Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>LAN Setup Dashboard</h1>
+    </header>
+    <main>
+        <section id="lan-server">
+            <h2>LAN Server Details</h2>
+            <div id="lan-server-details">
+                <!-- LAN server details will be loaded here -->
+            </div>
+        </section>
+        <section id="subsidiaries">
+            <h2>Subsidiaries Connections</h2>
+            <div id="subsidiaries-list">
+                <!-- Subsidiaries connection info will be loaded here -->
+            </div>
+        </section>
+        <section id="actions">
+            <button id="refresh-btn">Refresh Data</button>
+            <button id="sync-btn">Sync Configuration</button>
+        </section>
+        <section id="status">
+            <h2>Status</h2>
+            <pre id="status-log"></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
