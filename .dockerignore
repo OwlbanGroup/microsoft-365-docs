@@ -1,0 +1,9 @@
+node_modules
+tests
+*.log
+*.md
+.git
+.gitignore
+Dockerfile
+docker-run-alternate-port.ps1
+docker-port-check.ps1

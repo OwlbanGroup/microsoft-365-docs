@@ -10,7 +10,7 @@ const app = express();
 const port = 3000;
 
 // Simple token-based authentication middleware
-const authToken = 'mysecrettoken'; // In production, use env vars or secure storage
+const authToken = process.env.AUTH_TOKEN || 'mysecrettoken'; // Use environment variable for auth token in production
 function authenticate(req, res, next) {
   const token = req.headers['authorization'];
   if (token === `Bearer ${authToken}`) {
