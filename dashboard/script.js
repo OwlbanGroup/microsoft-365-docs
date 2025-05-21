@@ -5,26 +5,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const refreshBtn = document.getElementById('refresh-btn');
     const syncBtn = document.getElementById('sync-btn');
 
-    // Sample data to simulate loading from lan-config.yaml
-    // In a real app, this could be fetched from a backend API or local file
-    const sampleConfig = {
-        lan_server: {
-            hostname: "owlban-lan-server",
-            ip_address: "192.168.1.1",
-            subnet_mask: "255.255.255.0",
-            gateway: "192.168.1.254",
-            dns_servers: ["8.8.8.8", "8.8.4.4"]
-        },
-        subsidiaries: [
-            { name: "Subsidiary A", location: "New York", connection_type: "VPN", vpn_endpoint: "vpn.subsidiarya.owlban.com" },
-            { name: "Subsidiary B", location: "London", connection_type: "VPN", vpn_endpoint: "vpn.subsidiaryb.owlban.com" },
-            { name: "Subsidiary C", location: "Tokyo", connection_type: "MPLS", mpls_provider: "mpls.subsidiaryc.owlban.com" },
-            { name: "Subsidiary D", location: "Sydney", connection_type: "VPN", vpn_endpoint: "vpn.subsidiaryd.owlban.com" }
-        ]
-    };
+    let currentConfig = null;
 
-    function loadLanServerDetails() {
-        const lan = sampleConfig.lan_server;
+    async function fetchConfig() {
+        try {
+            const response = await fetch('/api/config');
+            if (!response.ok) {
+                throw new Error('Failed to fetch configuration');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            logStatus(`Error fetching config: ${error.message}`);
+            return null;
+        }
+    }
+
+    function loadLanServerDetails(lan) {
         lanServerDetailsDiv.innerHTML = `
             <p><strong>Hostname:</strong> ${lan.hostname}</p>
             <p><strong>IP Address:</strong> ${lan.ip_address}</p>
@@ -34,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     }
 
-    function loadSubsidiaries() {
+    function loadSubsidiaries(subsidiaries) {
         subsidiariesListDiv.innerHTML = '';
-        sampleConfig.subsidiaries.forEach(sub => {
+        subsidiaries.forEach(sub => {
             const div = document.createElement('div');
             div.className = 'subsidiary';
             div.innerHTML = `
@@ -55,11 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         statusLog.scrollTop = statusLog.scrollHeight;
     }
 
-    refreshBtn.addEventListener('click', () => {
+    refreshBtn.addEventListener('click', async () => {
         logStatus('Refreshing data...');
-        loadLanServerDetails();
-        loadSubsidiaries();
-        logStatus('Data refreshed.');
+        const config = await fetchConfig();
+        if (config) {
+            currentConfig = config;
+            loadLanServerDetails(config.lan_server);
+            loadSubsidiaries(config.subsidiaries);
+            logStatus('Data refreshed.');
+        }
     });
 
     syncBtn.addEventListener('click', () => {
@@ -71,7 +72,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Initial load
-    loadLanServerDetails();
-    loadSubsidiaries();
-    logStatus('Dashboard loaded.');
+    (async () => {
+        const config = await fetchConfig();
+        if (config) {
+            currentConfig = config;
+            loadLanServerDetails(config.lan_server);
+            loadSubsidiaries(config.subsidiaries);
+            logStatus('Dashboard loaded.');
+        }
+    })();
 });
