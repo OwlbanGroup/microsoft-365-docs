@@ -9,13 +9,15 @@ This project is a web-based dashboard for visualizing and managing LAN (Local Ar
 - View LAN server details including hostname, IP address, subnet mask, gateway, and DNS servers.
 - View subsidiaries connection information.
 - Refresh data from the backend API.
-- Sync configuration (simulated).
+- Sync configuration (real functionality via PowerShell script).
+- Basic token-based authentication for sync API.
 
 ## Project Structure
 
 - `server.js`: Express backend server.
 - `dashboard/`: Frontend files (HTML, CSS, JavaScript).
 - `lan-setup/lan-config.yaml`: LAN configuration file in YAML format.
+- `lan-setup/setup-lan.ps1`: PowerShell script to sync LAN configuration.
 
 ## Setup and Running
 
@@ -24,7 +26,7 @@ This project is a web-based dashboard for visualizing and managing LAN (Local Ar
 2. Install dependencies:
 
    ```
-   npm install express js-yaml
+   npm install express js-yaml helmet morgan
    ```
 
 3. Start the server:
@@ -38,15 +40,18 @@ This project is a web-based dashboard for visualizing and managing LAN (Local Ar
 ## Usage
 
 - Use the "Refresh Data" button to reload the LAN configuration.
-- Use the "Sync Configuration" button to simulate syncing the configuration.
+- Use the "Sync Configuration" button to trigger the real sync process. This requires authentication.
+
+### Authentication
+
+The sync API requires a bearer token in the `Authorization` header. The default token is `mysecrettoken`. The frontend is preconfigured to use this token.
 
 ## Future Improvements
 
-- Add authentication and authorization.
-- Implement real sync functionality.
 - Add more detailed views and editing capabilities.
 - Add automated tests and CI/CD pipeline.
 - Enhance security and error handling.
+- Implement user management and secure authentication.
 
 ## Deployment
 

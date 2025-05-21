@@ -63,13 +63,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    syncBtn.addEventListener('click', () => {
-        logStatus('Syncing configuration...');
-        // In a real app, this would trigger backend sync, e.g., call PowerShell script
-        setTimeout(() => {
-            logStatus('Configuration synced successfully.');
-        }, 2000);
-    });
+syncBtn.addEventListener('click', async () => {
+    logStatus('Syncing configuration...');
+    syncBtn.disabled = true;
+    try {
+        const response = await fetch('/api/sync', {
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer mysecrettoken'
+            }
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Sync failed');
+        }
+        const data = await response.json();
+        logStatus('Configuration synced successfully.');
+        logStatus(data.output);
+    } catch (error) {
+        logStatus(`Sync error: ${error.message}`);
+    } finally {
+        syncBtn.disabled = false;
+    }
+});
 
     // Initial load
     (async () => {
