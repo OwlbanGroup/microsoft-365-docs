@@ -16,6 +16,10 @@ describe('Dashboard Frontend Tests', () => {
 
     // Load the script.js file
     script = require('../dashboard/script.js');
+
+    // Simulate DOMContentLoaded event to trigger script initialization
+    const event = new Event('DOMContentLoaded');
+    document.dispatchEvent(event);
   });
 
   beforeEach(() => {

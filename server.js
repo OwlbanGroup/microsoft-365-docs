@@ -71,9 +71,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// Start the server
-app.listen(port, () => {
+// Start the server and export the server instance
+const server = app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
 
-module.exports = app;
+module.exports = { app, server };
