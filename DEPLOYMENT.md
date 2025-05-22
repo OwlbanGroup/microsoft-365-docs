@@ -39,3 +39,15 @@ docker run -p 3000:3000 -e AUTH_TOKEN=your_secure_token_here lan-setup-dashboard
 ```
 
 Open your browser and navigate to `http://localhost:3000` to access the dashboard.
+
+## Health Check Endpoint
+
+A health check endpoint is available at `/health` which returns a 200 status and a JSON response indicating the server status. This can be used for container orchestration readiness and liveness probes.
+
+## .dockerignore
+
+The project includes a `.dockerignore` file to exclude unnecessary files and directories from the Docker build context, improving build performance and reducing image size.
+
+## Environment Variable Security
+
+Ensure that the `AUTH_TOKEN` environment variable is set to a secure value in production environments and is not exposed in logs or version control. Use secure secret management solutions where possible.

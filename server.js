@@ -68,6 +68,11 @@ app.post('/api/sync', authenticate, (req, res) => {
   });
 });
 
+// Health check endpoint for readiness and liveness probes
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok' });
+});
+
 // Global error handler
 app.use((err, req, res, next) => {
   console.error('Unhandled error:', err);
