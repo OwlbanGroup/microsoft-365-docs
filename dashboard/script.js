@@ -22,6 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadLanServerDetails(lan) {
+        if (!lan) {
+            lanServerDetailsDiv.innerHTML = '<p>No LAN server data available.</p>';
+            return;
+        }
         lanServerDetailsDiv.innerHTML = `
             <p><strong>Hostname:</strong> ${lan.hostname}</p>
             <p><strong>IP Address:</strong> ${lan.ip_address}</p>

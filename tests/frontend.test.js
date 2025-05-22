@@ -26,6 +26,9 @@ describe('Frontend UI interaction tests', () => {
 
     // Evaluate the script.js in the test environment
     eval(scriptContent);
+
+    // Dispatch DOMContentLoaded event to trigger event listeners
+    document.dispatchEvent(new Event('DOMContentLoaded'));
   });
 
   test('Initial load fetches and displays data', async () => {
@@ -49,7 +52,7 @@ describe('Frontend UI interaction tests', () => {
     );
 
     // Wait for initial load async function to complete
-    await new Promise(process.nextTick);
+    await new Promise(resolve => setTimeout(resolve, 0));
 
     // Check that LAN server details are populated
     const lanDetails = document.getElementById('lan-server-details').innerHTML;
