@@ -10,7 +10,26 @@ describe('GET /api/config', () => {
     // Mock fs.readFileSync to return lan-config.yaml content
     originalReadFileSync = fs.readFileSync;
     const lanConfigPath = path.join(__dirname, '../lan-setup/lan-config.yaml');
-    const lanConfigContent = originalReadFileSync.call(fs, lanConfigPath, 'utf8');
+    const lanConfigContent = `
+lan_server:
+  hostname: test-host
+  ip_address: 192.168.1.1
+  subnet_mask: 255.255.255.0
+  gateway: 192.168.1.254
+  dns_servers:
+    - 8.8.8.8
+    - 8.8.4.4
+subsidiaries:
+  - name: Subsidiary A
+    location: Location A
+    connection_type: VPN
+    vpn_endpoint: vpn.subsidiarya.com
+  - name: Subsidiary B
+    location: Location B
+    connection_type: MPLS
+    mpls_provider: mpls.subsidiaryb.com
+`;
+
     jest.spyOn(fs, 'readFile').mockImplementation((filePath, encoding, callback) => {
       if (filePath === lanConfigPath || filePath === path.resolve(lanConfigPath) || filePath === path.normalize(lanConfigPath)) {
         callback(null, lanConfigContent);

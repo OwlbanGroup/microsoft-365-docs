@@ -4,6 +4,7 @@ const yaml = require('js-yaml');
 const path = require('path');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const compression = require('compression');
 const { execFile } = require('child_process');
 
 const rateLimit = require('express-rate-limit');
@@ -39,6 +40,9 @@ app.use(limiter);
 // Use helmet for security headers
 app.use(helmet());
 
+// Use compression middleware for response compression
+app.use(compression());
+
 // Use morgan for HTTP request logging
 app.use(morgan('combined'));
 
@@ -50,8 +54,17 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dashboard', 'index.html'));
 });
 
+// Cache for LAN config
+let cachedLanConfig = null;
+let lastCacheTime = 0;
+const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
+
 // API endpoint to serve LAN config as JSON
 app.get('/api/config', (req, res) => {
+  const now = Date.now();
+  if (cachedLanConfig && (now - lastCacheTime) < CACHE_TTL_MS) {
+    return res.json(cachedLanConfig);
+  }
   const configPath = path.join(__dirname, 'lan-setup', 'lan-config.yaml');
   fs.readFile(configPath, 'utf8', (err, fileContents) => {
     if (err) {
@@ -64,6 +77,8 @@ app.get('/api/config', (req, res) => {
       if (!data || typeof data !== 'object') {
         return res.status(400).json({ error: 'Invalid configuration data' });
       }
+      cachedLanConfig = data;
+      lastCacheTime = now;
       res.json(data);
     } catch (parseErr) {
       console.error('Error parsing YAML file:', parseErr);

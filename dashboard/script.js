@@ -105,16 +105,21 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingIndicator.className = 'loading-indicator';
     refreshBtn.appendChild(loadingIndicator);
 
-    const config = await fetchConfig();
-    if (config) {
-      currentConfig = config;
-      loadLanServerDetails(config.lan_server);
-      loadSubsidiaries(config.subsidiaries);
-      logStatus('Data refreshed.');
+    // Debounce: prevent multiple rapid clicks
+    if (refreshBtn._debounceTimeout) {
+      clearTimeout(refreshBtn._debounceTimeout);
     }
-
-    refreshBtn.removeChild(loadingIndicator);
-    refreshBtn.disabled = false;
+    refreshBtn._debounceTimeout = setTimeout(async () => {
+      const config = await fetchConfig();
+      if (config) {
+        currentConfig = config;
+        loadLanServerDetails(config.lan_server);
+        loadSubsidiaries(config.subsidiaries);
+        logStatus('Data refreshed.');
+      }
+      refreshBtn.removeChild(loadingIndicator);
+      refreshBtn.disabled = false;
+    }, 300);
   });
 
   syncBtn.addEventListener('click', async () => {
