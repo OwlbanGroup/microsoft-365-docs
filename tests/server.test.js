@@ -55,10 +55,11 @@ describe('POST /api/sync', () => {
     expect(res.body).toHaveProperty('error', 'Unauthorized');
   });
 
-  it('should allow authorized requests and return sync output', async () => {
+    it('should allow authorized requests and return sync output', async () => {
+    const authToken = process.env.AUTH_TOKEN || 'mysecrettoken';
     const res = await request(app)
       .post('/api/sync')
-      .set('Authorization', 'Bearer mysecrettoken');
+      .set('Authorization', `Bearer ${authToken}`);
     expect([200, 500]).toContain(res.statusCode); // 200 if success, 500 if script error
     if (res.statusCode === 200) {
       expect(res.body).toHaveProperty('message', 'Sync completed successfully');

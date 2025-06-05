@@ -6,11 +6,18 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const { execFile } = require('child_process');
 
+const rateLimit = require('express-rate-limit');
+
 const app = express();
 const port = 3000;
 
 // Simple token-based authentication middleware
-const authToken = process.env.AUTH_TOKEN || 'mysecrettoken'; // Use environment variable for auth token in production
+require('dotenv').config();
+const authToken = process.env.AUTH_TOKEN;
+if (!authToken) {
+  console.warn('Warning: AUTH_TOKEN environment variable is not set.');
+}
+
 function authenticate(req, res, next) {
   const token = req.headers['authorization'];
   if (token === `Bearer ${authToken}`) {
@@ -19,6 +26,15 @@ function authenticate(req, res, next) {
     res.status(401).json({ error: 'Unauthorized' });
   }
 }
+
+// Rate limiting middleware
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // limit each IP to 100 requests per windowMs
+  message: { error: 'Too many requests, please try again later.' }
+});
+
+app.use(limiter);
 
 // Use helmet for security headers
 app.use(helmet());
@@ -44,6 +60,10 @@ app.get('/api/config', (req, res) => {
     }
     try {
       const data = yaml.load(fileContents);
+      // Basic input validation example
+      if (!data || typeof data !== 'object') {
+        return res.status(400).json({ error: 'Invalid configuration data' });
+      }
       res.json(data);
     } catch (parseErr) {
       console.error('Error parsing YAML file:', parseErr);
