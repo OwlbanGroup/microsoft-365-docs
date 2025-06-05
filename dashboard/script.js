@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function loadSubsidiaries(subsidiaries) {
         subsidiariesListDiv.innerHTML = '';
+        if (!subsidiaries || !Array.isArray(subsidiaries)) {
+            subsidiariesListDiv.innerHTML = '<p>No subsidiaries data available.</p>';
+            return;
+        }
         subsidiaries.forEach(sub => {
             const div = document.createElement('div');
             div.className = 'subsidiary';

@@ -60,9 +60,9 @@ app.post('/api/sync', authenticate, (req, res) => {
       console.error('Error executing sync script:', error);
       return res.status(500).json({ error: 'Sync failed', details: stderr });
     }
-    // Log output before sending response to avoid async logging after tests complete
-    console.log('Sync script output:', stdout);
+    // Send response before logging to avoid async logging after tests complete
     res.json({ message: 'Sync completed successfully', output: stdout });
+    console.log('Sync script output:', stdout);
   }).on('close', () => {
     // Ensure no async logging after response
   });
