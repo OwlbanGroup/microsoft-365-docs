@@ -66,10 +66,10 @@ app.get('/api/config', (req: Request, res: Response) => {
       }
       cachedLanConfig = data;
       lastCacheTime = now;
-      res.json(data);
+      return res.json(data);
     } catch (parseErr) {
       console.error('Error parsing YAML file:', parseErr);
-      res.status(500).json({ error: 'Failed to parse configuration file' });
+      return res.status(500).json({ error: 'Failed to parse configuration file' });
     }
   });
 });
