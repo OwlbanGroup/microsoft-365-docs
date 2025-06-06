@@ -1,19 +1,19 @@
-const express = require('express');
+// Additional security: HTTPS support with self-signed certificate
+const https = require('https');
 const fs = require('fs');
-const yaml = require('js-yaml');
 const path = require('path');
+const express = require('express');
+const yaml = require('js-yaml');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const compression = require('compression');
 const { execFile } = require('child_process');
-
 const rateLimit = require('express-rate-limit');
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
 
-// Simple token-based authentication middleware
-require('dotenv').config();
 const authToken = process.env.AUTH_TOKEN;
 if (!authToken) {
   console.warn('Warning: AUTH_TOKEN environment variable is not set.');
@@ -36,30 +36,18 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
-
-// Use helmet for security headers
 app.use(helmet());
-
-// Use compression middleware for response compression
 app.use(compression());
-
-// Use morgan for HTTP request logging
 app.use(morgan('combined'));
-
-// Serve static files from the dashboard directory at root path
 app.use('/', express.static(path.join(__dirname, 'dashboard')));
-
-// Redirect root URL to index.html explicitly
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dashboard', 'index.html'));
 });
 
-// Cache for LAN config
 let cachedLanConfig = null;
 let lastCacheTime = 0;
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
-// API endpoint to serve LAN config as JSON
 app.get('/api/config', (req, res) => {
   const now = Date.now();
   if (cachedLanConfig && (now - lastCacheTime) < CACHE_TTL_MS) {
@@ -73,7 +61,6 @@ app.get('/api/config', (req, res) => {
     }
     try {
       const data = yaml.load(fileContents);
-      // Basic input validation example
       if (!data || typeof data !== 'object') {
         return res.status(400).json({ error: 'Invalid configuration data' });
       }
@@ -87,7 +74,6 @@ app.get('/api/config', (req, res) => {
   });
 });
 
-// API endpoint to trigger LAN config sync by running PowerShell script
 app.post('/api/sync', authenticate, (req, res) => {
   const scriptPath = path.join(__dirname, 'lan-setup', 'setup-lan.ps1');
   execFile('powershell.exe', ['-ExecutionPolicy', 'Bypass', '-File', scriptPath], (error, stdout, stderr) => {
@@ -95,28 +81,29 @@ app.post('/api/sync', authenticate, (req, res) => {
       console.error('Error executing sync script:', error);
       return res.status(500).json({ error: 'Sync failed', details: stderr });
     }
-    // Send response before logging to avoid async logging after tests complete
     res.json({ message: 'Sync completed successfully', output: stdout });
     console.log('Sync script output:', stdout);
-  }).on('close', () => {
-    // Ensure no async logging after response
-  });
+  }).on('close', () => {});
 });
 
-// Health check endpoint for readiness and liveness probes
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
 
-// Global error handler
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
   console.error('Unhandled error:', err);
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// Start the server and export the server instance
-const server = app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+const sslOptions = {
+  key: fs.readFileSync(path.join(__dirname, 'certs', 'server.key')),
+  cert: fs.readFileSync(path.join(__dirname, 'certs', 'server.crt'))
+};
+
+const httpsServer = https.createServer(sslOptions, app);
+
+httpsServer.listen(port, () => {
+  console.log(`HTTPS Server running at https://localhost:${port}`);
 });
 
-module.exports = { app, server };
+module.exports = { app, httpsServer };
