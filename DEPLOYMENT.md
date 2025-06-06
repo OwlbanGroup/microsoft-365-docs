@@ -51,3 +51,15 @@ The project includes a `.dockerignore` file to exclude unnecessary files and dir
 ## Environment Variable Security
 
 Ensure that the `AUTH_TOKEN` environment variable is set to a secure value in production environments and is not exposed in logs or version control. Use secure secret management solutions where possible.
+
+## Continuous Integration and Deployment
+
+This project includes a GitHub Actions workflow (`.github/workflows/ci.yml`) to automate testing on push and pull requests.
+
+Configure your CI/CD pipeline to run tests and deploy the application automatically.
+
+## Additional Recommendations
+
+- Monitor application logs and set up alerting for critical events.
+- Regularly update dependencies to patch security vulnerabilities.
+- Follow best practices for secure deployment and operations.

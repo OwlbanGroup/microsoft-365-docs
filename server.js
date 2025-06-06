@@ -86,6 +86,29 @@ app.post('/api/sync', authenticate, (req, res) => {
   }).on('close', () => {});
 });
 
+app.put('/api/config', authenticate, express.json(), (req, res) => {
+  const newConfig = req.body;
+  if (!newConfig || typeof newConfig !== 'object') {
+    return res.status(400).json({ error: 'Invalid configuration data' });
+  }
+  const configPath = path.join(__dirname, 'lan-setup', 'lan-config.yaml');
+  try {
+    const yamlStr = yaml.dump(newConfig);
+    fs.writeFile(configPath, yamlStr, 'utf8', (err) => {
+      if (err) {
+        console.error('Error writing YAML file:', err);
+        return res.status(500).json({ error: 'Failed to write configuration file' });
+      }
+      cachedLanConfig = newConfig;
+      lastCacheTime = Date.now();
+      res.json({ message: 'Configuration updated successfully' });
+    });
+  } catch (e) {
+    console.error('Error dumping YAML:', e);
+    res.status(500).json({ error: 'Failed to process configuration data' });
+  }
+});
+
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });

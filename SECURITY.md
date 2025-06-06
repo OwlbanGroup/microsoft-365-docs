@@ -41,4 +41,42 @@ We prefer all communications to be in English.
 
 Microsoft follows the principle of [Coordinated Vulnerability Disclosure](https://aka.ms/opensource/security/cvd).
 
+## Additional Security Recommendations
+
+### Environment Variable Management
+
+- Ensure the `AUTH_TOKEN` environment variable is set securely in production environments.
+- Avoid hardcoding tokens or secrets in source code or frontend files.
+- Use secret management tools or services to store and rotate secrets regularly.
+
+### Token Rotation
+
+- Implement token rotation policies to periodically update authentication tokens.
+- Consider using short-lived tokens or OAuth2/JWT for better security.
+- Revoke compromised tokens immediately.
+
+### HTTPS Certificate Management
+
+- Use valid SSL/TLS certificates from trusted Certificate Authorities in production.
+- Automate certificate renewal using tools like Let's Encrypt.
+- Avoid using self-signed certificates in production environments.
+
+### User Authentication and Authorization
+
+- Implement user management with role-based access control.
+- Use secure authentication protocols such as OAuth2 or OpenID Connect.
+- Protect sensitive API endpoints with proper authorization checks.
+
+### Logging and Monitoring
+
+- Enable detailed logging of authentication attempts and API usage.
+- Monitor logs for suspicious activities and potential security breaches.
+- Set up alerting mechanisms for critical security events.
+
+### Additional Recommendations
+
+- Regularly update dependencies to patch known vulnerabilities.
+- Conduct security audits and penetration testing periodically.
+- Educate developers and users about security best practices.
+
 <!-- END MICROSOFT SECURITY.MD BLOCK -->

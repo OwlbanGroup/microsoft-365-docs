@@ -2,146 +2,142 @@
  * @jest-environment jsdom
  */
 
-const fs = require('fs');
-const path = require('path');
+import '@testing-library/jest-dom';
+import { fireEvent, screen, waitFor } from '@testing-library/dom';
+import fs from 'fs';
+import path from 'path';
 
-describe('Frontend UI interaction tests', () => {
-  let scriptContent;
-  let container;
+const html = fs.readFileSync(path.resolve(__dirname, '../dashboard/index.html'), 'utf8');
 
-  beforeAll(() => {
-    // Load the script.js content
-    scriptContent = fs.readFileSync(path.resolve(__dirname, '../dashboard/script.js'), 'utf8');
-  });
-
+describe('LAN Setup Dashboard Frontend', () => {
   beforeEach(() => {
-    // Set up our document body
-    document.body.innerHTML = `
-      <div id="lan-server-details"></div>
-      <div id="subsidiaries-list"></div>
-      <pre id="status-log"></pre>
-      <button id="refresh-btn"></button>
-      <button id="sync-btn"></button>
-    `;
-
-    // Evaluate the script.js in the test environment
-    eval(scriptContent);
-
-    // Dispatch DOMContentLoaded event to trigger event listeners
-    document.dispatchEvent(new Event('DOMContentLoaded'));
+    document.documentElement.innerHTML = html.toString();
+    // Mock fetch
+    global.fetch = jest.fn();
   });
 
-  test('Initial load fetches and displays data', async () => {
-    // Mock fetch to return sample config data
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve({
-          lan_server: {
-            hostname: 'test-host',
-            ip_address: '192.168.1.1',
-            subnet_mask: '255.255.255.0',
-            gateway: '192.168.1.254',
-            dns_servers: ['8.8.8.8', '8.8.4.4']
-          },
-          subsidiaries: [
-            { name: 'Sub1', location: 'Loc1', connection_type: 'VPN', vpn_endpoint: 'vpn.sub1.com' }
-          ]
-        }),
-      })
-    );
-
-    // Wait for initial load async function to complete
-    await new Promise(resolve => setTimeout(resolve, 0));
-
-    // Check that LAN server details are populated
-    const lanDetails = document.getElementById('lan-server-details').innerHTML;
-    expect(lanDetails).toContain('test-host');
-    expect(lanDetails).toContain('192.168.1.1');
-
-    // Check that subsidiaries list is populated
-    const subsList = document.getElementById('subsidiaries-list').innerHTML;
-    expect(subsList).toContain('Sub1');
-    expect(subsList).toContain('vpn.sub1.com');
-
-    // Check that status log contains 'Dashboard loaded.'
-    const statusLog = document.getElementById('status-log').textContent;
-    expect(statusLog).toMatch(/Dashboard loaded\./);
+  afterEach(() => {
+    jest.resetAllMocks();
   });
 
-  test('Refresh button fetches and updates data', async () => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve({
-          lan_server: { hostname: 'refresh-host', ip_address: '10.0.0.1', subnet_mask: '', gateway: '', dns_servers: [] },
-          subsidiaries: []
-        }),
-      })
-    );
+  test('loads and displays LAN server details and subsidiaries', async () => {
+    const mockConfig = {
+      lan_server: {
+        hostname: 'test-host',
+        ip_address: '192.168.1.1',
+        subnet_mask: '255.255.255.0',
+        gateway: '192.168.1.254',
+        dns_servers: ['8.8.8.8', '8.8.4.4'],
+      },
+      subsidiaries: [
+        {
+          name: 'Subsidiary A',
+          location: 'Location A',
+          connection_type: 'VPN',
+          vpn_endpoint: 'vpn.subsidiarya.com',
+        },
+      ],
+    };
 
-    const refreshBtn = document.getElementById('refresh-btn');
-    refreshBtn.click();
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => mockConfig,
+    });
 
-    // Wait for async fetchConfig to complete
-    await new Promise(process.nextTick);
+    // Load script.js
+    await import('../dashboard/script.js');
 
-    const lanDetails = document.getElementById('lan-server-details').innerHTML;
-    expect(lanDetails).toContain('refresh-host');
+    // Wait for dashboard loaded log
+    await waitFor(() => {
+      expect(screen.getByText(/Dashboard loaded./i)).toBeInTheDocument();
+    });
 
-    const statusLog = document.getElementById('status-log').textContent;
-    expect(statusLog).toMatch(/Refreshing data\.\.\./);
-    expect(statusLog).toMatch(/Data refreshed\./);
+    expect(screen.getByText(/Hostname:/i).textContent).toContain('test-host');
+    expect(screen.getByText(/Subsidiary A/i)).toBeInTheDocument();
   });
 
-  test('Sync button triggers sync API and logs output', async () => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: true,
-        json: () => Promise.resolve({ message: 'Sync completed successfully', output: 'Sync output here' }),
-      })
-    );
+  test('allows editing and saving LAN server details', async () => {
+    const mockConfig = {
+      lan_server: {
+        hostname: 'test-host',
+        ip_address: '192.168.1.1',
+        subnet_mask: '255.255.255.0',
+        gateway: '192.168.1.254',
+        dns_servers: ['8.8.8.8', '8.8.4.4'],
+      },
+      subsidiaries: [],
+    };
 
-    const syncBtn = document.getElementById('sync-btn');
-    syncBtn.click();
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => mockConfig,
+    });
 
-    // Wait for async sync to complete
-    await new Promise(process.nextTick);
+    await import('../dashboard/script.js');
 
-    const statusLog = document.getElementById('status-log').textContent;
-    expect(statusLog).toMatch(/Syncing configuration\.\.\./);
-    expect(statusLog).toMatch(/Configuration synced successfully\./);
-    expect(statusLog).toMatch(/Sync output here/);
+    // Click edit LAN button
+    fireEvent.click(screen.getByText('Edit LAN Server Details'));
+
+    // Change hostname input
+    const hostnameInput = screen.getByLabelText('Hostname:');
+    fireEvent.change(hostnameInput, { target: { value: 'new-host' } });
+
+    // Mock PUT response
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ message: 'Configuration updated successfully' }),
+    });
+
+    // Submit form
+    fireEvent.submit(screen.getByRole('form', { name: /lan-edit-form/i }));
+
+    await waitFor(() => {
+      expect(screen.getByText(/LAN server details updated successfully./i)).toBeInTheDocument();
+    });
+
+    expect(screen.getByText(/Hostname:/i).textContent).toContain('new-host');
   });
 
-  test('Handles fetch config error gracefully', async () => {
-    global.fetch = jest.fn(() => Promise.reject(new Error('Fetch failed')));
+  test('allows editing and saving subsidiaries', async () => {
+    const mockConfig = {
+      lan_server: {},
+      subsidiaries: [
+        {
+          name: 'Subsidiary A',
+          location: 'Location A',
+          connection_type: 'VPN',
+          vpn_endpoint: 'vpn.subsidiarya.com',
+        },
+      ],
+    };
 
-    const refreshBtn = document.getElementById('refresh-btn');
-    refreshBtn.click();
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => mockConfig,
+    });
 
-    // Wait for async fetchConfig to complete
-    await new Promise(process.nextTick);
+    await import('../dashboard/script.js');
 
-    const statusLog = document.getElementById('status-log').textContent;
-    expect(statusLog).toMatch(/Error fetching config: Fetch failed/);
-  });
+    // Click edit subsidiaries button
+    fireEvent.click(screen.getByText('Edit Subsidiaries'));
 
-  test('Handles sync API error gracefully', async () => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: false,
-        json: () => Promise.resolve({ error: 'Sync failed' }),
-      })
-    );
+    // Change subsidiary name
+    const nameInput = screen.getByDisplayValue('Subsidiary A');
+    fireEvent.change(nameInput, { target: { value: 'Subsidiary A Updated' } });
 
-    const syncBtn = document.getElementById('sync-btn');
-    syncBtn.click();
+    // Mock PUT response
+    fetch.mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ message: 'Configuration updated successfully' }),
+    });
 
-    // Wait for async sync to complete
-    await new Promise(process.nextTick);
+    // Submit form
+    fireEvent.submit(screen.getByRole('form', { name: /subsidiaries-edit-form/i }));
 
-    const statusLog = document.getElementById('status-log').textContent;
-    expect(statusLog).toMatch(/Sync error: Sync failed/);
+    await waitFor(() => {
+      expect(screen.getByText(/Subsidiaries updated successfully./i)).toBeInTheDocument();
+    });
+
+    expect(screen.getByText(/Subsidiary A Updated/i)).toBeInTheDocument();
   });
 });

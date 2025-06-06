@@ -21,6 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const refreshBtn = document.getElementById('refresh-btn');
   const syncBtn = document.getElementById('sync-btn');
 
+  const editLanBtn = document.getElementById('edit-lan-btn');
+  const lanEditForm = document.getElementById('lan-edit-form');
+  const cancelLanBtn = document.getElementById('cancel-lan-btn');
+  const saveLanBtn = document.getElementById('save-lan-btn');
+  const editHostnameInput = document.getElementById('edit-hostname');
+  const editIpInput = document.getElementById('edit-ip');
+  const editSubnetInput = document.getElementById('edit-subnet');
+  const editGatewayInput = document.getElementById('edit-gateway');
+  const editDnsInput = document.getElementById('edit-dns');
+
+  const editSubsidiariesBtn = document.getElementById('edit-subsidiaries-btn');
+  const subsidiariesEditForm = document.getElementById('subsidiaries-edit-form');
+  const subsidiariesEditList = document.getElementById('subsidiaries-edit-list');
+  const cancelSubsidiariesBtn = document.getElementById('cancel-subsidiaries-btn');
+  const saveSubsidiariesBtn = document.getElementById('save-subsidiaries-btn');
+  const addSubsidiaryBtn = document.getElementById('add-subsidiary-btn');
+
   /** @type {LanServer | null} */
   let currentConfig = null;
 
@@ -97,6 +114,168 @@ document.addEventListener('DOMContentLoaded', () => {
   window.loadLanServerDetails = loadLanServerDetails;
   window.loadSubsidiaries = loadSubsidiaries;
   window.logStatus = logStatus;
+
+  // Edit LAN server details handlers
+  editLanBtn.addEventListener('click', () => {
+    if (!currentConfig || !currentConfig.lan_server) return;
+    const lan = currentConfig.lan_server;
+    editHostnameInput.value = lan.hostname || '';
+    editIpInput.value = lan.ip_address || '';
+    editSubnetInput.value = lan.subnet_mask || '';
+    editGatewayInput.value = lan.gateway || '';
+    editDnsInput.value = lan.dns_servers ? lan.dns_servers.join(', ') : '';
+    lanEditForm.style.display = 'block';
+    editLanBtn.style.display = 'none';
+  });
+
+  cancelLanBtn.addEventListener('click', () => {
+    lanEditForm.style.display = 'none';
+    editLanBtn.style.display = 'inline-block';
+  });
+
+  lanEditForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const updatedLan = {
+      hostname: editHostnameInput.value.trim(),
+      ip_address: editIpInput.value.trim(),
+      subnet_mask: editSubnetInput.value.trim(),
+      gateway: editGatewayInput.value.trim(),
+      dns_servers: editDnsInput.value.split(',').map(s => s.trim()).filter(Boolean),
+    };
+    if (!currentConfig) return;
+    const updatedConfig = {
+      ...currentConfig,
+      lan_server: updatedLan,
+    };
+    try {
+      const response = await fetch('/api/config', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer mysecrettoken',
+        },
+        body: JSON.stringify(updatedConfig),
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to update configuration');
+      }
+      currentConfig = updatedConfig;
+      loadLanServerDetails(updatedLan);
+      logStatus('LAN server details updated successfully.');
+      lanEditForm.style.display = 'none';
+      editLanBtn.style.display = 'inline-block';
+    } catch (error) {
+      logStatus(`Error updating LAN server details: ${error.message}`);
+    }
+  });
+
+  // Edit subsidiaries handlers
+  function createSubsidiaryEditDiv(sub, index) {
+    const div = document.createElement('div');
+    div.className = 'subsidiary-edit';
+    div.dataset.index = index;
+    div.innerHTML = `
+      <label>Name: <input type="text" class="sub-name" value="${sub.name || ''}" required></label><br>
+      <label>Location: <input type="text" class="sub-location" value="${sub.location || ''}" required></label><br>
+      <label>Connection Type: 
+        <select class="sub-connection-type" required>
+          <option value="VPN" ${sub.connection_type === 'VPN' ? 'selected' : ''}>VPN</option>
+          <option value="MPLS" ${sub.connection_type === 'MPLS' ? 'selected' : ''}>MPLS</option>
+        </select>
+      </label><br>
+      <label>VPN Endpoint: <input type="text" class="sub-vpn-endpoint" value="${sub.vpn_endpoint || ''}"></label><br>
+      <label>MPLS Provider: <input type="text" class="sub-mpls-provider" value="${sub.mpls_provider || ''}"></label><br>
+      <button type="button" class="remove-subsidiary-btn">Remove</button>
+      <hr>
+    `;
+    return div;
+  }
+
+  editSubsidiariesBtn.addEventListener('click', () => {
+    if (!currentConfig || !Array.isArray(currentConfig.subsidiaries)) return;
+    subsidiariesEditList.innerHTML = '';
+    currentConfig.subsidiaries.forEach((sub, index) => {
+      const div = createSubsidiaryEditDiv(sub, index);
+      subsidiariesEditList.appendChild(div);
+    });
+    subsidiariesEditForm.style.display = 'block';
+    editSubsidiariesBtn.style.display = 'none';
+  });
+
+  cancelSubsidiariesBtn.addEventListener('click', () => {
+    subsidiariesEditForm.style.display = 'none';
+    editSubsidiariesBtn.style.display = 'inline-block';
+  });
+
+  addSubsidiaryBtn.addEventListener('click', () => {
+    const newSub = {
+      name: '',
+      location: '',
+      connection_type: 'VPN',
+      vpn_endpoint: '',
+      mpls_provider: '',
+    };
+    const div = createSubsidiaryEditDiv(newSub, subsidiariesEditList.children.length);
+    subsidiariesEditList.appendChild(div);
+  });
+
+  subsidiariesEditList.addEventListener('click', (e) => {
+    if (e.target.classList.contains('remove-subsidiary-btn')) {
+      const div = e.target.closest('.subsidiary-edit');
+      if (div) {
+        subsidiariesEditList.removeChild(div);
+      }
+    }
+  });
+
+  subsidiariesEditForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const updatedSubs = [];
+    const subDivs = subsidiariesEditList.querySelectorAll('.subsidiary-edit');
+    subDivs.forEach(div => {
+      const name = div.querySelector('.sub-name').value.trim();
+      const location = div.querySelector('.sub-location').value.trim();
+      const connection_type = div.querySelector('.sub-connection-type').value;
+      const vpn_endpoint = div.querySelector('.sub-vpn-endpoint').value.trim();
+      const mpls_provider = div.querySelector('.sub-mpls-provider').value.trim();
+      if (name && location && connection_type) {
+        updatedSubs.push({
+          name,
+          location,
+          connection_type,
+          vpn_endpoint: vpn_endpoint || undefined,
+          mpls_provider: mpls_provider || undefined,
+        });
+      }
+    });
+    if (!currentConfig) return;
+    const updatedConfig = {
+      ...currentConfig,
+      subsidiaries: updatedSubs,
+    };
+    try {
+      const response = await fetch('/api/config', {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer mysecrettoken',
+        },
+        body: JSON.stringify(updatedConfig),
+      });
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to update configuration');
+      }
+      currentConfig = updatedConfig;
+      loadSubsidiaries(updatedSubs);
+      logStatus('Subsidiaries updated successfully.');
+      subsidiariesEditForm.style.display = 'none';
+      editSubsidiariesBtn.style.display = 'inline-block';
+    } catch (error) {
+      logStatus(`Error updating subsidiaries: ${error.message}`);
+    }
+  });
 
   refreshBtn.addEventListener('click', async () => {
     logStatus('Refreshing data...');

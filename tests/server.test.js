@@ -74,7 +74,7 @@ describe('POST /api/sync', () => {
     expect(res.body).toHaveProperty('error', 'Unauthorized');
   });
 
-    it('should allow authorized requests and return sync output', async () => {
+  it('should allow authorized requests and return sync output', async () => {
     const authToken = process.env.AUTH_TOKEN || 'mysecrettoken';
     const res = await request(app)
       .post('/api/sync')
@@ -86,5 +86,53 @@ describe('POST /api/sync', () => {
     } else {
       expect(res.body).toHaveProperty('error', 'Sync failed');
     }
+  });
+});
+
+describe('PUT /api/config', () => {
+  afterAll(() => {
+    server.close();
+  });
+
+  it('should reject unauthorized requests', async () => {
+    const res = await request(app).put('/api/config').send({});
+    expect(res.statusCode).toEqual(401);
+    expect(res.body).toHaveProperty('error', 'Unauthorized');
+  });
+
+  it('should reject invalid configuration data', async () => {
+    const authToken = process.env.AUTH_TOKEN || 'mysecrettoken';
+    const res = await request(app)
+      .put('/api/config')
+      .set('Authorization', `Bearer ${authToken}`)
+      .send('invalid data');
+    expect(res.statusCode).toEqual(400);
+  });
+
+  it('should update configuration with valid data', async () => {
+    const authToken = process.env.AUTH_TOKEN || 'mysecrettoken';
+    const validConfig = {
+      lan_server: {
+        hostname: 'updated-host',
+        ip_address: '192.168.1.2',
+        subnet_mask: '255.255.255.0',
+        gateway: '192.168.1.254',
+        dns_servers: ['8.8.8.8', '8.8.4.4'],
+      },
+      subsidiaries: [
+        {
+          name: 'Subsidiary A',
+          location: 'Location A',
+          connection_type: 'VPN',
+          vpn_endpoint: 'vpn.subsidiarya.com',
+        },
+      ],
+    };
+    const res = await request(app)
+      .put('/api/config')
+      .set('Authorization', `Bearer ${authToken}`)
+      .send(validConfig);
+    expect(res.statusCode).toEqual(200);
+    expect(res.body).toHaveProperty('message', 'Configuration updated successfully');
   });
 });

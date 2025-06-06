@@ -16,12 +16,29 @@
             <div id="lan-server-details">
                 <!-- LAN server details will be loaded here -->
             </div>
+            <button id="edit-lan-btn">Edit LAN Server Details</button>
+            <form id="lan-edit-form" style="display:none;">
+                <label>Hostname: <input type="text" id="edit-hostname" name="hostname" required></label><br>
+                <label>IP Address: <input type="text" id="edit-ip" name="ip_address" required></label><br>
+                <label>Subnet Mask: <input type="text" id="edit-subnet" name="subnet_mask" required></label><br>
+                <label>Gateway: <input type="text" id="edit-gateway" name="gateway" required></label><br>
+                <label>DNS Servers (comma separated): <input type="text" id="edit-dns" name="dns_servers" required></label><br>
+                <button type="submit" id="save-lan-btn">Save</button>
+                <button type="button" id="cancel-lan-btn">Cancel</button>
+            </form>
         </section>
         <section id="subsidiaries">
             <h2>Subsidiaries Connections</h2>
             <div id="subsidiaries-list">
                 <!-- Subsidiaries connection info will be loaded here -->
             </div>
+            <button id="edit-subsidiaries-btn">Edit Subsidiaries</button>
+            <form id="subsidiaries-edit-form" style="display:none;">
+                <div id="subsidiaries-edit-list"></div>
+                <button type="button" id="add-subsidiary-btn">Add Subsidiary</button><br>
+                <button type="submit" id="save-subsidiaries-btn">Save</button>
+                <button type="button" id="cancel-subsidiaries-btn">Cancel</button>
+            </form>
         </section>
         <section id="actions">
             <button id="refresh-btn">Refresh Data</button>
