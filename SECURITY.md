@@ -1,3 +1,5 @@
+# SECURITY
+
 ---
 ms.date: 11/25/2022
 ---
@@ -21,13 +23,13 @@ You should receive a response within 24 hours. If for some reason you do not, pl
 
 Please include the requested information listed below (as much as you can provide) to help us better understand the nature and scope of the possible issue:
 
-  * Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
-  * Full paths of source file(s) related to the manifestation of the issue
-  * The location of the affected source code (tag/branch/commit or direct URL)
-  * Any special configuration required to reproduce the issue
-  * Step-by-step instructions to reproduce the issue
-  * Proof-of-concept or exploit code (if possible)
-  * Impact of the issue, including how an attacker might exploit the issue
+* Type of issue (e.g. buffer overflow, SQL injection, cross-site scripting, etc.)
+* Full paths of source file(s) related to the manifestation of the issue
+* The location of the affected source code (tag/branch/commit or direct URL)
+* Any special configuration required to reproduce the issue
+* Step-by-step instructions to reproduce the issue
+* Proof-of-concept or exploit code (if possible)
+* Impact of the issue, including how an attacker might exploit the issue
 
 This information will help us triage your report more quickly.
 
@@ -45,38 +47,38 @@ Microsoft follows the principle of [Coordinated Vulnerability Disclosure](https:
 
 ### Environment Variable Management
 
-- Ensure the `AUTH_TOKEN` environment variable is set securely in production environments.
-- Avoid hardcoding tokens or secrets in source code or frontend files.
-- Use secret management tools or services to store and rotate secrets regularly.
+* Ensure the `AUTH_TOKEN` environment variable is set securely in production environments.
+* Avoid hardcoding tokens or secrets in source code or frontend files.
+* Use secret management tools or services to store and rotate secrets regularly.
 
 ### Token Rotation
 
-- Implement token rotation policies to periodically update authentication tokens.
-- Consider using short-lived tokens or OAuth2/JWT for better security.
-- Revoke compromised tokens immediately.
+* Implement token rotation policies to periodically update authentication tokens.
+* Consider using short-lived tokens or OAuth2/JWT for better security.
+* Revoke compromised tokens immediately.
 
 ### HTTPS Certificate Management
 
-- Use valid SSL/TLS certificates from trusted Certificate Authorities in production.
-- Automate certificate renewal using tools like Let's Encrypt.
-- Avoid using self-signed certificates in production environments.
+* Use valid SSL/TLS certificates from trusted Certificate Authorities in production.
+* Automate certificate renewal using tools like Let's Encrypt.
+* Avoid using self-signed certificates in production environments.
 
 ### User Authentication and Authorization
 
-- Implement user management with role-based access control.
-- Use secure authentication protocols such as OAuth2 or OpenID Connect.
-- Protect sensitive API endpoints with proper authorization checks.
+* Implement user management with role-based access control.
+* Use secure authentication protocols such as OAuth2 or OpenID Connect.
+* Protect sensitive API endpoints with proper authorization checks.
 
 ### Logging and Monitoring
 
-- Enable detailed logging of authentication attempts and API usage.
-- Monitor logs for suspicious activities and potential security breaches.
-- Set up alerting mechanisms for critical security events.
+* Enable detailed logging of authentication attempts and API usage.
+* Monitor logs for suspicious activities and potential security breaches.
+* Set up alerting mechanisms for critical security events.
 
 ### Additional Recommendations
 
-- Regularly update dependencies to patch known vulnerabilities.
-- Conduct security audits and penetration testing periodically.
-- Educate developers and users about security best practices.
+* Regularly update dependencies to patch known vulnerabilities.
+* Conduct security audits and penetration testing periodically.
+* Educate developers and users about security best practices.
 
 <!-- END MICROSOFT SECURITY.MD BLOCK -->

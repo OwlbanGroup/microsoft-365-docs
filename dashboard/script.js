@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const editLanBtn = document.getElementById('edit-lan-btn');
   const lanEditForm = document.getElementById('lan-edit-form');
   const cancelLanBtn = document.getElementById('cancel-lan-btn');
-  const saveLanBtn = document.getElementById('save-lan-btn');
+  // const saveLanBtn = document.getElementById('save-lan-btn');
   const editHostnameInput = document.getElementById('edit-hostname');
   const editIpInput = document.getElementById('edit-ip');
   const editSubnetInput = document.getElementById('edit-subnet');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const subsidiariesEditForm = document.getElementById('subsidiaries-edit-form');
   const subsidiariesEditList = document.getElementById('subsidiaries-edit-list');
   const cancelSubsidiariesBtn = document.getElementById('cancel-subsidiaries-btn');
-  const saveSubsidiariesBtn = document.getElementById('save-subsidiaries-btn');
+  // const saveSubsidiariesBtn = document.getElementById('save-subsidiaries-btn');
   const addSubsidiaryBtn = document.getElementById('add-subsidiary-btn');
 
   /** @type {LanServer | null} */

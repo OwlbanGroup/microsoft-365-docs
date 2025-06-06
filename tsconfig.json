@@ -15,9 +15,9 @@
     "checkJs": false
   },
   "include": [
-    "server.js",
-    "dashboard/**/*.js",
-    "tests/**/*.js"
+    "server.ts",
+    "dashboard/**/*.ts",
+    "tests/**/*.ts"
   ],
   "exclude": [
     "node_modules",
