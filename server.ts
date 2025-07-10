@@ -9,7 +9,7 @@ import { execFile } from 'child_process';
 import rateLimit from 'express-rate-limit';
 import https from 'https';
 import dotenv from 'dotenv';
-import Stripe from 'stripe';
+import Stripe = require('stripe');
 
 dotenv.config();
 
@@ -59,28 +59,31 @@ let cachedLanConfig: any = null;
 let lastCacheTime = 0;
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes
 
-app.get('/api/config', (req: Request, res: Response) => {
+app.get('/api/config', (req: Request, res: Response, next: NextFunction) => {
   const now = Date.now();
   if (cachedLanConfig && (now - lastCacheTime) < CACHE_TTL_MS) {
-    return res.json(cachedLanConfig);
+    res.json(cachedLanConfig);
+    return;
   }
   const configPath = path.join(__dirname, 'lan-setup', 'lan-config.yaml');
   fs.readFile(configPath, 'utf8', (err, fileContents) => {
     if (err) {
       console.error('Error reading YAML file:', err);
-      return res.status(500).json({ error: 'Failed to read configuration file' });
+      res.status(500).json({ error: 'Failed to read configuration file' });
+      return;
     }
     try {
       const data = yaml.load(fileContents);
       if (!data || typeof data !== 'object') {
-        return res.status(400).json({ error: 'Invalid configuration data' });
+        res.status(400).json({ error: 'Invalid configuration data' });
+        return;
       }
       cachedLanConfig = data;
       lastCacheTime = now;
-      return res.json(data);
+      res.json(data);
     } catch (parseErr) {
       console.error('Error parsing YAML file:', parseErr);
-      return res.status(500).json({ error: 'Failed to parse configuration file' });
+      res.status(500).json({ error: 'Failed to parse configuration file' });
     }
   });
 });
@@ -109,31 +112,29 @@ app.use((err: Error, req: Request, res: Response, next: Function) => {
 const useHttps = false; // Set to true if SSL certs are available
 
 // New API endpoint to spend profits through Stripe
-app.post('/api/spend-profits', authenticate, (req: Request, res: Response, next: Function) => {
-  (async () => {
-    try {
-      const { amount, currency, description, payment_method } = req.body;
+app.post('/api/spend-profits', authenticate, async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { amount, currency, description, payment_method } = req.body;
 
-      if (!amount || !currency || !payment_method) {
-        res.status(400).json({ error: 'Missing required parameters: amount, currency, payment_method' });
-        return;
-      }
-
-      // Create a PaymentIntent to spend the profits
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount,
-        currency,
-        payment_method,
-        description: description || 'Spending profits for Oscar Broome',
-        confirm: true,
-      });
-
-      res.json({ success: true, paymentIntent });
-    } catch (error: any) {
-      console.error('Error spending profits:', error);
-      res.status(500).json({ error: error.message || 'Failed to spend profits' });
+    if (!amount || !currency || !payment_method) {
+      res.status(400).json({ error: 'Missing required parameters: amount, currency, payment_method' });
+      return;
     }
-  })().catch(next);
+
+    // Create a PaymentIntent to spend the profits
+    const paymentIntent = await stripe.paymentIntents.create({
+      amount,
+      currency,
+      payment_method,
+      description: description || 'Spending profits for Oscar Broome',
+      confirm: true,
+    });
+
+    res.json({ success: true, paymentIntent });
+  } catch (error: any) {
+    console.error('Error spending profits:', error);
+    res.status(500).json({ error: error.message || 'Failed to spend profits' });
+  }
 });
 
 if (useHttps) {
