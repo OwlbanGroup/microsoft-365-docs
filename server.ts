@@ -9,6 +9,7 @@ import { execFile } from 'child_process';
 import rateLimit from 'express-rate-limit';
 import https from 'https';
 import dotenv from 'dotenv';
+import Stripe from 'stripe';
 
 dotenv.config();
 
@@ -19,6 +20,15 @@ const authToken = process.env.AUTH_TOKEN;
 if (!authToken) {
   console.warn('Warning: AUTH_TOKEN environment variable is not set.');
 }
+
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+if (!stripeSecretKey) {
+  console.warn('Warning: STRIPE_SECRET_KEY environment variable is not set.');
+}
+
+const stripe = new Stripe(stripeSecretKey || '', {
+  apiVersion: '2022-11-15',
+});
 
 function authenticate(req: Request, res: Response, next: NextFunction) {
   const token = req.headers['authorization'];
@@ -35,6 +45,7 @@ const limiter = rateLimit({
   message: { error: 'Too many requests, please try again later.' }
 });
 
+app.use(express.json());
 app.use(limiter);
 app.use(helmet());
 app.use(compression());
@@ -96,6 +107,34 @@ app.use((err: Error, req: Request, res: Response, next: Function) => {
 });
 
 const useHttps = false; // Set to true if SSL certs are available
+
+// New API endpoint to spend profits through Stripe
+app.post('/api/spend-profits', authenticate, (req: Request, res: Response, next: Function) => {
+  (async () => {
+    try {
+      const { amount, currency, description, payment_method } = req.body;
+
+      if (!amount || !currency || !payment_method) {
+        res.status(400).json({ error: 'Missing required parameters: amount, currency, payment_method' });
+        return;
+      }
+
+      // Create a PaymentIntent to spend the profits
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount,
+        currency,
+        payment_method,
+        description: description || 'Spending profits for Oscar Broome',
+        confirm: true,
+      });
+
+      res.json({ success: true, paymentIntent });
+    } catch (error: any) {
+      console.error('Error spending profits:', error);
+      res.status(500).json({ error: error.message || 'Failed to spend profits' });
+    }
+  })().catch(next);
+});
 
 if (useHttps) {
   const sslOptions = {

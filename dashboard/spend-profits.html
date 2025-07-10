@@ -1,0 +1,125 @@
+THO<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spend Profits - Oscar Broome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      max-width: 600px;
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, select, button {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #0070f3;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #999;
+      cursor: not-allowed;
+    }
+    .message {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <h1>Spend Profits - Oscar Broome</h1>
+  <form id="spendForm">
+    <label for="amount">Amount (in cents)</label>
+    <input type="number" id="amount" name="amount" min="1" required />
+
+    <label for="currency">Currency</label>
+    <select id="currency" name="currency" required>
+      <option value="usd" selected>USD</option>
+      <option value="eur">EUR</option>
+      <option value="gbp">GBP</option>
+      <!-- Add more currencies as needed -->
+    </select>
+
+    <label for="payment_method">Payment Method ID</label>
+    <input type="text" id="payment_method" name="payment_method" placeholder="e.g. pm_card_visa" required />
+
+    <label for="description">Description (optional)</label>
+    <input type="text" id="description" name="description" />
+
+    <button type="submit">Spend Profits</button>
+  </form>
+
+  <div id="message" class="message" style="display:none;"></div>
+
+  <script>
+    const form = document.getElementById('spendForm');
+    const messageDiv = document.getElementById('message');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      messageDiv.style.display = 'none';
+      messageDiv.textContent = '';
+      messageDiv.className = 'message';
+
+      const amount = parseInt(form.amount.value, 10);
+      const currency = form.currency.value;
+      const payment_method = form.payment_method.value.trim();
+      const description = form.description.value.trim();
+
+      if (!amount || !currency || !payment_method) {
+        messageDiv.textContent = 'Please fill in all required fields.';
+        messageDiv.classList.add('error');
+        messageDiv.style.display = 'block';
+        return;
+      }
+
+      try {
+        const response = await fetch('/api/spend-profits', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer YOUR_AUTH_TOKEN' // Replace with actual token or auth mechanism
+          },
+          body: JSON.stringify({ amount, currency, payment_method, description })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          messageDiv.textContent = 'Success! PaymentIntent created with ID: ' + data.paymentIntent.id;
+          messageDiv.classList.add('success');
+          form.reset();
+        } else {
+          messageDiv.textContent = 'Error: ' + (data.error || 'Unknown error');
+          messageDiv.classList.add('error');
+        }
+      } catch (err) {
+        messageDiv.textContent = 'Network error: ' + err.message;
+        messageDiv.classList.add('error');
+      }
+
+      messageDiv.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
