@@ -39,9 +39,43 @@ app.use(limiter);
 app.use(helmet());
 app.use(compression());
 app.use(morgan('combined'));
+
+// Add JSON body parser middleware globally
+app.use(express.json());
+
 app.use('/', express.static(path.join(__dirname, 'dashboard')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'dashboard', 'index.html'));
+});
+
+// New POST /api/spend-profits endpoint
+app.post('/api/spend-profits', authenticate, (req, res) => {
+  const { amount, currency, payment_method, description } = req.body;
+
+  // Basic validation
+  if (
+    typeof amount !== 'number' ||
+    amount <= 0 ||
+    typeof currency !== 'string' ||
+    currency.trim() === '' ||
+    typeof payment_method !== 'string' ||
+    payment_method.trim() === ''
+  ) {
+    return res.status(400).json({ error: 'Invalid input parameters' });
+  }
+
+  // Here you would add real payment processing logic, e.g., call Stripe API
+  // For now, return a dummy paymentIntent id
+  const dummyPaymentIntent = {
+    id: 'pi_dummy_1234567890',
+    amount,
+    currency,
+    payment_method,
+    description: description || '',
+    status: 'succeeded',
+  };
+
+  res.status(200).json({ paymentIntent: dummyPaymentIntent });
 });
 
 let cachedLanConfig = null;
