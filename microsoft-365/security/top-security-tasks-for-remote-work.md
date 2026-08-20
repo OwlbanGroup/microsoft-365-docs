@@ -2,8 +2,8 @@
 title: "Top 12 tasks for security teams to support working from home"
 f1.keywords:
 - CSH
-ms.author: bcarter
-author: brendacarter
+ms.author: scottfrancis
+author: sfrancis206
 manager: dansimp
 audience: Admin
 ms.topic: tutorial
@@ -26,11 +26,10 @@ If you are like [Microsoft](https://www.microsoft.com/microsoft-365/blog/2020/03
 
 :::image type="content" source="../media/security/security-support-remote-work.png" alt-text="The top tasks to perform to support working from home" lightbox="../media/security/security-support-remote-work.png":::
 
-
 If you're a small or medium-size organization using one of Microsoft's business plans, see these resources instead:
 
-- [Best practices for securing Microsoft 365 for business plans](../business-premium/secure-your-business-data.md)
-- [Microsoft 365 for Campaigns](../business-premium/m365bp-overview.md) (includes a recommended security configuration for Microsoft 365 Business)
+- [Best practices for securing Microsoft 365 for business plans](/microsoft-365/admin/security-and-compliance/m365b-security-best-practices)
+- [Microsoft 365 for Campaigns](/microsoft-365/admin/security-and-compliance/m365bp-security-benefits) (includes a recommended security configuration for Microsoft 365 for business)
 
 For customers using our enterprise plans, Microsoft recommends you complete the tasks listed in the following table that apply to your service plan. Instead of purchasing a Microsoft 365 enterprise plan, if you're combining subscriptions, note the following items:
 
@@ -74,17 +73,17 @@ Applying these policies takes only a few minutes, but be prepared to support you
 
 ## 2: Protect against threats
 
-All Microsoft 365 plans with cloud mailboxes include Exchange Online Protection (EOP) features, including:
+All Microsoft 365 plans with cloud mailboxes include the following default email protection features:
 
-- [Anti-malware](office-365-security/anti-malware-protection-about.md).
-- [Anti-spam](office-365-security/anti-spam-protection-about.md).
-- [Anti-spoofing](office-365-security/anti-phishing-policies-about.md#spoof-settings) in anti-phishing policies.
+- [Anti-malware](/defender-office-365/anti-malware-protection-about).
+- [Anti-spam](/defender-office-365/anti-spam-protection-about).
+- [Anti-spoofing](/defender-office-365/anti-phishing-policies-about#spoof-settings) in anti-phishing policies.
 
-Default settings for these EOP features are automatically assigned to all recipients via default policies. But, **to bump up the EOP protection level to Microsoft's recommended Standard or Strict security settings based on observations in the datacenters, turn on and assign the Standard preset security policy (for most users) and/or the Strict preset security policy (for admins and other high-risk users)**. As new protection capabilities are added and as the security landscape changes, the EOP settings in preset security policies are automatically updated to our recommended settings.
+Default settings for these protection features are automatically assigned to all recipients via default policies. But, **to bump up the protection level to Microsoft's recommended Standard or Strict security settings based on observations in the datacenters, turn on and assign the Standard preset security policy (for most users) and/or the Strict preset security policy (for admins and other high-risk users)**. As new protection capabilities are added and as the security landscape changes, the settings in preset security policies are automatically updated to our recommended settings.
 
 For instructions, see [Use the Microsoft Defender portal to assign Standard and Strict preset security policies to users](office-365-security/preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users).
 
-The differences between Standard and Strict are summarized in the table [here](office-365-security/preset-security-policies.md#policy-settings-in-preset-security-policies). The comprehensive settings for Standard and Strict **EOP settings** are described in the tables [here](office-365-security/recommended-settings-for-eop-and-office365.md#anti-spam-anti-malware-and-anti-phishing-protection-in-eop). 
+The differences between Standard and Strict are summarized in the table [here](office-365-security/preset-security-policies.md#policy-settings-in-preset-security-policies). The comprehensive settings for Standard and Strict settings are described in the tables [here](office-365-security/recommended-settings-for-eop-and-office365.md#anti-spam-anti-malware-and-anti-phishing-protection-in-eop).
 
 ## 3: Configure Microsoft Defender for Office 365
 
@@ -93,7 +92,7 @@ Microsoft Defender for Office 365 (included with Microsoft 365 E5 and Office 365
 - [Safe Attachments](office-365-security/safe-attachments-about.md) and [Safe Links protection](office-365-security/safe-links-about.md): Protects your organization from unknown threats in real time by using intelligent systems that inspect files, attachments, and links for malicious content. These automated systems include a robust detonation platform, heuristics, and machine learning models.
 - [Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](office-365-security/safe-attachments-for-spo-odfb-teams-about.md): Protects your organization when users collaborate and share files, by identifying and blocking malicious files in team sites and document libraries.
 - [Impersonation protection in anti-phishing policies](office-365-security/anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365): Applies machine learning models and advanced impersonation-detection algorithms to avert phishing attacks.
-- [Priority account protection](office-365-security/priority-accounts-turn-on-priority-account-protection.md): [Priority accounts](../admin/setup/priority-accounts.md) is a tag that you apply to a select number of high-value user accounts. Then, you can use the **Priority** tag as a filter in alerts, reports, and investigations. In Defender for Office 365 Plan 2 (included in Microsoft 365 E5), *priority account protection* offers additional heuristics for priority accounts that are tailored to company executives (regular employees don't benefit from this specialized protection).
+- [Priority account protection](office-365-security/priority-accounts-turn-on-priority-account-protection.md): [Priority accounts](/microsoft-365/admin/security-and-compliance/priority-accounts) is a tag that you apply to a select number of high-value user accounts. Then, you can use the **Priority** tag as a filter in alerts, reports, and investigations. In Defender for Office 365 Plan 2 (included in Microsoft 365 E5), *priority account protection* offers additional heuristics for priority accounts that are tailored to company executives (regular employees don't benefit from this specialized protection).
 
 For an overview of Defender for Office 365, including a summary of plans, see [Defender for Office 365](./office-365-security/defender-for-office-365.md).
 
@@ -109,7 +108,7 @@ The differences between **Defender for Office 365 protection** settings in Stand
 
 You can turn on and turn off Safe Attachments for SharePoint, OneDrive, and Microsoft Teams independently of preset security policies (it's on by default). To verify, see [Turn on Safe Attachments for SharePoint, OneDrive, and Microsoft Teams](office-365-security/safe-attachments-for-spo-odfb-teams-configure.md).
 
-After you [identify users as priority accounts](../admin/setup/priority-accounts.md), they get priority account protection if it's turned on (it's on by default). To verify, see [Configure and review priority account protection in Microsoft Defender for Office 365](office-365-security/priority-accounts-turn-on-priority-account-protection.md).
+After you [identify users as priority accounts](/microsoft-365/admin/security-and-compliance/priority-accounts), they get priority account protection if it's turned on (it's on by default). To verify, see [Configure and review priority account protection in Microsoft Defender for Office 365](office-365-security/priority-accounts-turn-on-priority-account-protection.md).
 
 ## 4: Configure Microsoft Defender for Identity
 
@@ -140,7 +139,7 @@ Microsoft Intune Mobile Application Management (MAM) allows you to manage and pr
 - You create an App Protection Policy (APP) that determines which apps on a device are managed and what behaviors are allowed (such as preventing data from a managed app from being copied to an unmanaged app). You create one policy for each platform (iOS, Android).
 - After creating the app protection policies, you enforce these by creating a conditional access rule in Microsoft Entra ID to require approved apps and APP data protection.
 
-APP protection policies include many settings. Fortunately, you don't need to learn about every setting and weigh the options. Microsoft makes it easy to apply a configuration of settings by recommending starting points. The [Data protection framework using app protection policies](/mem/intune/apps/app-protection-framework) includes three levels you can choose from.
+APP protection policies include many settings. Fortunately, you don't need to learn about every setting and weigh the options. Microsoft makes it easy to apply a configuration of settings by recommending starting points. The [Data protection framework using app protection policies](/intune/app-management/protection/data-protection-framework) includes three levels you can choose from.
 
 Even better, Microsoft coordinates this app protection framework with a set of conditional access and related policies we recommend all organizations use as a starting point. If you implemented MFA using the guidance in this article, you're half way there!
 
@@ -167,14 +166,14 @@ The Intune mobile app protection policies you created, together with the conditi
 
 ## 8: Enroll PCs into device management and require compliant PCs
 
-There are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking). This investigation can take a bit of time to sort out. See: [Enroll devices in Microsoft Intune](/mem/intune/enrollment/).
+There are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking). This investigation can take a bit of time to sort out. See: [Enroll devices in Microsoft Intune](/intune/device-enrollment/guide).
 
-The quickest way to get going is to [Set up automatic enrollment for Windows 10 devices](/mem/intune/enrollment/quickstart-setup-auto-enrollment).
+The quickest way to get going is to [Set up automatic enrollment for Windows devices](/intune/device-enrollment/windows/guide#windows-automatic-enrollment).
 
 You can also take advantage of these tutorials:
 
-- [Use Autopilot to enroll Windows devices in Intune](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices)
-- [Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/tutorial-use-device-enrollment-program-enroll-ios)
+- [Use Autopilot to enroll Windows devices in Intune](/intune/device-enrollment/windows/guide#windows-autopilot)
+- [Use Apple's Corporate Device Enrollment features in Apple Business Manager (ABM) to enroll iOS/iPadOS devices in Intune](/intune/device-enrollment/apple/guide-ios-ipados)
 
 After enrolling devices, use the guidance in [Common identity and device access policies](./office-365-security/zero-trust-identity-device-access-policies-common.md) to create these policies:
 

@@ -1,6 +1,6 @@
 ---
 title: "Best practices for using Office 365 on a slow network"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/09/2024
@@ -182,6 +182,6 @@ Microsoft continually improves the overall performance of Office 365 by monitori
 
 [Office 365 Network Connectivity Principles](microsoft-365-network-connectivity-principles.md)
 
-[Managing Office 365 endpoints](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
+[Managing Office 365 endpoints](managing-office-365-endpoints.md)
 
-[Office 365 endpoints FAQ](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d)
+[Office 365 endpoints FAQ](managing-office-365-endpoints.md)

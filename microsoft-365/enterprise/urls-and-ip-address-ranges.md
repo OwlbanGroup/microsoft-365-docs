@@ -1,9 +1,9 @@
----
+﻿---
 title: "Microsoft 365 URLs and IP address ranges"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/02/2025
+ms.date: 03/31/2026
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-enterprise
@@ -16,7 +16,9 @@ ms.collection:
 - must-keep
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom: 
+- Adm_O365
+- network
 search.appverid:
 - MET150
 - MOE150
@@ -37,8 +39,7 @@ Microsoft 365 requires connectivity to the Internet. The endpoints in this artic
 
 |Notes|Download|Use|
 |---|---|---|
-|**Last updated:** 04/02/2025 - ![RSS.](../media/5dc6bb29-25db-4f44-9580-77c735492c4b.png) [Change Log subscription](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** all required and optional destinations in one [JSON formatted](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) list.|**Use:** our proxy [PAC files](managing-office-365-endpoints.md#pacfiles)|
-|
+|**Last updated:** 03/31/2026 - [Change Log subscription](https://endpoints.office.com/version/worldwide?allversions=true&format=rss&clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7)|**Download:** all required and optional destinations in one [JSON formatted](https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7) list.|**Use:** our proxy [PAC files](managing-office-365-endpoints.md#pacfiles)|
 
 Start with [Managing Microsoft 365 endpoints](managing-office-365-endpoints.md) to understand our recommendations for managing network connectivity using this data. Endpoints data is updated as needed at the beginning of each month with new IP Addresses and URLs published 30 days in advance of being active. This cadence allows for customers who don't yet have automated updates to complete their processes before new connectivity is required. Endpoints may also be updated during the month if needed to address support escalations, security incidents, or other immediate operational requirements. The data shown on this page below is all generated from the REST-based web services. If you're using a script or a network device to access this data, you should go to the [Web service](microsoft-365-ip-web-service.md) directly.
 
@@ -49,17 +50,13 @@ The endpoints are grouped into four service areas representing the three primary
 Data columns shown are:
 
 - **ID**: The ID number of the row, also known as an endpoint set. This ID is the same as is returned by the web service for the endpoint set.
-
 - **Category**: Shows whether the endpoint set is categorized as **Optimize**, **Allow**, or **Default**. This column also lists which endpoint sets are required to have network connectivity. For endpoint sets that aren't required to have network connectivity, we provide notes in this field to indicate what functionality would be missing if the endpoint set is blocked.
 
    You can read about these categories and guidance for their management in [Optimizing connectivity to Microsoft 365 services](microsoft-365-network-connectivity-principles.md#optimizing-connectivity-to-microsoft-365-services).
-
 - **ER**: This is **Yes** if the endpoint set is supported over Azure ExpressRoute with Microsoft 365 route prefixes. The BGP community that includes the route prefixes shown aligns with the service area listed. When ER is **No**, this means that ExpressRoute isn't supported for this endpoint set.
 
    Some routes may be advertised in more than one BGP community, making it possible for endpoints within a given IP range to traverse the ER circuit, but still be unsupported. In all cases, the value of a given endpoint set's ER column should be respected.
-
 - **Addresses**: Lists the FQDNs or wildcard domain names and IP address ranges for the endpoint set. Note that an IP address range is in CIDR format and may include many individual IP addresses in the specified network.
-
 - **Ports**: Lists the TCP or UDP ports that are combined with listed IP addresses to form the network endpoint. You may notice some duplication in IP address ranges where there are different ports listed.
 
 ## [Microsoft 365 Unified Domains](cloud-microsoft-domain.md)
@@ -71,9 +68,9 @@ Data columns shown are:
 
 | ID | Category | Domain name| Purpose | Ports |
 |---|---|---|---|---|
-|184|Required|`*.cloud.microsoft`|Dedicated to authenticated user facing Microsoft SaaS product experiences.|**TCP:** 443,80<br>**UDP:** 443|
-|184|Required|`*.static.microsoft`|Dedicated to static (not customer generated) content hosted on CDNs.|**TCP:** 443,80<br>**UDP:** 443|
-|184|Required|`*.usercontent.microsoft`|Content used in Microsoft 365 experiences that requires domain isolation from applications.|**TCP:** 443,80<br>**UDP:** 443|
+|184|Required|`*.cloud.microsoft`|Dedicated to authenticated user facing Microsoft SaaS product experiences.|**TCP:** 443<br>**UDP:** 443|
+|184|Required|`*.static.microsoft`|Dedicated to static (not customer generated) content hosted on CDNs.|**TCP:** 443<br>**UDP:** 443|
+|184|Required|`*.usercontent.microsoft`|Content used in Microsoft 365 experiences that requires domain isolation from applications.|**TCP:** 443<br>**UDP:** 443|
 
 [!INCLUDE [Microsoft 365 worldwide endpoints](../includes/office-365-worldwide-endpoints.md)]
 
@@ -83,24 +80,25 @@ Notes for this table:
 
 ## Related Topics
 
-[Other endpoints not included in the Microsoft 365 IP Address and URL Web service](additional-office365-ip-addresses-and-urls.md)
+- [Other endpoints not included in the Microsoft 365 IP Address and URL Web service](additional-office365-ip-addresses-and-urls.md)
 
-[Managing Microsoft 365 endpoints](managing-office-365-endpoints.md)
+- [Managing Microsoft 365 endpoints](managing-office-365-endpoints.md)
 
-[General Microsoft Stream endpoints](/stream/network-overview#general-microsoft-stream-endpoints)
-  
-[Monitor Microsoft 365 connectivity](./monitor-connectivity.md)
-  
-[Client connectivity](https://support.office.com/article/client-connectivity-4232abcf-4ae5-43aa-bfa1-9a078a99c78b)
-  
-[Content delivery networks](https://support.office.com/article/content-delivery-networks-0140f704-6614-49bb-aa6c-89b75dcd7f1f)
-  
-[Microsoft Azure IP Ranges and Service Tags – Public Cloud](https://www.microsoft.com/download/details.aspx?id=56519)
+- [General Microsoft Stream endpoints](/stream/network-overview#general-microsoft-stream-endpoints)
 
-[Microsoft Azure IP Ranges and Service Tags – US Government Cloud](https://www.microsoft.com/download/details.aspx?id=57063)
+- [Monitor Microsoft 365 connectivity](./monitor-connectivity.md)
 
-[Microsoft Azure IP Ranges and Service Tags – China Cloud](https://www.microsoft.com/download/details.aspx?id=57062)
-  
-[Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602)
+- [Client connectivity](microsoft-365-networking-overview.md)
 
-[Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+- [Content delivery networks](content-delivery-networks.md)
+
+- [Microsoft Azure IP Ranges and Service Tags - Public Cloud](https://www.microsoft.com/en-us/download/details.aspx?id=56519)
+
+- [Microsoft Azure IP Ranges and Service Tags - US Government Cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57063)
+
+- [Microsoft Azure IP Ranges and Service Tags - China Cloud](https://www.microsoft.com/en-us/download/details.aspx?id=57062)
+
+- [Microsoft Public IP Space](https://www.microsoft.com/en-us/download/details.aspx?id=53602)
+
+- [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
+

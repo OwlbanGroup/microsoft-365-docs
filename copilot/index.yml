@@ -1,115 +1,92 @@
 ### YamlMime:Hub
-
-#root section (Required)
-title: Microsoft 365 Copilot documentation # < 60 chars
-summary: Learn about Microsoft 365 Copilot and how your organization can use this copilot for work. # < 160 chars
+title: Microsoft 365 Copilot documentation for IT Pros # < 60 chars
+summary: Explore resources for delivering Microsoft 365 Copilot services.
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
 brand: m365
-
 metadata:
-  title: Microsoft 365 Copilot documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Learn about Microsoft 365 Copilot and how your organization can use this copilot for work. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: microsoft-365-copilot 
-  ms.topic: hub-page # Required
-  ms.collection: 
-  - essentials-navigation
-  - m365copilot
-  - magic-ai-copilot
-  author: samanro #Required; your GitHub user alias, with correct capitalization.
-  ms.author: samanro #Required; microsoft alias of author; optional team alias.
-  ms.date: 11/13/2024 #Required; mm/dd/yyyy format.
-  ms.custom: [copilot-learning-hub]
+  title: 'Microsoft 365 Copilot hub | Microsoft Learn'
+  description: Technical documentation and other resources for Microsoft 365 Copilot, including Copilot Chat and agents.
+  ms.service: microsoft-365-copilot
+  keywords: copilot, microsoft 365, copilot chat, agents, microsoft copilot documentation
+  ms.topic: marketing-hub
+  ms.author: dansimp
+  manager: debrajoh
+  ms.audience: ITPro
+  author: dansimp
+  ms.date: 05/20/2025
+  brand: m365
 
-# conceptualContent section (Optional; Remove if not applicable.)
-conceptualContent:
-# itemType: architecture | concept | deploy | download | get-started | how-to-guide | training | overview | quickstart | reference | sample | tutorial | video | whats-new
-  # Supports up to 3 subsections
+
+# highlightedContent section (optional)
+# Maximum of 8 items
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: Privacy and Responsible AI
+      itemType: overview
+      url: enterprise-data-protection.md
+    # Card
+    - title: Copilot release notes
+      itemType: whats-new
+      url: release-notes.md
+    # Card
+    - title: Secure and govern Microsoft 365 Copilot
+      itemType: architecture
+      url: secure-govern-copilot-foundational-deployment-guidance.md
+    # Card
+    - title: Manage Microsoft 365 scenarios
+      itemType: how-to-guide
+      url: microsoft-365-copilot-page.md
+
+
+
+# productDirectory section (optional)
+productDirectory:
+  title: Microsoft 365 Copilot documentation # < 60 chars (optional)
+#  summary: Use the following documentation resources to plan and manage the foundational aspects of your Microsoft 365 journey. # < 160 chars (optional)
+  items:
+    # Card
+    - title: Microsoft 365 Copilot
+      imageSrc: /microsoft-365/media/logos/m365-copilot.png
+      summary: Plan, implement, and manage Microsoft 365 Copilot Chat and Microsoft 365 Copilot in your organization.
+      url: microsoft-365-copilot-overview.md
+
+tools:
+  title: Extending Microsoft 365 Copilot
+  summary: Who this content is for - Developers that are responsible for customizing Microsoft 365 Copilot capabilities by extending Copilot connectors, plugins, agents, and APIs, and even building AI-driven copilots with Microsoft Copilot Studio. Connect to data beyond Microsoft 365 to enhance Microsoft 365 Copilot, Copilot Search, and Microsoft Search experiences.
+  items:
+    - title: Microsoft 365 Copilot connectors
+      imageSrc: /office/media/icons/connector-blue.png
+#     summary: Who this library is for - Developers that are responsible for customizing Microsoft 365 Copilot capabilities by extending Copilot connectors, agents, and plugins. Connect to data beyond Microsoft 365 to enhance Microsoft 365 Copilot, Copilot Search, and Microsoft Search experiences.
+      url: /microsoft-365/copilot/connectors/overview
+    # Card
+    - title: Microsoft 365 Copilot extensibility
+      imageSrc: /office/media/icons/api.png
+#     summary: Who this library is for - Developers that are responsible for building custom Copilot experiences by using Microsoft 365 extensibility options including agents, connectors, and Copilot APIs.
+      url: /microsoft-365/copilot/extensibility/overview
+    # Card
+    - title: Microsoft Copilot Studio
+      imageSrc: /microsoft-365/media/logos/copilot-studio.png
+#     summary: Who this library is for - Developers that are responsible for building AI-driven copilots with Microsoft Copilot Studio. Discover how to build AI-driven agents and workflows easily with Microsoft Copilot Studio with online training courses, docs, and videos. Learn how to quickly and simply integrate chat into your website.
+      url: /microsoft-copilot-studio
+
+# Card with links style
+additionalContent:
+  # Supports up to 4 subsections
   sections:
-    - items:
-        # Card
-        - title: How does Microsoft 365 Copilot work?
-          links:
-            - url: microsoft-365-copilot-overview.md
-              itemType: overview
-              text: Introduction to Microsoft 365 Copilot
-            - url: microsoft-365-copilot-architecture.md
-              itemType: architecture
-              text: Architecture and illustrations
-            - url: https://www.youtube.com/playlist?list=PLXtHYVsvn_b-NeN9BbLb5sLpIGfdP8j78
-              itemType: video
-              text: Mechanics Microsoft 365 Copilot playlist
-        # Card
-        - title: How Microsoft protects your data
-          links:
-            - url: https://support.microsoft.com/topic/what-is-responsible-ai-33fc14be-15ea-4c2c-903b-aa493f5b8d92
-              itemType: reference
-              text: Microsoft's commitment to Responsible AI
-            - url: microsoft-365-copilot-privacy.md
-              itemType: concept
-              text: How Microsoft 365 Copilot protects organizational data
-            - url: microsoft-365-copilot-architecture-data-protection-auditing.md
-              itemType: concept
-              text: Data protection and auditing in Microsoft 365 Copilot
-        # Card
-        - title: Get ready for Microsoft 365 Copilot
-          links:
-            - url: microsoft-365-copilot-e3-guide.md
-              itemType: concept
-              text: E3 implementation guide
-            - url: microsoft-365-copilot-e5-guide.md
-              itemType: concept
-              text: E5 implementation guide
-            - url: microsoft-365-copilot-licensing.md
-              itemType: concept
-              text: Licensing options
-            - url: https://www.microsoft.com/en-us/solutionassessments/safeedbackform
-              itemType: get-started
-              text: Microsoft 365 Copilot Optimization Assessment (English only)
-        # Card
-        - title: Onboard and engage
-          links:
-            - url: microsoft-365-copilot-setup.md
-              itemType: deploy
-              text: Set up and assign Microsoft 365 Copilot licenses
-            - url: https://setup.cloud.microsoft/copilot-for-microsoft-365/setup-guide
-              itemType: deploy
-              text: Microsoft 365 Copilot setup guide on setup.cloud.microsoft
-            - url: https://adoption.microsoft.com/copilot/
-              itemType: get-started
-              text: Best practices and tools for employee engagement
-            - url: https://adoption.microsoft.com/copilot-scenario-library/
-              itemType: get-started
-              text: Microsoft Copilot Scenario Library
-            - url: https://copilot.cloud.microsoft/prompts
-              itemType: training
-              text: Copilot Prompt Gallery for recommended prompts and tutorials
-        # Card
-        - title: Deliver impact
-          links:
-            - url: /microsoft-365/admin/activity-reports/microsoft-365-copilot-usage?bc=/microsoft-365/copilot/breadcrumb/toc.json&toc=/microsoft-365/copilot/toc.json
-              itemType: how-to-guide
-              text: Use the Microsoft 365 Copilot usage report
-            - url: /viva/insights/org-team-insights/copilot-dashboard?bc=/microsoft-365/copilot/breadcrumb/toc.json&toc=/microsoft-365/copilot/toc.json
-              itemType: how-to-guide
-              text: Use the Microsoft Copilot Dashboard in Viva Insights
-            - url: /viva/engage/configure-copilot-for-engage?bc=/microsoft-365/copilot/breadcrumb/toc.json&toc=/microsoft-365/copilot/toc.json
-              itemType: how-to-guide
-              text: Accelerate change with Viva Insights
-            - url: /viva/goals/copilot-intro?bc=/microsoft-365/copilot/breadcrumb/toc.json&toc=/microsoft-365/copilot/toc.json
-              itemType: how-to-guide
-              text: Accelerate change with Viva Goals
-        # Card
-        - title: Extend and optimize
-          links:
-            - url: /microsoft-365-copilot/extensibility/
-              itemType: overview
-              text: Building your own plug-ins and connectors
-            - url: /microsoft-365-copilot/extensibility/build-or-extend#build-your-own-copilot
-              itemType: overview 
-              text: Build a custom agent
-            - url: /microsoft-copilot-studio/
-              itemType: overview 
-              text: Get started with Copilot Studio
-            - url: /training/paths/copilot-m365-extensibility/
-              itemType: training
-              text: Extend Microsoft 365 Copilot learning path
-            
+    - title: Keep exploring
+      summary: Continue your Microsoft 365 Copilot and development learning with these Microsoft resources.
+      items:
+          - title: Microsoft 365 Copilot training
+            summary: Access videos, tutorials, and learning paths for Microsoft 365 Copilot.
+            url: /training/paths/prepare-your-organization-microsoft-365-copilot
+          - title: Explore scenarios for Microsoft 365 Copilot
+            summary: See real-world scenarios that demonstrate how Copilot can deliver business value.
+            url: https://adoption.microsoft.com/copilot-scenario-library/
+          - title: AI and Copilot videos
+            summary: Videos about how to get the most out of Copilot.
+            url: https://www.youtube.com/playlist?list=PLXtHYVsvn_b-NeN9BbLb5sLpIGfdP8j78
+          - title: Anthropic as a subprocessor
+            summary: Opting in to Anthropic as a subprocessor for Microsoft 365 Copilot.
+            url: connect-to-ai-subprocessor.md

@@ -4,18 +4,21 @@ f1.keywords:
 - NOCSH
 ms.author: kwekua
 author: kwekuako
-manager: scotv
+manager: dansimp
 ms.date: 01/06/2025
 audience: Admin
 ms.topic: how-to
 ms.collection:
 - Tier3
-- scotvorg 
+- scotvorg
 - Adm_O365
 - M365-subscription-management
 - Adm_TOC
+- operations-pod
 ms.service: microsoft-365-business
-ms.custom: admindeeplinkMAC
+ms.custom:
+- admindeeplinkMAC
+- integrated-apps
 ms.localizationpriority: medium
 description: "Lean how to pin up to three apps to your users' app launcher."
 ---

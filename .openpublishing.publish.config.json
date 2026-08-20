@@ -1,27 +1,13 @@
 {
   "docsets_to_publish": [
     {
-      "docset_name": "Defender-Threat-Intelligence",
-      "build_source_folder": "defender",
-      "build_output_subfolder": "Defender-Threat-Intelligence",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
       "docset_name": "microsoft-365-copilot",
       "build_source_folder": "copilot",
       "build_output_subfolder": "microsoft-365-copilot",
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content"
       },
@@ -38,7 +24,7 @@
         "o365-21vianet",
         "o365-worldwide"
       ],
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -67,7 +53,7 @@
       "url": "https://github.com/MicrosoftDocs/memdocs-pr/",
       "branch": "main",
       "branch_mapping": {}
-    }, 
+    },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
@@ -114,7 +100,6 @@
     ".openpublishing.redirection.compliance.json",
     ".openpublishing.redirection.contentunderstanding.json",
     ".openpublishing.redirection.copilot.json",
-    ".openpublishing.redirection.defender.json",
     ".openpublishing.redirection.enterprise.json",
     ".openpublishing.redirection.frontline.json",
     ".openpublishing.redirection.knowledge.json",
@@ -126,6 +111,7 @@
     ".openpublishing.redirection.scheduler.json",
     ".openpublishing.redirection.security.json",
     ".openpublishing.redirection.solutions.json",
+    ".openpublishing.redirection.solutions-migration.json",
     ".openpublishing.redirection.syntex.json",
     ".openpublishing.redirection.test-base.json",
     ".openpublishing.redirection.topics.json",

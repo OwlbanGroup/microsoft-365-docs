@@ -3,7 +3,7 @@ title: "Mobile device management for Contoso"
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
-ms.author: kvice
+ms.author: scotv
 manager: scotv
 ms.date: 09/06/2024
 audience: ITPro
@@ -57,7 +57,7 @@ This is how Contoso set up their mobile device management infrastructure:
   - Device encryption to help prevent unauthorized access.
   - A six-digit PIN or password.
   - An inactivity-timeout period.
-  - Antivirus and malware protection, and signature updates with Windows Defender on Windows 11 devices.
+  - Antivirus and malware protection, and signature updates with Microsoft Defender on Windows 11 devices.
   - Automatic updates on Windows 11 devices that include the latest security updates.
   - Pushing certificates to managed devices.
   - A clear separation of business and personal data. Users or admins can selectively wipe corporate data from the device, while leaving personal data such as pictures, personal email accounts, and personal files untouched.

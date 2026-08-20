@@ -2,10 +2,10 @@
 title: "Connect your DNS records at Amazon Web Services (AWS) to Microsoft 365"
 f1.keywords:
 - CSH
-ms.author: kvice
-author: kelleyvice-msft
+ms.author: frankroj
+author: frankroj
 manager: scotv
-ms.date: 08/12/2024
+ms.date: 04/23/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
@@ -18,7 +18,10 @@ ms.collection:
 - Adm_O365
 - Adm_NonTOC
 - Adm_O365_Setup
-ms.custom: AdminSurgePortfolio
+- operations-pod
+ms.custom:
+- AdminSurgePortfolio
+- domains
 search.appverid:
 - BCS160
 - MET150
@@ -35,8 +38,7 @@ If AWS is your DNS hosting provider, follow the steps in this article to verify 
 
 After you add these records at AWS, your domain will be set up to work with Microsoft services.
 
-> [!NOTE]
-> Typically it takes about 15 minutes for DNS changes to take effect. However, it can occasionally take longer for a change you've made to update across the Internet's DNS system. If you're having trouble with mail flow or other issues after adding DNS records, see [Find and fix issues after adding your domain or DNS records](../get-help-with-domains/find-and-fix-issues.md).
+[!INCLUDE [Domain propagation note](../../includes/global-administrator-note.md)]
 
 [!INCLUDE [How to get tech support for SMB](../../includes/smb-how-to-get-tech-support.md)]
 
@@ -100,8 +102,7 @@ To verify the record in Microsoft 365:
 
 1. On the **Verify domain** page, select **Verify**.
 
-> [!NOTE]
-> Typically it takes about 15 minutes for DNS changes to take effect. However, it can occasionally take longer for a change you've made to update across the Internet's DNS system. If you're having trouble with mail flow or other issues after adding DNS records, see [Find and fix issues after adding your domain or DNS records](../get-help-with-domains/find-and-fix-issues.md).
+[!INCLUDE [Domain propagation note](../../includes/global-administrator-note.md)]
 
 ## Add an MX record so email for your domain will come to Microsoft 365
 
@@ -260,8 +261,7 @@ Only select this option if your organization uses Skype for Business for online 
 
    :::image type="content" source="../../media/dns-aws/aws-domians-srv-create-records.png" alt-text="Screenshot of where you select Create records to add an SRV record.":::
 
-> [!NOTE]
-> Typically it takes about 15 minutes for DNS changes to take effect. However, it can occasionally take longer for a change you've made to update across the Internet's DNS system. If you're having trouble with mail flow or other issues after adding DNS records, see [Find and fix issues after adding your domain or DNS records](../get-help-with-domains/find-and-fix-issues.md).
+[!INCLUDE [Domain propagation note](../../includes/global-administrator-note.md)]
 
 ### Add the two required CNAME records for Skype for Business
 
@@ -302,8 +302,7 @@ Only select this option if your organization uses Skype for Business for online 
 
    :::image type="content" source="../../media/dns-aws/aws-domains-cname-create-records.png" alt-text="Screenshot of where you select Create records to add CNAME records for Skype for Business.":::
 
-> [!NOTE]
-> Typically it takes about 15 minutes for DNS changes to take effect. However, it can occasionally take longer for a change you've made to update across the Internet's DNS system. If you're having trouble with mail flow or other issues after adding DNS records, see [Troubleshoot issues after changing your domain name or DNS records](../get-help-with-domains/find-and-fix-issues.md).
+[!INCLUDE [Domain propagation note](../../includes/global-administrator-note.md)]
 
 ## Advanced option: Intune and Mobile Device Management for Microsoft 365
 
@@ -348,5 +347,4 @@ This service helps you secure and remotely manage mobile devices that connect to
 
    :::image type="content" source="../../media/dns-aws/aws-domains-cname-create-records.png" alt-text="Screenshot of where you select Create records to add CNAME records for Mobile Device Management.":::
 
-> [!NOTE]
-> Typically it takes about 15 minutes for DNS changes to take effect. However, it can occasionally take longer for a change you've made to update across the Internet's DNS system. If you're having trouble with mail flow or other issues after adding DNS records, see [Troubleshoot issues after changing your domain name or DNS records](../get-help-with-domains/find-and-fix-issues.md).
+[!INCLUDE [Domain propagation note](../../includes/global-administrator-note.md)]

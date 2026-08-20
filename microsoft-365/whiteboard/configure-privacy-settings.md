@@ -22,7 +22,7 @@ description: Learn about compliance and how to configure privacy settings in Mic
 
 If you're the Microsoft Whiteboard administrator for your organization, you can control the following settings:
 
-- What level of diagnostic data is collected and sent to Microsoft about the Whiteboard client software running on the user’s device.
+- What level of diagnostic data is collected and sent to Microsoft about the Whiteboard client software running on the user's device.
 
 - Whether optional connected experiences in Whiteboard are available to your users.
 
@@ -37,15 +37,15 @@ To configure the availability of optional connected experiences, use the [Office
 
 You can choose the level of diagnostic data that is collected and sent to Microsoft about the Whiteboard client software running on devices in your organization. Optional diagnostic data will be sent to Microsoft, unless you change the setting in the Microsoft 365 admin center. If you choose to send optional diagnostic data, required diagnostic data is also included.
 
-In addition to **Required** or **Optional**, there's also a choice of **Neither**. If you choose that option, no diagnostic data about Whiteboard client software running on the user’s device is sent to Microsoft. This option, however, significantly limits Microsoft’s ability to detect, diagnose, and remediate problems that your users may encounter while using Whiteboard.
+In addition to **Required** or **Optional**, there's also a choice of **Neither**. If you choose that option, no diagnostic data about Whiteboard client software running on the user's device is sent to Microsoft. This option, however, significantly limits Microsoft's ability to detect, diagnose, and remediate problems that your users may encounter while using Whiteboard.
 
-Your users won’t be able to change the diagnostic data level for their devices if they're signed in to Whiteboard with their organizational credentials (sometimes referred to as a work or school account). But if they're signed in to Whiteboard with a Microsoft account, such as a personal outlook.com email address, then they can change the diagnostic data level on their devices by going to **Settings > Privacy and security**.
+Your users won't be able to change the diagnostic data level for their devices if they're signed in to Whiteboard with their organizational credentials (sometimes referred to as a work or school account). But if they're signed in to Whiteboard with a Microsoft account, such as a personal outlook.com email address, then they can change the diagnostic data level on their devices by going to **Settings > Privacy and security**.
 
 ## Optional connected experiences setting for your organization
 
 You can choose whether to make optional connected experiences in Whiteboard available to your users. These connected experiences will be available to your users unless you change the setting in the Microsoft 365 admin center. 
 
-These connected experiences are different because they aren't covered by your organization’s commercial agreement with Microsoft. Optional connected experiences are offered by Microsoft directly to your users and are governed by the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement) instead of the [Online Services Terms](https://www.microsoft.com/licensing/product-licensing/products).
+These connected experiences are different because they aren't covered by your organization's commercial agreement with Microsoft. Optional connected experiences are offered by Microsoft directly to your users and are governed by the [Microsoft Services Agreement](https://www.microsoft.com/servicesagreement) instead of the [Online Services Terms](https://www.microsoft.com/licensing/product-licensing/products).
 
 Even if you choose to make these optional connected experiences available to your users, your users can turn them off as a group by going to **Settings > Privacy and security**. Your users only have this choice if they're signed into Whiteboard with their organizational credentials, also known as a work or school account. Users can't change privacy settings if they're signed in with a Microsoft account, such as a personal outlook.com email address.
 
@@ -57,60 +57,60 @@ The following are the required diagnostic data events collected by Whiteboard, i
 
 Collected the first-time ink is added to a board in Microsoft Whiteboard. This information is critical to catch errors associated with adding ink to a board. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **Action** – type of ink stroke
-- **Source** – input method for ink stroke
+- **Action** - type of ink stroke
+- **Source** - input method for ink stroke
 
 **Intentional.SurfSide.ActivationProtocol.LoadFromUri**
 
 Collected every time when Microsoft Whiteboard is launched by a call from another application or process. This information is critical to catch if Whiteboard doesn't launch when properly invoked by another application or process. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **ApplicationExecutionState** – execution state of app when activation protocol happens
-- **IsSignedIn** – user is authentication status
-- **Kind** – application or process that is launching Whiteboard
+- **ApplicationExecutionState** - execution state of app when activation protocol happens
+- **IsSignedIn** - user is authentication status
+- **Kind** - application or process that is launching Whiteboard
 
 **Intentional.Whiteboard.Init.DisplayWhiteboard**
 
 Collected the first time Microsoft Whiteboard is displayed on a client per a session. This information is critical to catch launching issues. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **IsPrelaunched** – prelaunch status
-- **IsProtocolActivation** – application launch type
+- **IsPrelaunched** - prelaunch status
+- **IsProtocolActivation** - application launch type
 
 **Intentional.Whiteboard.Init.StartApp**
 
 Collected every time when Microsoft Whiteboard launches after the previous state ended without crashing. This information is critical to catch crashing issues. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **First Start** – first time app was launched on client
+- **First Start** - first time app was launched on client
 
 **Intentional.Whiteboard.KeyCategory.UseCategory**
 
 Collected every time a feature is used for the first time (and the first time only) per user/session/whiteboard in Microsoft Whiteboard. This information is critical to make sure the key categories are used. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **CategoryName** – Name of the key category
+- **CategoryName** - Name of the key category
 
 **Intentional.Whiteboard.KeyFeature.UseFeature**
 
 Collected every time a feature is used for the first time (and the first time only) per user/session/whiteboard in Microsoft Whiteboard. This information is critical to make sure the features are called and used. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **FeatureName** – Name of the key feature
+- **FeatureName** - Name of the key feature
 
 **Intentional.Whiteboard.SafeBoot.StartApp**
 
 Collected every time when Microsoft Whiteboard launches after the previous state ended in a crash. This information is critical to catch crashing issues. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **First Start** – first time app was launched on client
+- **First Start** - first time app was launched on client
 
 **Intentional.Whiteboard.Scrub.LoadSettings**
 
 Collected every time when Microsoft Whiteboard launches. This information is critical to catch errors associated with user configured settings. Microsoft is using this data to diagnose the issue in order to guarantee Microsoft Whiteboard is running as expected.
 
-- **ActivePen** – pen mode state
-- **CollectFullTelemetryWithoutSignIn** – full telemetry collection without sign-in enablement
-- **DefaultWhiteboardBackgroundColor** – default board background color
-- **DefaultWhiteboardBackgroundPattern** – default board background pattern
-- **FlightStatus** – flight status
-- **InkToShape** – ink to shape enablement
-- **InkToTable** – ink to table enablement
-- **SignInEnabled** – user sign-in enablement
-- **SharingWithoutSignInEnabled** – sharing board enablement
-- **ToolbarLocation** – default toolbar location on screen
-- **TeamSettingsSource** – Teams settings enablement
+- **ActivePen** - pen mode state
+- **CollectFullTelemetryWithoutSignIn** - full telemetry collection without sign-in enablement
+- **DefaultWhiteboardBackgroundColor** - default board background color
+- **DefaultWhiteboardBackgroundPattern** - default board background pattern
+- **FlightStatus** - flight status
+- **InkToShape** - ink to shape enablement
+- **InkToTable** - ink to table enablement
+- **SignInEnabled** - user sign-in enablement
+- **SharingWithoutSignInEnabled** - sharing board enablement
+- **ToolbarLocation** - default toolbar location on screen
+- **TeamSettingsSource** - Teams settings enablement

@@ -1,7 +1,7 @@
 ---
 title: "Understand deployment insights in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: jatingupta
@@ -36,7 +36,7 @@ Microsoft 365 Lighthouse provides deployment insights within and across the tena
 
 - Prioritize deployment activities based on risk.
 
-To access deployment insights, in the left navigation pane in [Lighthouse](https://lighthouse.microsoft.com), select **Deployment** > **Deployment insights**.
+To access deployment insights, in the left navigation pane in [Lighthouse](https://lighthouse.microsoft.com), select **Deployment** > **Deployment insights**.
 
 ## Watch: Deployment insights
 
@@ -60,17 +60,17 @@ The **Deployment insights** page includes the following:
 
 The tenant progress graph measures deployment progress by customer tenant, reporting the status of each tenant's deployment plan as one of the following:
 
-- **Complete** – The status of all deployment tasks is **Compliant** or **Dismissed**.
+- **Complete** - The status of all deployment tasks is **Compliant** or **Dismissed**.
 
-- **Not complete** – The status of one or more of the deployment tasks is **Not compliant** or **Not licensed**.
+- **Not complete** - The status of one or more of the deployment tasks is **Not compliant** or **Not licensed**.
 
 ### User progress
 
 The user progress graph measures deployment progress by user, reporting deployment progress status as one of the following:
 
-- **Complete** – The status of all deployment tasks is **Compliant**, **Excluded**, or **Not targeted**.
+- **Complete** - The status of all deployment tasks is **Compliant**, **Excluded**, or **Not targeted**.
 
-- **Not complete** – The status of one or more of the deployment tasks is either **Not compliant** or **Not licensed**.
+- **Not complete** - The status of one or more of the deployment tasks is either **Not compliant** or **Not licensed**.
 
 ### Deployment insights table
 
@@ -95,18 +95,18 @@ To better understand deployment insights, here are a few examples of how differe
 
 In this example, all customer tenants have 100 users and have been assigned a baseline that includes 10 tasks:
 
-- A – Complete, with no tasks that have been **Dismissed** and no users that have been **Excluded**
-- B – Complete, with one task that has been **Dismissed**
-- C – Complete, with 1 user **Excluded** from 1 task
-- D – Complete, with 1 user **Excluded** from 5 tasks
-- E – Complete, with 5 users **Excluded** from 1 task
-- F – Complete, with 50 users **Excluded** from 5 tasks
-- G – Complete, with 100 users **Excluded** from 10 tasks
-- H – Not complete, with 1 user that is **Not compliant** for 1 task
-- I – Not complete, with 1 task for which 100 users are **Not compliant**
-- J – Not complete, with 1 task that has regressed to a state of **Not licensed**
-- K – Not complete, with 1 newly detected user with a status of **Not Licensed** for all tasks
-- L – Not complete, with 1 user with from which all licenses have been unassigned
+- A - Complete, with no tasks that have been **Dismissed** and no users that have been **Excluded**
+- B - Complete, with one task that has been **Dismissed**
+- C - Complete, with 1 user **Excluded** from 1 task
+- D - Complete, with 1 user **Excluded** from 5 tasks
+- E - Complete, with 5 users **Excluded** from 1 task
+- F - Complete, with 50 users **Excluded** from 5 tasks
+- G - Complete, with 100 users **Excluded** from 10 tasks
+- H - Not complete, with 1 user that is **Not compliant** for 1 task
+- I - Not complete, with 1 task for which 100 users are **Not compliant**
+- J - Not complete, with 1 task that has regressed to a state of **Not licensed**
+- K - Not complete, with 1 newly detected user with a status of **Not Licensed** for all tasks
+- L - Not complete, with 1 user with from which all licenses have been unassigned
 
 | Tenant | Baseline         | Deployment plan status | Task progress | Dismissed tasks | Not licensed tasks | Regressed tasks | User progress | Users excluded | User exclusions |
 |--------|------------------|------------------------|---------------|-----------------|--------------------|-----------------|---------------|----------------|-----------------|
@@ -204,5 +204,5 @@ For information on how to manage tenants by using deployment insights, see [Mana
 ## Related content
 
 [Overview of deployment tasks in Microsoft 365 Lighthouse](m365-lighthouse-overview-deployment-task.md) (article)\
-[Overview of using Micrososft 365 Lighthouse baselines to deploy standard tenant configurations](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (article)\
-[Understand deployment statuses in Microsoft 365 Ligthouse](m365-lighthouse-understand-deployment-statuses.md) (article)
+[Overview of using Microsoft 365 Lighthouse baselines to deploy standard tenant configurations](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (article)\
+[Understand deployment statuses in Microsoft 365 Lighthouse](m365-lighthouse-understand-deployment-statuses.md) (article)

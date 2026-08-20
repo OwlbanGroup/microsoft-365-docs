@@ -1,7 +1,7 @@
 ---
 title: "Preview and share your personal booking page"
-ms.author: pritikar
-author: kwekuako
+ms.author: kwekua
+author: pritikar
 manager: scotv
 ms.date: 07/11/2024  
 ms.topic: article
@@ -13,6 +13,7 @@ ms.collection:
 - essentials-overview
 - essentials-get-started
 - essentials-manage
+- operations-pod
 description: Preview and share your personal booking page with clients and customers with Microsoft Bookings.
 ---
 
@@ -58,7 +59,7 @@ Sharing your booking page link offers the following advantages:
 
 ## Share meeting types
 
-All meeting types in personal bookings can be shared individually by selecting the ‘share’ icon present on the meeting tile. This link can be copied and shared via email. There's also the option of making the link valid only for one booking for private meetings.
+All meeting types in personal bookings can be shared individually by selecting the 'share' icon present on the meeting tile. This link can be copied and shared via email. There's also the option of making the link valid only for one booking for private meetings.
 
 :::image type="content" source="media/create_a_new_meeting_type_share.png" alt-text="Screenshot showing the option to share meeting types Microsoft Bookings.":::
 

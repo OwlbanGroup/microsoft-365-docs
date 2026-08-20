@@ -1,8 +1,35 @@
 items:
-- name: Microsoft 365 for business
-  tocHref: /business/
-  topicHref: /business/index
+- name: Microsoft 365
+  tocHref: /microsoft-365/
+  topicHref: /microsoft-365/index
+- name: Microsoft 365
+  tocHref: /microsoft-365-apps/
+  topicHref: /microsoft-365/index
+- name: Microsoft 365
+  tocHref: /intune/
+  topicHref: /microsoft-365/index    
   items:
   - name: Microsoft 365 Business Premium
-    tocHref: /microsoft-365/business-premium/index
+    tocHref: /microsoft-365/admin/
+    topicHref: /microsoft-365/business-premium/index
+  - name: Microsoft 365 Business Premium
+    tocHref: /defender-business/
+    topicHref: /microsoft-365/business-premium/index
+  - name: Microsoft 365 Business Premium
+    tocHref: /autopilot/
+    topicHref: /microsoft-365/business-premium/index    
+  - name: Microsoft 365 Business Premium
+    tocHref: /microsoft-365-apps/deploy/
+    topicHref: /microsoft-365/business-premium/index
+  - name: Microsoft 365 Business Premium
+    tocHref: /defender-endpoint/
+    topicHref: /microsoft-365/business-premium/index
+  - name: Microsoft 365 Business Premium
+    tocHref: /defender-office-365/
+    topicHref: /microsoft-365/business-premium/index
+  - name: Microsoft 365 Business Premium
+    tocHref: /lighthouse/
+    topicHref: /microsoft-365/business-premium/index
+  - name: Microsoft 365 Business Premium
+    tocHref: /intune/intune-service/
     topicHref: /microsoft-365/business-premium/index

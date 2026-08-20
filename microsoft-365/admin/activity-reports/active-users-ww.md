@@ -1,21 +1,17 @@
 ---
-title: "Assess the Microsoft 365 Active Users report"
-ms.author: camillepack
-author: camillepack
+title: "Active Users report - Microsoft 365 admin center"
+ms.author: cmcatee
+author: cmcatee-MSFT
 manager: scotv
-ms.date: 01/09/2024
+ms.reviewer: hlu
 audience: Admin
-ms.topic: overview
+ms.topic: concept-article
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
-- Tier2
-- scotvorg
-- M365-subscription-management 
+ms.collection:
+- M365-subscription-management
 - Adm_O365
-- Adm_NonTOC
-ms.custom: 
-- AdminSurgePortfolio
+ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
 search.appverid:
@@ -24,47 +20,49 @@ search.appverid:
 - MOE150
 - GEA150
 ms.assetid: fc1cf1d0-cd84-43fd-adb7-a4c4dfa8112d
+ai-usage: ai-assisted
 description: "Learn how to get an Active Users report using the Microsoft 365 Reports dashboard in the admin center and find out how many product licenses are being used."
+ms.date: 04/24/2026
 ---
 
-# Assess the Microsoft 365 Active Users report
+# Active Users report - Microsoft 365 admin center
 
-The Microsoft 365 Reports dashboard shows you the activity overview across the products in your organization. It enables you to drill in to individual product level reports to give you more granular insight about the activities within each product. Check out [the Reports overview topic](activity-reports.md).
-  
-For example, you can use the **Active Users** report to find out how many product licenses are being used by individuals in your organization, and drill down for information about which users are using what products. This report can help administrators identify underutilized products or users that might need additional training or information.
+The Active Users report provides details about how many product licenses individuals in your organization use. You can drill into the report for information about which users are using what products. This report helps administrators identify underutilized products or users who might need additional training or information.
 
-## How to get to the Active Users report
+[!INCLUDE [microsoft-365-usage-reports-generic-intro](../../includes/microsoft-365-usage-reports-generic-intro.md)]
 
-1. In the admin center, go to the **Reports** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Usage</a> page. 
-2. From the dashboard homepage, click on the **View more** button on the Active users - Microsoft 365 Services card.
+## View the Active Users report
 
-## Interpret the Active Users report
+For information about the roles needed to view usage reports, see [Microsoft 365 admin center usage reports overview](activity-reports.md).
 
-You can view active users in the Office 365 report by choosing the **Active users** tab.<br/>![Microsoft 365 reports - Microsoft Office 365 active users.](../../media/56fe2e54-76ad-49e5-886f-1344c2697258.png)
+1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>.
+1. In the navigation menu, select **Reports**. If you don't see **Reports**, select **Show all**, and then select **Reports**.
+1. Select <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Usage</a>.
+1. On the dashboard homepage, select the **View more** button on the **Active users - Microsoft 365 Services** card.
 
-The **Active Users** report can be viewed for trends over the last 7 days, 30 days, 90 days, or 180 days. However, if you view a particular day in the report, the table will show data for up to 28 days from the current date (not the date the report was generated). The data in each report usually covers up to the last 24 to 48 hours.
+## Interpret the Active users report
 
-The **Users** chart shows you daily active users in the reporting period separated by product.
+To view active users in the Active users report, select the **Active users** tab.
 
-The **Activity** chart shows you daily activity count in the reporting period separated by product.
+:::image type="content" source="../../media/56fe2e54-76ad-49e5-886f-1344c2697258.png" alt-text="Screenshot of the active users report." lightbox="../../media/56fe2e54-76ad-49e5-886f-1344c2697258.png":::
 
-The **Services** chart shows you count of users by activity type and Service.
+The **Active Users** report displays trends over the last 7, 30, 90, or 180 days. However, if you select a particular day in the report, the table shows data for up to 28 days from the current date (not the date the report was generated). The data in each report usually covers up to the last 24 to 48 hours.
 
-On the Users chart, the x axis shows the selected reporting time period and the y axis displays the daily active users separated and color coded by license type.
-On the Activity chart, the x axis shows the selected reporting time period and the y axis displays the daily activity count separated and color coded by license type.
-On the Services activity chart, the X axis displays the individual services your users are enabled for in the given time period and the Y axis is the Count of users by activity status, color coded by activity status.
+The **Users** chart shows you daily active users in the reporting period separated by product. On the **Users** chart, the x axis shows the selected reporting time period and the y axis displays the daily active users separated and color coded by license type.
 
-You can filter the series you see on the chart by selecting an item in the legend. Changing this selection doesn't change the info in the grid table.
+The **Activity** chart shows you daily activity count in the reporting period separated by product. On the **Activity** chart, the x axis shows the selected reporting time period and the y axis displays the daily activity count separated and color coded by license type.
 
-You can also export the report data into an Excel .csv file, by selecting the Export link. This exports data of all users and enables you to do simple sorting and filtering for further analysis. 
+The **Services** chart shows you count of users by activity type and Service. On the **Services** activity chart, the X axis displays the individual services your users are enabled for in the given time period and the Y axis is the Count of users by activity status, color coded by activity status.
+
+You can filter the series you see on each chart by selecting an item in the legend. Changing this selection doesn't change the info in the grid table.
+
+To export the report data into an Excel .csv file, select the **Export** link. This action exports data for all users and lets you do simple sorting and filtering for further analysis.
 
 You can change what information is displayed in the grid table with column controls.
 
-If your subscription is operated by 21Vianet, then you will not see Viva Engage.
+If your subscription is operated by 21Vianet, you won't see data for Viva Engage.
 
-If your organization's policies prevents you from viewing reports where user information is identifiable, you can change the privacy setting for all these reports. Check out the **How do I hide user level details?** section in [Activity Reports in the Microsoft 365 admin center](activity-reports.md).  
-
-The table shows you a breakdown of the user activities at the per-user level.
+The table displays a breakdown of the user activities at the per-user level.
 
 |Item|Description|
 |:-----|:-----|
@@ -85,3 +83,5 @@ The table shows you a breakdown of the user activities at the per-user level.
 |License assign date for SharePoint | The date a SharePoint license was assigned to the user. |
 |License assign date for Viva Engage  | The date a Viva Engage Exchange license was assigned to the user. |
 |License assign date for Microsoft Teams  | The date a Microsoft Teams license was assigned to the user. |
+
+[!INCLUDE [display-user-specific-data](../../includes/display-user-specific-data.md)]

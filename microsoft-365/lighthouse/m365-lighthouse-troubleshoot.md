@@ -1,7 +1,7 @@
 ---
 title: "Troubleshoot error messages and problems in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: crimora
@@ -72,7 +72,7 @@ Either granular delegated administrative privileges (GDAP) plus an indirect rese
 | Status | Description | Resolution |
 |--|--|--|
 | Limited | This customer tenant has access to only a limited set of experiences in Lighthouse, including GDAP setup and management, user search, user details, tenant tagging, and service health. | Select the tenant name to see a detailed status of Lighthouse management requirements. For more information, see [Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). |
-| Removed by partner | Your organization has excluded this customer tenant from Lighthouse management. | You need to reactivate the tenant for management by Lighthouse. On the **Tenants** page, select the three dots (more actions) next to the tenant that you want to manage, and then select **Manage tenant**. It can take 24–48 hours for initial customer data to appear in Lighthouse. |
+| Removed by partner | Your organization has excluded this customer tenant from Lighthouse management. | You need to reactivate the tenant for management by Lighthouse. On the **Tenants** page, select the three dots (more actions) next to the tenant that you want to manage, and then select **Manage tenant**. It can take 24-48 hours for initial customer data to appear in Lighthouse. |
 | Removed by customer | The customer chose to disallow the use of Microsoft 365 Lighthouse to manage their tenant. | An admin in the customer tenant needs to go to **Org settings** in the Microsoft 365 admin center, select **Microsoft 365 Lighthouse** on the **Services** tab, and then select the option to allow the use of Microsoft 365 Lighthouse customer management experiences in their tenant. |
 | Error | An error occurred during the onboarding process for this customer tenant and we're working on a fix. | If this error persists for more than 48 hours, please contact Support. |
 
@@ -122,7 +122,7 @@ You should also make sure Conditional Access policies configured in the customer
 
 **Cause:** You're attempting to view data in Lighthouse before tenant onboarding is complete.
 
-**Resolution:** It can take 24–48 hours for initial customer data to appear in Lighthouse. If it's been more than 48 hours since you onboarded the tenant and you're still not able to view or load tenant data, or you're unable to view or load data that you had previously been able to, contact Support. For more information, see [Get help and support for Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Be prepared to provide relevant network logs and a list of any options that may have been modified.
+**Resolution:** It can take 24-48 hours for initial customer data to appear in Lighthouse. If it's been more than 48 hours since you onboarded the tenant and you're still not able to view or load tenant data, or you're unable to view or load data that you had previously been able to, contact Support. For more information, see [Get help and support for Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). Be prepared to provide relevant network logs and a list of any options that may have been modified.
 
 ### Customer tenant data isn't updating after making changes in the customer tenant
 
@@ -152,7 +152,7 @@ You should also make sure Conditional Access policies configured in the customer
 
 **Cause 2:** The customer tenant was recently onboarded to Lighthouse and data is still loading in Lighthouse.
 
-**Resolution:** Once a customer tenant is onboarded to Lighthouse, allow 24–48 hours for initial customer data to appear.
+**Resolution:** Once a customer tenant is onboarded to Lighthouse, allow 24-48 hours for initial customer data to appear.
 
 **Cause 3:** The customer tenant device is new and device data is still loading in Lighthouse.
 
@@ -160,17 +160,17 @@ You should also make sure Conditional Access policies configured in the customer
 
 If data is still not appearing on the Device compliance and Threat management pages after following the resolution instructions, contact Support. For more information, see [Get help and support for Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
 
-## Sales Advisor
+## Opportunities
 
-### Message when viewing the Sales Advisor Opportunities page in Lighthouse: "You don't have permission to view the information on this page"
+### Message when viewing the Opportunities page in Lighthouse: "You don't have permission to view the information on this page"
 
-**Cause:** You don't have the correct permissions in Partner Center to view the Sales Advisor pages in Lighthouse.
+**Cause:** You don't have the correct permissions to view the Opportunities page in Lighthouse.
 
 **Resolution:** Verify that you hold the Account Manager role in Lighthouse. If you don't hold the Account Manager role, reach out to someone who holds the Administrator role in Lighthouse and ask them to assign the role to you. For more information, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 
-### Message when viewing the Sales Advisor Opportunities page in Lighthouse: "There are no opportunities"
+### Message when viewing the Opportunities page in Lighthouse: "There are no opportunities"
 
-**Cause 1:** Sales Advisor's propensity model may not be generating new recommendations for your customers. This means that there are currently no opportunities for you to view or act on.
+**Cause 1:** The machine learning (ML) model may not be generating new recommendations. This means there are currently no opportunities for you to view or act on.
 
 **Resolution:** Check back in two weeks to see if any new recommendations have been generated.
 
@@ -178,21 +178,7 @@ If data is still not appearing on the Device compliance and Threat management pa
 
 **Resolution:** Open a service request by following the instructions in [Get help and support for Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md). To create a Lighthouse service request, make sure you have a partner tenant role and at least one Microsoft Entra role assigned to you with the following property set: **microsoft.office365.supportTickets/allEntities/allTasks**. For a complete list of Microsoft Entra roles, see [Microsoft Entra built-in roles](/azure/active-directory/roles/permissions-reference).
 
-### Message when trying to access Lighthouse from the Partner Insights tab of Sales advisor: "You must be an indirect reseller or direct-bill partner to use this service" or I'm redirected to the Lighthouse Home page but can't sign in
-
-**Cause 1:** Microsoft 365 Lighthouse hasn't been deployed in your partner tenant yet.
-
-**Resolution:** Work with someone who holds the Administrator role in Lighthouse to deploy Lighthouse in your partner tenant. For more information, see [Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md).
-
-**Cause 2:** Your organization has multiple partner tenants and you attempted to access Lighthouse using credentials for a partner tenant that hasn't yet deployed Lighthouse.
-
-**Resolution:** Use the same Microsoft Entra credentials that you used to sign in to Partner Center to access Lighthouse. If you're unsure, reach out to someone in your partner tenant who has the appropriate permissions to confirm which partner tenants have deployed Lighthouse. If needed, have them deploy Lighthouse to the partner tenant that you're trying to use. For more information, see [Sign up for Microsoft 365 Lighthouse](m365-lighthouse-sign-up.md). 
-
-**Cause 3:** You attempted to access Lighthouse from a partner tenant that isn't qualified to use Lighthouse. At this time, Lighthouse supports only indirect resellers and direct-bill partners.
-
-**Resolution:** For a complete list of qualifications and requirements, see [Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md). If you're not an indirect provider and believe you received this message in error, contact Support. For more information, see [Get help and support for Microsoft 365 Lighthouse](m365-lighthouse-get-help-and-support.md).
-
-### Data or opportunities displayed on Sales Advisor pages seem inaccurate
+### Data or opportunities displayed on the Opportunities page seem inaccurate
 
 **Cause:** If you see an opportunity with a customer that you don't recognize, you may have incomplete or incorrect information regarding the partner relationship that your organization has with that customer.
 

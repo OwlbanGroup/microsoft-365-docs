@@ -1,6 +1,6 @@
 ---
 title: "Prepare a nonroutable domain for directory synchronization"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 10/07/2024
@@ -14,6 +14,7 @@ f1.keywords:
 ms.custom: 
 - Adm_O365
 - 'O365E_SetupDirSyncLocalDir'
+- identity-models
 ms.collection:
 - scotvorg
 - Ent_O365

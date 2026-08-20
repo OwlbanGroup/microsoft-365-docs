@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 01/31/2025
+ms.date: 06/30/2025
 ms.topic: article
 ms.service: microsoft-365-archive
 search.appverid: 
@@ -25,7 +25,7 @@ Microsoft is transparent about the specific policies, operational practices, and
 
 - None of your organization's data is used or transferred by Microsoft to train AI models, large-language models, or any other models.
 
-- Your data remains securely within your organization’s tenant.
+- Your data remains securely within your organization's tenant.
 
 ## Privacy
 
@@ -45,7 +45,7 @@ All data within Microsoft 365 Archive is stored within the customer tenant for a
 
 ## Security
 
-Microsoft 365 Archive works with and integrates into Microsoft 365. This means that the Microsoft 365 security capabilities—such role-based access, identity and app management, and others—apply to Microsoft 365 Archive.
+Microsoft 365 Archive works with and integrates into Microsoft 365. This means that the Microsoft 365 security capabilities-such role-based access, identity and app management, and others-apply to Microsoft 365 Archive.
 
 ## Compliance
 
@@ -57,15 +57,15 @@ To learn more about data promises for archive sites and their impact on complian
 
 For more detailed information, see the following resources:
 
-- **Microsoft 365** – [Quick tasks for getting started with compliance in Microsoft Purview](/purview/compliance-quick-tasks)
+- **Microsoft 365** - [Quick tasks for getting started with compliance in Microsoft Purview](/purview/compliance-quick-tasks)
 
-- **Microsoft 365 Copilot** – [Data, privacy, and security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy)
+- **Microsoft 365 Copilot** - [Data, privacy, and security for Microsoft 365 Copilot](/microsoft-365/copilot/microsoft-365-copilot-privacy)
 
-- **Microsoft SharePoint** – [Plan compliance requirements for SharePoint and OneDrive](/SharePoint/compliant-environment)
+- **Microsoft SharePoint** - [Plan compliance requirements for SharePoint and OneDrive](/SharePoint/compliant-environment)
 
-- **Microsoft Graph** – [Use the Microsoft Graph compliance and privacy APIs](/graph/api/resources/complianceapioverview)
+- **Microsoft Graph** - [Use the Microsoft Graph compliance and privacy APIs](/graph/api/resources/complianceapioverview)
 
-- **Microsoft Entra ID** – [Microsoft Entra security baseline for Microsoft Entra ID](/security/benchmark/azure/baselines/aad-security-baseline)
+- **Microsoft Entra ID** - [Microsoft Entra security baseline for Microsoft Entra ID](/security/benchmark/azure/baselines/aad-security-baseline)
 
-- **Azure** – [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](/azure/compliance/offerings/)
+- **Azure** - [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](/azure/compliance/offerings/)
 

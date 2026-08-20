@@ -1,0 +1,71 @@
+### 
+### Test file. STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the Microsoft 365 docs team. 
+### 
+items:
+- name: Microsoft 365
+  tocHref: /microsoft-365/
+  topicHref: /microsoft-365/index
+- name: Microsoft 365
+  tocHref:  /microsoft-365-copilot/
+  topicHref: /microsoft-365/index
+- name: Microsoft 365
+  tocHref:  /azure/
+  topicHref: /microsoft-365/index
+- name: Microsoft 365
+  tocHref:  /graph/
+  topicHref: /microsoft-365/index          
+  items:
+  - name: Microsoft 365 Copilot
+    tocHref: /microsoft-365/copilot/
+    topicHref: /microsoft-365/copilot/index  
+  - name: Microsoft 365 Copilot
+    tocHref: /microsoftteams/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /viva/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /security/zero-trust/copilots/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /microsoft-365-copilot/extensibility/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /microsoft-365/admin/manage/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /microsoft-copilot-studio/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /power-platform/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /microsoft-365/developer/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /microsoftsearch/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /connectors/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /microsoft-365/copilot/connectors/
+    topicHref: /microsoft-365/copilot/index    
+  - name: Microsoft 365 Copilot
+    tocHref:  /sharepoint/
+    topicHref: /microsoft-365/copilot/index  
+  - name: Microsoft 365 Copilot
+    tocHref:  /purview/
+    topicHref: /microsoft-365/copilot/index  
+  - name: Microsoft 365 Copilot
+    tocHref:  /azure/sentinel/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /office365/servicedescriptions/
+    topicHref: /microsoft-365/copilot/index      
+  - name: Microsoft 365 Copilot
+    tocHref:  /copilot/
+    topicHref: /microsoft-365/copilot/index
+  - name: Microsoft 365 Copilot
+    tocHref:  /graph/api/
+    topicHref: /microsoft-365/copilot/index

@@ -1,7 +1,7 @@
----  
+---
 title: "Create a new meeting type in Bookings"  
-ms.author: pritikar
-author: kwekuako
+ms.author: kwekua
+author: pritikar
 manager: scotv
 ms.date: 07/11/2024  
 ms.topic: how-to
@@ -11,13 +11,14 @@ ms.collection:
 - Tier1
 - scotvorg
 - essentials-manage
+- operations-pod
 ms.custom: QuickDraft
 AI_Usage:  
 - AI-Assisted
 description: Learn how to create a new meeting type in Microsoft Bookings.
----  
+---
 
-# Create a new meeting type in Bookings
+  # Create a new meeting type in Bookings
 
 In this article, you'll learn about meeting types, public and private meetings, and how to create and edit meeting types.
 

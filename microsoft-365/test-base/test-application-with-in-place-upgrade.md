@@ -36,7 +36,7 @@ You can now onboard a package with baseline OS and target OS defined via the new
 
 #### Step 1: Enable in-place upgrade by choosing Flow driven test in Config test step
 
-You should be able to find a new testing option “Flow driven test” with clear preview note on the top info box explaining the purpose of the new feature when creating new package via either Create new package online, Create package with Intune App or Upload pre-build package.
+You should be able to find a new testing option "Flow driven test" with clear preview note on the top info box explaining the purpose of the new feature when creating new package via either Create new package online, Create package with Intune App or Upload pre-build package.
  > [!div class="mx-imgBorder"]
  > ![Screenshot shows choosing flow driven test.](Media/testwithupgrade01.png)
 
@@ -62,7 +62,7 @@ Click on the ellipse icon beside the test script should pop up function menu wit
 Click on the flow driven test panel to define test flow.
  > [!div class="mx-imgBorder"]
  > ![Screenshot shows package scripts open flow driven.](Media/testwithupgrade05.png)
- > Drag each row to reorder the scripts, opting in or out the check boxes to define if you’d like to have the script run before the upgrade, after the upgrade or both.
+ > Drag each row to reorder the scripts, opting in or out the check boxes to define if you'd like to have the script run before the upgrade, after the upgrade or both.
  > [!div class="mx-imgBorder"]
  > ![Screenshot shows flow driven test](Media/testwithupgrade06.png)
 
@@ -97,7 +97,7 @@ The created package should be listed under the Test summary tab.
 
 #### Step 2: Check the test run summary under the Test summary drill down page
 
-Click the package to enter the dedicated Test summary page with In-place upgrade as the header of the summary tab. Corresponding test runs should be named with baseline OS – target OS as below:
+Click the package to enter the dedicated Test summary page with In-place upgrade as the header of the summary tab. Corresponding test runs should be named with baseline OS - target OS as below:
  > [!div class="mx-imgBorder"]
  > ![Screenshot shows test summary in place upgrade.](Media/testwithupgrade11.png)
 
@@ -113,7 +113,7 @@ You should be able to review the test detail to get a comprehensive assessment o
 
 #### Step 1: Script execution tab
 
-Click on the Script execution tab, user should be able to see the script execution result side by side for the application’s test scripts before (on the baseline OS) and after the upgrade (on the target OS).
+Click on the Script execution tab, user should be able to see the script execution result side by side for the application's test scripts before (on the baseline OS) and after the upgrade (on the target OS).
  > [!div class="mx-imgBorder"]
  > ![Screenshot shows test results Script execution.](Media/testwithupgrade13.png)
  > If a script is scheduled to be run both pre and post upgrade, the overall script status should be passed only if both pre and post upgrade script executions are successful.

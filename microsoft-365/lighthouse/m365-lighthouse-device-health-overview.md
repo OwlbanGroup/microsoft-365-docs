@@ -1,7 +1,7 @@
 ---
 title: "Overview of the Device health page in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: prpath
@@ -34,7 +34,7 @@ The Device health page provides a subset of device analytics offered through End
 
 ## Requirements
 
-Devices must be enrolled in Microsoft Intune. For more information on enrollment, see [What is Endpoint analytics?](/mem/analytics/overview) Once a device is enrolled, the Device health page automatically populates with data. It may take up to 48 hours to see updates.
+Devices must be enrolled in Microsoft Intune. For more information on enrollment, see [What is Endpoint analytics?](/intune/endpoint-analytics/) Once a device is enrolled, the Device health page automatically populates with data. It may take up to 48 hours to see updates.
 
 > [!NOTE]
 > If data doesn't show up for a specific tenant, verify that the policy is enabled. From the tenant's deployment plan, under **Set up device enrollment**, verify that **Device health monitoring policy** is compliant. If not compliant, deploy the policy.
@@ -59,7 +59,7 @@ The Device tab provides device health insights for all managed Windows devices, 
 
 - Health status (Needs attention, Meeting goals, Insufficient data)
 
-- Start up performance score – To learn more, see [Scores, baselines, and insights in Endpoint analytics](/mem/analytics/scores).
+- Start up performance score - To learn more, see [Scores, baselines, and insights in Endpoint analytics](/intune/endpoint-analytics/scores).
 
 - Total restarts
 
@@ -69,7 +69,7 @@ The Device tab provides device health insights for all managed Windows devices, 
 
 - Hardware model, manufacturer, OS version, and disk type
 
-Select a device from the list for more detailed device information, including a comprehensive list of startup processes on that device. A shortcut is provided to view the device in Microsoft Endpoint Manager, where you can see more insights and recommendations.
+Select a device from the list for more detailed device information, including a comprehensive list of startup processes on that device. A shortcut is provided to view the device in Microsoft Intune, where you can see more insights and recommendations.
 
 The Devices tab also includes the following options:
 
@@ -87,6 +87,6 @@ The Devices tab also includes the following options:
 
 ## Related content
 
-[What is Endpoint analytics?](/mem/analytics/overview) (article)\
-[Scores, baselines, and insights in Endpoint analytics](/mem/analytics/scores) (article)\
+[What is Endpoint analytics?](/intune/endpoint-analytics/) (article)\
+[Scores, baselines, and insights in Endpoint analytics](/intune/endpoint-analytics/scores) (article)\
 [Overview of the Apps page in Microsoft 365 Lighthouse](m365-lighthouse-apps-page-overview.md) (article)

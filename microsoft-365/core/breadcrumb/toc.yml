@@ -1,0 +1,98 @@
+### 
+### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the Microsoft 365 docs team. 
+### 
+items:
+- name: Microsoft 365
+  tocHref: /microsoft-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref: /microsoft-365/core/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /microsoft-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /microsoft-365/admin/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /microsoft-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /microsoft-365/enterprise/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /microsoft-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /microsoft-365/commerce/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /microsoft-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /microsoft-365/business-premium/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /compliance/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /compliance/assurance/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /entra/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /entra/identity/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /defender-business/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /defender-business/
+    topicHref: /microsoft-365/core/
+  - name: Microsoft 365 Core
+    tocHref:  /autopilot/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /windows/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /windows/security/
+    topicHref: /microsoft-365/core/
+- name: Microsoft 365
+  tocHref:  /microsoft-365-apps/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /microsoft-365-apps/
+    topicHref: /microsoft-365/core/  
+- name: Microsoft 365
+  tocHref:  /defender-endpoint/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /defender-endpoint/
+    topicHref: /microsoft-365/core/  
+- name: Microsoft 365
+  tocHref:  /defender-office-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /defender-office-365/
+    topicHref: /microsoft-365/core/  
+- name: Microsoft 365
+  tocHref:  /troubleshoot/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 Core
+    tocHref:  /troubleshoot/
+    topicHref: /microsoft-365/core/  

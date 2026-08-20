@@ -26,7 +26,7 @@ ms.date: 11/22/2024
 > [!IMPORTANT]
 > This feature will start rolling out for public preview in November 2023. If you would like to provide feedback and improve this feature while in preview, please fill out [this form](https://forms.office.com/r/QCQh2q3pnP).
 
-Setting up your frontline operational hierarchy enables you to map your organization’s structure of frontline teams and locations to a hierarchy in the Teams admin center. You can organize your organization’s teams by country, region, area, city, district, and so on. Using a CSV file, you can connect each of your frontline teams and locations to parent teams to build this hierarchy. Admins can also define metadata in the CSV file that ranges from department information to brand information metadata for each team and location.
+Setting up your frontline operational hierarchy enables you to map your organization's structure of frontline teams and locations to a hierarchy in the Teams admin center. You can organize your organization's teams by country, region, area, city, district, and so on. Using a CSV file, you can connect each of your frontline teams and locations to parent teams to build this hierarchy. Admins can also define metadata in the CSV file that ranges from department information to brand information metadata for each team and location.
 
 The operational hierarchy coupled with this metadata enables frontline experiences, like [targeted announcements in Viva Connections](/viva/connections/announcements-viva-connections), [open shifts across locations in Shifts](set-up-open-shifts-across-locations.md) (Preview), and numerous frontline apps and capabilities, like task publishing, in the future. Start setting up your operational hierarchy today to get the full value of these upcoming features as they're released.
 
@@ -37,7 +37,7 @@ The operational hierarchy coupled with this metadata enables frontline experienc
 
 It's important to understand the following terms as you navigate hierarchies. Teams are referred to as **nodes**.
 
-- **Root nodes** are the top-most nodes in the hierarchy. Root nodes can be your organization’s headquarters.
+- **Root nodes** are the top-most nodes in the hierarchy. Root nodes can be your organization's headquarters.
 - **Parent nodes** and **child nodes** are terms that represent a relationship between two connected nodes. In the example, the Boston store is a child node of Northeast zone.
 - A node with no children is called a **leaf node**. They are at the bottom of a hierarchy.
 
@@ -101,7 +101,7 @@ When you add an attribute column, keep the following things in mind:
       Depending on the size of your file, setup might take a few minutes.
 
       :::image type="content" source="media/frontline-hierarchy-setup.png" alt-text="Screenshot of the table on the Operational hierarchy tab of the Manage frontline teams page, showing setup status." lightbox="media/frontline-hierarchy-setup.png":::
-1. Refresh the Manage frontline teams page to check the latest status of your hierarchy setup. Make sure you’re on the **Operational hierarchy** tab after you refresh the page.
+1. Refresh the Manage frontline teams page to check the latest status of your hierarchy setup. Make sure you're on the **Operational hierarchy** tab after you refresh the page.
 
     When setup is completed, the status in the table is updated to **Success**.
 

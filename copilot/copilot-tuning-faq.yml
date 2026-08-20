@@ -1,0 +1,109 @@
+### YamlMime:FAQ
+metadata:
+  title: Microsoft 365 Copilot Tuning FAQ
+  description: Find answers to questions related to Copilot Tuning.
+  author: mestew
+  ms.author: mstewart
+  manager: scotv
+  ms.service: microsoft-365-copilot
+  ms.subservice: admin
+  ms.topic: faq
+  ms.date: 03/10/2026
+
+title: Microsoft 365 Copilot Tuning FAQ
+summary: |
+  Copilot Tuning is a service that enhances the customization of Microsoft 365 Copilot agents by tuning content, tools, and models on tenant-specific data. With the capabilities provided by Copilot Tuning, organizations can use their proprietary data to improve the relevance and accuracy of AI agent-generated outputs. This tuning helps agents understand and adhere to the unique terminology, workflows, and business processes of the organization. 
+
+  Copilot Tuning introduces tunable templates in Agent Builder that provide custom task-specific inference recipes. With various tuning options (tune context, tune model, tune tools), the templates utilize other task-specific recipes. These agents can perform high-value tasks such as document writing, expert answering, summarization, validation, style editing and optimization. These tasks are performed within the security and compliance boundaries of Microsoft 365. 
+
+  [!INCLUDE [copilot-tuning-preview](./includes/copilot-tuning-preview.md)]
+
+sections:
+- name: Copilot Tuning capabilities
+  questions:
+  - question: |
+      What are the capabilities of Copilot Tuning?
+    answer: |
+      Copilot Tuning extends Microsoft 365 Copilot agents by enabling greater customization and control over agent behavior and outputs for specific tasks.
+
+      With Copilot Tuning, organizations can adapt agents to their terminology, workflows, and business processes by tuning context, tools, or models. This task‑specific tuning improves the relevance and accuracy of agent responses while operating within Microsoft 365 security, privacy, and compliance boundaries.
+
+  - question: |
+      What are the intended uses of Copilot Tuning?
+    answer: |
+      Copilot Tuning supports task‑specific agent templates designed for high‑value business scenarios, including:
+
+      - **Document writing** – Generate structured drafts that follow organizational templates, standards, and formatting requirements.
+      - **Document summarization** – Produce summaries tailored to audience, tone, and purpose.
+      - **Expert answers** – Provide domain‑specific responses grounded in organizational knowledge.
+      - **Document validation** – Review documents for compliance with policies, guidelines, or regulatory requirements.
+      - **Style editing** – Refine drafts to align with brand voice and writing standards.
+      - **Optimization scenarios** – Assist with planning or optimization tasks based on defined objectives and constraints.
+
+- name: Templates and agents
+  questions:
+  - question: |
+      What is the difference between an agent template and an agent?
+    answer: |
+      Agent Builder provides predefined templates that define how an agent performs a specific type of task. These templates include built‑in orchestration and task‑specific logic.
+
+      An **agent** is created from a template and can then be customized with instructions, data sources, and optional tuning to meet a specific business need.
+
+  - question: |
+      How are tunable templates different from other templates?
+    answer: |
+      Tunable templates use task‑specific orchestration by default and support additional customization through Copilot Tuning.
+
+      Unlike standard templates, tunable templates allow you to further align agent behavior by tuning context, tools, or the underlying model based on your data, goals, and evaluation criteria.
+
+- name: Responsible use and limitations
+  questions:
+  - question: |
+      What should agent creators consider when applying Copilot Tuning?
+    answer: |
+      Although tuning can improve agent quality, AI‑generated outputs can still contain errors. When using Copilot Tuning, you should:
+
+      - Define clear, scenario‑appropriate goals and evaluation criteria.
+      - Use high‑quality, representative data.
+      - Ensure there is a human review process for all outputs.
+
+      For question‑and‑answer or service scenarios, establish escalation paths for handling incorrect or inappropriate responses.
+
+  - question: |
+      Are there any limitations to Copilot Tuning?
+    answer: |
+      Yes. The effectiveness of Copilot Tuning depends on the quality, coverage, and relevance of the data used. Results may vary by scenario, data availability, and regional support.
+
+      Copilot Tuning must not be used to bypass platform‑level AI safety protections or to enable harmful or high‑risk uses, such as generating toxic content or producing outputs that could result in significant harm to individuals or society.
+
+- name: Improving quality and performance
+  questions:
+  - question: |
+      What can I do to improve performance or resolve issues?
+    answer: |
+      If agent responses don’t meet expectations, review and adjust the goals, data, and evaluation criteria used during tuning.
+
+      Generated outputs should always be treated as drafts. A human should review results for accuracy, completeness, and appropriateness before use.
+
+  - question: |
+      Does an agent always need model tuning?
+    answer: |
+      No. You can start by using a tunable template without applying tuning. If the results meet your needs, no further action is required.
+
+      If improvements are needed, begin by tuning context. If necessary, you can then tune tools, and finally apply model tuning.
+
+  - question: |
+      How should task‑specific agents be evaluated?
+    answer: |
+      After creating an agent, define clear goals, data, and evaluation criteria. Copilot Tuning provides evaluation results based on those inputs.
+
+      Review the evaluation output and adjust your inputs as needed. Tuning is an iterative process, and multiple cycles may be required to achieve the desired outcome.
+
+
+additionalContent: |
+  ## Related content
+
+  - [Copilot Tuning overview](copilot-tuning-overview.md)
+  - [Microsoft AI principles](https://www.microsoft.com/ai/responsible-ai)
+  - [Microsoft responsible AI resources](https://www.microsoft.com/ai/responsible-ai-resources)
+

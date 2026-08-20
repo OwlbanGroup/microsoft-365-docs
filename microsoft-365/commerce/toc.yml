@@ -10,8 +10,6 @@ items:
           href: try-or-buy-microsoft-365.md
         - name: Buy or manage add-ons
           href: buy-or-edit-an-add-on.md
-        - name: Business Assist for Microsoft 365
-          href: ../admin/misc/business-assist.md
         - name: Add storage space
           href: add-storage-space.md
     - name: Manage subscriptions
@@ -22,9 +20,11 @@ items:
           href: subscriptions/renew-your-subscription.md
         - name: Reactivate your subscription
           href: subscriptions/reactivate-your-subscription.md
+        - name: Extend your subscription
+          href: subscriptions/extend-your-subscription-with-est.md
         - name: Cancel your subscription
           href: subscriptions/cancel-your-subscription.md
-        - name: What if my subscription expires?
+        - name: What if my subscription ends?
           href: subscriptions/what-if-my-subscription-expires.md
         - name: Manage third-party app subscriptions
           href: manage-saas-apps.md
@@ -32,14 +32,38 @@ items:
           href: subscriptions/manage-self-service-purchases-users.md
         - name: Manage self-service purchases (Admin)
           href: subscriptions/manage-self-service-purchases-admins.md
+        - name: View scheduled changes
+          href: subscriptions/view-scheduled-changes.md
+    - name: Manage pay-as-you-go services
+      items:
+        - name: Pay-as-you-go services overview
+          href: services/pay-as-you-go-overview.md 
+        - name: Available pay-as-you-go services
+          href: services/pay-as-you-go-services.md
+        - name: What's new for pay-as-you-go services
+          href: services/pay-as-you-go-whats-new.md
+        - name: Set up billing for pay-as-you-go services
+          items:
+            - name: Set up services in the Billing node
+              href: services/pay-as-you-go-setup-billing-node.md
+            - name: Set up services in the Copilot node 
+              href: services/pay-as-you-go-setup-copilot.md
+            - name: Set up services in the Settings node
+              href: services/pay-as-you-go-setup.md
+        - name: Create a budget for pay-as-you-go services
+          href: services/pay-as-you-go-budget.md
+        - name: Troubleshooting
+          items:
+            - name: Fix the RequestDisallowedByPolicy error
+              href: services/error-request-disallowed-by-policy.md
     - name: Manage licenses
       items:
         - name: Buy or remove subscription licenses
           href: licenses/buy-licenses.md
         - name: Assign or unassign licenses for users
-          href: ../admin/manage/assign-licenses-to-users.md
+          href: ../admin/manage/assign-licenses-to-users.md?toc=/microsoft-365/commerce/toc.json&bc=/microsoft-365/commerce/breadcrumb/toc.json
         - name: Assign or unassign licenses for groups
-          href: ../admin/manage/manage-group-licenses.md
+          href: ../admin/manage/manage-group-licenses.md?toc=/microsoft-365/commerce/toc.json&bc=/microsoft-365/commerce/breadcrumb/toc.json
         - name: Move users to a different subscription
           href: subscriptions/move-users-different-subscription.md
         - name: Manage ISV app licenses
@@ -52,12 +76,14 @@ items:
           href: licenses/subscriptions-and-licenses.md
     - name: Manage volume licensing
       items:
+        - name: Manage volume licensing agreements
+          href: licenses/manage-volume-licensing.md
         - name: Sign in to the Microsoft 365 admin center
           href: licenses/vl-sign-in.md
         - name: Sign your volume licensing agreement
           href: licenses/sign-vl-agreement.md
-        - name: Contracts FAQs
-          href: licenses/contracts-faq.yml
+        - name: View volume licensing contracts
+          href: licenses/view-vl-contracts.md
         - name: Manage volume licensing user roles
           href: licenses/manage-user-roles-vl.md
         - name: Download volume licensing products
@@ -69,9 +95,13 @@ items:
         - name: Activate online services
           href: licenses/online-service-activation-vl.md
         - name: Online service activation for Open programs
-          href: licenses/online-service-activation-faq.yml
+          href: licenses/online-service-activation-open-programs.md
         - name: Volume licensing invoices
           href: licenses/volume-licensing-invoices.md
+        - name: Initiate a Change of Channel Partner request
+          href: licenses/change-of-vl-partner-request.md
+        - name: Contact volume licensing support
+          href: licenses/contact-vl-support.md
     - name: Bills and payments
       items:
         - name: View your invoice
@@ -80,8 +110,12 @@ items:
           href: billing-and-payments/understand-your-invoice2.md
         - name: Understand your invoice (MCA)
           href: billing-and-payments/understand-your-invoice.md
-        - name: Pay for your subscription
+        - name: Pay your invoice with a credit card or billing profile
           href: billing-and-payments/pay-for-your-subscription.md
+        - name: Pay your invoice with a wire transfer
+          href: billing-and-payments/pay-by-wire-transfer.md
+        - name: Understand billing and dunning policies
+          href: billing-and-payments/billing-dunning-policies.md
         - name: Manage payment methods
           href: billing-and-payments/manage-payment-methods.md
         - name: Manage billing across multiple tenants
@@ -92,6 +126,8 @@ items:
           href: billing-and-payments/manage-billing-notifications.md
         - name: Understand billing accounts
           href: manage-billing-accounts.md
+        - name: Keep your billing account active
+          href: keep-billing-accounts-active.md
         - name: Manage billing profiles
           href: billing-and-payments/manage-billing-profiles.md
         - name: Change your billing addresses
@@ -109,4 +145,4 @@ items:
     - name: Close your account
       href: close-your-account.md
     - name: Contact support
-      href: ../admin/get-help-support.md
+      href: ../admin/get-help-support.md?toc=/microsoft-365/commerce/toc.json&bc=/microsoft-365/commerce/breadcrumb/toc.json

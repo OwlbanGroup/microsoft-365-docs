@@ -1,150 +1,102 @@
 ---
-title: Microsoft 365 Copilot data protection and auditing architecture
+title: Microsoft 365 Copilot data protection architecture
 f1.keywords:
 - NOCSH
-ms.author: mandia
-author: MandiOhlinger
-manager: laurawi
-ms.date: 02/13/2025
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
+ms.date: 04/07/2026
+ms.update-cycle: 180-days
 audience: Admin
+customer-intent: As an IT professional, I want to understand how Microsoft 365 Copilot works with data protection, oversharing controls, and auditing features in Microsoft 365.
 ms.reviewer: mandia, bcarter, ruihu, cabailey
 ms.topic: overview
 ms.service: microsoft-365-copilot
+ms.subservice: security
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - scotvorg
 - m365copilot
 - magic-ai-copilot
 - essentials-overview
+- trust-pod
+- MCAT
 description: Get descriptions and see diagrams that describe how Microsoft Purview data protection, SharePoint oversharing controls, and auditing work with Microsoft 365 Copilot. This article also shows how Microsoft Purview sensitivity labels, SharePoint oversharing controls, and Purview tools like eDiscovery and retention policies affect Microsoft 365 Copilot.
 ms.custom: [copilot-learning-hub]
 appliesto:
-  - ✅ Microsoft 365 Copilot
+- ✅ Microsoft 365 Copilot
 ---
 
-# Architecture diagrams of licensed Microsoft 365 data protection, oversharing, and auditing features that affect Microsoft 365 Copilot
+# How data is protected and audited in Microsoft 365 and Microsoft 365 Copilot
 
-Microsoft 365 includes features that help you protect your data and audit usage, including Microsoft Purview sensitivity labels & encryption, and SharePoint oversharing controls. These features affect [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) and how Copilot interacts with your data.
+Microsoft 365 Copilot operates within the Microsoft 365 service boundary and honors the same data protection, access control, and compliance capabilities that apply across Microsoft 365.
 
-First and foremost, [Microsoft 365 Copilot](microsoft-365-copilot-overview.md) honors your security & data protection controls. There are also features you can use to audit Copilot usage data.
+This article describes the data protection architecture for Microsoft 365 Copilot. It explains how Copilot works with Microsoft Purview sensitivity labels and encryption, how SharePoint and OneDrive access controls affect Copilot, and where Copilot interaction data is stored for auditing and compliance scenarios.
 
-This article is for IT admins, and describes & illustrates:
-
-- How Copilot works with Microsoft Purview sensitivity labels.
-- The controls you can use to prevent oversharing data in SharePoint sites and OneDrive.
-- Where Copilot usage data is stored and how you can discover, audit, and retain this data.
-
-This article applies to:
-
-- Microsoft 365 Copilot
+This article is intended for IT administrators who want to understand how data flows through Copilot and how existing Microsoft 365 protections are enforced. It doesn't provide deployment steps or remediation guidance.
 
 > [!TIP]
 > To learn more how Microsoft 365 Copilot uses your data, see:
 >
 > - [Data, Privacy, and Security for Microsoft 365 Copilot](microsoft-365-copilot-privacy.md)
-> - [AI security for Microsoft 365 Copilot](microsoft-365-copilot-ai-security.md) (includes info on honoring data residency requirements)
+> - [Security for Microsoft 365 Copilot](security-microsoft-365-copilot.md)
 
 ## How Microsoft 365 Copilot works with sensitivity labels and encryption
 
-Copilot works together with your Microsoft Purview sensitivity labels and encryption to provide an extra layer of protection.
+Copilot works with Microsoft Purview sensitivity labels and encryption to enforce access controls and protection settings during grounding and content generation.
 
-The following diagram provides a visual representation of how Copilot honors your information protection controls using sensitivity labels and encryption.
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png" alt-text="Diagram that shows how Copilot works with documents protected by Microsoft Purview sensitivity labels." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.png":::
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.svg" alt-text="Diagram that shows how Copilot works with documents with Microsoft Purview sensitivity labels." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-sensitivity-labels.svg":::
+In this flow:
 
-Let's take a look:
+- Copilot can only summarize or reference content that the user is authorized to access.
+- When encryption is applied, the user must have EXTRACT and VIEW usage rights for Copilot to interact with the content.
+- Items encrypted by Azure Rights Management without a sensitivity label still require EXTRACT or VIEW usage rights for the user for Copilot to summarize the content.
+- In Copilot Chat interactions, sensitivity labels can be displayed for returned data. The response reflects the highest‑priority label.
+- When Copilot generates new content based on labeled sources, the highest‑priority sensitivity label is inherited when supported.
+- Protection settings remain enforced even when labeled files are stored outside the Microsoft 365 tenant.
 
-- You open a file in a [supported Office app](/purview/sensitivity-labels-office-apps). When the file opens, the sensitivity label name and content markings that are configured for the label are shown.
+> [!NOTE]
+> User-defined sensitivity label permissions can block Copilot from extracting and interacting with the file content. For example, Copilot agents can't read files that have user-defined sensitivity label permissions.
 
-  - When the sensitivity label applies encryption, the user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
-
-  - Items encrypted by the [Azure Rights Management](/azure/information-protection/office-apps-services-support) service without a sensitivity label still require EXTRACT or VIEW usage rights for the user for Copilot to summarize the data.
-
-- In a prompt session with Copilot (called [Microsoft 365 Copilot Chat](https://support.microsoft.com/topic/get-started-with-microsoft-365-copilot-business-chat-5b00a52d-7296-48ee-b938-b95b7209f737)), the labels are displayed for data that is returned. The current response shows the label with the highest priority.
-- When you use Copilot to create new content based on items that have a sensitivity label, the new content automatically inherits the sensitivity label with the highest priority and that label's protection settings.
-
-- Protection extends to data stored outside of your Microsoft 365 tenant when the file is opened in an Office app.
-
-  For example, there's a file with a sensitivity label saved outside of your Microsoft 365 tenant, like on a user's personal device, a network share, or in cloud storage. When this file is opened in an Office app, the protection settings go with the file.
-
-To learn more, see:
+To learn more, see the following articles:
 
 - [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
 - [Microsoft Purview strengthens information protection for Copilot](/purview/ai-microsoft-purview#microsoft-purview-strengthens-information-protection-for-copilot)
 
-## Oversharing controls you can use with Microsoft 365 Copilot
+## How SharePoint and OneDrive access controls affect Copilot
 
-Microsoft 365 includes controls to help you prevent oversharing data through Copilot.
+SharePoint and OneDrive access controls influence what Copilot can discover and reference, without changing user permissions.
 
-The following diagram provides a visual representation of some of the features in your Microsoft 365 E3+ and SharePoint Advanced Management licenses that help you prevent oversharing.
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png" alt-text="Diagram that shows how SharePoint and OneDrive access controls affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.png":::
 
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.svg" alt-text="Diagram that shows the controls you can use to prevent sharing specific data in SharePoint Online and OneDrive, and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-oversharing-controls.svg":::
+These controls include:
 
-Let's take a look:
+- Search and discovery settings that limit which sites appear in Copilot and organization‑wide search.
+- Sharing and membership controls that affect how broadly content can be accessed.
+- Governance and lifecycle policies that reduce long‑term oversharing risk.
+- Information protection policies that restrict Copilot access based on sensitivity labels and DLP conditions.
 
-1. [Restricted SharePoint Search](/sharepoint/restricted-sharepoint-search) allows you to limit organization-wide search and Copilot experiences to selected SharePoint sites. By default, this setting is off and the [allowed list](/sharepoint/restricted-sharepoint-search-allowed-list) is empty. It serves as a temporary solution to review and apply proper permission settings to your sites.
+For prescriptive remediation guidance, see [Secure & governed data foundation for Microsoft 365 Copilot: A deployment blueprint](secure-govern-copilot-foundational-deployment-guidance.md).
 
-2. SharePoint includes more built-in controls:
+## Where Copilot usage data is stored and how it's audited
 
-    - Use **Specific people links** instead of organization-wide sharing by default.
-    - Hide broad scoped permissions from users, like the **Everyone Except External Users** claim.
-    - Site admins can use site level controls to restrict member sharing, and ensure **Site Owners** handle access requests.
+Copilot interaction data is stored within Microsoft 365 services and can be discovered, audited, and retained using Microsoft Purview capabilities.
 
-3. In SharePoint Advanced Management, use **[data access governance reports](/SharePoint/data-access-governance-reports)** to identify sites that contain potentially overshared or sensitive content.
+:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png" alt-text="Diagram that shows how Microsoft Purview auditing, eDiscovery, and retention features apply to Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.png":::
 
-4. With **[Restricted Content Discovery](/sharepoint/restricted-content-discovery)**, organizations can put a flag on sites so that users can't find them through Copilot or Org-wide search. Restricted content discovery doesn't change users' existing permissions. Users with access can still visit sites and open files.
+Microsoft 365 can capture:
 
-5. In SharePoint Advanced Management, create an **[inactive site policy](/sharepoint/site-lifecycle-management#create-an-inactive-site-policy)** to automatically manage and reduce inactive sites.
+- Audit records for Copilot prompts, responses, and referenced content.
+- Copilot interaction data for eDiscovery and compliance investigations.
+- Retained versions of referenced files through cloud attachments and Preservation Hold Libraries.
+- User‑uploaded files stored in OneDrive Copilot Chat folders.
+- Content created with Copilot Pages stored in user‑owned SharePoint Embedded containers.
 
-6. In SharePoint Advanced Management, you can restrict access to SharePoint and OneDrive sites to users in a specific group by using the **[restricted access control policy](/sharepoint/restricted-access-control)**.     Users that aren't members of the specified group can't access the site or content, even if they had prior permissions or a shared link. This policy can be used with Microsoft 365 Group-connected, Teams-connected, and non-group connected sites.
-
-    To learn more, see:
-
-    - [SharePoint restricted access control policy](/sharepoint/restricted-access-control)
-    - [OneDrive restricted access control policy](/sharepoint/onedrive-site-access-restriction)
-
-7. Microsoft Purview includes capabilities to limit oversharing:
-
-   - Use [Microsoft Purview sensitivity labels](/purview/sensitivity-labels) that apply encryption to restrict which files Copilot can access. The user must have the EXTRACT and VIEW usage rights for Copilot to summarize the data.
-
-    - Use [Data Loss Prevention (DLP) for Microsoft 365 Copilot](/purview/dlp-microsoft365-copilot-location-learn-about) to prevent Copilot from accessing content that has specific sensitivity labels applied.
-
-## Where Copilot usage data is stored and how you can audit it
-
-Copilot usage data is stored in several places. You can use the tools provided with Microsoft 365 E5 to discover, audit, and apply retention policies.
-
-The following diagram provides a visual representation of the different features in your Microsoft 365 E5 license that help you search and audit Copilot data.
-
-:::image type="content" source="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.svg" alt-text="Diagram that shows the eDiscovery, Communication Compliance, and retention features in Microsoft 365 and how they affect Microsoft 365 Copilot." lightbox="media/microsoft-365-copilot-architecture-data-protection-auditing/copilot-auditing-tools.svg":::
-
-Let's take a look:
-
-1. Use [Microsoft Purview audit logs](/purview/audit-solutions-overview) to identify how, when, and where Copilot interactions occurred and which items were accessed, including any sensitivity labels on those items.
-
-2. Use [Microsoft Purview eDiscovery](/purview/edisc) to search for keywords in Copilot prompts and responses that might be inappropriate. You can also include this info in an eDiscovery case to review, export, or put this data on hold for an ongoing legal investigation.
-
-3. Use [Microsoft Purview Communication Compliance](/purview/communication-compliance) to detect and alert inappropriate or risky Copilot prompts and responses, like personal data or highly confidential information.
-
-4. Use [Microsoft Purview retention policies](/purview/retention) to keep a copy of deleted Copilot conversations so they're available to eDiscovery.
-
-    Or, if you have a compliance requirement to delete data after a specific period of time, use retention policies to automatically delete Copilot prompts and responses.
-
-5. During a Copilot prompt and response session (called interactions), Copilot can provide links to the source files. These embedded links are called **[cloud attachments](/purview/retention-policies-sharepoint#how-retention-works-with-cloud-attachments)**.
-
-    When a retention label is automatically applied, the specific version of the cloud attachments used in the interaction is retained. The version is kept even if the original file is edited or deleted from SharePoint or OneDrive.
-
-    This original or deleted version of the file is stored in the **[Preservation Hold Library](/purview/retention-policies-sharepoint#how-retention-works-for-sharepoint-and-onedrive)** in SharePoint or OneDrive. It remains accessible to eDiscovery searches.
-
-6. In a Copilot interaction, users can upload local files. These uploaded files are automatically stored in the **Microsoft Copilot Chat Files folder** in the user's OneDrive.
-
-    As with other files in OneDrive, Copilot-related files are accessible for eDiscovery searches and can be automatically retained or deleted with a retention policy.
-
-7. Content created by **[Copilot Pages](https://techcommunity.microsoft.com/blog/microsoft365copilotblog/copilot-pages-for-it-admins---sep-2024-update/4241521)** is stored in a **user-owned SharePoint Embedded container** (one per user). As with other files in SharePoint, this Copilot-related content is accessible for eDiscovery searches and can be automatically retained or deleted with a retention policy.
-
-To learn more, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
+Retention and deletion behavior follows configured Microsoft Purview retention policies. To learn more, see [Learn about retention for Copilot](/purview/retention-policies-copilot).
 
 ## Related content
 
-- [Microsoft 365 Copilot architecture and how it works](microsoft-365-copilot-license-feature-overview.md)
-- [Read about Data, Privacy, and Security for Microsoft 365 Copilot](microsoft-365-copilot-privacy.md)
-- [Microsoft 365 license feature comparison list for Microsoft 365 Copilot](microsoft-365-copilot-license-feature-overview.md)
+- [Microsoft 365 Copilot architecture and how it works](/microsoft-365/copilot/microsoft-365-copilot-architecture)
+- [Data, Privacy, and Security for Microsoft 365 Copilot](microsoft-365-copilot-privacy.md)
+- [Secure & governed data foundation for Microsoft 365 Copilot: A deployment blueprint](secure-govern-copilot-foundational-deployment-guidance.md)

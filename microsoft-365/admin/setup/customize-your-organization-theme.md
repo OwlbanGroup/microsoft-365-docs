@@ -2,26 +2,28 @@
 title: "Customize the theme for your organization"
 f1.keywords:
 - CSH
-ms.author: kwekua
-author: kwekuako
-manager: scotv
-ms.date: 11/14/2024
+ms.author: dansimp
+author: dansimp
+manager: dansimp
+ms.date: 02/02/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier3
 - scotvorg
 - highpri
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
-ms.custom: 
+- operations-pod
+ms.custom:
 - VSBFY23
 - AdminSurgePortfolio
 - okr_smb
 - AdminTemplateSet
+- tenant
 description: "Learn to change the default theme for the top of the navigation bar in Microsoft 365 and customize it to match your company logo or color."
 ---
 
@@ -115,6 +117,8 @@ The default theme will continue to be shown to all employees. Adding a new group
 ### Why don’t I see group themes in the Admin Center?
 
 Only global admins can customize company themes. Global readers have read-only access.
+
+[!INCLUDE [global-administrator-note](../../includes/global-administrator-note.md)]
 
 ### How many different themes can I set up for my organization?  
 

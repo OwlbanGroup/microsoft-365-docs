@@ -10,16 +10,18 @@ audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier3
 - scotvorg
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
-ms.custom: 
+- operations-pod
+ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
 - admindeeplinkMAC
+- user-accounts
 description: "If you're responsible for configuring email settings for everyone in a business this article explains how to configure Focused Inbox for users."
 ---
 
@@ -134,7 +136,7 @@ This example turns Focused Inbox **Off** for Tim Matthews in the Contoso organiz
 > [!IMPORTANT]
 > In this example, both "X-MS-Exchange-Organization-BypassFocusedInbox" and "true" are case sensitive.
 > Also, Focused Inbox will honor the X-header that bypasses Clutter, so if you use this setting in Clutter, it will be used in Focused Inbox. 
-> For detailed syntax and parameter information, see [New-TransportRule](/powershell/module/exchange/new-transportrule).
+> For detailed syntax and parameter information, see [New-TransportRule](/powershell/module/exchangepowershell/new-transportrule).
 
 ### How do you know this worked?
 

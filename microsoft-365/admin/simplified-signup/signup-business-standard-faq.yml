@@ -1,0 +1,72 @@
+### YamlMime:FAQ
+metadata:
+  title: Sign up for Microsoft 365 Business Standard FAQ
+  description: Find answers to common questions about signing up for Microsoft 365 Business Standard, including business email, domain setup, and billing.
+  ms.date: 03/13/2026
+  f1.keywords:
+  - NOCSH
+  ms.author: kwekua
+  author: kwekuako
+  manager: scotv
+  audience: Admin
+  ms.topic: faq
+  ms.service: microsoft-365-business
+  ms.localizationpriority: medium
+  ms.collection:
+    - Tier2
+    - scotvorg
+    - M365-subscription-management
+    - Adm_O365
+    - Adm_TOC
+    - operations-pod
+  ms.custom: campaignIDs-batch2
+  search.appverid:
+   - MET150
+   - MOE150
+title: Sign up for Microsoft 365 Business Standard FAQ
+summary: |
+
+  This article provides answers to frequently asked questions that administrator might have about signing up for Microsoft 365 Business Standard. For more information about Microsoft 365 Business Standard, see [Sign up for Microsoft 365 Business Standard](signup-business-standard.md).
+
+sections:
+- name: Sign up for Microsoft 365 Business Standard FAQ
+  questions:
+  - question: |
+      What is a business email and what are the advantages of setting one up?
+    answer: |
+      A business email is an email that uses your own domain name. For example, if you own the domain name `contoso.com`, you can build a website using the URL `www.contoso.com`. You can also have a custom email address such as `yourname@contoso.com`. This type of email is referred to as a branded business email and helps identify your organization in email communications.
+
+  - question: |
+      How do I get a new business email address?
+    answer: |
+      You have three options for getting a business email.
+
+      - Use a suggested **onmicrosoft.com** domain for free (`someone@mybusiness.onmicrosoft.com`). This option doesn't require a custom domain but isn't recommended for customer-facing scenarios, such as sending emails to customers.
+
+      - Buy a new domain to have a more professional email address (`mybusinessname@contoso.com`).
+
+      - Use a domain name that you already own.
+
+  - question: |
+      Why might I need to verify my domain to create a business email?
+    answer: |
+      If you choose to use a domain you already own, you can use it for your email address with Microsoft 365. As part of the sign-up process, Microsoft 365 asks you to verify the domain so you can send emails through Microsoft 365. Verification typically involves adding a DNS record to confirm domain ownership. This verification confirms that you're the owner of the domain. It enhances security and helps prevent fraudulent activity.
+
+  - question: |
+      Is there a benefit to paying monthly vs. annually?
+    answer: |
+      To provide you with the greatest amount of flexibility, Microsoft 365 offers different payment options. Microsoft 365 Business Basic, Apps for business, Business Standard, and Business Premium plans are available for monthly or annual commitment payment:
+
+      - **Monthly commitment payment**: Pay month to month and cancel at any time.
+
+      - **Annual commitment payment**: Commit to one year and pay monthly or annually at a discounted rate.
+
+  - question: |
+      How does recurring billing work?
+    answer: |
+      When recurring billing is on, your subscription automatically renews at the end of each billing term. If your subscription is active, you can turn recurring billing off or on in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339). For more information, see [Manage recurring billing in the Microsoft 365 admin center](../../commerce/subscriptions/renew-your-subscription.md).
+
+  - question: |
+      What do I do if I want to change my business name?
+    answer: |
+      Contact Microsoft support to request an update to your business name. Support can help ensure the change is applied consistently across your Microsoft 365 services. For more information, see [Get support](../get-help-support.md).

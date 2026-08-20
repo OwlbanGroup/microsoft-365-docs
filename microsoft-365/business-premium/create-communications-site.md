@@ -1,13 +1,11 @@
 ---
 title: "Create a SharePoint communications site in Teams with Microsoft 365 for business"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business-security
+ms.service: microsoft-365-admin
 ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.collection:
@@ -16,21 +14,18 @@ ms.collection:
 - M365-identity-device-management
 - M365-Campaigns
 - tier2
+- trust-pod
 ms.custom:
 - Adm_O365
 - MiniMaven
 - MSB365
 - admindeeplinkSPO
-search.appverid:
-- BCS160
-- MET150
-- MOE150
 description: "Create a SharePoint communications site for your campaign or business and protect your team from cyberattacks and incursions from malware and other threats due to improper file sharing."
 ---
 
 # Create a communications site
 
-A great way to communicate priorities, share strategy documents, and highlight upcoming events is to use a communications site in SharePoint, and that's what this article is all about. Communications sites are for sharing things broadly across your whole business or campaign—it's your internal strategy site and tactical room.
+A great way to communicate priorities, share strategy documents, and highlight upcoming events is to use a communications site in SharePoint, and that's what this article is all about. Communications sites are for sharing things broadly across your whole business or campaign-it's your internal strategy site and tactical room.
 
 ## Best practices
 
@@ -72,4 +67,4 @@ If you don't see the **+ Create** site link, self-service site creation might no
 
 ## Next step
 
-[Protect managed devices](m365bp-protect-managed-devices.md) for your organization.
+[Protect managed devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment) for your organization.

@@ -1,24 +1,19 @@
 ---
 title: "Sign in and set up Microsoft 365 for Campaigns"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business-security
+ms.service: microsoft-365-admin
 ms.date: 06/07/2024
 ms.localizationpriority: medium
 ms.collection:
 - M365-Campaigns
 - m365solution-smb
 - tier2
+- trust-pod
 ms.custom:
 - MiniMaven
-search.appverid:
-- BCS160
-- MET150
 ms.assetid: 496e690b-b75d-4ff5-bf34-cc32905d0364
 description: "Setup overview for Microsoft 365 for Campaigns or other businesses"
 ---
@@ -100,7 +95,7 @@ Make sure that you meet the following requirements before you begin your setup p
 
 3. Type your username and password. Select **Sign in**.
 
-4. In the top right of the page, find the **Preview on** control. Select **Preview on** so you can use all the controls described in [Configure your security protection for your campaign](m365bp-security-overview.md).
+4. In the top right of the page, find the **Preview on** control. Select **Preview on** so you can use all the controls described in [Configure your security protection for your campaign](/microsoft-365/admin/security-and-compliance/m365bp-security-benefits).
 
 ## How your staff will sign in
 
@@ -142,4 +137,4 @@ To help your staff learn about steps to protect your campaign from cyber threats
 
 ## Next objective
 
-Proceed to [set up your security protection](m365bp-security-overview.md).
+Proceed to [set up your security protection](/microsoft-365/admin/security-and-compliance/m365bp-security-benefits).

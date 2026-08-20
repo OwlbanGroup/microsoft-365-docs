@@ -1,6 +1,6 @@
----
+﻿---
 title: "Microsoft 365 network provider assessments."
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/05/2024
@@ -18,6 +18,7 @@ ms.collection:
 - must-keep
 description: "Microsoft 365 network provider assessments"
 ROBOTS: NOINDEX, NOFOLLOW
+ms.custom: network
 ---
 
 # Microsoft 365 network provider assessments.
@@ -50,10 +51,10 @@ By using telemetry data from the actual calls, Microsoft Teams availability is c
 
 Network providers are detected from network attributes in Office 365 network telemetry. Network attributes that may be used for detection include:
 
-* Public IP Address ownership
-* Public ASN ownership
-* VPN network interface details
-* SSL Certificate ownership
+- Public IP Address ownership
+- Public ASN ownership
+- VPN network interface details
+- SSL Certificate ownership
 
 Specific network attributes for a network provider solution are either obtained from public sources, from Microsoft network telemetry, or contributed to Microsoft by the network provider.
 
@@ -69,14 +70,14 @@ The formula used for the standard error is:
 
 Where:
 
-* z is the statistical coefficient and for 95% confidence interval the value is 1.96
-* c is the error coefficient for the percentile and for the 50th percentile it's 1.09
-* σ is the standard deviation of the aggregation
-* n is the number of samples
+- z is the statistical coefficient and for 95% confidence interval the value is 1.96
+- c is the error coefficient for the percentile and for the 50th percentile it's 1.09
+- σ is the standard deviation of the aggregation
+- n is the number of samples
 
 ## Data aggregation slicing
 
-For customer specific reporting the aggregations are sliced by the customer and by detected network provider and by work location type. They're also sliced by office location for drill-down capability. For the NPI Chart views including Target Baseline metrics are aggregations sliced by network provider and by country/region and state. The NPI Chart data is aggregated from all Office 365 customers.
+For customer specific reporting, the aggregations are sliced by the customer and by detected network provider and by work location type. They're also sliced by office location for drill-down capability. For the NPI Chart views including Target Baseline metrics are aggregations sliced by network provider and by country/region and state. The NPI Chart data is aggregated from all Microsoft 365 customers.
 
 For network providers the aggregations are sliced by network provider, by geography (including country/region, state, and city), and by /24 public network.
 
@@ -84,10 +85,10 @@ For network providers the aggregations are sliced by network provider, by geogra
 
 There are some markers we show where data can't be reported.
 
-* **Statistical significance** – As described above we don't show data where the standard error of sampling is greater than 20%.
-* **No data** – This is displayed if for some reason this data element had no samples.
-* **Privacy requirement** – This is displayed for the network provider view if there were fewer than five customers in any aggregation result or if there were fewer than 24 samples in the aggregation. We don't provide customer performance data directly to network providers for customer privacy reasons.
-* **Dominating customer** – Even where there are five or more customers, there might be cases where a customer can be guessed due to the specific network provider having a large customer in a geographic area. To avoid this, we compare the population including the largest customer with the same population excluding the largest customer. Using a Cohen's D calculation, we discard results where the population difference is greater than 0.5. This means that where the largest customer has a medium to large Cohen's D effect on the aggregation result the result is blocked. A network provider simply needs to expand their geographic area where they have more customers to see results.
+- **Statistical significance** - As described above we don't show data where the standard error of sampling is greater than 20%.
+- **No data** - This is displayed if for some reason this data element had no samples.
+- **Privacy requirement** - This is displayed for the network provider view if there were fewer than five customers in any aggregation result or if there were fewer than 24 samples in the aggregation. We don't provide customer performance data directly to network providers for customer privacy reasons.
+- **Dominating customer** - Even where there are five or more customers, there might be cases where a customer can be guessed due to the specific network provider having a large customer in a geographic area. To avoid this, we compare the population including the largest customer with the same population excluding the largest customer. Using a Cohen's D calculation, we discard results where the population difference is greater than 0.5. This means that where the largest customer has a medium to large Cohen's D effect on the aggregation result the result is blocked. A network provider simply needs to expand their geographic area where they have more customers to see results.
 
 The markers **Privacy requirement** and **Dominating customer** aren't shown in customer reports.
 In addition, we remove outliers from the sample source where outliers are defined as:
@@ -98,18 +99,14 @@ Network providers will additionally not be shown in a tenant or location view if
 
 ## Network Provider Index Chart
 
-The NPI Chart shows the network providers with the highest performance for Office 365 applications for customers who are in the same country/region and state as your office. We show availability and performance data related to these providers. This chart also has a target baseline that shows the best performance observed in the same country/region and state.
+The NPI Chart shows the network providers with the highest performance for Microsoft 365 applications for customers who are in the same country/region and state as your office. We show availability and performance data related to these providers. This chart also has a target baseline that shows the best performance observed in the same country/region and state.
 
 Note: NPI Chart is currently available only for United States of America. The chart will be expanded soon to all locations globally.
 
-## Related articles
+## Related content
 
-[Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
-
-[Network provider reporting](office-365-network-mac-perf-nppux.md)
-
-[Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
-
-[Microsoft 365 network connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
-
-[Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)
+- [Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
+- [Network provider reporting](office-365-network-mac-perf-nppux.md)
+- [Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
+- [Microsoft 365 network connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
+- [Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)

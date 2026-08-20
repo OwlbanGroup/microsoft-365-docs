@@ -1,6 +1,6 @@
----
+﻿---
 title: "Plan for network devices that connect to Microsoft 365 services"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 06/27/2024
@@ -15,7 +15,9 @@ ms.collection:
 - must-keep
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom: 
+- Adm_O365
+- network
 search.appverid:
 - MET150
 - MOE150
@@ -32,16 +34,7 @@ Some network hardware may have limitations on the number of concurrent sessions 
 
 This article is part of [Network planning and performance tuning for Microsoft 365](./network-planning-and-performance.md).
 
-On-premises outgoing Internet proxy settings also affect connectivity to Microsoft 365 services for your client applications. You must also configure your network proxy devices to allow connections for Microsoft cloud services URLs and applications. Every organization is different. To get an idea for how Microsoft manages this process and the amount of bandwidth we provision, [read the case study](https://www.microsoft.com/itshowcase/Article/Content/631/Optimizing-network-performance-for-Microsoft-Office-365).
-  
-The following Skype for Business Help articles have more information about Skype for Business settings:
-  
-- [Troubleshooting Skype for Business Online sign-in errors for administrators](/skypeforbusiness/set-up-skype-for-business-online/troubleshooting-sign-in-errors-for-admins)
-
-- [You cannot connect to Skype for Business, or certain features don't work, because an on-premises firewall blocks the connection](https://go.microsoft.com/fwlink/p/?LinkID=243625)
-
-> [!NOTE]
-> While many of these settings are Skype for Business-specific, the general guidance on network configuration is useful for all Microsoft 365 services.
+On-premises outgoing Internet proxy settings also affect connectivity to Microsoft 365 services for your client applications. You must also configure your network proxy devices to allow connections for Microsoft cloud services URLs and applications. Every organization is different.
   
 ## Determining Network Capacity
 
@@ -55,7 +48,7 @@ To test network capacity, monitor the network activity on the proxy network inte
 
 If your organization uses wide area network (WAN) acceleration proxy appliances, you may encounter issues when you access the Microsoft 365 services. You may need to optimize your network device or devices to ensure that your users have a consistent experience when accessing Microsoft 365. For example, Microsoft 365 services encrypt some Microsoft 365 content and the TCP header. Your device may not be able to handle this kind of traffic.
   
-Read our support statement about [Using WAN Optimization Controller or Traffic/Inspection devices with Microsoft 365](https://support.microsoft.com/kb/2690045).
+Read our support statement about [Using WAN Optimization Controller or Traffic/Inspection devices with Microsoft 365](/troubleshoot/microsoft-365-apps/office-suite-issues/office-365-third-party-network-devices).
   
 ## Hardware and Software Load-balancing Devices
 
@@ -65,10 +58,9 @@ We provide a software-based NLB solution built into Windows Server. Microsoft 36
   
 ## Firewalls and proxies
 
-For more details on configuring firewalls and proxies to connect to Microsoft 365, read [Managing Microsoft 365 endpoints](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a), [Assessing Microsoft 365 network connectivity](assessing-network-connectivity.md), and [Microsoft 365 endpoints FAQ](https://support.office.com/article/d4088321-1c89-4b96-9c99-54c75cae2e6d) to learn more about devices and circuit selection.
-  
-## See also
+For more details on configuring firewalls and proxies to connect to Microsoft 365, see [Managing Microsoft 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints) and [Assessing Microsoft 365 network connectivity](assessing-network-connectivity.md).
 
-[Setup guides for Microsoft 365 services](setup-guides-for-microsoft-365.md)
+## Related content
 
-[Microsoft 365 Enterprise overview](microsoft-365-overview.md)
+- [Setup guides for Microsoft 365 services](setup-guides-for-microsoft-365.md)
+- [Microsoft 365 Enterprise overview](microsoft-365-overview.md)

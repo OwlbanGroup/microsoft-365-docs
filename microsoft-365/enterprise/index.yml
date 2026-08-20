@@ -17,8 +17,8 @@ metadata:
   - Adm_TOC
   - essentials-navigation
   author: kelleyvice-msft #Required; your GitHub user alias, with correct capitalization.
-  ms.author: kvice #Required; microsoft alias of author; optional team alias.
-  ms.date: 04/01/2025 #Required; mm/dd/yyyy format.
+  ms.author: scotv #Required; microsoft alias of author; optional team alias.
+  ms.date: 10/20/2025 #Required; mm/dd/yyyy format.
 
 # highlightedContent section (optional)
 # Maximum of 8 items
@@ -59,7 +59,7 @@ conceptualContent:
         - url: /deployoffice/plan-microsoft-365-apps
           itemType: deploy
           text: Microsoft 365 Apps for enterprise
-        - url: /mem/intune/fundamentals/intune-planning-guide
+        - url: /intune/fundamentals/planning-guide
           itemType: deploy
           text: Microsoft Intune
     # Card
@@ -74,7 +74,7 @@ conceptualContent:
         - url: /deployoffice/overview-update-channels
           itemType: concept
           text: Microsoft 365 Apps for enterprise
-        - url: /mem/intune/apps/apps-enterprise-app-management
+        - url: /intune/app-management/deployment/enterprise-app-management
           itemType: get-started
           text: Apps with Intune
         - url: /office365/

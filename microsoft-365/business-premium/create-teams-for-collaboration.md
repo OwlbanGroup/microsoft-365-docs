@@ -1,13 +1,11 @@
 ---
 title: "Use Microsoft Teams for collaboration"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business-security
+ms.service: microsoft-365-admin
 ms.localizationpriority: medium
 ms.date: 05/31/2024
 ms.collection:
@@ -16,14 +14,11 @@ ms.collection:
 - M365-identity-device-management
 - M365-Campaigns
 - tier2
+- trust-pod
 ms.custom:
 - Adm_O365
 - MiniMaven
 - MSB365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
 description: "Learn why and how to create a team in Microsoft Teams so your small business or campaign can collaborate."
 ---
 

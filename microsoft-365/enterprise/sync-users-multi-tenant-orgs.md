@@ -1,9 +1,9 @@
 ---
 title: Synchronize users in multitenant organizations in Microsoft 365
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/02/2025
+ms.date: 04/29/2026
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-365-enterprise
@@ -15,6 +15,7 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: Learn how to manage user sync in multitenant organizations in Microsoft 365.
+ms.custom: tenant
 ---
 
 # Synchronize users in multitenant organizations in Microsoft 365

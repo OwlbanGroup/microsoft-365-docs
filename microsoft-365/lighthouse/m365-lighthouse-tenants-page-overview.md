@@ -1,7 +1,7 @@
 ---
 title: "Overview of the Tenants page in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: ebamoh
@@ -66,7 +66,7 @@ The following table describes the different statuses that you might see in one o
 
 | Status           | Description                                                                                                        |
 |------------------|--------------------------------------------------------------------------------------------------------------------|
-| Access needed    | You don't have the appropriate granular delegated administrative privileges (GDAP) to view the information. Reach out to an admin in your partner tenant who can assign you the appropriate GDAP role to view data on the Tenants page.<br><br>To see which GDAP roles provide access to Microsoft Secure Score, see [Microsoft Secure Score: Microsoft Entra global roles permissions](/defender-xdr/microsoft-secure-score#microsoft-entra-global-roles-permissions).<br><br>To see which GDAP roles provide access to apps and services usage, see [Microsoft 365 Reports in the admin center: Who can see reports](../admin/activity-reports/activity-reports.md#who-can-see-reports). |
+| Access needed    | You don't have the appropriate granular delegated administrative privileges (GDAP) to view the information. Reach out to an admin in your partner tenant who can assign you the appropriate GDAP role to view data on the Tenants page.<br><br>To see which GDAP roles provide access to Microsoft Secure Score, see [Microsoft Secure Score: Microsoft Entra global roles permissions](/defender-xdr/microsoft-secure-score#microsoft-entra-global-roles-permissions).<br><br>To see which GDAP roles provide access to apps and services usage, see [Microsoft 365 admin center usage reports overview: Before you begin](../admin/activity-reports/activity-reports.md#before-you-begin)|
 | Error       | An error occurred during the onboarding process for this customer tenant and we're working on a fix. If this error persists for more than 24 hours, contact Support. |
 | Limited          | This customer tenant has access to only a limited set of experiences in Lighthouse, including GDAP setup and management, user search, user details, tenant tagging, and service health.<br><br>Select the tenant name to see a detailed status of Lighthouse management requirements. For more information, see [Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md).|
 | Managed          | This customer tenant can be actively managed and monitored in Lighthouse for users and devices with required licenses.  |
@@ -133,7 +133,7 @@ The **Action items** tab displays a summary of key issues in the customer tenant
 
 #### Devices
 
-The **Devices** section provides a summary of the number of customer device issues that require attention across the tenant, including compliance, threat protection, device health, Windows 365 issues, and Windows event logs. This section also provides links to the associated pages where you can view details about the issues.
+The **Devices** section provides a summary of the number of customer device issues that require attention across the tenant, including compliance, threat protection, device health, and Windows 365 issues. This section also provides links to the associated pages where you can view details about the issues.
 
 #### Users and email
 

@@ -1,0 +1,27 @@
+{
+  "AutoIssueAssign": {
+    "ExcludedUserList": ["user1", "user2"]
+  },
+  "AutoLabelAssign": {
+    "AutoAssignUsers": 1,
+    "AutoAssignReviewers": 1,
+    "AutoLabel": 1,
+    "ExcludedUserList": ["user1", "user2"],
+    "ExcludedBranchList": ["branch1", "branch2"]
+  },
+  "AutoPublish": {
+    "EnableAutoPublish": true,
+    "EnableAutoMerge": true
+  },
+  "Stale": {
+    "RunDebug": false
+  },
+  "StaleBranch": {
+    "RepoBranchSkipList": ["ExampleBranch1", "ExampleBranch2"],
+    "ReportOnly": false
+  },
+  "TierManagement": {
+    "EnableWriteSignOff": 1,
+    "EnableReadOnlySignoff": 1
+  }
+}

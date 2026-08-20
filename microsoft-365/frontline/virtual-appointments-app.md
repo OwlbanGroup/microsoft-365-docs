@@ -29,10 +29,23 @@ description: Get an overview of how to use the Virtual Appointments app in Teams
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 09/18/2023
+ms.date: 10/06/2025
 ---
 
 # Use the Virtual Appointments app in Microsoft Teams
+
+> [!IMPORTANT]
+> The Virtual Appointments app in Microsoft Teams is no longer available.
+>
+> To schedule and manage appointments, your users can use Microsoft Bookings. As part of Microsoft 365, Microsoft Bookings is an online scheduling tool that enables users to create customizable booking pages where customers, clients, and colleagues can easily schedule appointments.
+>
+> - For advanced scheduling features in Microsoft Bookings, like SMS notifications and the queue for scheduled appointments, users also need a [Teams Premium license](/microsoftteams/enhanced-teams-experience).
+>
+> For existing Virtual Appointment app users, we recommend using Microsoft Bookings, licensed through a Microsoft 365 subscription plan, together with a Teams Premium license for a more comprehensive solution.
+>
+> To prepare for this change, notify your users, update relevant documentation as appropriate, and share details on Microsoft Bookings.
+>
+> [Learn more about Microsoft Bookings](/microsoft-365/bookings/bookings-overview) and the [advanced experience in Bookings with Teams Premium](https://techcommunity.microsoft.com/blog/microsoftteamsblog/teams-premium-enhances-scheduling-in-microsoft-bookings/4292193). To learn more about appointments, see [Appointments with Microsoft Teams](virtual-appointments.md).
 
 ![Information icon](media/info.png) **Some features described in this article require [Teams Premium](/microsoftteams/teams-add-on-licensing/licensing-enhance-teams)**.
 
@@ -40,7 +53,7 @@ ms.date: 09/18/2023
 
 This article is intended primarily for users in your organization who will set up the Virtual Appointments app for staff members on their team. This can include managers, supervisors, schedulers, or other employees. Users who initially create a shared appointment calendar are automatically assigned the Virtual Appointments admin role for that calendar and can perform most of the tasks in this article.
 
-If you’re an IT admin, see [Manage the Virtual Appointments app](/microsoftteams/manage-virtual-appointments-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json) to learn how to control access to the app in your organization.
+If you're an IT admin, see [Manage the Virtual Appointments app](/microsoftteams/manage-virtual-appointments-app?bc=/microsoft-365/frontline/breadcrumb/toc.json&toc=/microsoft-365/frontline/toc.json) to learn how to control access to the app in your organization.
 
 Team members can find the app in the Teams app store, or you can share the [installation link](https://teams.microsoft.com/l/app/6e106207-4565-4312-b3ea-bbe9b3ed0a02?source=app-details-dialog) to help them find it. IT admins can use an [app setup policy](/microsoftteams/teams-app-setup-policies) to pin the app for your organization, or team members can [pin the app themselves](https://support.microsoft.com/office/pin-an-app-for-easy-access-3045fd44-6604-4ba7-8ecc-1c0d525e89ec).
 
@@ -75,7 +88,7 @@ To get started, [create a new appointment calendar](#to-create-a-new-appointment
 #### To create a new appointment calendar
 
 1. On the **Home** tab or **Schedule** tab of the app, choose **Create appointment calendar**.
-1. Complete the form and choose the relevant service category for your organization. If you’re part of a larger organization, consider creating separate calendars for specific departments within your organization.
+1. Complete the form and choose the relevant service category for your organization. If you're part of a larger organization, consider creating separate calendars for specific departments within your organization.
 
     :::image type="content" source="media/virtual-appointments-app-new-appointment-calendar.png" alt-text="Screenshot of the new appointment calendar page." lightbox="media/virtual-appointments-app-new-appointment-calendar.png":::
 
@@ -196,7 +209,7 @@ The Virtual Appointments usage report in the **Analytics** tab gives you an over
 The analytics experience depends on user role:
 
 - Virtual Appointments admins get organizational analytics. If you're an admin, you'll see an org-level report showing aggregated analytics across all departments in your organization. To learn more, see [Virtual Appointments usage report](virtual-appointments-usage-report.md).
-- Non-admins get either departmental or individual analytics. Staff members who are associated with a department see a report that shows data for the given department. If a person isn’t associated with a department, the report shows data for the appointments that they conducted. To learn more, see [Analyze your Virtual Appointment usage](https://support.microsoft.com/topic/3214fd14-a860-4870-b30c-e8f87e182ce0).
+- Non-admins get either departmental or individual analytics. Staff members who are associated with a department see a report that shows data for the given department. If a person isn't associated with a department, the report shows data for the appointments that they conducted. To learn more, see [Analyze your Virtual Appointment usage](https://support.microsoft.com/topic/3214fd14-a860-4870-b30c-e8f87e182ce0).
 
 ## Related articles
 

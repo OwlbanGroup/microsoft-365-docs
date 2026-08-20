@@ -1,7 +1,7 @@
 ---
 title: "Compare device compliance policy settings in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: prpath
@@ -65,6 +65,6 @@ As you make policy adjustments, make sure you assess your changes against your c
 
 ## Related content
 
-[What is device enrollment in Intune?](/mem/intune/enrollment/device-enrollment) (article)  
-[Use compliance policies to set rules for devices you manage with Intune](/mem/intune/protect/device-compliance-get-started) (article)  
+[What is device enrollment in Intune?](/intune/device-enrollment/enroll-devices) (article)  
+[Use compliance policies to set rules for devices you manage with Intune](/intune/device-security/compliance/overview) (article)  
 [Overview of using Microsoft 365 Lighthouse baselines to deploy standard tenant configurations](m365-lighthouse-deploy-standard-tenant-configurations-overview.md) (article)

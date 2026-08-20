@@ -1,4 +1,12 @@
 items:
-- name: Microsoft 365 for frontline workers
-  tocHref: /frontline/
-  topicHref: /microsoft-365/frontline/
+- name: Microsoft 365
+  tocHref: /microsoft-365/
+  topicHref: /microsoft-365/index
+  items:
+  - name: Microsoft 365 for frontline workers
+    tocHref: /microsoft-365/frontline/
+    topicHref: /microsoft-365/frontline/
+  - name: Microsoft 365 for frontline workers
+    tocHref: /microsoftteams/
+    topicHref: /microsoft-365/frontline/    
+

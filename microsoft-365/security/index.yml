@@ -11,7 +11,9 @@ metadata:
   services: office-365-security-compliance
   ms.service: microsoft-365-security
   ms.topic: hub-page # Required
-  ms.collection: m365-security-compliance
+  ms.collection: 
+  - m365-security-compliance
+  - trust-pod
   author: dansimp #Required; your GitHub user alias, with correct capitalization.
   ms.author: dansimp #Required; microsoft alias of author; optional team alias.
   ms.date: 04/24/2024 #Required; mm/dd/yyyy format.
@@ -30,10 +32,6 @@ highlightedContent:
     - title: Zero Trust identity and device access configurations
       itemType: quickstart
       url: /microsoft-365/security/office-365-security/zero-trust-identity-device-access-policies-overview
-    # Card
-    - title: Strengthen your security posture
-      itemType: quickstart
-      url: /microsoft-365/security/security-posture-solution-overview
     # Card
     - title: Microsoft SIEM and XDR security solutions
       itemType: overview

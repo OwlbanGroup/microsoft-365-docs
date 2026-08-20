@@ -12,6 +12,7 @@ ms.collection:
 - Tier1
 - scotvorg
 - essentials-manage
+- operations-pod
 description: "Change the color theme of your booking page."
 ---
 
@@ -35,7 +36,7 @@ To customize your booking page, sign in to [microsoft365.com](https://office.com
 
 The section below gives you information about setting up your bookings page and how to publish your page.
 
-- **Configure booking page** Publish your calendar live to make your service bookable. You have the options to share the link to your calendar via email and Twitter, and to add a **Book Now** button to a Facebook page. The link can also be embedded in your organization’s Web site.
+- **Configure booking page** Publish your calendar live to make your service bookable. You have the options to share the link to your calendar via email and Twitter, and to add a **Book Now** button to a Facebook page. The link can also be embedded in your organization's Web site.
 
     The internal Booking Page looks like this:
 

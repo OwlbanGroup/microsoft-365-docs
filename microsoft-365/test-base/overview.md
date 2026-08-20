@@ -30,13 +30,13 @@ The Test Base for Microsoft 365 service can accommodate your expanding testing m
 
 Test Base ensures that your applications continue working as expected, even when platform dependencies vary, or when the Windows update service applies new Windows updates. With Test Base, you can avoid the aggravation, protracted time commitments, and expenses of setting up and maintaining a complex lab environment for testing your applications. 
 
-In addition, you can automatically test your applications’ compatibility against security and feature updates for Windows by using secure virtual machines (VMs). Doing so allows you to obtain access to world-class intelligence for testing your applications. You can also test your apps compatibility with prerelease Windows security updates — submit a request to get access.
+In addition, you can automatically test your applications' compatibility against security and feature updates for Windows by using secure virtual machines (VMs). Doing so allows you to obtain access to world-class intelligence for testing your applications. You can also test your apps compatibility with prerelease Windows security updates - submit a request to get access.
 
 ## How does Test Base work?
 
 To sign up for the Test Base service, see [Create a new Test Base account](createAccount.md).
 
-After a customer has enrolled in the Test Base service, it’s easy to begin uploading application packages for testing.
+After a customer has enrolled in the Test Base service, it's easy to begin uploading application packages for testing.
 
 Following a successful upload, packages are tested against Windows prerelease updates.
 
@@ -47,7 +47,7 @@ However, if the package fails any test, customers can use insights from memory o
 > [!NOTE]
 > **For customers to take advantage of prerelease update testing, they must specifically request access to it. Once your request for access to prerelease updates is approved, your uploaded packages will automatically get scheduled to be tested against prerelease Windows updates for the OS versions selected during package uploading.**.
 
-As new Windows prerelease updates become available, existing application packages are automatically tested with the new prerelease content. Following each test, another round of insights is provided. If customers don’t specifically request access to prerelease testing, their application packages are tested against only the current released version of Windows. 
+As new Windows prerelease updates become available, existing application packages are automatically tested with the new prerelease content. Following each test, another round of insights is provided. If customers don't specifically request access to prerelease testing, their application packages are tested against only the current released version of Windows. 
 
 After packages are successfully tested, customers can resolve any issues found during testing and deliver their applications to their end users with the assurance that Test Base did its job.
 

@@ -1,16 +1,15 @@
 ---
 title: "Microsoft Feedback Code of Conduct"
-ms.author: kwekua
-author: kwekuako
-manager: scotv
-ms.date: 02/24/2025
+ms.author: danbrown
+author: DHB-MSFT
+manager: dansimp
+ms.date: 04/30/2026
 audience: Admin
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-365-business
-ms.localizationpriority: medium
-ms.collection: 
-- Tier3
-- scotvorg
+ms.subservice: m365-privacy
+ms.collection: feedback-content
+hideEdit: true
 description: "Learn about Microsoft code of conduct for the feedback you provide."
 ---
 
@@ -37,20 +36,20 @@ In addition to upholding this Code of Conduct, you're also responsible for adher
 
 ## Don't
 
-- Post feedback that is the same or similar to feedback you posted before.
+- Post feedback that's the same or similar to feedback you posted before.
 - Threaten, stalk, insult, victimize or intimidate anyone (or group of people) for any reason, including on the basis of age, gender, disability, ethnicity, sexual orientation, race, or religion.
 - Incite other users to threaten, stalk, insult, victimize, or intimidate another person or group of people.
-- Harass, insult, tease, or correct other users about the grammar used in their posts. Good or bad grammar isn't the point-the feedback community is about sharing feedback with Microsoft and others within the community.
-- Post content that is showing nudity of any sort, including full or partial photographic human nudity, or nudity in cartoons, fantasy art, or manga.
+- Harass, insult, tease, or correct other users about the grammar used in their posts. Good or bad grammar isn't the point. The feedback community is about sharing feedback with Microsoft and others within the community.
+- Post content that's showing nudity of any sort, including full or partial photographic human nudity, or nudity in cartoons, fantasy art, or manga.
 - Post chain letters.
 - Link to websites that require payment to access information.
 - Post links to external sites that violate this Code of Conduct.
 
 ## Things that will get you immediately banned from participating in feedback
 
-- Posting content that is intended to harm or exploit minors in any way, including collecting the personal data of any minor (anyone under18 years old), including, but not limited to: name, email address, home address, phone number, or the name of the minor's school.
+- Posting content that's intended to harm or exploit minors in any way, including collecting the personal data of any minor (anyone under18 years old), including, but not limited to: name, email address, home address, phone number, or the name of the minor's school.
 - Invading anyone's privacy by attempting to harvest, collect, store, or publish private or personal data, such as passwords, account information, credit card numbers, addresses, or other contact information without that person's knowledge and willing consent.
-- Posting content or links to content that is illegal or violates any applicable local or national laws.
+- Posting content or links to content that's illegal or violates any applicable local or national laws.
 - Posting or spreading viruses, worms, malware, or other software intended to harm another user's computer.
 - Impersonating a Microsoft employee, agent, manager, host, administrator, moderator, another user, MVP, or any other person through any means.
 - Pirating Microsoft software or products, or offering pirated software or products for sale, including posting product keys.
@@ -77,10 +76,10 @@ Microsoft reserves the right, at its sole discretion and without any obligation 
 - We encourage you to not share information that others could use to harm you. We encourage parents to be aware of and help exercise control over content posted by and activities of their children to keep them safe online.
 - Microsoft isn't responsible for the content of any user-created posting, listing, or message. The decision to view content or engage with others is yours. We advise you to use your judgment.
 - You're responsible for protecting your computer against interference, spyware, or viruses that might be encountered. We recommend you install a virus protection program on your computer and keep it up to date.
-- You might use the Report Abuse links in the public feedback communities to report violations of this Code of Conduct.
+- You might use the "Report abuse" links in the public feedback communities to report violations of this Code of Conduct.
 - Microsoft reserves the right to amend or change the Code of Conduct or any service at any time without notice. We encourage you to periodically review these guidelines to ensure you are in compliance.
-- Some information you provide or upload to the service might be stored outside of the country/region in which you reside.
-- The Microsoft Terms of Use and the Microsoft Privacy Policy governs all activity on the service.
+- Some information you provide or upload to the service might be stored outside of the country or region in which you reside.
+- The [Microsoft Terms of Use](https://www.microsoft.com/legal/terms-of-use) and the Microsoft Privacy Policy governs all activity on the service.
 - You acknowledge that by providing feedback to Microsoft privately or within a public feedback community you're a volunteer participant in the feedback community and that you may discontinue your participation at any time. Nothing related to your participation will be construed as creating an employer-employee relationship, a partnership, joint venture, association, or agency relationship, or as a limitation upon Microsoft's right to terminate your access as foreseen above, or upon Microsoft's discretion, to terminate your access as provided herein. You assume all risk for your use.
 - You understand that posting content or submitting material is voluntary, and you are under no obligation whatsoever to provide any submissions or contributions. You're solely responsible for your dealings with any third party that relates to your use of the community, or any information or materials you obtain from a third party.
 - No Compensation. Microsoft shall not be obligated to provide, and you have no expectation of receiving, any compensation in any form for your voluntary participation in the community, or for your submissions or contributions.

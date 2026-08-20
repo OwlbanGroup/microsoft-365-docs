@@ -1,9 +1,9 @@
 ---
 title: "Microsoft 365 tenant-to-tenant migrations"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
-ms.date: 07/22/2024
+ms.date: 07/22/2025
 audience: Admin
 ms.topic: overview
 ms.service: microsoft-365-enterprise
@@ -22,7 +22,9 @@ ms.assetid: eb45fd8b-1d5d-4b0c-9c5a-479dbb176e7d
 f1.keywords:
 - NOCSH
 description: Learn how to migrate Microsoft 365 tenants.
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- tenant
 ---
 
 # Microsoft 365 tenant-to-tenant migrations

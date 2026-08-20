@@ -69,98 +69,96 @@
     "externalReference": [],
     "globalMetadata": {
       "feedback_system": "Standard",
-            "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
+      "feedback_product_url": "https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app",
       "breadcrumb_path": "/microsoft-365/breadcrumb/toc.json",
       "recommendations": true,
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "searchScope": ["Microsoft Bookings", "Microsoft 365 Lighthouse", "Microsoft 365 for frontline workers", "Microsoft Syntex", "Microsoft 365 Archive", "Microsoft 365"],
+      "searchScope": ["Microsoft Bookings", "Microsoft 365 Lighthouse", "Microsoft 365 for frontline workers", "Microsoft 365", "Microsoft 365 Archive", "Microsoft 365"],
       "contributors_to_exclude": [ 
-        "rjagiewich", 
-        "claydetels19",
-        "jborsecnik",
-        "shdyas", 
-        "garycentric",
-        "alexbuckgit", 
-        "beccarobins",
-        "dstrome",
-        "Stacyrch140",
-        "American-Dipper",
-        "padmagit77",
         "aditisrivastava07",
-        "Ruchika-mittal01"
+        "AGuentherinWA",
+        "alexbuckgit", 
+        "American-Dipper",
+        "beccarobins",
+        "claydetels19",
+        "dstrome",
+        "garycentric",
+        "jborsecnik",
+        "padmagit77",
+        "rjagiewich", 
+        "Ruchika-mittal01",
+        "shdyas", 
+        "Shipra-M09", 
+        "Stacyrch140",
+        "techtoons"
       ]
     },
     "fileMetadata": {
       "recommendations":{
         "admin/**/*.md": false,
-        "business/**/*.md": false,
         "business-video/**/*.md": false,
+        "business/**/*.md": false,
         "commerce/**/*.md": false,
         "lighthouse/**/*.md": false
-        },
+      },
       "titleSuffix": {
-        "compliance/**/*.md": "Microsoft Purview (compliance)",
-        "security/mtp/**/*.md": "Microsoft 365 security",
-        "managed-desktop/**/*.md": "Microsoft Managed Desktop",
-        "enterprise/**/*.md": "Microsoft 365 Enterprise",
+        "admin/**/*.md": "Microsoft 365 admin",
+        "archive/**/*.md": "Microsoft 365 Archive",
+        "archive/**/*.yml": "Microsoft 365 Archive",
         "business-premium/**/*.md": "Microsoft 365 Business Premium",
         "business/**/*.md": "Microsoft 365 Business",
-        "admin/**/*.md": "Microsoft 365 admin",
-        "lighthouse/**/*.md": "Microsoft 365 Lighthouse",
-        "syntex/**/*.md": "Microsoft Syntex",
+        "compliance/**/*.md": "Microsoft Purview (compliance)",
+        "enterprise/**/*.md": "Microsoft 365 Enterprise",
         "frontline/**/*.md": "Microsoft 365 for frontline workers",
-        "whiteboard/**/*.md": "Microsoft Whiteboard",
+        "lighthouse/**/*.md": "Microsoft 365 Lighthouse",
+        "managed-desktop/**/*.md": "Microsoft Managed Desktop",
+        "security/mtp/**/*.md": "Microsoft 365 security",
+        "syntex/**/*.md": "Microsoft 365",
         "topics/**/*.md": "Microsoft Topics",
-        "archive/**/*.md": "Microsoft 365 Archive",
-        "archive/**/*.yml": "Microsoft 365 Archive"
+        "whiteboard/**/*.md": "Microsoft Whiteboard"
       },
       "feedback_product_url": {
-        "compliance/**/*.md":"https://feedbackportal.microsoft.com/feedback/",
-        "security/**/*.md":"https://docs.microsoft.com/microsoft-365/security/defender/feedback",
-        "security/defender/**/*.md":"https://techcommunity.microsoft.com/t5/microsoft-365-defender/bd-p/MicrosoftThreatProtection",
         "admin/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
         "bookings/":"https://feedbackportal.microsoft.com/feedback/forum/e9c7c7d1-011c-ec11-b6e7-0022481f8472",
-        "business/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
-        "business-video/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
         "business-premium/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
-        "solutions/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
+        "business-video/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
+        "business/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
         "commerce/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
-        "syntex/**/*.md":"https://aka.ms/syntex/feedback",
+        "compliance/**/*.md":"https://feedbackportal.microsoft.com/feedback/",
         "enterprise/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
-        "solutions/**/*.md":"https://admin.microsoft.com/adminportal/home?showfeedback=DocsMacCampaign",
-        "lighthouse/":"https://feedbackportal.microsoft.com/feedback/forum/d6a21c42-fe1b-ec11-b6e7-0022481f8472",
         "frontline/":"https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472",
+        "lighthouse/":"https://feedbackportal.microsoft.com/feedback/forum/d6a21c42-fe1b-ec11-b6e7-0022481f8472",
+        "security/**/*.md":"https://learn.microsoft.com/en-us/defender-xdr/m365d-enable-faq",
+        "syntex/**/*.md":"https://aka.ms/syntex/feedback",
         "topics/**/*.md":"https://feedbackportal.microsoft.com/feedback/forum/5dc082d8-1e1c-ec11-b6e7-0022481f8472"
       },
       "searchScope": {
         "admin/**/*.md": ["Microsoft 365"],
         "admin/**/*.yml": ["Microsoft 365"],
+        "archive/**/*.md": ["Microsoft 365 Archive"],
+        "archive/**/*.yml": ["Microsoft 365 Archive"],
         "bookings/**/*.md": ["Microsoft Bookings"],
         "bookings/**/*.yml": ["Microsoft Bookings"],
-        "business/**/*.md": ["Microsoft 365"],
-        "business/**/*.yml": ["Microsoft 365"],
         "business-video/**/*.md": ["Microsoft 365"],
         "business-video/**/*.yml": ["Microsoft 365"],
+        "business/**/*.md": ["Microsoft 365"],
+        "business/**/*.yml": ["Microsoft 365"],
         "commerce/**/*.md": ["Microsoft 365"],
         "commerce/**/*.yml": ["Microsoft 365"],
         "compliance/**/*.md": ["Microsoft 365"],
         "compliance/**/*.yml": ["Microsoft 365"],
-        "lighthouse/**/*.md": ["Microsoft 365 Lighthouse"],
-        "lighthouse/**/*.yml": ["Microsoft 365 Lighthouse"],
+        "documentprocessing/**/*.md": ["Microsoft 365"],
+        "documentprocessing/**/*.yml": ["Microsoft 365"],
         "enterprise/**/*.md": ["Microsoft 365"],
         "enterprise/**/*.yml": ["Microsoft 365"],
         "frontline/**/*.md": ["Microsoft 365 for frontline workers"],
         "frontline/**/*.yml": ["Microsoft 365 for frontline workers"],
+        "lighthouse/**/*.md": ["Microsoft 365 Lighthouse"],
+        "lighthouse/**/*.yml": ["Microsoft 365 Lighthouse"],
         "security/**/*.md": ["Microsoft 365"],
         "security/**/*.yml": ["Microsoft 365"],
-        "solutions/**/*.md": ["Microsoft 365"],
-        "solutions/**/*.yml": ["Microsoft 365"],
-        "syntex/**/*.md": ["Microsoft Syntex"],
-        "syntex/**/*.yml": ["Microsoft Syntex"],
         "topics/**/*.md": ["Microsoft Topics"],
-        "topics/**/*.yml": ["Microsoft Topics"],
-        "archive/**/*.md": ["Microsoft 365 Archive"],
-        "archive/**/*.yml": ["Microsoft 365 Archive"]
+        "topics/**/*.yml": ["Microsoft Topics"]
       }
     },
     "template": [],
@@ -170,6 +168,36 @@
       "docs-link-absolute": {
         "exclude": [
         ]
+      },
+      "filename-incomplete": {
+        "exclude": [
+          "**/*.md",
+          "**/*.yml"
+        ]
+      },
+      "image-name-incomplete": {
+        "exclude": [
+          "**/*.gif",
+          "**/*.jpeg",
+          "**/*.jpg",
+          "**/*.png",
+          "**/*.svg"
+        ]
+      }, 
+      "image-structure-incorrect": { 
+        "exclude": [ 
+          "**/*.gif", 
+          "**/*.jpeg", 
+          "**/*.jpg", 
+          "**/*.png", 
+          "**/*.svg" 
+        ] 
+      }, 
+      "include-structure-incorrect": { 
+        "exclude": [ 
+          "**/*.md", 
+          "**/*.yml"
+        ] 
       },
       "sensitive-language-ma": {
         "exclude": [
@@ -182,12 +210,10 @@
       "sensitive-language-wl": {
         "exclude": [
           "frontline/shifts-connector-ukg-prerequisites.md"
-
         ]
       },
       "sensitive-language-bl": {
         "exclude": [
-
         ]
       }
     }

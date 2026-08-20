@@ -1,21 +1,26 @@
 ---
-title: Microsoft 365 Group mailbox size management 
+title: Microsoft 365 Group mailbox size management
 description: Learn about the group mailbox size management in Microsoft 365.
-author: DaniEASmith
-ms.author: danismith
-manager: jtremper
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: ITPro
 ms.topic: article
-ms.service: microsoft-365-business
+ms.service: microsoft-365-admin
 ms.localizationpriority: medium
 search.appverid: 
-ms.reviewer: rahulnayak
-ms.date: 08/03/2022
+ms.custom: 
+- m365-groups
+- user-accounts
+ms.collection:
+- trust-pod
+ms.reviewer: batre
+ms.date: 05/21/2025
 ---
 
 # Microsoft 365 group mailbox size management 
 
-Each Microsoft 365 group comes equipped with a dedicated mailbox that stores the emails received on the group. The group mailbox is also used by applications like SharePoint Online, Viva Engage, Teams etc. The group mailbox is equipped with initial storage quota of 50 GB. If the group mailbox quota is reached, people sending emails to the group receive a non-delivery report. Hence, it’s a good practice to remove the older content from group mailboxes, to ensure the group mailbox doesn’t reach its quota. 
+Each Microsoft 365 group comes equipped with a dedicated mailbox that stores the emails received on the group. The group mailbox is also used by applications like SharePoint Online, Viva Engage, Teams etc. The group mailbox is equipped with initial storage quota of 50 GB. If the group mailbox quota is reached, people sending emails to the group receive a non-delivery report. Hence, it's a good practice to remove the older content from group mailboxes, to ensure the group mailbox doesn't reach its quota. 
 
 The following ways help you understand how the quota calculation works, best practices or proactive approach taken to ensure the group mailbox doesn't reach its quota. And the course of action to be performed if the group mailbox as reached or exceeded its quota.
 
@@ -39,7 +44,11 @@ Get-MailboxStatistics <groupname> | ft TotalDeletedItemSize,TotalItemSize
 
 ## Steps to follow when the group mailbox has reached its limit:  
 
-As mentioned earlier, the group mailbox is used for various applications to store data. Once the group mailbox as reached its quota, it's important to identify the folders occupying more data and take the appropriate action. 
+As mentioned earlier, the group mailbox is used for various applications to store data. Once the group mailbox as reached its quota, it's important to identify the folders occupying more data and take the appropriate action.
+
+Group owners can follow [these steps](https://support.microsoft.com/office/mailbox-storage-limits-in-outlook-21d25b99-525e-4fb3-a7c0-28367e3e76ce) to clean up the group mailbox and empty the space.
+
+Or, you can use PowerShell:
 
 1. Start with the following command to confirm that the group mailbox quota has exceeded: 
 
@@ -47,9 +56,9 @@ As mentioned earlier, the group mailbox is used for various applications to stor
    Get-MailboxStatistics <groupname> |ft TotalItemSize,TotalDeletedItemSize 
    ```
 
-   The group mailbox is distributed in various `TargetQuota`, namely System, Recoverable and User. The folders matching `TargetQuota` “User” is the only one considered in the calculation of the group quota.  
+   The group mailbox is distributed in various `TargetQuota`, namely System, Recoverable and User. The folders matching `TargetQuota` "User" is the only one considered in the calculation of the group quota.  
 
-1. Use the following command to verify the folder size that’s occupying User data: 
+1. Use the following command to verify the folder size that's occupying User data: 
 
    ```PowerShell
    Get-MailboxFolderStatistics <groupname> | where { $_.TargetQuota -like 'User' } | ft Name,FolderPath,FolderType,FolderSize 

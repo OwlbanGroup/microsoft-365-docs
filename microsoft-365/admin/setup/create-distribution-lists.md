@@ -1,21 +1,22 @@
 ---
-title: Create distribution lists
+title: Create Distribution Lists for Group Email
 f1.keywords:
 - NOCSH
 ms.author: kwekua
 author: kwekuako
-manager: scotv
-ms.date: 10/02/2024
+manager: dansimp
+ms.date: 04/10/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
-- Tier3
-- scotvorg
-- highpri
-- M365-subscription-management 
-- Adm_O365
+ms.collection:
+ - Tier3
+ - scotvorg
+ - highpri
+ - M365-subscription-management
+ - Adm_O365
+ - operations-pod
 search.appverid:
 - BCS160
 - MET150
@@ -27,53 +28,60 @@ ms.custom:
 - AdminSurgePortfolio
 - okr_smb
 - AdminTemplateSet
-description: "Create distribution groups or lists in the Microsoft 365 admin center so you can send emails to a group without typing each recipient's name."
+description: Create distribution groups, also known as distribution lists, in the Microsoft 365 admin center to email everyone at once. Follow these steps to set up your list quickly.
+#customer intent: As an admin, I want to create a distribution group in the Microsoft 365 admin center so that I can email a group of people at once.
 ---
 
 # Create distribution groups in the Microsoft 365 admin center
 
-Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+Use distribution groups, also known as distribution lists, to send email to a group of people without typing each recipient's name. Organize distribution groups by:
 
-Use distribution lists (sometimes called distribution groups) when you want to send email to group of people without having to type each individual recipient's name. Distribution lists can be organized by a particular discussion subject (such as "Marketing") or by users who share common work that requires them to communicate frequently. They also provide a way for you to automatically forward email to multiple email addresses.
-  
-## Create a distribution list (group)
+- A particular discussion subject. For example, *Marketing*.
+- Users who share common work that requires them to communicate frequently.
 
-::: moniker range="o365-worldwide"
+Distribution groups also provide a way to automatically forward email to multiple email addresses.
 
-Go to the admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.cloud.microsoft</a>.
+## Create a distribution group
 
-::: moniker-end
+To create a distribution group in the Microsoft 365 admin center, follow these steps:
 
-::: moniker range="o365-21vianet"
+1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
 
-Go to the admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">https://portal.partner.microsoftonline.cn/adminportal</a>.
+1. From the left navigation bar, select **… Show all**, and then select **Teams and groups** to expand it.
 
-::: moniker-end
+1. Under **Teams and groups**, select [**Active teams and groups**](https://go.microsoft.com/fwlink/p/?linkid=2052855).
 
-1. Select **Teams and groups** \> **Active teams and groups** \> **Distribution list**. Select **Show all** if you don't see **Teams and groups**.
+1. On the **Active teams and groups** page, select **Distribution list**.
 
-2. Select **Add a distribution list**.
+1. Select **+ Add a distribution list**.
 
-3. On the **Set up the basics** page, enter a name, description, and select **Next**.
+1. On the **Set up the basics** page, enter a name and description for the distribution group and then select **Next**.
 
-4. On the **Assign owners** page, select **Assign owners** and select users and choose **Add**. Select **Next**.
+1. On the **Assign owners** page, select **+ Assign owners**.
 
-5. On the **Edit settings** page, create a group email address for your new group, and choose whether you want people outside your organization to send email to the group. Select **Next**.
+1. In the **Assign owners** pane, select the owners, and then select **Add**. Owners can manage the group and its members.
 
-6. On the **Add members** page, select **Add members** to add your members and then **Next**.
+1. On the **Assign owners** page, select **Next**.
 
-7. On the **Edit settings** page, add a group email address and choose whether to allow external senders email the group.
+1. On the **Add members** page, select **+ Add members**.
 
-8. On the **Review and finish adding group** page, verify your group information and select **Create group**.
+1. On the **Add members** pane, select members for the distribution group, and then select **Add**.
 
-To add users to your distribution list after you've created it, see [Add a user or contact to a distribution list](../email/add-user-or-contact-to-distribution-list.md).
+1. On the **Add members** page, select **Next**.
 
-Check out how to use group in Outlook 2016 and Outlook on the web in [Use contact groups (formerly distribution lists) in Outlook](https://support.microsoft.com/office/1c97fcb2-0ed4-41e6-b401-58f9d7d40e39).
-  
-Check out [Distribution list issues](/office365/troubleshoot/groups/distribution-list-issues) for help with distribution list issues.
+1. On the **Edit settings** page, enter a group email address for the distribution group and then select **Next**. If you want to allow people outside your organization to send email to the group, then also select the option **Allow people outside of my organization to send email to this Distribution group**.
+
+1. On the **Review and finish adding group** page, verify the information is correct and then select **Create group**.
+
+For more information about distribution groups, see the following articles:
+
+- [Add a user or contact to a distribution list](../email/add-user-or-contact-to-distribution-list.md).
+- [Use contact groups (formerly distribution lists) in Outlook](https://support.microsoft.com/office/1c97fcb2-0ed4-41e6-b401-58f9d7d40e39).
+- [Distribution list issues](/office365/troubleshoot/groups/distribution-list-issues).
 
 ## Related content
 
-[User email settings](../email/office-365-user-email-settings.md) (article)\
-[Create, edit, or delete a security group in the Microsoft 365 admin center](../email/create-edit-or-delete-a-security-group.md) (article)\
-[Create a shared mailbox](../email/create-a-shared-mailbox.md) (article)
+- [User email settings](../email/office-365-user-email-settings.md).
+- [Create, edit, or delete a security group in the Microsoft 365 admin center](../email/create-edit-or-delete-a-security-group.md).
+- [Create a shared mailbox](../email/create-a-shared-mailbox.md).
+- [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).

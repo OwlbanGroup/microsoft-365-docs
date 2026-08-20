@@ -16,7 +16,7 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 10/02/2024
+ms.date: 10/28/2025
 
 ---
 
@@ -63,7 +63,7 @@ After you mapped your attributes, you can view your list of mapped values. These
 
     :::image type="content" source="media/targeted-comms-view-values.png" alt-text="Screenshot of the Targeted communications page in the Teams admin center, showing list of mapped attribute values." lightbox="media/targeted-comms-view-values.png":::
 
-    If your organization has new departments or job titles that aren’t in the list, choose **Refresh values** to update the list. Keep in mind that this process can take several hours to complete.
+    If your organization has new departments or job titles that aren't in the list, choose **Refresh values** to update the list. Keep in mind that this process can take several hours to complete.
 
     > [!NOTE]
     > If you want to change or remove the **Department** or **Job title** attribute, go to the [Dynamic teams settings page](deploy-dynamic-teams-at-scale.md#edit-your-frontline-team-settings), edit your attributes, and then come back here to view the updated values.
@@ -72,7 +72,7 @@ After you mapped your attributes, you can view your list of mapped values. These
 
 With automatic tags, your frontline workers can reach each other by department or job title in Teams channel conversations. Anyone on the team can use the tags in @mentions to notify those people who are associated with that tag.
 
-Your frontline can quickly and easily reach the right groups of people. And because the tags are automatically created based on your mapped attribute values, team owners don’t have to manually create and assign tags or manage them locally.
+Your frontline can quickly and easily reach the right groups of people. And because the tags are automatically created based on your mapped attribute values, team owners don't have to manually create and assign tags or manage them locally.
 
 For example, a regional store manager who oversees all Northwind Trader stores in their region needs to notify all store associates and supervisors about a potentially harmful product that must be immediately removed from all stores. The manager @mentions the **Store Associate** and **Store Supervisor** tag in their channel post to notify all store associates and supervisors.
 

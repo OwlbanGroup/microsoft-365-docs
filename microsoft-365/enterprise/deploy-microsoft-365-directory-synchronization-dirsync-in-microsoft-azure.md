@@ -1,6 +1,6 @@
 ---
 title: "Deploy Microsoft 365 Directory Synchronization in Microsoft Azure"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 02/12/2025
@@ -21,6 +21,7 @@ f1.keywords:
 ms.custom: 
 - Ent_Solutions
 - seo-marvel-apr2020
+- identity-models
 ms.assetid: b8464818-4325-4a56-b022-5af1dad2aa8b
 description: Learn how to deploy Microsoft Entra Connect on a virtual machine in Azure to synchronize accounts between your on-premises directory and the Microsoft Entra tenant.
 ---
@@ -195,7 +196,7 @@ Microsoft Entra Connect adds accounts to your Microsoft 365 subscription from th
 
 ## See also
 
-[Microsoft 365 solution and architecture center](../solutions/index.yml)
+[Microsoft 365 solution and architecture center](/previous-versions/microsoft-365/solutions/)
   
 [Connect an on-premises network to a Microsoft Azure virtual network](connect-an-on-premises-network-to-a-microsoft-azure-virtual-network.md)
 

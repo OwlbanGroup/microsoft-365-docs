@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 04/01/2025
+ms.date: 06/01/2025
 ms.topic: article
 ms.service: microsoft-365-backup
 ms.custom: backup
@@ -111,7 +111,7 @@ Once your application has a status of active, you need to enable your Billing Po
 POST /solutions/backupRestore/enable
 ```
 
-After you enable the Billing Policy, your application will be the Microsoft 365 Backup Storage Controller in the Consuming Tenant and will now be able to maintain the Microsoft 365 Backup Service (as per your application’s oAuth permission scopes).
+After you enable the Billing Policy, your application will be the Microsoft 365 Backup Storage Controller in the Consuming Tenant and will now be able to maintain the Microsoft 365 Backup Service (as per your application's oAuth permission scopes).
 
 > [!NOTE]
 > You can execute this API multiple times in that it's idempotent. It's recommended to enable the Billing Policy in the Consuming Tenant if, for whatever reason, your Billing Policy changes. For example, if you want to change the Azure Subscription ID or Resource Group.

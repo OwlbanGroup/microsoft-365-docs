@@ -1,17 +1,19 @@
 ---
 title: "Restrict SharePoint site content to a geo location"
-ms.reviewer: anfra
-ms.date: 09/26/2024
-ms.author: kvice
-author: kelleyvice-msft
-manager: scotv
+ms.reviewer: anfra, jugiammo
+ms.date: 05/09/2025
+ms.author: v-fahasen
+author: fhasen-msft
+manager: Justin.Giammona
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-365-enterprise
-ms.subservice: administration
+ms.subservice: multi-geo-capabilities
 f1.keywords:
 - NOCSH
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- data-residency
 ms.collection: Strat_SP_gtc
 ms.localizationpriority: medium
 description: In this article, learn how to restrict SharePoint sites to a specified geo location in a multi-geo environment.
@@ -21,7 +23,7 @@ description: In this article, learn how to restrict SharePoint sites to a specif
 
 Under certain circumstances you may choose to enforce a site and its file content to remain in the _Geography_ location where the site was created, either by preventing the site from being moved or by preventing the caching of the site's file content in another _Geography_ location.
 
-You can do this task by using the [Set-SPOSite](/powershell/module/sharepoint-online/set-sposite) cmdlet with the **RestrictedToGeo** parameter. This parameter has a default value of NULL, but you can change it to one of the following restrictions:
+You can do this task by using the [Set-SPOSite](/powershell/module/microsoft.online.sharepoint.powershell/set-sposite) cmdlet with the **RestrictedToGeo** parameter. This parameter has a default value of NULL, but you can change it to one of the following restrictions:
 
 |Restriction|Description|
 |:----------|:----------|
@@ -40,3 +42,4 @@ For example:
 ```powershell
 Set-SPOSite -Identity https://contoso.sharepoint.com/sites/RegionRestrictedTeamSite -RestrictedToGeo BlockFull
 ```
+

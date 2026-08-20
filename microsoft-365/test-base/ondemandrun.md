@@ -36,7 +36,7 @@ By specifying the OS update type and Windows product which are pre-defined with 
 > [!div class="mx-imgBorder"]
 > [ ![Run on request](Media/runondemand02-runonrequest.png) ](Media/runondemand02-runonrequest.png#lightbox)
 
-You don’t need the test to be executed with its automatic cadence before you can use the feature. You can now decide which product and when to be tested.
+You don't need the test to be executed with its automatic cadence before you can use the feature. You can now decide which product and when to be tested.
 
 > [!div class="mx-imgBorder"]
 > [ ![Testsummary](Media/runondemand03-testsummary.png) ](Media/runondemand03-testsummary.png#lightbox)

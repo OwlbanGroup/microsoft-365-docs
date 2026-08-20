@@ -1,20 +1,22 @@
 ---
 title: Microsoft 365 Multi-Geo tenant configuration
-ms.reviewer:
-ms.date: 10/02/2024
-ms.author: kvice
-author: kelleyvice-msft
-manager: scotv
+ms.reviewer: jugiammo
+ms.date: 05/09/2025
+ms.author: v-fahasen
+author: fhasen-msft
+manager: Justin.Giammona
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
-ms.subservice: multi-tenant
+ms.subservice: multi-geo-capabilities
 ms.collection:
 - SPO_Content
 - Strat_SP_gtc
 f1.keywords:
 - NOCSH
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- data-residency
 ms.localizationpriority: medium
 description: In this article, learn how to add satellite locations and configure your tenant for Microsoft 365 Multi-Geo.
 ---
@@ -56,3 +58,4 @@ Provisioning may take from a few hours up to 72 hours, depending on the size of 
 
 > [!IMPORTANT]
 > Your new _Satellite Geography_ location will be set up with default settings. This will allow you to configure that _Satellite Geography_ location as appropriate for your local compliance needs.
+

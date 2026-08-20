@@ -1,0 +1,614 @@
+{
+  "redirections": [
+    {
+      "source_path": "microsoft-365/solutions/allow-direct-connect-with-all-organizations.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/allow-direct-connect-with-all-organizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/allow-members-to-send-as-or-send-on-behalf-of-group.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/allow-members-to-send-as-or-send-on-behalf-of-group",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-add-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-add-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-add-step-1.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-add-step-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-add-step-2.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-add-step-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-add-step-3.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-add-step-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-add-step-4.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-add-step-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-add-step-5.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-add-step-5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-assignments.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-assignments",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-deployment.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-deployment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-management.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-step-1.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-step-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-step-2.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-step-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-step-3.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-step-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-step-4.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-step-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-assign-steps-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-assign-steps-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-1.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-2.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-3.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-4.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-5.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-6.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-config-step-7.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-config-step-7",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-guide-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-guide-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-license-manage.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-license-manage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-license-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-license-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-access-requirements.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-access-requirements",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-conditional-launch.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-conditional-launch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-data-protection.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-data-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-framework.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-framework",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-health-checks.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-health-checks",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-step-1.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-step-1",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-step-2.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-step-2",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-step-3.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-step-3",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-step-4.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-step-4",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-step-5.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-step-5",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-protect-step-6.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-protect-step-6",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-purchase-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-purchase-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-purchase-store.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-purchase-store",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-purchase-volume.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-purchase-volume",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-type-built-in.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-type-built-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-type-lob.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-type-lob",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-type-microsoft.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-type-microsoft",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-type-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-type-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-type-store.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-type-store",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/apps-type-web.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/apps-type-web",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/architecture-icons-templates.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/architecture-icons-templates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/best-practices-anonymous-sharing.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/best-practices-anonymous-sharing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/choose-domain-to-create-groups.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/choose-domain-to-create-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/cloud-architecture-models.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/cloud-architecture-models",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaborate-as-team.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaborate-as-team",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaborate-guests-cross-cloud.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaborate-guests-cross-cloud",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaborate-in-site.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaborate-in-site",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaborate-on-documents.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaborate-on-documents",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaborate-teams-direct-connect.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaborate-teams-direct-connect",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaborate-with-people-outside-your-organization.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaborate-with-people-outside-your-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaboration-governance-first.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaboration-governance-first",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/collaboration-governance-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/collaboration-governance-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/configure-teams-baseline-protection.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/configure-teams-baseline-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/configure-teams-highly-sensitive-protection.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/configure-teams-highly-sensitive-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/configure-teams-sensitive-protection.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/configure-teams-sensitive-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/configure-teams-three-tiers-protection.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/configure-teams-three-tiers-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/create-secure-guest-sharing-environment.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/create-secure-guest-sharing-environment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/data-privacy-protection-assess.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/data-privacy-protection-assess",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/data-privacy-protection-protect-govern.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/data-privacy-protection-protect-govern",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/data-privacy-protection-regulations.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/data-privacy-protection-regulations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/data-privacy-protection-respond-requests.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/data-privacy-protection-respond-requests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/data-privacy-protection.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/data-privacy-protection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/deploy-voice.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/deploy-voice",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/design-principles.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/design-principles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely-manage-endpoints.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely-manage-endpoints",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely-remote-access.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely-remote-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely-secure-sign-in.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely-secure-sign-in",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely-security-compliance.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely-security-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely-teams-productivity-apps.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely-teams-productivity-apps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely-train-monitor-usage.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely-train-monitor-usage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/empower-people-to-work-remotely.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/empower-people-to-work-remotely",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/end-life-cycle-groups-teams-sites-viva-engage.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/end-life-cycle-groups-teams-sites-viva-engage",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/energy-secure-collaboration.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/energy-secure-collaboration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/financial-services-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/financial-services-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/financial-services-secure-collaboration.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/financial-services-secure-collaboration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/groups-naming-policy.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/groups-naming-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/groups-sharepoint-governance.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/groups-sharepoint-governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/groups-sharepoint-teams-governance.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/groups-sharepoint-teams-governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/groups-teams-access-governance.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/groups-teams-access-governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/healthcare-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/healthcare-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/identity-design-principles.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/identity-design-principles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/index.yml",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/infographics-for-users.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/infographics-for-users",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/limit-invitations-from-specific-organization.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/limit-invitations-from-specific-organization",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/limit-organizations-where-users-have-guest-accounts.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/limit-organizations-where-users-have-guest-accounts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/limit-who-can-invite-guests.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/limit-who-can-invite-guests",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/manage-creation-of-groups.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/manage-creation-of-groups",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/microsoft-365-groups-expiration-policy.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/microsoft-365-groups-expiration-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/microsoft-365-guest-settings.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/microsoft-365-guest-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/microsoft-365-limit-sharing.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/microsoft-365-limit-sharing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/networking-design-principles.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/networking-design-principles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/per-group-guest-access.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/per-group-guest-access",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/plan-external-collaboration.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/plan-external-collaboration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/plan-organization-lifecycle-governance.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/plan-organization-lifecycle-governance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/productivity-illustrations.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/productivity-illustrations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/ransomware-protection-microsoft-365-attack-detection-response.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/ransomware-protection-microsoft-365-attack-detection-response",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/ransomware-protection-microsoft-365-devices.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/ransomware-protection-microsoft-365-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/ransomware-protection-microsoft-365-identities.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/ransomware-protection-microsoft-365-identities",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/ransomware-protection-microsoft-365-information.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/ransomware-protection-microsoft-365-information",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/ransomware-protection-microsoft-365-security-baselines.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/ransomware-protection-microsoft-365-security-baselines",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/ransomware-protection-microsoft-365.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/ransomware-protection-microsoft-365",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/retail-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/retail-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/security-design-principles.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/security-design-principles",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/setup-secure-collaboration-with-teams.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/setup-secure-collaboration-with-teams",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/share-limit-accidental-exposure.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/share-limit-accidental-exposure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/tenant-management-device-management.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/tenant-management-device-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/tenant-management-identity.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/tenant-management-identity",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/tenant-management-migration.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/tenant-management-migration",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/tenant-management-networking.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/tenant-management-networking",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/tenant-management-overview.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/tenant-management-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/tenant-management-tenants.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/tenant-management-tenants",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/trust-conditional-access-from-other-organizations.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/trust-conditional-access-from-other-organizations",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "microsoft-365/solutions/trusted-vendor-onboarding.md",
+      "redirect_url": "/previous-versions/microsoft-365/solutions/trusted-vendor-onboarding",
+      "redirect_document_id": false
+    }
+  ]
+}

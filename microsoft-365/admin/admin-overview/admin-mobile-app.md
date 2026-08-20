@@ -5,19 +5,20 @@ f1.keywords:
 ms.author: kwekua
 author: kwekuako
 manager: scotv
-ms.date: 04/02/2025
+ms.date: 02/02/2026
 audience: Admin
 ms.topic: overview
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
 - highpri
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
 - must-keep
+- operations-pod
 ms.custom:
 - VSBFY23
 - TRN_M365B
@@ -71,11 +72,8 @@ The admin app has a lot of capabilities that allows you to manage Microsoft 365 
 - **Service Health** Monitor the health of all the services by viewing the current status of the service and details about service disruption and outages.
 - **Notifications** Stay on top of all the important information and updates related to message center posts, service health and billing through push notifications. You can even customize what you want to be notified of.
 
-If you're an admin and you're responsible for more than one Microsoft 365 organization, you can sign in to multiple organizations and quickly switch between them. The app supports dark theme and is available in 39 languages.
+If you're an admin and you're responsible for more than one Microsoft 365 organization, you can sign in to multiple organizations and quickly switch between them. The app supports dark theme and is available in over 40 languages.
   
-> [!IMPORTANT]
-> If you're having issues using the Admin mobile app on iOS or Android, email us at [feedback365@microsoft.com](mailto:feedback365@microsoft.com) to let us know.
-
 ## Frequently asked questions
 
 Below are answers to frequently asked questions.
@@ -90,7 +88,7 @@ This feature isn't yet part of the Microsoft 365 Admin mobile app, but will be c
 
 To use the app you need to have admin permissions and a valid subscription to one of the following Microsoft 365 subscriptions:
 
-- Microsoft 365 Apps for Enterprise
+- Microsoft 365 Apps
 - Microsoft 365 Apps for Business
 - Microsoft 365 Business Premium
 - Microsoft 365 Business Standard
@@ -110,7 +108,7 @@ Yes, but with reduced functionality. You'll be able to sign in and view service 
   
 ### What languages are supported by the app?
 
-The app supports all 39 languages that the web-based Microsoft 365 admin center supports. To change the language, from the left navigation menu in the admin center, go to **Settings** > **Language** or select the **Language** icon in **Quick Links** section of the admin mobile app home page.
+The app supports over 40 languages that the web-based Microsoft 365 admin center supports. To change the language, from the left navigation menu in the admin center, go to **Settings** > **Language** or select the **Language** icon in **Quick Links** section of the admin mobile app home page.
   
 ### How can I share the Service Incidents and Messages with the rest of my organization?
 
@@ -139,7 +137,7 @@ Email [feedback365@microsoft.com](mailto:feedback365@microsoft.com) to report an
 
 ## Next steps
 
-Once you've downloaded the admin mobile, you can add users to get you started.
+Once you've downloaded the admin mobile app, you can add users to get you started.
   
 ## Related content
 

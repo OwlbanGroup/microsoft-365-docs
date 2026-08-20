@@ -1,22 +1,17 @@
 ---
 title: "Trial user guide: Microsoft 365 Business Premium"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-audience: Admin
 ms.topic: article
 ms.collection:
 - m365-security
 - tier2
-ms.service: microsoft-365-business-security
+- trust-pod
+ms.service: microsoft-365-admin
 ms.date: 05/31/2024
 ms.reviewer: nehabha
 ms.localizationpriority: medium
-search.appverid:
-- MOE150
-- MET150
 description: "Make the most of your Microsoft 365 Business Premium trial. Try out some of the key productivity and security capabilities."
 ---
 
@@ -35,7 +30,7 @@ When you [start a trial or purchase Microsoft 365 Business Premium](get-microsof
 
    After you start your trial and complete the setup process, it can take up to two hours for changes to take effect.
 
-2. [Turn on multifactor authentication](m365bp-turn-on-mfa.md) (MFA). You can use security defaults to get set up right away, or use Conditional Access policies to meet more stringent requirements.
+2. [Verify or configure multifactor authentication](/microsoft-365/admin/security-and-compliance/set-up-multi-factor-authentication) (MFA). Security defaults are turned on by default, or use Conditional Access policies to meet more stringent requirements.
 
 3. Use your [preset security policies](/defender-office-365/preset-security-policies). These policies represent a baseline protection profile that's suitable for most users. Standard protection includes:
 
@@ -101,5 +96,5 @@ Microsoft 365 Business Premium includes Defender for Business, a new security so
 
 ## See also
 
-- [Microsoft 365 Business Premium - cybersecurity for small business](m365bp-overview.md)
+- [Microsoft 365 Business Premium - cybersecurity for small business](/microsoft-365/admin/security-and-compliance/m365bp-security-benefits)
 - [What is Microsoft Defender for Business?](/defender-business/mdb-overview)

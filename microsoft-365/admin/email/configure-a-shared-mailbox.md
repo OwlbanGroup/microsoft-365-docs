@@ -2,24 +2,26 @@
 title: "Configure shared mailbox settings"
 f1.keywords:
 - NOCSH
-ms.author: kwekua
-author: kwekuako
-manager: scotv
-ms.date: 09/30/2024
+ms.author: dansimp
+author: dansimp
+manager: dansimp
+ms.date: 02/03/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
+- operations-pod
 ms.custom:
 - MSStore_Link
 - AdminSurgePortfolio
 - AdminTemplateSet
+- user-accounts
 description: "Create a shared mailbox and configure some settings for its users, such as email forwarding and automatic replies."
 ---
 

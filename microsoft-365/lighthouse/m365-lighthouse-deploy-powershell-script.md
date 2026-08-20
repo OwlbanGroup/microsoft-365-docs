@@ -1,7 +1,7 @@
 ---
 title: "Deploy a PowerShell script from Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: arpere
@@ -31,7 +31,7 @@ PowerShell scripts are plain text files that you can use to automate processes. 
 
 Ensure that the target devices on which you're running the PowerShell script are running Windows 10 or later (excluding Windows 10 Home) and enrolled in Intune.
 
-For a detailed list of requirements and to learn more about using PowerShell scripts, see [Use PowerShell scripts on Windows 10/11 devices in Intune](/mem/intune/apps/intune-management-extension).
+For a detailed list of requirements and to learn more about using PowerShell scripts, see [Use PowerShell scripts on Windows 10/11 devices in Intune](/intune/device-management/tools/management-extension-windows).
 
 ## Create and deploy a PowerShell script
 
@@ -53,9 +53,9 @@ For a detailed list of requirements and to learn more about using PowerShell scr
  
 ## Next steps
 
-On the **Scripts** page in Lighthouse, select the script from the list to open the script details. From here, you can see a list of devices targeted to run the script and the status of the script. Keep in mind that it might take some time for the script to run. For help troubleshooting script issues, see [Common issues and resolutions when using PowerShell scripts on Windows 10/11 devices in Intune](/mem/intune/apps/intune-management-extension).
+On the **Scripts** page in Lighthouse, select the script from the list to open the script details. From here, you can see a list of devices targeted to run the script and the status of the script. Keep in mind that it might take some time for the script to run. For help troubleshooting script issues, see [Common issues and resolutions when using PowerShell scripts on Windows 10/11 devices in Intune](/intune/device-management/tools/management-extension-windows).
 
 ## Related content
 
 [Manage Microsoft Entra groups and group membership](/entra/fundamentals/how-to-manage-groups) (article)\
-[Use PowerShell scripts on Windows 10/11 devices in Intune](/mem/intune/apps/intune-management-extension) (article)
+[Use PowerShell scripts on Windows 10/11 devices in Intune](/intune/device-management/tools/management-extension-windows) (article)

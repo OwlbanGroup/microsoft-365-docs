@@ -5,7 +5,7 @@ items:
     - name: Set up Whiteboard
       items:
         - name: Set up and use
-          href: /surface-hub/whiteboard-collaboration
+          href: /surface-hub/whiteboard-collaboration?toc=/microsoft-365/whiteboard/toc.json&bc=/microsoft-365/whiteboard/breadcrumb/toc.json
         - name: Deploy on Windows devices
           href: deploy-on-windows-organizations.md
 
@@ -49,4 +49,4 @@ items:
               href: manage-clients-gcc-high.md
 
     - name: Whiteboard PowerShell
-      href: /powershell/module/whiteboard/
+      href: /powershell/module/whiteboardadmin/

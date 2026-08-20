@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 03/04/2025
+ms.date: 06/14/2025
 ms.topic: article
 ms.service: microsoft-365-backup
 ms.custom: backup
@@ -22,19 +22,19 @@ description: Learn about the pricing model, estimating costs, and usage reports 
 
 The Microsoft 365 Backup service, offered through the Microsoft 365 admin center, is a [pay-as-you-go consumption-based service](/microsoft-365/syntex/syntex-pay-as-you-go-services). The list price is $0.15/GB/month of protected content.
 
-### What’s counted towards protected backup storage?
+### What's counted towards protected backup storage?
 
 Microsoft 365 Backup charges you based on the size of the following content once it's added to backup protection. That size is the result of the summation of the following two categories:
 
 - Summation of the user-facing size of the protected content:
 
-    - Size of OneDrive accounts and SharePoint sites as displayed in the live sites’ usage reports, which includes the first-stage recycle bin. If a site or OneDrive account is removed from the protection policy, the size of the site at the time it's removed from the policy will be used as the proxy for the site’s "live" size. In other words, your backup costs will never increase once the OneDrive account or site has been removed from the protection policy.
+    - Size of OneDrive accounts and SharePoint sites as displayed in the live sites' usage reports, which includes the first-stage recycle bin. If a site or OneDrive account is removed from the protection policy, the size of the site at the time it's removed from the policy will be used as the proxy for the site's "live" size. In other words, your backup costs will never increase once the OneDrive account or site has been removed from the protection policy.
 
-    - Size of the live user or shared mailbox plus their associated online archives if those are being used. If the mailbox is removed from the protection policy, the size of the mailbox at the time it’s removed will be used as the ongoing proxy for its "live" size until all restore points expire from the backup. In other words, your backup costs will never increase once the mailbox has been removed from the protection policy.
+    - Size of the live user or shared mailbox plus their associated online archives if those are being used. If the mailbox is removed from the protection policy, the size of the mailbox at the time it's removed will be used as the ongoing proxy for its "live" size until all restore points expire from the backup. In other words, your backup costs will never increase once the mailbox has been removed from the protection policy.
 
 - Summation of the deleted and versioned data held for recovery in the backups:
 
-    - Deleted content in SharePoint sites’ and OneDrive accounts’ second-stage recycle bin (also known as site collection recycle bin).
+    - Deleted content in SharePoint sites' and OneDrive accounts' second-stage recycle bin (also known as site collection recycle bin).
 
     - Deleted and versioned items in the protected mailboxes.
 
@@ -112,7 +112,7 @@ You can get the sizes of live sites and first-stage recycle bin in the tenant (o
 Get-SPOSite
 ```
 
-Learn more about the *Get-SPOSite* cmdlet - [*Get-SPOSite* cmdlet](/powershell/module/sharepoint-online/get-sposite) and the  [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
+Learn more about the *Get-SPOSite* cmdlet - [*Get-SPOSite* cmdlet](/powershell/module/microsoft.online.sharepoint.powershell/get-sposite) and the  [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online).
 
 You can get the sizes of the second-stage recycle bin by running the following PowerShell cmdlet:
 

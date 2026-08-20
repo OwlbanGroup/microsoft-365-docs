@@ -1,6 +1,6 @@
 ---
 title: "View directory synchronization errors in Microsoft 365"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 07/17/2024
@@ -15,6 +15,7 @@ ms.custom:
  - Adm_O365
  - seo-marvel-apr2020
  - admindeeplinkMAC
+ - identity-models
 ms.collection:
 - scotvorg
 - Ent_O365

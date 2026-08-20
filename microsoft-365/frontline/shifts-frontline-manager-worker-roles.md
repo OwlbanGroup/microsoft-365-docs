@@ -27,7 +27,7 @@ appliesto:
   - Microsoft Teams
   - Microsoft 365 for frontline workers
 ms.custom: seo-marvel-mar2020
-ms.date: 02/20/2024
+ms.date: 10/24/2025
 ---
 
 # Use roles to define your frontline managers and workers in Shifts
@@ -36,7 +36,7 @@ ms.date: 02/20/2024
 
 In Shifts, there are two user personas&mdash;frontline manager and frontline worker&mdash;based on users' responsibilities and activities within a team. This article explains these user personas and how to use roles in Shifts and Teams to define your frontline mangers and workers.
 
-- **Frontline managers** are responsible for the creation and overall management of their team’s schedule and shift requests. They're part of the frontline workforce with managerial responsibilities. A frontline manager in Shifts requires one of the following roles:
+- **Frontline managers** are responsible for the creation and overall management of their team's schedule and shift requests. They're part of the frontline workforce with managerial responsibilities. A frontline manager in Shifts requires one of the following roles:
 
   - Team owner in Teams
   - Team member in Teams who is elevated to a schedule owner in Shifts
@@ -49,10 +49,10 @@ Each role has different capabilities in Shifts and in Teams. Here's a summary of
 
 |Capability in Shifts  |Team member |Schedule owner |Team owner |
 |---------|:---------:|:---------:|:---------:|
-|Create, edit, and publish schedules to manage their team’s shifts assignments.||✔️|✔️|
+|Create, edit, and publish schedules to manage their team's shifts assignments.||✔️|✔️|
 |View and manage (approve or deny) shift requests.||✔️|✔️|
 |Manage settings in Shifts for their teams.||✔️| ✔️|
-|View and modify their team’s timesheet to process employee payrolls.||✔️|✔️|
+|View and modify their team's timesheet to process employee payrolls.||✔️|✔️|
 |Manage settings in Shifts for their teams.||✔️|✔️|
 |View their schedules and their team's schedules.|✔️|✔️|✔️|
 |Create and cancel shift requests.|✔️||
@@ -70,7 +70,7 @@ Each role has different capabilities in Shifts and in Teams. Here's a summary of
 
 ## Example scenario
 
-Here’s an example of how to use roles in Teams and Shifts for your frontline managers and workers.
+Here's an example of how to use roles in Teams and Shifts for your frontline managers and workers.
 
 At Contoso Ltd., department managers report directly to the store manager. The store manager has more authority within the company as they oversee the hiring of department managers and store associates, help their departments on specific issues, and manage the generation of revenue within their store. Department managers, on the other hand, are responsible for managing the day-to-day operations and people within their department.
 
@@ -78,7 +78,7 @@ Contoso set up their team roles as follows based on employees' responsibilities:
 
 - Store managers are responsible for their store's success, and only get involved in daily department management activities if necessary. For their store's team, the store manager is assigned a **team owner** role in Teams.  
 
-- Department managers manage the day-to-day activities of their team in Shifts, including managing schedules and shift requests. They don’t need team owner privileges in Teams. Department managers are assigned the **team member** role in Teams and **schedule owner** role in Shifts.
+- Department managers manage the day-to-day activities of their team in Shifts, including managing schedules and shift requests. They don't need team owner privileges in Teams. Department managers are assigned the **team member** role in Teams and **schedule owner** role in Shifts.
 
 - Store associates work in a specific department, and are assigned the **team member** role in Teams.  
 
@@ -88,7 +88,7 @@ Determine the capabilities you want to provide your frontline managers in Shifts
 
 As mentioned earlier, a frontline manager in Shifts can be a team owner in Teams *or* a team member in Teams who is a schedule owner in Shifts. Team owners can manage their team in Teams. Schedule owners are team members in Teams who can manage schedules in Shifts for their team.
 
-You can elevate the permissions of a team member to a schedule owner role in Shifts so they can create schedules and manage shift requests without making that person a team owner. With schedule owner permissions, a frontline manager can manage their team’s schedule without being able to do things like add or remove members or delete the team.
+You can elevate the permissions of a team member to a schedule owner role in Shifts so they can create schedules and manage shift requests without making that person a team owner. With schedule owner permissions, a frontline manager can manage their team's schedule without being able to do things like add or remove members or delete the team.
 
 ### Team owner in Teams
 

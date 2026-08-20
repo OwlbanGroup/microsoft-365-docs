@@ -21,7 +21,7 @@ appliesto:
   - Microsoft Teams
   - Microsoft 365 for frontline workers
 ms.custom: seo-marvel-apr2020
-ms.date: 08/23/2023
+ms.date: 10/06/2025
 ---
 # Microsoft Teams Advanced Virtual Appointments activity report
 
@@ -71,8 +71,8 @@ The graph provides an overview of feature usage. It changes depending on the dat
 |--------|-------------|
 |**1**   |Each report has a date for when the report was generated. The reports usually reflect a 24 to 48-hour latency from time of activity. |
 |**2**   |The X axis is the selected date range for the report. The Y axis is the number of active users per feature.<br>Hover over a dot on a given date to see the number of users using that feature on that date.|
-|**3**   |You can filter what you see on the chart by selecting an item. For example, select **Total Text Message Users**, **Total On-Demand Users**, or **Total Queue Users**, to see only the info related to each one. Changing this selection doesn’t change the information in the table.|
-|**4**   |This table shows detailed usage information for each user in your organization during the selected date range. <ul><li>**Primary** is the name of the user.</li><li>**Primary's email** is the email address of the user.</li><li>**Total Appointments** shows the total number of virtual appointments in which the user used an advanced feature.</li><li>**SMS** shows the total number of times the user used SMS in a virtual appointment.</li><li>**On-demand** shows the total number of times the user joined an on-demand appointment by selecting **Join** on the **Queue** tab in the Virtual Appointments app.</li><li>**Queue** shows the total number of times the user navigated to the **Queue** tab in the Virtual Appointments app.</li></ul>
+|**3**   |You can filter what you see on the chart by selecting an item. For example, select **Total Text Message Users**, **Total On-Demand Users**, or **Total Queue Users**, to see only the info related to each one. Changing this selection doesn't change the information in the table.|
+|**4**   |This table shows detailed usage information for each user in your organization during the selected date range. <ul><li>**Primary** is the name of the user.</li><li>**Primary's email** is the email address of the user.</li><li>**Total Appointments** shows the total number of virtual appointments in which the user used an advanced feature.</li><li>**SMS** shows the total number of times the user used SMS in a virtual appointment.</li><li>**On-demand** shows the total number of times the user joined an on-demand appointment by selecting **Join** on the **Queue** tab in the Virtual Appointments app.</li><li>**Queue** shows the total number of times the user navigated to the **Queue** tab in the Virtual Appointments app.</li></ul>
 
 ## Related articles
 

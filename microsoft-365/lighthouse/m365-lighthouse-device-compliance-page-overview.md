@@ -1,7 +1,7 @@
 ---
 title: "Overview of the Device compliance page in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: prpath
@@ -42,11 +42,11 @@ To export device compliance data to an Excel comma-separated values (.csv) file,
 
 ## Devices tab
 
-On the Devices tab, the colored count-annotation bar displays the total number of devices across all your customer tenants that have the following compliance statuses: Compliant, Not compliant, In grace period, and Not evaluated. For more information about the different compliance statuses, see [Monitor Intune Device compliance policies](/mem/intune/protect/compliance-policy-monitor).
+On the Devices tab, the colored count-annotation bar displays the total number of devices across all your customer tenants that have the following compliance statuses: Compliant, Not compliant, In grace period, and Not evaluated. For more information about the different compliance statuses, see [Monitor Intune Device compliance policies](/intune/device-security/compliance/monitor-policy).
 
 To see which tenants have devices with a specific compliance status, select that status from the count-annotation bar to filter the list. To see device compliance statuses for one or more specific customer tenants, use the **Tenants** dropdown menu to filter the list.
 
-Select any device name in the list to view more details about that device's current compliance state. You can sync or restart the device, or select **View device in Microsoft Endpoint Manager** if you need to troubleshoot or take further action.
+Select any device name in the list to view more details about that device's current compliance state. You can sync or restart the device, or select **View device in Microsoft Intune** if you need to troubleshoot or take further action.
 
 > [!NOTE]
 > When you restart a device, the device owner isn't automatically notified and may lose unsaved work. For this reason, you may want to notify the device owner before you restart a device.
@@ -67,7 +67,7 @@ On the Policies tab, you can view device compliance policies across your tenants
 
 To see policies for devices on a specific platform, use the **OS** dropdown menu to filter the list. To see policies for one or more specific customer tenants, use the **Tenants** dropdown menu to filter the list.
 
-Select any policy name in the list to view more details about that policy. If you need to take action or see additional information, select **View this policy in Microsoft Endpoint Manager**.
+Select any policy name in the list to view more details about that policy. If you need to take action or see additional information, select **View this policy in Microsoft Intune**.
 
 The Policies tab also includes the following options:
 
@@ -83,7 +83,7 @@ The Settings tab provides an aggregated report of non-compliant settings across 
 
 To see non-compliant settings for devices on a specific platform, use the **Platform** dropdown menu to filter the list. To see non-compliant settings for one or more specific customer tenants, use the **Tenants** dropdown menu to filter the list.
 
-Select any non-compliant setting name in the list to open a pane where you can view a list of tenants that have devices with that specific non-compliant setting. From here, you can further drill down by selecting any tenant from the list to view information about the devices within that tenant that have the specific non-compliant setting. You can also sync or restart the device, or select **View device in Microsoft Endpoint Manager** if you need to troubleshoot or take further action.
+Select any non-compliant setting name in the list to open a pane where you can view a list of tenants that have devices with that specific non-compliant setting. From here, you can further drill down by selecting any tenant from the list to view information about the devices within that tenant that have the specific non-compliant setting. You can also sync or restart the device, or select **View device in Microsoft Intune** if you need to troubleshoot or take further action.
 
 The Settings tab also includes the following options:
 

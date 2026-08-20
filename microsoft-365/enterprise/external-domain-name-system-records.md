@@ -1,6 +1,6 @@
----
+﻿---
 title: "External Domain Name System records for Microsoft 365"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 10/24/2024
@@ -17,8 +17,9 @@ ms.collection:
 f1.keywords:
 - CSH
 ms.custom:
- - Adm_O365
- - seo-marvel-apr2020
+- Adm_O365
+- seo-marvel-apr2020
+- network
 search.appverid:
 - MET150
 - MOE150
@@ -30,7 +31,7 @@ description: A reference list of external Domain Name System records to use when
 
 # External Domain Name System records for Microsoft 365
 
-![Domain.](../media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png)
+:::image type="content" source="../media/e05b1c78-1df0-4200-ba40-6e26b7ead68f.png" alt-text="Domain image.":::
 
 **Want to see a customized list of DNS records for your Microsoft 365 organization?** You can [find the info you need to create Microsoft 365 DNS records](../admin/get-help-with-domains/information-for-dns-records.md) for your domain in Microsoft 365.
 
@@ -40,9 +41,9 @@ description: A reference list of external Domain Name System records to use when
 
 **Go back to** [Network planning and performance tuning for Microsoft 365](./network-planning-and-performance.md).
 
-Often the SPF and MX records are the hardest to figure out. We've updated our SPF records guidance at the end of this article. The important thing to remember is that _you can only have a single SPF record for your domain_. You can have multiple MX records; however, that can cause problems for mail delivery. Having a single MX record that directs email to one mail system removes many potential problems.
+Often the SPF and MX records are the hardest to figure out. We've updated our SPF records guidance at the end of this article. The important thing to remember is that *you can only have a single SPF record for your domain*. You can have multiple MX records; however, that can cause problems for mail delivery. Having a single MX record that directs email to one mail system removes many potential problems.
 
-The following sections are organized by service in Microsoft 365. To see a customized list of the Microsoft 365 DNS records for your domain, sign in to Microsoft 365 and [Gather the information you need to create Microsoft 365 DNS records](https://support.office.com/article/77f90d4a-dc7f-4f09-8972-c1b03ea85a67).
+The following sections are organized by service in Microsoft 365.
 
 ## External DNS records required for Microsoft 365 (core services)
 <a name="BKMK_ReqdCore"> </a>
@@ -53,7 +54,7 @@ The CNAME record is only required for customers using [Microsoft 365 operated by
 
 |DNS record|Purpose|Value to use|Applies to|
 |---|---|---|---|
-|**TXT** <br/> **(Domain verification)**|Used by Microsoft 365 to verify only that you own your domain. It doesn't affect anything else.|**Host:** @ (or, for some DNS hosting providers, your domain name) <br/> **TXT Value:** _A text string provided by_ Microsoft 365 <br/> The Microsoft 365 **domain setup wizard** provides the values that you use to create this record.|All customers|
+|**TXT** <br/> **(Domain verification)**|Used by Microsoft 365 to verify only that you own your domain. It doesn't affect anything else.|**Host:** @ (or, for some DNS hosting providers, your domain name) <br/> **TXT Value:** *A text string provided by* Microsoft 365 <br/> The Microsoft 365 **domain setup wizard** provides the values that you use to create this record.|All customers|
 |**CNAME** <br/> **(Suite)**|Used by Microsoft 365 to direct authentication to the correct identity platform. [More information](../admin/services-in-china/purpose-of-cname.md?viewFallbackFrom=o365-worldwide) <br/> **Note** that this CNAME only applies to Microsoft 365 operated by 21Vianet. If present and your Microsoft 365 isn't operated by 21Vianet, users on your custom domain get a "*custom domain* isn't in our system" error and aren't able to activate their Microsoft 365 license. [More information](/office365/servicedescriptions/office-365-platform-service-description/office-365-operated-by-21vianet) |**Alias:** msoid <br/> **Target:** clientconfig.partner.microsoftonline-p.net.cn| 21Vianet customers only|
 
 ## External DNS records required for email in Microsoft 365 (Exchange Online)
@@ -64,7 +65,7 @@ Email in Microsoft 365 requires several different records. The three primary rec
 - **The Autodiscover record** allows client computers to automatically find Exchange and configure the client properly.
 
 - **The MX record** tells other mail systems where to send email for your domain. **Note:** When you change your email to Microsoft 365, by updating your domain's MX record, ALL email sent to that domain starts coming to Microsoft 365.
-Do you just want to switch a few email addresses to Microsoft 365? You can [Pilot Microsoft 365 with a few email addresses on your custom domain](https://support.office.com/article/39cee536-6a03-40cf-b9c1-f301bb6001d7).
+Do you just want to switch a few email addresses to Microsoft 365? You can [Pilot Microsoft 365 with a few email addresses on your custom domain](../admin/misc/pilot-microsoft-365-from-my-custom-domain.md).
 
 - **The TXT record for SPF** is used by recipient email systems to validate that the server sending your email is one that you approve. This helps prevent problems like email spoofing and phishing. See the [External DNS records required for SPF](external-domain-name-system-records.md#BKMK_SPFrecords) in this article to help you understand what to include in your record.
 
@@ -129,7 +130,7 @@ For scenarios where you're not just using Exchange Online email for Microsoft 36
 |1|All email systems (required)|All SPF records start with this value|v=spf1|
 |2|Exchange Online (common)|Use with just Exchange Online|include:spf.protection.outlook.com|
 |3|Third-party email system (less common)||include:\<email system like mail.contoso.com\>|
-|4|On-premises mail system (less common)|Use if you're using Exchange Online Protection or Exchange Online plus another mail system|`ip4:<0.0.0.0>` <br/> `ip6:< : : >` <br/> include:\<mail.contoso.com\> <br/> The value in brackets (\<\>) should be other mail systems that send email for your domain.|
+|4|On-premises mail system (less common)|You're using [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop) or Exchange Online plus another email system|`ip4:<0.0.0.0>` <br/> `ip6:< : : >` <br/> include:\<mail.contoso.com\> <br/> The value in brackets (\<\>) should be other mail systems that send email for your domain.|
 |5|All email systems (required)||-all|
 
 ### Example: Adding to an existing SPF record
@@ -179,5 +180,3 @@ Values: v=spf1 include:spf.protection.outlook.com include:mail.contoso.com -all
 ```
 
 These are some common examples that can help you adapt your existing SPF record when you add your domain to Microsoft 365 for email. If you have a complicated scenario that includes, for example, edge email servers for managing email traffic across your firewall, you have a more detailed SPF record to set up. Learn how: [Set up SPF records in Microsoft 365 to help prevent spoofing](../security/office-365-security/email-authentication-spf-configure.md).
-
-Here's a short link you can use to come back: <https://aka.ms/o365edns>

@@ -1,6 +1,6 @@
----
+﻿---
 title: "Network requests in Office for Mac"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 06/26/2024
@@ -16,8 +16,9 @@ ms.collection:
 f1.keywords:
 - CSH
 ms.custom: 
- - Adm_O365_Setup
- - seo-marvel-apr2020
+- Adm_O365_Setup
+- seo-marvel-apr2020
+- network
 search.appverid: MOM160
 ms.assetid: afdae969-4046-44b9-9adb-f1bab216414b
 description: This article describes which endpoints and URLs Office for Mac applications try to reach, and the services provided.
@@ -25,7 +26,7 @@ description: This article describes which endpoints and URLs Office for Mac appl
 
 # Network requests in Office for Mac
 
-Office for Mac applications provide a native app experience on the macOS platform. Each app is designed to work in a variety of scenarios, including states when no network access is available. When a machine is connected to a network, the applications automatically connect to a series of web-based services to provide enhanced functionality. The following information describes which endpoints and URLs the applications try to reach, and the services provided. This information is useful when troubleshooting network configuration issues and setting policies for network proxy servers. The details in this article are intended to complement the [Office 365 URL and address ranges article](urls-and-ip-address-ranges.md), which includes endpoints for computers running Microsoft Windows. Unless noted, the information in this article also applies to Office 2019 for Mac and Office 2016 for Mac, which are available as a one-time purchase from a retail store or through a volume licensing agreement.
+Office for Mac applications provide a native app experience on the macOS platform. Each app is designed to work in various scenarios, including states when no network access is available. When a machine is connected to a network, the applications automatically connect to a series of web-based services to provide enhanced functionality. The following information describes which endpoints and URLs the applications try to reach, and the services provided. This information is useful when troubleshooting network configuration issues and setting policies for network proxy servers. The details in this article are intended to complement the [Office 365 URL and address ranges article](urls-and-ip-address-ranges.md), which includes endpoints for computers running Microsoft Windows. Unless noted, the information in this article also applies to Office 2019 for Mac and Office 2016 for Mac, which are available as a one-time purchase from a retail store or through a volume licensing agreement.
 
 Most of this article is tables detailing network URLs, type, and description of service or feature provided by that endpoint. Each of the Office apps may differ in its service and endpoint usage. The following apps are defined in the tables below:
   
@@ -53,9 +54,9 @@ The following network endpoints are used to download the Office for Mac installa
 |:-----|:-----|:-----|
 |```https://go.microsoft.com/fwlink/```  <br/> |ST  <br/> |Microsoft 365 Installation Portal forward link service to latest installation packages.  <br/> |
 |```https://officecdn-microsoft-com.akamaized.net/```  <br/> |SS  <br/> |Location of installation packages on the Content Delivery Network.  <br/> |
-|```https://officecdn.microsoft.com/```  <br/> |SS  <br/> |Location of installation packages on the Content Delivery Network.  <br/> |
+|```https://res.public.onecdn.static.microsoft/mro1cdnstorage/```  <br/> |SS  <br/> |Location of installation packages on the Content Delivery Network.  <br/> |
 |```https://officeci-mauservice.azurewebsites.net/```  <br/> |ST  <br/> |Management Control endpoint for Microsoft AutoUpdate  <br/> |
-|```https://officecdnmac.microsoft.com/```  <br/> |  <br/> |Enhanced content delivery network (CDN) for Microsoft AutoUpdate updates  <br/> |
+|```https://res.public.onecdn.static.microsoft/mro1cdnstorage/```  <br/> |  <br/> |Enhanced content delivery network (CDN) for Microsoft AutoUpdate updates  <br/> |
 
  **First app launch**
   
@@ -67,15 +68,16 @@ The following network endpoints are contacted on first launch of an Office app. 
 |```https://ocos-office365-s2s.msedge.net/```  <br/> |WXPON  <br/> |ST  <br/> |'Flighting' Network Configuration Test  <br/> |
 |```https://client-office365-tas.msedge.net/```  <br/> |WXPON  <br/> |ST  <br/> |'Flighting' Network Configuration Test  <br/> |
 |```https://officeclient.microsoft.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Configuration Service - Master list of service endpoints.  <br/> |
-|```https://nexusrules.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Rules Telemetry download - Informs the client about what data and events to upload to the telemetry service.  <br/> |
+|```https://nexusrules.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Rules Telemetry download - Informs the client about what data and events to upload to the telemetry service. <br/> |
+|```https://otelrules.svc.static.microsoft/```  <br/> |WXPON  <br/> |ST  <br/> |Office Rules Telemetry download - Informs the client about what data and events to upload to the telemetry service.  <br/> |
 |```https://mobile.pipe.aria.microsoft.com/```  <br/> |N  <br/> |CS  <br/> |OneNote Telemetry Service  <br/> |
-|```https://nexus.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Telemetry Upload Reporting - "Heartbeart" and error events that occur on the client are uploaded to the telemetry service.  <br/> |
+|```https://nexus.officeapps.live.com/```  <br/> |WXPON  <br/> |ST  <br/> |Office Telemetry Upload Reporting - "Heartbeat" and error events that occur on the client are uploaded to the telemetry service.  *[Note: this URL is only used by Office 2019 for Mac and older versions, which are no longer supported.]* <br/> |
 |```https://templateservice.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Office Template Service - Provides users with online document templates.  <br/> |
 |```https://omextemplates.content.office.net/```  <br/> |WXP  <br/> |CS  <br/> |Office Templates Downloads - Storage of PNG template images.  <br/> |
 |```https://store.office.com/```  <br/> |WXP  <br/> |CS  <br/> |Store configuration for Office apps.  <br/> |
 |```https://odc.officeapps.live.com/```  <br/> |WXPN  <br/> |CS  <br/> |Office Document Integration Services Catalog (list of services and endpoints) and Home Realm Discovery.  <br/> |
 |```https://cdn.odc.officeapps.live.com/```  <br/> |WXPON  <br/> |CS  <br/> |Resources for Home Realm Discovery v2 (15.40 and later)  <br/> |
-|```https://officecdn.microsoft.com/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft AutoUpdate Manifests - checks to see if there are updates available  <br/> |
+|```https://res.public.onecdn.static.microsoft/mro1cdnstorage/```  <br/> |WXPON  <br/> |ST  <br/> |Microsoft AutoUpdate Manifests - checks to see if there are updates available  <br/> |
 |```https://ajax.aspnetcdn.com/```  <br/> |WXPO  <br/> |SS  <br/> |Microsoft Ajax JavaScript Library  <br/> |
 |```https://wikipedia.firstpartyapps.oaspapps.com/```  <br/> |W  <br/> |SS  <br/> |Wikipedia app for Office configuration and resources.  <br/> |
 |```https://excelbingmap.firstpartyapps.oaspapps.com/```  <br/> |X  <br/> |SS  <br/> |Bing Map app for Office configuration and resources.  <br/> |
@@ -253,7 +255,7 @@ Volume License customers may have strict policies about saving documents to clou
 
 - ```defaults write com.microsoft.Powerpoint UseOnlineContent -integer 0```
 
-If users try to access the Sign-In function, they will see an error that a network connection is not present. Because this preference also blocks online product activation, it should only be used for Volume License installations. Specifically, using this preference will prevent Office applications from accessing the following endpoints:
+If users try to access the Sign-In function, they'll see an error that a network connection isn't present. Because this preference also blocks online product activation, it should only be used for Volume License installations. Specifically, using this preference prevents Office applications from accessing the following endpoints:
   
 - ```https://odc.officeapps.live.com```
 
@@ -265,7 +267,7 @@ If users try to access the Sign-In function, they will see an error that a netwo
 
 - All endpoints listed in the 'Product Activation' section above.
 
-- All endpoints listed in the 'Office Apps (aka add-ins)' section above.
+- All endpoints listed in the 'Office Apps (also known as add-ins)' section above.
 
 To re-establish full functionality for the user, either set the preference to '2' or remove it.
   
@@ -296,13 +298,13 @@ Microsoft takes your privacy very seriously. You can read about Microsoft's data
 
 ```defaults write com.microsoft.Office365ServiceV2 SendAllTelemetryEnabled -bool FALSE```
 
-Heartbeat telemetry is always sent and cannot be disabled.
+Heartbeat telemetry is always sent and can't be disabled.
   
 ### Crash reporting
   
 When a fatal application error occurs, the application will unexpectedly terminate and upload a crash report to the 'Watson' service. The crash report consists of a call-stack, which is the list of steps the application was processing leading up to the crash. These steps help the engineering team identify the exact function that failed and why.
   
-In some cases, the contents of a document will cause the application to crash. If the app identifies the document as the cause, it will ask the user if it's okay to also send the document along with the call-stack. Users can make an informed choice to this question. IT administrators may have strict requirements about the transmission of documents and make the decision on behalf of the user to never send documents. The following preference can be set to prevent documents from being sent, and to suppress the prompt to the user:
+In some cases, the contents of a document will cause the application to crash. If the app identifies the document as the cause, it asks the user if it's okay to also send the document along with the call-stack. Users can make an informed choice to this question. IT administrators may have strict requirements about the transmission of documents and make the decision on behalf of the user to never send documents. The following preference can be set to prevent documents from being sent, and to suppress the prompt to the user:
   
 ```defaults write com.microsoft.errorreporting IsAttachFilesEnabled -bool FALSE```
 
@@ -311,16 +313,16 @@ In some cases, the contents of a document will cause the application to crash. I
   
 ### Updates
   
-Microsoft releases Office for Mac updates at regular intervals (typically once a month). We strongly encourage users and IT administrators to keep machines up to date to ensure the latest security fixes are installed. In cases where IT administrators want to closely control and manage machine updates, the following preference can be set to prevent the AutoUpdate process from automatically detecting and offering product updates:
+Microsoft releases Office for Mac updates at regular intervals (typically once a month). We strongly encourage users and IT administrators to keep machines up to date to ensure the latest security fixes are installed. In cases where IT administrators want to closely control and manage machine updates, the following preference can be set to prevent the Microsoft AutoUpdate process from automatically detecting and offering product updates:
   
 ```defaults write com.microsoft.autoupdate2 HowToCheck -string 'Manual'```
 
 ### Blocking Requests with a Firewall/Proxy
   
-If your organization blocks requests to URLs via a firewall or proxy server be sure to configure the URLs listed in this document as either allowed, or block listed with a 40X response (e.g. 403 or 404). A 40X response will allow the Office applications to gracefully accept the inability to access the resource, and will provide a faster user experience, than simply dropping the connection, which in turn will cause the client to retry.
+If your organization blocks requests to URLs via a firewall or proxy server be sure to configure the URLs listed in this document as either allowed, or block listed with a 40X response (for example, 403 or 404). A 40X response allows the Office applications to gracefully accept the inability to access the resource, and will provide a faster user experience, than simply dropping the connection, which in turn will cause the client to retry.
   
-If your proxy server requires authentication, a 407 response will be returned to the client. For the best experience, ensure that you're using Office for Mac builds 15.27 or later, as they include specific fixes for working with NTLM and Kerberos servers.
+If your proxy server requires authentication, a 407 response is returned to the client. For the best experience, ensure that you're using Office for Mac builds 15.27 or later, as they include specific fixes for working with NTLM and Kerberos servers.
   
-## See also
+## Related content
 
-[Office 365 URLs and IP address ranges](urls-and-ip-address-ranges.md)
+[Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md)

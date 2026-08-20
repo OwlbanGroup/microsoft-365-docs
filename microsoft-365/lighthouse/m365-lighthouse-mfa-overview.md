@@ -1,7 +1,7 @@
 ---
 title: "Overview of the Multifactor authentication page in Microsoft 365 Lighthouse"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: aakash
@@ -28,11 +28,11 @@ Multifactor authentication (MFA) in Microsoft Entra ID helps protect your custom
 
 There are several ways to enable MFA:
 
-- **Conditional Access policies (Recommended)** – Enable conditional access policies for tenants with Microsoft Entra ID P1 or P2 licensing.
+- **Conditional Access policies (Recommended)** - Enable conditional access policies for tenants with Microsoft Entra ID P1 or P2 licensing.
 
-- **Security defaults** – Enable security defaults for tenants without Microsoft Entra ID P1 or P2 licensing.
+- **Security defaults** - Enable security defaults for tenants without Microsoft Entra ID P1 or P2 licensing.
 
-- **Per-user MFA** – It isn't recommended to enable MFA on a per-user basis unless the tenant doesn't have Microsoft Entra ID P1 or P2 licensing and you don't want to use security defaults.
+- **Per-user MFA** - It isn't recommended to enable MFA on a per-user basis unless the tenant doesn't have Microsoft Entra ID P1 or P2 licensing and you don't want to use security defaults.
 
 The **Multifactor authentication** page provides detailed information on the status of MFA enablement across your customer tenants and recommended actions to enhance your customers' security. Select any tenant in the list to see more details about that tenant, including which Conditional Access policies requiring MFA are already configured and which users still need to register for MFA.
 
@@ -51,8 +51,8 @@ The Multifactor authentication page includes:
 
 The MFA enforcement graph measures MFA enforcement progress by tenant, reporting the enforcement status of MFA for each tenant as either:
 
-- **Conditional Access policy enablement** – One or more policies requiring MFA are enabled.
-- **Security defaults** – Security defaults are enabled.
+- **Conditional Access policy enablement** - One or more policies requiring MFA are enabled.
+- **Security defaults** - Security defaults are enabled.
 - **No MFA detected** - No Conditional Access policies that require MFA are enabled, and Security defaults have been disabled.
 
 > [!NOTE]
@@ -62,10 +62,10 @@ The MFA enforcement graph measures MFA enforcement progress by tenant, reporting
 
 The MFA registration graph measures MFA registration progress by user, reporting the registration status of MFA for each user as either:
 
-- **Registered** – The user registered for MFA.
-- **Not registered for MFA** – The user didn't register for MFA.
-- **Excluded from MFA** – The user was excluded from MFA registration in Lighthouse.
-- **Data unavailable due to missing license** – The user is a member of a tenant for which data is unavailable due to a missing license.
+- **Registered** - The user registered for MFA.
+- **Not registered for MFA** - The user didn't register for MFA.
+- **Excluded from MFA** - The user was excluded from MFA registration in Lighthouse.
+- **Data unavailable due to missing license** - The user is a member of a tenant for which data is unavailable due to a missing license.
 
 > [!NOTE]
 > The exclusion of a user from MFA registration in Lighthouse doesn't automatically result in the user's exclusion from the applicable deployment task in Lighthouse or from a Conditional Access policy configured in the tenant. To ensure that the user is excluded from the applicable deployment task in Lighthouse and from Conditional Access policies configured in the tenant, see [Manage multifactor authentication](m365-lighthouse-manage-mfa.md).
@@ -134,8 +134,8 @@ The tab lists the user accounts that are part of the **Microsoft 365 Lighthouse 
 
 ## Related content
 
-[Manage multifactor authentication in Lighthouse](m365-lighthouse-manage-mfa.md) (article)\
+[Manage multifactor authentication in Lighthouse](m365-lighthouse-manage-mfa.md) (article)\
 [Plan a Microsoft Entra multifactor authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted) (article)\
-[What are security defaults?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) (article)\
-[What is Conditional Access?](/azure/active-directory/conditional-access/overview) (article)\
-[Learn how to convert users from per-user MFA to Conditional Access](/azure/active-directory/authentication/howto-mfa-getstarted#convert-users-from-per-user-mfa-to-conditional-access-based-mfa) (article)
+[What are security defaults?](/azure/active-directory/fundamentals/concept-fundamentals-security-defaults) (article)\
+[What is Conditional Access?](/azure/active-directory/conditional-access/overview) (article)\
+[Learn how to convert users from per-user MFA to Conditional Access](/azure/active-directory/authentication/howto-mfa-getstarted#convert-users-from-per-user-mfa-to-conditional-access-based-mfa) (article)

@@ -1,25 +1,26 @@
 ---
-title: "Set up Microsoft 365 Business Basic"
+title: Set up Microsoft 365 Business Basic
 f1.keywords:
 - NOCSH
-ms.author: efrene
-author: efrene
+ms.author: kwekua
+author: kwekuako
 manager: scotv
-ms.date: 05/31/2024
+ms.date: 04/27/2026
 audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
-- Tier2
-- scotvorg
-- highpri
-- M365-subscription-management
-- Adm_O365
-- Adm_TOC
-- Adm_O365_Setup
-- TRN_SMB
-- must-keep
+ms.collection:
+  - Tier2
+  - scotvorg
+  - highpri
+  - M365-subscription-management
+  - Adm_O365
+  - Adm_TOC
+  - Adm_O365_Setup
+  - TRN_SMB
+  - must-keep
+  - operations-pod
 ms.custom:
 - VSBFY23
 - TRN_M365B
@@ -31,43 +32,49 @@ search.appverid:
 - MET150
 - MOE150
 - BEA160
-description: "Learn how to set up your Microsoft 365 Business Basic subscription."
+description: Learn how to activate your Microsoft 365 Business Basic subscription and complete initial setup.
+#customer intent: As an IT admin for a small business, I want to activate the Microsoft 365 Business Basic subscription so that we can start using its features.
 ---
 
-# Set up Microsoft 365 Business Basic
+# Activate and set up Microsoft 365 Business Basic
 
-Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+For more small business content, see [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+
+## Activate your Microsoft 365 Business Basic subscription
+
+Use these steps to confirm your subscription is active and ready for users.
+
+> [!NOTE]
+> If you bought a nonprofit offer, sign in to the [Nonprofit Hub](https://nonprofit.microsoft.com/) to claim or activate your nonprofit offer. Then return to the Microsoft 365 admin center to verify that the subscription appears under **Billing** > **Your products**. If the nonprofit offer still doesn't appear, use the [Microsoft nonprofit support Contact Us form](https://nonprofit.microsoft.com/contactus).
+
+1. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
+
+1. In the admin center, go to **Billing** > **Your products**.
+
+1. Verify that **Microsoft 365 Business Basic** shows **Active**.
+
+1. Go to **Users** > **Active users**, and assign available Business Basic licenses to your users.
+
+1. In the admin center Home page, select **Dashboard view**, and then select **Go to guided setup** to complete domain, email, and app setup.
 
 ## Add an existing domain to your Microsoft 365 Business Basic subscription
 
-When you purchase Microsoft 365 Business Basic, you have the option of using a domain you own, or buying one during the sign-up.
+When you purchase Microsoft 365 Business Basic, you can use a domain you own or buy one during the sign-up process.
 
-- If you purchased a new domain when you signed up, your domain is all set up and you can move to [Add users and assign licenses](#add-users-and-assign-licenses).
+- If you purchase a new domain during sign-up, your domain is all set up and you can move to [Add users and assign licenses](#add-users-and-assign-licenses).
 
-::: moniker range="o365-worldwide"
+1. Go to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
 
-1. Go to the Microsoft 365 admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.cloud.microsoft</a>.
+1. In the admin center Home page, select **Dashboard view**, and then select **Go to guided setup** to start the wizard.
 
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. Go to the admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=850627" target="_blank">https://portal.partner.microsoftonline.cn</a>.
-
-::: moniker-end
-
-2. Choose **Go to guided setup** to start the wizard.
-
-3. Choose **Go to guided setup** to start the wizard.
-
-4. In the **Add domain** step, enter the domain name you want to use (like contoso.com).
+1. In the **Add domain** step, enter the domain name you want to use (like contoso.com).
 
     > [!IMPORTANT]
-    > If you purchased a domain during the sign-up, you will not see **Add a domain** step here. Go to [Add users](#add-users-and-assign-licenses) instead.
+    > If you purchase a domain during sign-up, you don't see the **Add a domain** step. Instead, go to [Add users](#add-users-and-assign-licenses).
 
-5. Follow the steps in the wizard to [Add DNS records to connect your domain](../get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md) that verifies you own the domain. If you know your domain host, see also [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
+1. Follow the steps in the wizard to [Add DNS records to connect your domain](../get-help-with-domains/create-dns-records-at-any-dns-hosting-provider.md) that verifies you own the domain. If you know your domain host, see also [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
-    If your hosting provider is GoDaddy or another host enabled with [domain connect](/office365/admin/get-help-with-domains/domain-connect), the process is easy and you'll be automatically asked to sign in and let Microsoft authenticate on your behalf.
+    If your hosting provider is GoDaddy or another host that is enabled with [domain connect](/office365/admin/get-help-with-domains/domain-connect), the process is easy and you're automatically asked to sign in and let Microsoft authenticate on your behalf.
 
     ![On GoDaddy Confirm Access page, select Authorize.](../../media/godaddyauth.png)
    
@@ -75,27 +82,27 @@ When you purchase Microsoft 365 Business Basic, you have the option of using a d
 
 You can add users in the wizard, but you can also [add users later](../add-users/add-users.md) in the admin center.
 
-Any users you add in the wizard get automatically assigned a Microsoft 365 Business Basic license.
+Any users you add in the wizard automatically get assigned a Microsoft 365 Business Basic license.
 
 1. If your Microsoft 365 Business Basic subscription has existing users (for example, if you used Microsoft Entra Connect), you get an option to assign licenses to them now. Go ahead and add licenses to them as well.
 
-2. After you've added the users, you'll also get an option to share credentials with the new users you added. You can choose to print them out, email them, or download them.
+1. After you add the users, you also get an option to share credentials with the new users you added. You can choose to print them out, email them, or download them.
 
 ## Connect your domain
 
 > [!NOTE]
-> If you chose to use the .onmicrosoft domain, or used Microsoft Entra Connect to set up users, you will not see this step.
+> If you choose to use the .onmicrosoft domain, or use Microsoft Entra Connect to set up users, you don't see this step.
   
 To set up services, you have to update some records at your DNS host or domain registrar.
   
 1. The setup wizard typically detects your registrar and gives you a link to step-by-step instructions for updating your NS records at the registrar website. If it doesn't, [Change nameservers to set up Microsoft 365 with any domain registrar](../get-help-with-domains/change-nameservers-at-any-domain-registrar.md).
 
-    - If you have existing DNS records, for example an existing web site, but your DNS host is enabled for [domain connect](/office365/admin/get-help-with-domains/domain-connect), choose **Add records for me**. On the **Choose your online services** page, accept all the defaults, and choose **Next**, and choose **Authorize** on your DNS host's page.
-    - If you have existing DNS records with other DNS hosts (not enabled for domain connect), you'll want to manage your own DNS records to make sure the existing services stay connected. See [domain basics](/office365/admin/get-help-with-domains/dns-basics) for more info.
+    - If you have existing DNS records, for example an existing website, but your DNS host is enabled for [domain connect](/office365/admin/get-help-with-domains/domain-connect), choose **Add records for me**. On the **Choose your online services** page, accept all the defaults, and choose **Next**. Choose **Authorize** on your DNS host's page.
+    - If you have existing DNS records with other DNS hosts (not enabled for domain connect), you need to manage your own DNS records to make sure the existing services stay connected. See [domain basics](/office365/admin/get-help-with-domains/dns-basics) for more info.
 
-2. Follow the steps in the wizard and email and other services will be set up for you.
+1. Follow the steps in the wizard and email and other services are set up for you.
 
-    When the signup process is complete, you'll be directed to the admin center, where you can add users, and assign licenses. After you complete the initial setup, you can use the **Setup** page in the admin center to continue setting up and configuring the services that come with your subscriptions.
+    When the signup process is complete, you're directed to the admin center, where you can add users, and assign licenses. After you complete the initial setup, you can use the **Setup** page in the admin center to continue setting up and configuring the services that come with your subscriptions.
 
     For more information about the setup wizard and the admin center **Setup** page, see [Difference between the setup wizard and the Setup page](o365-setup-wizard-and-setup-page.md).
 
@@ -107,11 +114,11 @@ To set up services, you have to update some records at your DNS host or domain r
 
 1. From the **How you'll sign in** page on the Microsoft 365 Business Standard sign up, choose **Create a new business email account (advanced)**.
 
-2. Follow the steps to buy a new domain and enter the domain name you want to use (like contoso.com). After you've completed buying your domain, you can [add users and licenses](../add-users/add-users.md) and install your Microsoft 365 productivity apps in the admin center.
+1. Follow the steps to buy a new domain and enter the domain name you want to use (like contoso.com). After you complete buying your domain, you can [add users and licenses](../add-users/add-users.md) and install your Microsoft 365 productivity apps in the admin center.
 
 ## Finish setting up
 
-Follow the steps below to set up Outlook, Teams, OneDrive and your website.
+Follow the steps in this section to set up Outlook, Teams, OneDrive, and your website.
 
 ### Step: Set up Outlook for email
 
@@ -119,11 +126,11 @@ Follow the steps below to set up Outlook, Teams, OneDrive and your website.
 
     (If you're using a Mac, open Outlook from the toolbar or locate it using the Finder.)
 
-    If you've just installed Outlook, on the Welcome page, select **Next**.
+    On the Welcome page, select **Next**.
 
-2. Choose **File** \> **Info** \> **Add Account**.
+1. Choose **File** \> **Info** \> **Add Account**.
 
-3. Enter your Microsoft email address and select **Connect**.
+1. Enter your Microsoft email address and select **Connect**.
 
 ## Watch: Set up Outlook for email
 
@@ -133,19 +140,19 @@ More at [Set up Outlook for email](https://support.microsoft.com/office/f5bf0cd1
   
 ### Import email
 
-If you were using Outlook with another email account, you can import your previous email, calendar, and contacts into your new Microsoft account.
+If you used Outlook with another email account, you can import your previous email, calendar, and contacts into your new Microsoft account.
   
 1. **Export your old email**
 
-    In Outlook, choose **File** \> **Open &amp; Export** \> **Import/Export**.
+    In Outlook, select **File** \> **Open & Export** \> **Import/Export**.
 
     Select **Export to a File** and then follow the steps to export your Outlook Data File (.pst) and any subfolders.
 
-2. **Import your old email**
+1. **Import your old email**
 
-    In Outlook, choose **File** \> **Open &amp; Export** \> **Import/Export** again.
+    In Outlook, select **File** \> **Open & Export** \> **Import/Export**.
 
-    This time, select **Import from another program or file** and follow the steps to import the backup file you created when you exported your old email.
+    Select **Import from another program or file** and follow the steps to import the backup file you created when you exported your old email.
 
 ## Watch: Import and redirect email
 
@@ -157,9 +164,9 @@ You can also use <a href="https://go.microsoft.com/fwlink/p/?linkid=2059104" tar
 
 ## Set up Microsoft Teams and OneDrive
 
-Select the OneDrive cloud icon from your taskbar and follow the steps to move your files to your new OneDrive folder. Select **Next** to set up Microsoft Teams.
+Select the OneDrive cloud icon from your taskbar and follow the steps to move your files to your new OneDrive folder. To set up Microsoft Teams select **Next**.
 
-1. Open Microsoft Teams, select your profile icon, and then **Add work or school account**. Follow the steps to add your new account to Teams.
+1. Open Microsoft Teams, select your profile icon, and then **Add work or school account**. To add your new account to Teams, follow the steps that appear after selecting **Add work or school account**.
 
 ## Use a public website
 
@@ -167,7 +174,7 @@ Microsoft 365 doesn't include a public website for your business. If you want to
   
 1. From the admin center, go to **Resources**, and then select **Public website**.
 
-2. Select **Learn more** under one of the options, and then sign up with a website partner and use their tools to set up and design your site.
+1. Select **Learn more** under one of the options, and then sign up with a website partner and use their tools to set up and design your site.
 
 ## Watch: Create your business website
 
@@ -175,15 +182,15 @@ Microsoft 365 doesn't include a public website for your business. If you want to
 
 ## Invite users to join your subscription and organization
 
-Once you've set up your organization, you can invite other users to join your Microsoft 365 business subscription. They'll get access to all the features of the subscription.
+Once you set up your organization, you can invite other users to join your Microsoft 365 business subscription. They get access to all the features of the subscription.
 
 [Invite users to my subscription](../simplified-signup/admin-invite-business-standard.md)
 
-Let your users know they can follow the steps in the articles below to join your organization and subscription.
+To join your organization and subscription, see the following articles:
 
 - [Accept an email invitation](../simplified-signup/user-invite-business-standard.md)
 
-- [Accept an email invitation using an Outlook, Yahoo, Gmail or other account (User)](../simplified-signup/user-invite-msa-nodomain-join.md)
+- [Accept an email invitation using an Outlook, Yahoo, Gmail, or other account (User)](../simplified-signup/user-invite-msa-nodomain-join.md)
 
 ## Related topics
 

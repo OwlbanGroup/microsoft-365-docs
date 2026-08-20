@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: kwekua
 author: kwekuako
 manager: scotv
-ms.date: 10/01/2024
+ms.date: 02/02/2026
 audience: Admin
 ms.topic: article
 ms.service: microsoft-365-business
@@ -15,6 +15,7 @@ ms.collection:
 - scotvorg
 - Adm_O365
 - Adm_TOC
+- operations-pod
 ms.custom: AdminSurgePortfolio
 description: "Learn how to use the search feature in the admin center for better and faster results."
 ---
@@ -48,6 +49,10 @@ If you select the three dots (more actions) menu next to their name, you can res
 - Make sure you spell the users' names correctly as user searches are matched exactly against the earlier mentioned properties. For example, in the above example, Jus or Malz will work but a misspelling, like, Jostin instead of Justin won't find this user.
 - To get an exact match, search by primary email address or username.
 
+## Copilot
+
+Search now includes Microsoft 365 Copilot admin settings. You can search for Copilot usage info and service management.
+
 ## Groups
 
 You can search for Groups by group name or group email address. You can select the Group and edit the group from any page.
@@ -60,7 +65,7 @@ Make sure you spell the group name correctly.
 
 ## Actions
 
-You can search for Actions category, which contains frequently used actions in M365 Admin Center. Think of actions as verb in the system. For example, you can also search "reset password" from any page and then reset one or more passwords for users. You can search for “delete a user” and delete the user from the Delete user page.
+You can search for Actions category, which contains frequently used actions in Microsoft 365 Admin Center. Think of actions as verb in the system. For example, you can also search "reset password" from any page and then reset one or more passwords for users. You can search for “delete a user” and delete the user from the Delete user page.
 
 :::image type="content" source="../../media/search-for-actions-mac.png" alt-text="Screenshot: Search results showing actions you can perform in the admin center":::
 

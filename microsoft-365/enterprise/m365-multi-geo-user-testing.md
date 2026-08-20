@@ -1,19 +1,20 @@
 ---
 title: User Testing in Multi-Geo
 description: Learn about user testing in Multi-Geo
-ms.author: kvice
-author: kelleyvice-msft
-manager: scotv
-ms.reviewer: deanw, anfra
+ms.author: v-fahasen
+author: fhasen-msft
+manager: Justin.Giammona
+ms.reviewer: jugiammo, anfra
 ms.service: microsoft-365-enterprise
-ms.subservice: multi-tenant
+ms.subservice: multi-geo-capabilities
 ms.topic: article
 f1.keywords:
 - NOCSH
-ms.date: 02/12/2025
+ms.date: 05/09/2025
 ms.custom:
-  - it-pro
-  - has-azure-ad-ps-ref
+- it-pro
+- has-azure-ad-ps-ref
+- data-residency
 ms.localizationpriority: medium
 ms.collection:
 - M365-subscription-management
@@ -84,3 +85,4 @@ If the user already has a OneDrive site created in the _Tenant_, setting their P
 > Exchange Online automatically relocates the user's mailbox if the PDL changes and the MailboxRegion no longer matches the Mailbox Database Geo Location code. For more information, see [Administering Exchange Online mailboxes in a multi-geo environment](administering-exchange-online-multi-geo.md).
 
 If the user doesn't have a OneDrive site within the _Tenant_, OneDrive will be provisioned for them in accordance to their PDL value, assuming the PDL for the user matches one of the company's satellite locations.
+

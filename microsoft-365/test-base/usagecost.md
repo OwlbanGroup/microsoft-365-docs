@@ -26,7 +26,7 @@ f1.keywords: NOCSH
 
 ## Usage console under Billing hub
 
-By access the new “Usage console” under the "Billing hub" section from portal, user will be able to review their Total usage for the selected period, Free hour balance and the Billable cost based on the usage.
+By access the new "Usage console" under the "Billing hub" section from portal, user will be able to review their Total usage for the selected period, Free hour balance and the Billable cost based on the usage.
 
 **Prep Step**
 

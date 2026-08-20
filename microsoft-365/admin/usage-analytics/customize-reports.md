@@ -5,7 +5,7 @@ f1.keywords:
 ms.author: efrene
 author: efrene
 manager: scotv
-ms.date: 03/05/2024
+ms.date: 03/11/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
@@ -16,6 +16,7 @@ ms.collection:
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
+- operations-pod
 ms.custom: AdminSurgePortfolio
 search.appverid:
 - BCS160
@@ -116,7 +117,7 @@ You can start by connecting directly to the ODATA reporting APIs from Microsoft 
 
 3. Enter your Microsoft 365 (organization or school) admin credentials to authenticate to Microsoft 365 when prompted.
 
-    See the [FAQ](usage-analytics.md#faq) for more information about who is allowed to access the Microsoft 365 Adoption template app reports.
+    See the [Microsoft 365 Usage Analytics Overview FAQ](usage-analytics-faq.yml) for more information about who is allowed to access the Microsoft 365 Adoption template app reports.
 
 4. Once the connection is authorized, you will see the Navigator window that shows the datasets available to connect to.
 

@@ -9,11 +9,12 @@ metadata:
   ms.topic: landing-page # Required
   ms.collection:
   - Tier1
-  - scotvorg 
-  - highpri 
+  - scotvorg
+  - highpri
   - commerce
   - Adm_TOC
-  ms.custom: 
+  - operations-pod
+  ms.custom:
   - VSBFY23
   - commerce_landingpage
   author: cmcatee-MSFT #Required; your GitHub user alias, with correct capitalization.
@@ -22,7 +23,7 @@ metadata:
   audience: Admin
   ms.localizationpriority: medium
   search.appverid: MET150
-  ms.date: 03/13/2025
+  ms.date: 02/17/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 
@@ -39,15 +40,17 @@ landingContent:
           - text: Manage payment methods
             url: billing-and-payments/manage-payment-methods.md
           - text: Understand your invoice (MCA)
-            url: billing-and-payments/understand-your-invoice.md           
+            url: billing-and-payments/understand-your-invoice.md
           - text: Understand your invoice (MOSA)
             url: billing-and-payments/understand-your-invoice2.md
       - linkListType: overview
         links:
           - text: Introducing the new Microsoft billing experience
             url: billing-experience-overview.md
-          - text: Payment options for your subscription
+          - text: Pay your invoice with a credit card or billing profile
             url: billing-and-payments/pay-for-your-subscription.md
+          - text: Pay your invoice with a wire transfer
+            url: billing-and-payments/pay-by-wire-transfer.md
       - linkListType: video
         links:
           - text: Understand your bill or invoice
@@ -88,7 +91,7 @@ landingContent:
             url: try-or-buy-microsoft-365.md
           - text: Buy a domain name
             url: ../admin/get-help-with-domains/buy-a-domain-name.md
-#          - text: Upgrade to a different plan 
+#          - text: Upgrade to a different plan
 #            url: subscriptions/upgrade-to-different-plan.md
           - text: Turn recurring billing on or off
             url: subscriptions/renew-your-subscription.md
@@ -102,3 +105,45 @@ landingContent:
             url: https://www.youtube.com/watch?v=BRN-zfy0ncI
           - text: Move users to a different subscription
             url: https://www.youtube.com/watch?v=IgXxC1H1XU0
+
+  # Card
+  - title: Manage pay-as-you-go services
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Set up pay-as-you-go billing in Settings node
+            url: services/pay-as-you-go-setup.md
+          - text: Set up pay-as-you-go billing in Billing node
+            url: services/pay-as-you-go-setup-billing-node.md
+          - text: Set up a pay-as-you-go budget
+            url: services/pay-as-you-go-budget.md
+          - text: Start using pay-as-you-go services
+            url: services/pay-as-you-go-overview.md#start-using-pay-as-you-go-services
+      - linkListType: overview
+        links:
+          - text: What are pay-as-you-go services?
+            url: services/pay-as-you-go-overview.md
+          - text: Available pay-as-you-go services
+            url: services/pay-as-you-go-services.md
+          - text: Pay-as-you-go pricing
+            url: services/pay-as-you-go-overview.md#pricing-details-for-pay-as-you-go-services
+      - linkListType: whats-new
+        links:
+          - text: Available new pay-as-you-go services
+            url: services/pay-as-you-go-whats-new.md
+
+  # Card
+  - title: Manage volume licensing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Sign in to the Microsoft 365 admin center (volume licensing)
+            url: licenses/vl-sign-in.md
+          - text: Download volume licensing products
+            url: licenses/download-vl-products.md
+          - text: Find and use product keys for volume licensing
+            url: licenses/product-keys-for-vl.md
+          - text: Manage License Reservations for volume licensing
+            url: licenses/manage-license-reservations-vl.md
+          - text: Contact volume licensing support
+            url: licenses/contact-vl-support.md

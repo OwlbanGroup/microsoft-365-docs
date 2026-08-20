@@ -45,7 +45,7 @@ You can use **Functional test** to define the install sequence for the pre-relea
 
 You will be able to reorder the scripts in the functional list panel by dragging the items up and down to the proper step. Choose which step to execute the Office installation by selecting the script before which you would like the pre-release Office installation to happen.  
 
-In below example, Windows update will be installed first, followed by the pre-office-install script, then the Office pre-release will be installed before the install script for user’s application after which the run-test script will be executed.
+In below example, Windows update will be installed first, followed by the pre-office-install script, then the Office pre-release will be installed before the install script for user's application after which the run-test script will be executed.
 
  > [!div class="mx-imgBorder"]  
  > ![Screenshot shows Functional test](Media/testwithm365app03.png)  
@@ -68,4 +68,4 @@ In the detailed page, you will see install-Office as an auto-executed script whi
  > [!div class="mx-imgBorder"]  
  > ![Screenshot shows Reliability](Media/testwithm365app05.png)  
  > [!NOTE]
- > For Out of box test type, a pre-defined Office interop test script will be executed to help collect conflict signals for pre-release Office running with user’s installed application by default. You can use Functional test to define your own test flow and bypass the Office test script if you would like to focus on testing how your application works with latest Office updates.
+ > For Out of box test type, a pre-defined Office interop test script will be executed to help collect conflict signals for pre-release Office running with user's installed application by default. You can use Functional test to define your own test flow and bypass the Office test script if you would like to focus on testing how your application works with latest Office updates.

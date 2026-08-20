@@ -2,8 +2,8 @@
 title: "Getting a mailbox not found error in Outlook on the web"
 f1.keywords:
 - CSH
-ms.author: efrene
-author: efrene
+ms.author: kwekua
+author: kwekuako
 manager: scotv
 audience: Admin
 ms.topic: article
@@ -14,9 +14,11 @@ ms.collection:
 - Tier2
 - scotvorg
 - M365-subscription-management
-ms.custom: 
+- operations-pod
+ms.custom:
 - AdminTemplateSet
 - admindeeplinkMAC
+- user-accounts
 ROBOTS: NOINDEX, NOFOLLOW
 search.appverid:
 - MET150

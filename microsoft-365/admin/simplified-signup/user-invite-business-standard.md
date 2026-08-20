@@ -1,11 +1,11 @@
 ---
-title: "Accept an email invitation to a Microsoft 365 for business subscription (User)"
+title: Accept an email invitation to a Microsoft 365 for business subscription (User)
 f1.keywords:
 - NOCSH
 ms.author: kwekua
 author: kwekuako
 manager: scotv
-ms.date: 01/06/2025
+ms.date: 03/27/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
@@ -13,12 +13,13 @@ ms.localizationpriority: medium
 ms.collection:
 - Tier1
 - scotvorg
-- highpri 
+- highpri
 - Adm_TOC
-ms.custom: 
+- operations-pod
+ms.custom:
 - VSBFY23
 - AdminSurgePortfolio
-description: "Accept invite to join a Microsoft 365 for business organization"
+description: Accept invite to join a Microsoft 365 for business organization
 ---
 
 # Accept an email invitation to a Microsoft 365 for business subscription (User)
@@ -26,16 +27,18 @@ description: "Accept invite to join a Microsoft 365 for business organization"
 Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
 
 > [!IMPORTANT]
+>
 > These steps apply to Microsoft 365 Business Standard, Microsoft 365 Business Basic and Microsoft 365 Apps for business.
 
-When you’re already using Microsoft 365 Business with a Gmail, Outlook, Yahoo (or similar) email address, someone (for example your administrator or business owner) may invite you to upgrade Microsoft 365 to start using professional branded email.  In this scenario, you are switching email address and learning how to upgrade.
+When you're already using Microsoft 365 Business with a Gmail, Outlook, Yahoo (or similar) email address, someone (for example your administrator or business owner) may invite you to upgrade Microsoft 365 to start using professional branded email.  In this scenario, you are switching email address and learning how to upgrade.
 
 :::image type="content" source="../../media/ssu-accept-invite-upgrade.png" alt-text="Screenshot: Accept email invite for new business email account":::
 
-If you’re an admin of an organization where users are still using Gmail, Outlook, Yahoo, or similar email addresses, and you’re looking how to set up branded email, check out these steps instead: [Add a domain to Microsoft 365](../setup/add-domain.md) and [Set up your organization with email and cloud storage](../setup/setup-business-standard.md#finish-setting-up).
+If you're an admin of an organization where users are still using Gmail, Outlook, Yahoo, or similar email addresses, and you're looking how to set up branded email, see the article [Add a domain to Microsoft 365](../setup/add-domain.md).
 
 > [!IMPORTANT]
-> If you’re an admin and you’re looking for steps on how to send a user an invite to your Microsoft 365 for business subscription, check out [Invite users to Microsoft 365 Business Standard (Admin)](admin-invite-business-standard.md).
+>
+> If you're an admin and you're looking for steps on how to send a user an invite to your Microsoft 365 for business subscription, check out [Invite users to Microsoft 365 Business Standard (Admin)](admin-invite-business-standard.md).
 
 ## Join a Microsoft 365 for business organization
 
@@ -43,19 +46,19 @@ Make sure you have your current account sign in details before you start these s
 
 1. From the invitation email, select **Set up this account**.
 
-2. Before you can sign in to your new business account, you have to set it up with your existing user account. Select **Sign in** to log into your existing user account.
+1. Before you can sign in to your new business account, you have to set it up with your existing user account. Select **Sign in** to log into your existing user account.
 
-3. Read the information about how your data will be handled.
+1. Read the information about how your data will be handled.
 
-4. On the **How you'll sign in** page, learn about your new account and select **Next**.
+1. On the **How you'll sign in** page, learn about your new account and select **Next**.
 
-5. On the **Add new account to desktop apps** page, open any Microsoft 365 app, select your profile and sign in with the new username and temporary password. select **Next**.
+1. On the **Add new account to desktop apps** page, open any Microsoft 365 app, select your profile and sign in with the new username and temporary password. select **Next**.
 
-6. Follow the steps on the **Add new account to Outlook** page to set up Outlook. Select **Next**.
+1. Follow the steps on the **Add new account to Outlook** page to set up Outlook. Select **Next**.
 
-7. Follow the steps on the **Move files to OneDrive for Business** page to set up OneDrive. Select **Next**.
+1. Follow the steps on the **Move files to OneDrive for Business** page to set up OneDrive. Select **Next**.
 
-8. On the **Add new account to Microsoft Teams** page, follow the steps to set up Teams. Select **I'm done** when you're complete.
+1. On the **Add new account to Microsoft Teams** page, follow the steps to set up Teams. Select **I'm done** when you're complete.
 
 ### Next steps - Migrate your data to Microsoft 365 for business
 
@@ -67,9 +70,9 @@ Download and start using [Microsoft 365 apps for business](https://support.micro
 
 ## Frequently asked questions
 
-### I didn’t receive an upgrade email?
+### I didn't receive an upgrade email?
 
-Check your spam folder. If it’s not there, contact your admin or business owner and ask them to send the email again.
+Check your spam folder. If it's not there, contact your admin or business owner and ask them to send the email again.
 
 ### I have a question about upgrading my account, who can I talk to?
 
@@ -94,14 +97,14 @@ You should have received an email from your admin. Please follow the steps outli
 
 ### Does the way I login to Windows change when I get a new business account?
 
-No it doesn’t, you can still log in the same way as before.
+No it doesn't, you can still log in the same way as before.
 
 ### How can I send and receive emails with my new business email?
 
 When you launch Microsoft Outlook using your new business account, your new mailbox is automatically set up for you.
 
-1. First follow: [Set up Outlook for business email](Set up Outlook for Microsoft 365 for business email](../setup/setup-outlook.md).
-2. Then follow: [Create and send email in Outlook](https://support.microsoft.com/office/create-and-send-email-in-outlook-19c32deb-08b6-4f90-a211-02bc5f77f360).
+1. First follow: [Set up Outlook for business email](../setup/setup-outlook.md).
+1. Then follow: [Create and send email in Outlook](https://support.microsoft.com/office/create-and-send-email-in-outlook-19c32deb-08b6-4f90-a211-02bc5f77f360).
 
 ### How can I leave this business (and stop using this license)?
 

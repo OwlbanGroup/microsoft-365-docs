@@ -11,6 +11,7 @@ ms.localizationpriority: medium
 ms.collection:
 - scotvorg
 - essentials-manage
+- operations-pod
 description: "Use this page to create your staff list and to manage staff member details such as name, phone number, and email address."
 ---
 
@@ -45,7 +46,7 @@ Although Bookings is a feature of Microsoft 365, not all of your staff members a
 
     :::image type="content" source="media/bookings-notify-all-email.jpg" alt-text="A notification email from Bookings.":::
 
-6. Select **Events on Microsoft 365 calendar affect availability** if you want the free/busy information from staff members’ calendars to impact availability for booking services through Bookings.
+6. Select **Events on Microsoft 365 calendar affect availability** if you want the free/busy information from staff members' calendars to impact availability for booking services through Bookings.
 
     For example, if a staff member has a team meeting or a personal appointment scheduled for 3pm on a Wednesday, Bookings shows that staff member as unavailable to be booked in that time slot. That time appears as busy or tentative in the Bookings Page view, as shown in the image below.
 

@@ -28,7 +28,7 @@ ms.date: 10/24/2024
 
 ## Overview
 
-Create and manage frontline teams in bulk to drive communication and collaboration for every location in your frontline workforce. Team membership of your frontline teams is automatically synced with your frontline workers’ [Microsoft Entra attributes](/entra/external-id/customers/how-to-define-custom-attributes). As team owners, frontline managers at each of your locations, like department heads, store leads, and warehouse managers, can manually add or remove members.
+Create and manage frontline teams in bulk to drive communication and collaboration for every location in your frontline workforce. Team membership of your frontline teams is automatically synced with your frontline workers' [Microsoft Entra attributes](/entra/external-id/customers/how-to-define-custom-attributes). As team owners, frontline managers at each of your locations, like department heads, store leads, and warehouse managers, can manually add or remove members.
 
 > [!NOTE]
 > If you would like to provide feedback and help improve this feature, fill out this [form](https://forms.office.com/r/MPfxrGG9h4).
@@ -63,7 +63,7 @@ Team membership is automatically managed over time through the power of dynamic 
   - All your frontline managers at each of your frontline locations should be added to up to 20 Microsoft 365 dynamic groups.
   - There must be one attribute consistent across all frontline workers and managers that represents their frontline location.
 
-- If you want to enable [targeted communications](set-up-targeted-communications.md), ensure you can map the attributes of your frontline workers through data available in Microsoft Entra ID. If user profile information doesn’t yet include job title or department, you can add it. [Learn more about how to add or update a user’s profile information in Microsoft Entra ID](/entra/fundamentals/how-to-manage-user-profile-info). 
+- If you want to enable [targeted communications](set-up-targeted-communications.md), ensure you can map the attributes of your frontline workers through data available in Microsoft Entra ID. If user profile information doesn't yet include job title or department, you can add it. [Learn more about how to add or update a user's profile information in Microsoft Entra ID](/entra/fundamentals/how-to-manage-user-profile-info). 
 
 ### Admin role to run the deployment
 

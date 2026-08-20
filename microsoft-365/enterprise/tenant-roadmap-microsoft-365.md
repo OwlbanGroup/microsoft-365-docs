@@ -2,7 +2,7 @@
 title: Tenant roadmap for Microsoft 365
 f1.keywords:
 - NOCSH
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 12/09/2024
@@ -17,7 +17,9 @@ ms.collection:
 - m365initiative-coredeploy
 - essentials-get-started
 - must-keep
-ms.custom: it-pro
+ms.custom:
+- it-pro
+- tenant
 description: The roadmap to set up your tenants for Microsoft 365.
 ---
 

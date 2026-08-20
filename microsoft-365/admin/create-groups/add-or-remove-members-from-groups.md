@@ -1,24 +1,27 @@
 ---
 title: "Add or remove members from Microsoft 365 groups"
-ms.reviewer: rahulnayak
-ms.date: 06/27/2024
+ms.reviewer: batre
+ms.date: 05/21/2025
 f1.keywords: NOCSH
-author: DaniEASmith
-ms.author: danismith
-manager: jtremper
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business
+ms.service: microsoft-365-admin
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
-ms.custom: 
+- trust-pod
+ms.custom:
 - AdminSurgePortfolio
 - AdminTemplateSet
+- m365-groups
+- user-accounts
 search.appverid:
 - MET150
 ms.assetid: e186d224-a324-4afa-8300-0e4fc0c3000a
@@ -108,7 +111,7 @@ By default, the person who created the group is the group owner. Often a group w
 
 - [Manage groups dynamically in Microsoft Entra ID](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal): see the section "How can I manage the membership of a group dynamically?"
 
-- To add hundreds or thousands of users to groups, use the [Add-UnifiedGroupLinks](/powershell/module/exchange/add-unifiedgrouplinks).
+- To add hundreds or thousands of users to groups, use the [Add-UnifiedGroupLinks](/powershell/module/exchangepowershell/add-unifiedgrouplinks).
 
 - [Assign a new owner to an orphaned group](https://support.microsoft.com/office/86bb3db6-8857-45d1-95c8-f6d540e45732)
 
@@ -116,4 +119,4 @@ By default, the person who created the group is the group owner. Often a group w
 
 [Manage guest access in Microsoft 365 groups](manage-guest-access-in-groups.md) (article)\
 [Manage Microsoft 365 groups with PowerShell](../../enterprise/manage-microsoft-365-groups-with-powershell.md): this article introduces you to key cmdlets and provides examples (article)\
-[Microsoft 365 groups naming policy](../../solutions/groups-naming-policy.md) (article)
+[Microsoft 365 groups naming policy](/previous-versions/microsoft-365/solutions/groups-naming-policy) (article)

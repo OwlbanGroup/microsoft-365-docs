@@ -23,7 +23,7 @@ f1.keywords: NOCSH
 To create a **Test Base** account, perform the steps that follow. 
 
 > [!IMPORTANT]
-> You'll need a subscription to register for a **Test Base** account. If you don’t have an Azure subscription, see **Subscriptions** on the [Azure home](https://ms.portal.azure.com/#home) page to learn how to create one. 
+> You'll need a subscription to register for a **Test Base** account. If you don't have an Azure subscription, see **Subscriptions** on the [Azure home](https://ms.portal.azure.com/#home) page to learn how to create one. 
 
 ## To create a Test Base account
  
@@ -39,9 +39,9 @@ To create a **Test Base** account, perform the steps that follow.
 
 3. On the **Create Test Base Account** page, add your information to the following required input fields on the **Create Test Base Account** page: 
 
-   - **Subscription**—from the drop-down list, locate your Azure subscription ID and select it. 
-   - **Resource group**—create a new Resource group by selecting **Create new** and specifying a chosen name in the **Name** input text box that displays. Select **OK** when done. If you already have a **Resource group**, locate its name in the drop-down list and select it. 
-   - **Test Base account**—under **Account Details**, as shown in the figure that follows, specify a chosen name for your **Test Base** account by typing it in the input text field. 
+   - **Subscription**-from the drop-down list, locate your Azure subscription ID and select it. 
+   - **Resource group**-create a new Resource group by selecting **Create new** and specifying a chosen name in the **Name** input text box that displays. Select **OK** when done. If you already have a **Resource group**, locate its name in the drop-down list and select it. 
+   - **Test Base account**-under **Account Details**, as shown in the figure that follows, specify a chosen name for your **Test Base** account by typing it in the input text field. 
 
    > [!NOTE]
    > You must provide input for all required fields (*). 

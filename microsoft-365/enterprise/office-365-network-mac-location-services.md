@@ -1,6 +1,6 @@
 ---
 title: "Microsoft 365 Network Connectivity Location Services"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/09/2025
@@ -36,16 +36,13 @@ In the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blan
 
 ## Terms of Use
 
-Any content provided through Bing Maps, including geocodes, can only be used within the product through which the content is provided. Customer's use of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a> Location Services feature, powered by Bing Maps, is governed by the _Bing Maps End-User Terms of Use_ available at <https://go.microsoft.com/?linkid=9710837> and the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=248686).
+Any content provided through Bing Maps, including geocodes, can only be used within the product through which the content is provided. Customer's use of the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a> Location Services feature, powered by Bing Maps, is governed by the *Bing Maps End-User Terms of Use* available at <https://go.microsoft.com/?linkid=9710837> and the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkID=248686).
 
 This feature, provided through Bing Maps, is also supported by **TomTom**. More information about TomTom's products and services may be found at [https://www.tomtom.com/legal](https://www.tomtom.com/legal).
 
-## Related articles
+## Related content
 
-[Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
-
-[Microsoft 365 network performance insights](office-365-network-mac-perf-insights.md)
-
-[Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
-
-[Microsoft 365 connectivity test in the Microsoft 365 admin center](office-365-network-mac-perf-onboarding-tool.md)
+- [Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
+- [Microsoft 365 network performance insights](office-365-network-mac-perf-insights.md)
+- [Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
+- [Microsoft 365 connectivity test in the Microsoft 365 admin center](office-365-network-mac-perf-onboarding-tool.md)

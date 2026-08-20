@@ -2,25 +2,27 @@
 title: "Add another email alias for a user"
 f1.keywords:
 - NOCSH
-ms.author: kwekua
-author: kwekuako
-manager: scotv
-ms.date: 01/06/2025
+ms.author: dansimp
+author: dansimp
+manager: dansimp
+ms.date: 02/02/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier1
 - scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
+- operations-pod
 ms.custom:
 - MSStore_Link
 - AdminSurgePortfolio
 - AdminTemplateSet
 - business_assist
+- user-accounts
 description: "Learn how you can add more than one email address, called an email alias to users in your Microsoft 365 organization."
 ---
 
@@ -34,9 +36,6 @@ If you want multiple people to manage email sent to a single email address like 
 
 > [!NOTE]
 > This article is for Microsoft 365 administrators who have business subscriptions. It's not for home users.
-
-> [!TIP]
-> If you need help with the steps in this topic, consider [working with a Microsoft small business specialist](https://go.microsoft.com/fwlink/?linkid=2186871). With Business Assist, you and your employees get around-the-clock access to small business specialists as you grow your business, from onboarding to everyday use.
 
 ## Before you begin
 
@@ -55,7 +54,7 @@ You must be a member of the user administrator role to add email aliases to a us
     > [!TIP]
     > The email alias must end with a domain from the drop-down list. To add another domain name to the list, see [Add a domain to Microsoft 365](../setup/add-domain.md).
   
-4. When you're done, choose **Save changes**. It usually takes about 24 hours for the new aliases to update.
+4. When you're done, choose **Save changes**. It can take up 24 hours for the new aliases to update.
 
 5. The user will now have a primary address and an alias. For example, all mail sent to jenna@contoso.com, and her alias, jen@contoso.com, will go to Jenna's inbox. **When the user replies, the *From* address will depend on her Outlook client. Outlook on the web will use the alias at which the email was received. Outlook desktop will use her primary email alias.**
 

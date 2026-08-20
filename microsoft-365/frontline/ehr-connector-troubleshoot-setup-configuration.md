@@ -94,11 +94,11 @@ Here are some common reasons why you might be experiencing this issue when integ
 
 ## Provider experience
 
-### Providers don’t get a Teams notification when patients join a virtual appointment
+### Providers don't get a Teams notification when patients join a virtual appointment
 
 Often this can be solved by training. When a provider starts the virtual appointment, a temporary notification is displayed to the provider to admit the patient. This notification appears only briefly.
 
-Providers can also select **People** in the meeting controls at the top of the screen to see the list of participants, and then under **Waiting in lobby**, select the green check mark next to the participant’s name to admit them.
+Providers can also select **People** in the meeting controls at the top of the screen to see the list of participants, and then under **Waiting in lobby**, select the green check mark next to the participant's name to admit them.
 
 ## Patient experience
 
@@ -145,7 +145,7 @@ If you want to share your FHIR base URL, email us with the FHIR base URL you wou
 
 ### My organization uses a Citrix environment. How do I configure it to use the EHR connector?
 
-You can configure a Citrix environment to route certain URLs back to the local machine and not launch in the virtual machine. For example, to launch virtual appointments in Teams, configure all traffic for “*.teams.microsoft.com” to the local machine.
+You can configure a Citrix environment to route certain URLs back to the local machine and not launch in the virtual machine. For example, to launch virtual appointments in Teams, configure all traffic for "*.teams.microsoft.com" to the local machine.
 
 To learn more, see the following Citrix documentation:
 

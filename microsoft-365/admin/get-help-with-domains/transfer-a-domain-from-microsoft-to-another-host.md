@@ -2,10 +2,10 @@
 title: "Transfer a domain from Microsoft to another host"
 f1.keywords:
 - NOCSH
-ms.author: kvice
-author: kelleyvice-msft
+ms.author: frankroj
+author: frankroj
 manager: scotv
-ms.date: 03/18/2025
+ms.date: 04/23/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
@@ -13,13 +13,15 @@ ms.subservice: m365-domains
 ms.localizationpriority: medium
 ms.collection:
 - Tier2
-- scotvorg 
+- scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
 - Adm_O365_Setup
-ms.custom: 
+- operations-pod
+ms.custom:
 - AdminSurgePortfolio
+- domains
 search.appverid:
 - BCS160
 - MET150
@@ -38,6 +40,8 @@ You can't transfer a Microsoft 365 domain to another registrar for 60 days after
 [!INCLUDE [How to get tech support for SMB](../../includes/smb-how-to-get-tech-support.md)]
 
 Sign in as a global administrator, follow these steps to get a code at Microsoft 365, and then go to the other domain registrar website to transfer your domain name to the new registrar.
+
+[!INCLUDE [global-administrator-note](../../includes/global-administrator-note.md)]
 
 ## Transfer a domain
 

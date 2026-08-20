@@ -1,6 +1,6 @@
----
+﻿---
 title: Implementing VPN split tunneling for Microsoft 365
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 03/21/2025
@@ -21,6 +21,7 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: "How to implement VPN split tunneling for Microsoft 365"
+ms.custom: network
 ---
 
 # Implementing VPN split tunneling for Microsoft 365
@@ -34,15 +35,15 @@ description: "How to implement VPN split tunneling for Microsoft 365"
 > - For information about how to configure Stream and live events in VPN environments, see [Special considerations for Stream and live events in VPN environments](microsoft-365-vpn-stream-and-live-events.md).
 > - For information about optimizing Microsoft 365 worldwide tenant performance for users in China, see [Microsoft 365 performance optimization for China users](microsoft-365-networking-china.md).
 
-Microsoft suggests a strategy to improve connectivity quickly and efficiently. This involves a few simple steps to update your network routes, allowing certain key endpoints to bypass congested VPN servers. By applying a similar or better security model at different layers, there's no need to secure all traffic at the corporate network's exit point and you can route Microsoft 365 traffic using shorter and more efficient network paths. This can usually be done within hours and can be scaled to multiple Microsoft 365 workloads as needed. 
+Microsoft suggests a strategy to improve connectivity quickly and efficiently. This involves a few steps to update your network routes, allowing certain key endpoints to bypass congested VPN servers. By applying a similar or better security model at different layers, there's no need to secure all traffic at the corporate network's exit point and you can route Microsoft 365 traffic using shorter and more efficient network paths. This can usually be done within hours and can be scaled to multiple Microsoft 365 workloads as needed. 
 
 ## Implement VPN split tunneling
 
-In this article, you'll find the simple steps required to migrate your VPN client architecture from a _VPN forced tunnel_ to a _VPN forced tunnel with a few trusted exceptions_, [VPN split tunnel model #2](microsoft-365-vpn-common-scenarios.md#2-vpn-forced-tunnel-with-a-small-number-of-trusted-exceptions) in [Common VPN split tunneling scenarios for Microsoft 365](microsoft-365-vpn-common-scenarios.md).
+In this article, you'll find the steps required to migrate your VPN client architecture from a *VPN forced tunnel* to a *VPN forced tunnel with a few trusted exceptions*, [VPN split tunnel model #2](microsoft-365-vpn-common-scenarios.md#2-vpn-forced-tunnel-with-a-small-number-of-trusted-exceptions) in [Common VPN split tunneling scenarios for Microsoft 365](microsoft-365-vpn-common-scenarios.md).
 
 The following diagram illustrates how the recommended VPN split tunnel solution works:
 
-![Split tunnel VPN solution detail.](../media/vpn-split-tunneling/vpn-split-tunnel-example.png)
+:::image type="content" source="../media/vpn-split-tunneling/vpn-split-tunnel-example.png" alt-text="Screenshot that shows Split tunnel VPN solution detail.":::
 
 ### 1. Identify the endpoints to optimize
 
@@ -89,11 +90,11 @@ $destPrefix = " 52.112.0.0/14, 52.122.0.0/15, 2603:1063::/38" # Teams Media endp
 foreach ($prefix in $destPrefix) {New-NetRoute -DestinationPrefix $prefix -InterfaceIndex $intIndex -NextHop $gateway}
 ```
 
-In the preceding script, _$intIndex_ is the index of the interface connected to the internet (find by running **get-netadapter** in PowerShell; look for the value of _ifIndex_) and _$gateway_ is the default gateway of that interface (find by running **ipconfig** in a command prompt or **(Get-NetIPConfiguration | Foreach IPv4DefaultGateway).NextHop** in PowerShell).
+In the preceding script, `$intIndex` is the index of the interface connected to the internet (find by running **get-netadapter** in PowerShell; look for the value of `ifInde`) and `$gateway` is the default gateway of that interface (find by running **ipconfig** in a command prompt or **(Get-NetIPConfiguration | Foreach IPv4DefaultGateway).NextHop** in PowerShell).
 
 Once you have added the routes, you can confirm that the route table is correct by running **route print** in a command prompt or PowerShell.
 
-To add routes for _all_ current IP address ranges in the Optimize category, you can use the following script variation to query the [Microsoft 365 IP and URL web service](microsoft-365-ip-web-service.md) for the current set of Optimize IP subnets and add them to the route table.
+To add routes for *all* current IP address ranges in the Optimize category, you can use the following script variation to query the [Microsoft 365 IP and URL web service](microsoft-365-ip-web-service.md) for the current set of Optimize IP subnets and add them to the route table.
 
 #### Example: Add all Optimize subnets into the route table
 
@@ -141,28 +142,16 @@ This section provides links to detailed guides for implementing split tunneling 
 - **Pulse Secure**: [VPN Tunneling: How to configure split tunneling to exclude Microsoft 365 applications](https://kb.pulsesecure.net/articles/Pulse_Secure_Article/KB44417)
 - **Check Point VPN**: [How to configure Split Tunnel for Microsoft 365 and other SaaS Applications](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk167000)
 
-## Related articles
+## Related content
 
-[Overview: VPN split tunneling for Microsoft 365](microsoft-365-vpn-split-tunnel.md)
-
-[Common VPN split tunneling scenarios for Microsoft 365](microsoft-365-vpn-common-scenarios.md)
-
-[Securing Teams media traffic for VPN split tunneling](microsoft-365-vpn-securing-teams.md)
-
-[Special considerations for Stream and live events in VPN environments](microsoft-365-vpn-stream-and-live-events.md)
-
-[Microsoft 365 performance optimization for China users](microsoft-365-networking-china.md)
-
-[Microsoft 365 Network Connectivity Principles](microsoft-365-network-connectivity-principles.md)
-
-[Assessing Microsoft 365 network connectivity](assessing-network-connectivity.md)
-
-[Microsoft 365 network and performance tuning](network-planning-and-performance.md)
-
-[Alternative ways for security professionals and IT to achieve modern security controls in today's unique remote work scenarios (Microsoft Security Team blog)](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
-
-[Enhancing VPN performance at Microsoft: using Windows 10 VPN profiles to allow auto-on connections](https://www.microsoft.com/itshowcase/enhancing-remote-access-in-windows-10-with-an-automatic-vpn-profile)
-
-[Running on VPN: How Microsoft is keeping its remote workforce connected](https://www.microsoft.com/itshowcase/blog/running-on-vpn-how-microsoft-is-keeping-its-remote-workforce-connected/?elevate-lv)
-
-[Microsoft global network](/azure/networking/microsoft-global-network)
+- [Overview: VPN split tunneling for Microsoft 365](microsoft-365-vpn-split-tunnel.md)
+- [Common VPN split tunneling scenarios for Microsoft 365](microsoft-365-vpn-common-scenarios.md)
+- [Securing Teams media traffic for VPN split tunneling](microsoft-365-vpn-securing-teams.md)
+- [Special considerations for Stream and live events in VPN environments](microsoft-365-vpn-stream-and-live-events.md)
+- [Microsoft 365 performance optimization for China users](microsoft-365-networking-china.md)
+- [Microsoft 365 Network Connectivity Principles](microsoft-365-network-connectivity-principles.md)
+- [Assessing Microsoft 365 network connectivity](assessing-network-connectivity.md)
+- [Microsoft 365 network and performance tuning](network-planning-and-performance.md)
+- [Alternative ways for security professionals and IT to achieve modern security controls in today's unique remote work scenarios (Microsoft Security Team blog)](https://www.microsoft.com/security/blog/2020/03/26/alternative-security-professionals-it-achieve-modern-security-controls-todays-unique-remote-work-scenarios/)
+- [Enhancing VPN performance at Microsoft: using Windows 10 VPN profiles to allow auto-on connections](https://www.microsoft.com/itshowcase/enhancing-remote-access-in-windows-10-with-an-automatic-vpn-profile)
+- [Microsoft global network](/azure/networking/microsoft-global-network)

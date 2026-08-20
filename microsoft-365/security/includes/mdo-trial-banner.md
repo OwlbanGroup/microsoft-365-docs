@@ -6,8 +6,7 @@ ms.date: 05/20/2022
 manager: deniseb
 ms.author: chrisda
 author: chrisda
-ms.service: microsoft-365-security
-ms.subservice: mdo
+ms.service: microsoft-365-admin
 search.appverid: met150
 ---
 

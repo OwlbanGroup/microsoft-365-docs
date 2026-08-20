@@ -1,26 +1,29 @@
 ---
 title: "Create a group in the admin center"
-ms.reviewer: rahulnayak
-ms.date: 06/11/2024
+ms.reviewer: batre
+ms.date: 05/21/2025
 f1.keywords: CSH
-author: DaniEASmith
-ms.author: danismith
-manager: jtremper
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
 audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business
+ms.service: microsoft-365-admin
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
-ms.custom: 
+- trust-pod
+ms.custom:
 - AdminSurgePortfolio
 - okr_smb
 - AdminTemplateSet
 - admindeeplinkMAC
+- m365-groups
+- user-accounts
 search.appverid:
 - BCS160
 - MET150
@@ -42,17 +45,20 @@ While users can create a Microsoft 365 group from Outlook or other apps, as an a
 
 1. Select **Add Microsoft 365 group**.
 
-4. On the **Basics** page, type a name for the group, and, optionally, a description. Select **Next**.
+1. On the **Basics** page, type a name for the group, and, optionally, a description. Select **Next**.
 
-5.  On the **Owners** page, choose the name of one or more people who will be designated to manage the group. Anyone who is a group owner will be able to delete email from the Group inbox. Other members won't be able to delete email from the Group inbox. Select **Next**.
+1.  On the **Owners** page, choose the name of one or more people who will be designated to manage the group. Anyone who is a group owner will be able to delete email from the Group inbox. Other members won't be able to delete email from the Group inbox. Select **Next**.
 
-6.  On the **Members** page, choose the name of one or more people who will be designated as members of the group. Select **Next**.
+1.  On the **Members** page, choose the name of one or more people who will be designated as members of the group. Select **Next**.
 
-7. On the **Settings** page, type a unique email address for the group, choose a privacy option and whether you want to add Microsoft Teams, and then select **Next**.
+1. On the **Settings** page, type a unique email address for the group, choose a privacy option and whether you want to add Microsoft Teams, and then select **Next**.
+
+    > [!NOTE]
+    > The email domain of the group can be changed after the group has been created.
     
-8. After reviewing your settings and making any changes, select **Create group**.
+1. After reviewing your settings and making any changes, select **Create group**.
 
-9. Select **Close**.
+1. Select **Close**.
     
 ## Add members to the group
 
@@ -64,13 +70,13 @@ Users can [add themselves or request approval](https://support.microsoft.com/off
     
 1. On the **Membership** tab, select **Members**.
 
-3. Select **Add members**.
+1. Select **Add members**.
     
-4. Select the users you want to add, and then select **Save**.
+1. Select the users you want to add, and then select **Save**.
     
-5. Select **Close** three times. 
-    
-The group will appear in Outlook with members assigned to it.
+1. Select **Close** three times.
+
+   The group will appear in Outlook with members assigned to it.
 
 ## Who can delete email from the Group inbox?
 
@@ -87,4 +93,4 @@ After creating a new group and adding members, you can further configure your gr
 ## Related content
 
 [Manage guest access to Microsoft 365 groups](https://support.microsoft.com/office/bfc7a840-868f-4fd6-a390-f347bf51aff6) (article)\
-[Choose the domain to use when creating Microsoft 365 groups](../../solutions/choose-domain-to-create-groups.md) (article)\
+[Choose the domain to use when creating Microsoft 365 groups](/previous-versions/microsoft-365/solutions/choose-domain-to-create-groups) (article)\

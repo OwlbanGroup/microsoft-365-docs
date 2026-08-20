@@ -12,6 +12,7 @@ ms.collection:
 - Tier1
 - scotvorg
 - essentials-manage
+- operations-pod
 description: "Change your language and time zone settings in Microsoft Bookings. If bookings are created at the wrong time, Bookings might be set for the wrong time zone."
 ---
 
@@ -23,7 +24,7 @@ There are two separate language and time zone settings for Bookings. The first s
 
 ## Setting language and time zone for a booking calendar
 
-The booking calendar uses the logged-in user’s language and time zone settings. For example, If the logged-in user’s time zone is set to Eastern Standard Time (EST), then the booking calendar will show existing appointment start and end times in EST. This time zone was originally set when the user’s Microsoft 365 and Outlook on the web accounts were created.
+The booking calendar uses the logged-in user's language and time zone settings. For example, If the logged-in user's time zone is set to Eastern Standard Time (EST), then the booking calendar will show existing appointment start and end times in EST. This time zone was originally set when the user's Microsoft 365 and Outlook on the web accounts were created.
 
 To set the language and time zone for the booking calendar:
 
@@ -31,7 +32,7 @@ To set the language and time zone for the booking calendar:
 
    :::image type="content" source="../media/bookings-outlook-tile.png" alt-text="Outlook tile on Microsoft 365 landing page.":::
 
-1. After Outlook opens, select the **gear icon** in the upper, right-hand corner of the screen to open your personal and account settings, then search for “time zone” in the **Settings** panel search box. The panel will update to show your current personal language and time zone settings for this account. As noted above, this setting also controls the language and time zone of the booking calendar.
+1. After Outlook opens, select the **gear icon** in the upper, right-hand corner of the screen to open your personal and account settings, then search for "time zone" in the **Settings** panel search box. The panel will update to show your current personal language and time zone settings for this account. As noted above, this setting also controls the language and time zone of the booking calendar.
 
 1. Change the language or time zone by selecting the drop-down arrow in the **Language or Current time zone** box and choosing the desired setting.
 

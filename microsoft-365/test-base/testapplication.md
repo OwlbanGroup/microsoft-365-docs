@@ -29,7 +29,7 @@ This section provides all the steps necessary to create a new package containing
 
 In the [Azure portal](https://portal.azure.com/), go to the **Test Base** account for which you'll be creating and uploading your package and perform the steps that follow. 
 
-In the left-hand menu under **Package catalog**, select the **New package**. Then click the first card **‘Create new package online'** to build your package online within 5 steps!
+In the left-hand menu under **Package catalog**, select the **New package**. Then click the first card **'Create new package online'** to build your package online within 5 steps!
 
 > [!div class="mx-imgBorder"]
 > ![Create a new Package wizard](Media/testapplication01.png)
@@ -100,7 +100,7 @@ In the left-hand menu under **Package catalog**, select the **New package**. The
    > ![Create resources](Media/testapplication10.png)
 
 3. Under **scripts folder**, sample scripts and script tags have been created for you. All script tags are editable, you can reassign them to reference your script paths.
-   - If the **Out of Box test** is selected in step 2, you can see the **outofbox** folder under the scripts folder. You also have the option to add **‘Reboot after install'** tag for the Install script.
+   - If the **Out of Box test** is selected in step 2, you can see the **outofbox** folder under the scripts folder. You also have the option to add **'Reboot after install'** tag for the Install script.
 
    > [!div class="mx-imgBorder"]
    > ![Reference script](Media/testapplication11.png)
@@ -137,7 +137,7 @@ The Test matrix tab is for you to indicate the specific Windows update program o
    > ![Screenshot shows Set test matrix new package.](Media/settestmatrix01-newpackage.png)
 
 1. Choose **OS update type**
-   - Test Base provides scheduled testing to make sure your applications performance won’t break by the latest Windows updates. 
+   - Test Base provides scheduled testing to make sure your applications performance won't break by the latest Windows updates. 
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot shows Set test matrix choose osupdate.](Media/settestmatrix02-chooseosupdate.png)

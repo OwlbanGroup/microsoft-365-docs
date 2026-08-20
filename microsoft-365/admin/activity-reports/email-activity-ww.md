@@ -1,61 +1,60 @@
 ---
-title: "Microsoft 365 admin center email activity reports"
-ms.author: camillepack
-author: camillepack
+title: "Email activity reports - Microsoft 365 admin center"
+ms.author: cmcatee
+author: cmcatee-MSFT
 manager: scotv
-ms.date: 03/14/2024
+ms.reviewer: hlu
 audience: Admin
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
-- Tier2
-- scotvorg
-- M365-subscription-management
-- Adm_O365
-- Adm_NonTOC
-ms.custom: AdminSurgePortfolio
+ms.collection:
+ - M365-subscription-management
+ - Adm_O365
 search.appverid:
 - BCS160
 - MET150
 - MOE150
 - GEA150
 ms.assetid: 1cbe2c00-ca65-4fb9-9663-1bbfa58ebe44
-description: "Learn how to get an email activity report and understand user email trends by using the Microsoft 365 Reports dashboard in the Microsoft 365 admin center."
+ai-usage: ai-assisted
+description: "The Email activity report in Microsoft 365 admin center provides detailed charts and per-user data to help you understand and manage email usage efficiently."
+ms.date: 04/24/2026
 ---
 
-# Microsoft 365 Reports in the admin center - Email activity
+# Email activity reports - Microsoft 365 admin center
 
-The Microsoft 365 Reports dashboard shows you the activity overview across the products in your organization. It enables you to drill in to individual product level reports to give you more granular insight about the activities within each product. Check out [the Reports overview topic](activity-reports.md).
+The Email activity report provides a high-level view of email traffic within your organization. Use the Email activity report to understand the trends and per-user level details of the email activity within your organization.
+
+[!INCLUDE [microsoft-365-usage-reports-generic-intro](../../includes/microsoft-365-usage-reports-generic-intro.md)]
+
+## View the Email activity report
+
+For information about the roles needed to view usage reports, see [Microsoft 365 admin center usage reports overview](activity-reports.md).
+
+1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>.
+1. In the navigation menu, select **Reports**. If you don't see **Reports**, select **Show all**, and then select **Reports**.
+1. Select <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Usage</a>.
+1. On the **Usage** page, under **Reports**, select **Exchange**.
+1. On the report page, select the **Email activity** tab.
   
-For example, you can get a high level view of email traffic within your organization from the Reports page, and then you can drill into the Email activity widget to understand the trends and per user level details of the email activity within your organization.
+## Interpret the Email activity report
 
-## How to get to the email activity report
-
-1. In the admin center, go to the **Reports** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=2074756" target="_blank">Usage</a> page.
-2. From the **Overview** page, select **Exchange** \> **Email activity**.
+You can view your users' email activity by looking at the **Activity** and **Users** charts.
   
-## Interpret the email activity report
+:::image type="content" source="../../media/5eb1d9e9-8106-4843-acb7-c0238c0da816.png" alt-text="Screenshot of the email activity report." lightbox="../../media/5eb1d9e9-8106-4843-acb7-c0238c0da816.png":::
 
-You can get a view into your user's email activity by looking at the **Activity** and **Users** charts.
-  
-![Email activity report.](../../media/5eb1d9e9-8106-4843-acb7-c0238c0da816.png)
+The Email activity report displays trends over the last 7, 30, 90, or 180 days. However, if you select a particular day in the report, the table shows data for up to 28 days from the current date (not the date the report was generated). The data in each report usually covers up to the last 24 to 48 hours.
 
-The **Email activity** report can be viewed for trends over the last 7 days, 30 days, 90 days, or 180 days. However, if you select a particular day in the report, the table will show data for up to 28 days from the current date (not the date the report was generated). The data in each report usually covers up to the last 24 to 48 hours.
+The **Activity** chart helps you understand the trend of the amount of email activity going on in your organization. You can see the split of email send, email read, email received, meeting created, or meeting interacted activities. On the **Activity** chart, the Y axis is the count of activity of the type email sent, email received, email read, meeting created, and meeting interacted.
 
-The **Activity** chart enables you to understand the trend of the amount of email activity going on in your organization. You can understand the split of email send, email read, email received, meeting created, or meeting interacted activities.
-
-The **User** chart enables you to understand the trend of the number of unique users who are generating the email activities. You can look at the trend of users performing email sending, email reading, email receiving, meeting creating, or meeting interacting activities.
-
-On the Activity chart, the Y axis is the count of activity of the type email sent, email received, email read, meeting created, and meeting interacted.
-
-On the Users activity chart, the Y axis is the user's performing activity of the type email sent, email received, email read, meeting created, or meeting interacted.
+The **User** chart helps you understand the trend of the number of unique users who are generating the email activities. You can look at the trend of users performing email sending, email reading, email receiving, meeting creating, or meeting interacting activities. On the **Users** activity chart, the Y axis is the users performing activity of the type email sent, email received, email read, meeting created, or meeting interacted.
 
 The X axis on both charts is the selected date range for this specific report.
 
-You can filter the series you see on the chart by selecting an item in the legend.
+You can filter the series you see on either chart by selecting an item in the legend.
 
- The table shows you a breakdown of the email activities at the per-user level. This shows all users that have an Exchange product assigned to them and their email activities.
+The table shows a breakdown of the email activities at the per-user level. This data shows all users that have an Exchange product assigned to them and their email activities.
 
 |Item|Description|
 |:-----|:-----|
@@ -71,13 +70,13 @@ You can filter the series you see on the chart by selecting an item in the legen
 |Meeting interacted actions |The number of times a meeting request accept, tentative, decline, or cancel action was recorded for the user. |
 |Product assigned  |The products that are assigned to this user.  |
 
-If your organization's policies prevents you from viewing reports where user information is identifiable, you can change the privacy setting for all these reports. Check out the **How do I hide user level details?** section in the [Activity Reports in the Microsoft 365 admin center](activity-reports.md).
+[!INCLUDE [display-user-specific-data](../../includes/display-user-specific-data.md)]
 
-Select **Choose columns** to add or remove columns from the report.  
+To add or remove columns from the report, select **Choose columns**.  
 
-![Email activity report - choose columns.](../../media/80ffa0ad-61c5-4a6f-8a1d-5f6730ff7da9.png)
+:::image type="content" source="../../media/80ffa0ad-61c5-4a6f-8a1d-5f6730ff7da9.png" alt-text="Screenshot of the email activity report column options." lightbox="../../media/80ffa0ad-61c5-4a6f-8a1d-5f6730ff7da9.png":::
 
-You can also export the report data into an Excel .csv file, by selecting the **Export** link. This exports data of all users and enables you to do simple sorting and filtering for further analysis.
+To export the report data into an Excel .csv file, select the **Export** link. This action exports data for all users and lets you do simple sorting and filtering for further analysis.
 
 > [!NOTE]
 > The Email activity report is only available for mailboxes that are associated with users who have licenses.

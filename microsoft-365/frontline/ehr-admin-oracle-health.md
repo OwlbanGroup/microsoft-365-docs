@@ -27,10 +27,13 @@ appliesto:
   - Microsoft 365 for frontline workers
 ms.reviewer: beolson 
 description: Learn how to integrate the Teams EHR connector to enable healthcare providers in your organization to conduct virtual appointments with patients or other providers in Teams directly from the Oracle Health EHR system.
-ms.date: 06/26/2024
+ms.date: 10/06/2025
 ---
 
 # Virtual Appointments with Teams - Integration into Oracle Health EHR
+
+> [!IMPORTANT]
+> This EHR integration is no longer supported.
 
 The Microsoft Teams Electronic Health Record (EHR) connector makes it easy for clinicians to launch a virtual patient appointment or consult with another provider in Microsoft Teams directly from the Oracle Health EHR system. Built on the Microsoft 365 cloud, Teams enables simple, secure collaboration and communication with chat, video, voice, and healthcare tools in a single hub that supports compliance with HIPAA, HITECH certification, and more.
 
@@ -87,7 +90,7 @@ Your Microsoft 365 admin can configure a single department or multiple departmen
 
 ### Enter configuration information
 
-Next, to set up the integration, your Microsoft 365 admin adds a Fast Health Interoperability Resources (FHIR) base URL from Oracle Health and specifies the environment. Configure as many FHIR base URLs as needed, depending on your organization’s needs and the environments you want to test.
+Next, to set up the integration, your Microsoft 365 admin adds a Fast Health Interoperability Resources (FHIR) base URL from Oracle Health and specifies the environment. Configure as many FHIR base URLs as needed, depending on your organization's needs and the environments you want to test.
 
 :::image type="content" source="media/ehr-admin-cerner-configuration.png" alt-text="Screenshot of the Configuration information page of the Teams EHR connector configuration portal." lightbox="media/ehr-admin-cerner-configuration.png":::
 
@@ -114,7 +117,7 @@ To enable SMS notifications, your Microsoft 365 admin completes the following st
 
 1. Under **Your phone numbers**, select **Generate a new phone number** to generate a phone number for your organization. Doing this starts the process to request and generate a new phone number. This process might take up to 2 minutes to complete.
 
-    After the phone number is generated, it's displayed on the screen. This number is used to send SMS confirmations and reminders to your patients. The number has been provisioned but isn’t linked to the FHIR base URL yet. You do that in the next step.
+    After the phone number is generated, it's displayed on the screen. This number is used to send SMS confirmations and reminders to your patients. The number has been provisioned but isn't linked to the FHIR base URL yet. You do that in the next step.
 
     :::image type="content" source="media/ehr-admin-cerner-phone-number.png" alt-text="Screenshot showing an example of the phone number that's generated." lightbox="media/ehr-admin-cerner-phone-number.png":::
 
@@ -124,7 +127,7 @@ To enable SMS notifications, your Microsoft 365 admin completes the following st
 
     :::image type="content" source="media/ehr-admin-cerner-link-phone-number.png" alt-text="Screenshot showing how to link a phone number to a FHIR base URL." lightbox="media/ehr-admin-cerner-link-phone-number.png":::
 
-    If you’re configuring the connector for the first time, you’ll see the FHIR base URL that was entered in the earlier step. The same phone number can be linked to multiple FHIR base URLs, which means that patients will receive SMS notifications from the same phone number for different organizations and/or departments.
+    If you're configuring the connector for the first time, you'll see the FHIR base URL that was entered in the earlier step. The same phone number can be linked to multiple FHIR base URLs, which means that patients will receive SMS notifications from the same phone number for different organizations and/or departments.
 
      Select **Next**.
 
@@ -156,13 +159,13 @@ From there, the provider can view appointment information, join appointments, an
 
 Key features of the provider experience:
 
-- Providers can join appointments using supported browsers or the Teams app.
+- Providers can join appointments using supported browsers or the Teams application.
 - Providers can use all supported Teams meeting features, including screen sharing, custom background, and recording.
 - Providers can see real-time updates of patients connecting to an appointment for a given appointment in PowerChart.
-- Provider information isn’t visible to patients during the appointment.
+- Provider information isn't visible to patients during the appointment.
 
 > [!NOTE]
-> Any information entered in the meeting chat that’s necessary for medical records continuity or retention purposes should be downloaded, copied, and notated by the healthcare provider. The chat doesn’t constitute a legal medical record or a designated record set. Messages from the chat are stored based on settings created by the Microsoft Teams admin.
+> Any information entered in the meeting chat that's necessary for medical records continuity or retention purposes should be downloaded, copied, and notated by the healthcare provider. The chat doesn't constitute a legal medical record or a designated record set. Messages from the chat are stored based on settings created by the Microsoft Teams admin.
 
 ### Patient experience
 
@@ -170,7 +173,7 @@ The connector supports patients joining appointments through a link in the SMS t
 
 Key features of the patient experience
 
-- Patients can join appointments from [modern web browsers on desktop and mobile without having to install the Teams app](browser-join.md).
+- Patients can join appointments from [modern web browsers on desktop and mobile without having to install the Teams application](browser-join.md).
 - Patients can join appointments with a single click and no other account or sign-in is required.
 - Patients aren't required to create a Microsoft account or sign in to launch a visit.
 - Patients are placed in a lobby until the provider joins and admits them.
@@ -188,9 +191,9 @@ The [EHR connector Virtual Appointments report](ehr-connector-report.md) in the 
 
 Teams integration into EHR systems optimizes the amount of data used and stored during integration and virtual appointment flows. The solution follows the overall Teams privacy and data management principles and guidelines outlined in Teams Privacy.
 
-The Teams EHR connector doesn't store or transfer any identifiable personal data or any health records of patients or healthcare providers from the EHR system. The only data that the EHR connector stores is the EHR user’s unique ID, which is used during Teams meeting setup.
+The Teams EHR connector doesn't store or transfer any identifiable personal data or any health records of patients or healthcare providers from the EHR system. The only data that the EHR connector stores is the EHR user's unique ID, which is used during Teams meeting setup.
 
-The EHR user’s unique ID is stored in one of the three geographic regions described in [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations). All chats, recordings, and other data shared in Teams by meeting participants are stored according to existing storage policies. To learn more about the location of data in Teams, see [Location of data in Teams](/microsoftteams/location-of-data-in-teams).
+The EHR user's unique ID is stored in one of the three geographic regions described in [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations). All chats, recordings, and other data shared in Teams by meeting participants are stored according to existing storage policies. To learn more about the location of data in Teams, see [Location of data in Teams](/microsoftteams/location-of-data-in-teams).
 
 ## Related articles
 

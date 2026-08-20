@@ -2,20 +2,22 @@
 title: "Get support"
 f1.keywords:
 - NOCSH
-ms.author: cmcatee
-author: cmcatee-MSFT
-manager: scotv
+author: kwekuako
+ms.author: kwekua
+manager: dansimp
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: high
-ms.collection: 
+ms.collection:
 - Tier1
 - scotvorg
 - highpri
 - Adm_O365
 - Adm_TOC
-ms.custom: 
+- ContentEnagagementFY25
+- operations-pod
+ms.custom:
 - VSBFY23
 - AdminSurgePortfolio
 - adminvideo
@@ -26,7 +28,7 @@ search.appverid:
 - MET150
 - MOE150
 description: "Learn how to get online or phone support for your Microsoft 365 for business subscription. You must be an admin for a business subscription to get support."
-ms.date: 03/14/2025
+ms.date: 01/26/2026
 ---
 
 # Get support for Microsoft 365 for business
@@ -59,9 +61,9 @@ Save time by starting your service request online. We can help you find a soluti
 
 1. Go to the admin center at <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">https://admin.cloud.microsoft</a>. If you get a message that says you don't have permission to access this page or perform this action, you aren't an admin. For more information, see [Who has admin permissions in my business?](../admin/admin-overview/admin-center-overview.md#who-has-admin-permissions-in-my-business).
 2. On the bottom right side of the page, select **Help & support**.
-3. Type a question or keyword into the text box. If you get a drop-down list, select the one closest to your question, or continue typing your question, then press **Enter**.
-4. If the results don't help, at the bottom, select **Contact Support**.
-5. Enter a description of your issue, confirm your contact number and email address, select your preferred contact method, and then select **Contact me**. The expected wait time is indicated in the **Contact support** pane.
+3. On the Support Assistant page, type your message or question into the text box. You will get a set of results to your question or message.
+4. If the results don't help, select the **Contact Support (headset)** icon at the top of the page or bottom left on the page.
+5. Choose your contact method, phone or email. Add and confirm your contact details and select **Contact me**. The expected wait time is indicated in the **Contact support** pane.
 
 > [!NOTE]
 > For a smoother support experience, we recommend that you open separate support requests for each issue.
@@ -80,12 +82,6 @@ Admins have your account details ready when you call.
 > [!NOTE]
 > To better protect your organization, we added a PIN-based verification step to our existing phone-based verification process. If you contact us from a number that isn't registered with your organization profile, the Microsoft support representative sends a verification code to the registered email or phone number in your Microsoft 365 admin center profile. You must provide this code to the support representative to grant them access to your organization's account.
 
-## Small business support with Business Assists
-
-Get the most out of your subscription with expert advice from small business specialists.
-
-Business Assist for Microsoft 365 is designed for small businesses to give you and your users around-the-clock access to small business specialists as you grow your business, from onboarding to everyday use. To learn more, see [Business Assist](../admin/misc/business-assist.md).
-
 ## Volume licensing support
 
 There's a dedicated support team for users who access volume licensing (VL) contracts in the Microsoft 365 admin center. To request support for volume licensing, use the following steps:
@@ -93,7 +89,7 @@ There's a dedicated support team for users who access volume licensing (VL) cont
 1. In the Microsoft 365 admin center, select **Help & support**.
 2. In the query box, type "manage volume licensing" together with your question to help target your query more accurately. If you see a drop-down list, select the item closest to your question, or continue typing your question, then press **Enter**.
 3. If the results don't help, at the bottom, select **Contact Support**.
-4. Enter a description of your issue, specify the license ID or VL agreement number your issue relates to, confirm your contact number and email address, select your preferred contact method, and then select **Contact me**.
+4. Enter a description of your issue, specify the License ID or VL agreement number your issue relates to, confirm your contact number and email address, select your preferred contact method, and then select **Contact me**.
 
 If you're a volume licensing admin but are unable to access the admin center, you can create an [online support request](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=2afa6f15-b710-db46-909a-8346017c802f).
 

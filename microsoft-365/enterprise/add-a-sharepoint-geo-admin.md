@@ -1,14 +1,14 @@
 ---
 title: "Add or remove a geo administrator"
-ms.reviewer: anfra
-ms.date: 09/27/2024
-ms.author: kvice
-author: kelleyvice-msft
-manager: scotv
+ms.reviewer: anfra, jugiammo
+ms.date: 06/19/2025
+ms.author: v-fahasen
+author: fhasen-msft
+manager: Justin.Giammona
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
-ms.subservice: administration
+ms.subservice: multi-geo-capabilities
 ms.collection: 
 - SPO_Content
 - must-keep
@@ -17,8 +17,9 @@ f1.keywords:
 - NOCSH
 description: Need to configure separate administrators for each geo location? Learn how to add or remove a geo administrator in Microsoft 365 Multi-Geo.
 ms.custom:
-  - seo-marvel-apr2020
-  - has-azure-ad-ps-ref, azure-ad-ref-level-one-done 
+- seo-marvel-apr2020
+- has-azure-ad-ps-ref, azure-ad-ref-level-one-done 
+- data-residency
 ---
 
 # Add or remove a _Geography_ administrator in Microsoft 365 Multi-Geo
@@ -29,11 +30,14 @@ Some services - such as the term store - are administered from the _Primary Prov
 
 Global administrators and SharePoint administrators continue to have access to settings in the _Primary Provisioned Geography_ location and all _Satellite Geography_ locations.
 
+> [!IMPORTANT]
+> Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
+
 ## Configuring _Geography_ administrators
 
 Configuring _Geography_ admins requires the SharePoint PowerShell module.
 
-Use [Connect-SPOService](/powershell/module/sharepoint-online/Connect-SPOService) to connect to the admin center of the _Geography_ location where you want to add the _Geography_ admin. (For example, Connect-SPOService  https://ContosoEUR-admin.sharepoint.com.)
+Use [Connect-SPOService](/powershell/module/microsoft.online.sharepoint.powershell/connect-sposervice) to connect to the admin center of the _Geography_ location where you want to add the _Geography_ admin. (For example, Connect-SPOService  https://ContosoEUR-admin.sharepoint.com.)
 
 To view the existing _Geography_ admins of a location, run `Get-SPOGeoAdministrator`
 
@@ -59,10 +63,11 @@ To remove a group by using the ObjectID, run `Remove-SPOGeoAdministrator -Object
 
 ## Related articles
 
-[Add-SPOGeoAdministrator](/powershell/module/sharepoint-online/add-spogeoadministrator)
+[Add-SPOGeoAdministrator](/powershell/module/microsoft.online.sharepoint.powershell/add-spogeoadministrator)
 
-[Get-SPOGeoAdministrator](/powershell/module/sharepoint-online/get-spogeoadministrator)
+[Get-SPOGeoAdministrator](/powershell/module/microsoft.online.sharepoint.powershell/get-spogeoadministrator)
 
-[Remove-SPOGeoAdministrator](/powershell/module/sharepoint-online/remove-spogeoadministrator)
+[Remove-SPOGeoAdministrator](/powershell/module/microsoft.online.sharepoint.powershell/remove-spogeoadministrator)
 
 [Set an alias (MailNickName) for a security group](/powershell/module/microsoft.graph.groups/update-mggroup)
+

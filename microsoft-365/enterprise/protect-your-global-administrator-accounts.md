@@ -1,6 +1,6 @@
 ---
 title: "Step 2. Protect your Microsoft 365 privileged accounts"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 09/26/2024
@@ -28,7 +28,9 @@ f1.keywords:
 - NOCSH
 ms.assetid: 6b4ded77-ac8d-42ed-8606-c014fd947560
 description: This article provides information about protecting privileged access to your Microsoft 365 tenant.
-ms.custom: seo-marvel-apr2020
+ms.custom: 
+- seo-marvel-apr2020
+- user-accounts
 ---
 
 # Step 2. Protect your Microsoft 365 privileged accounts

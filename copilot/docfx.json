@@ -47,23 +47,58 @@
       "permissioned-type": "public",
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "contributors_to_exclude": [ 
-        "rjagiewich",
-        "traya1", 
-        "American-Dipper", 
-        "claydetels19",
-        "jborsecnik",
-        "shdyas", 
-        "garycentric",
-        "Stacyrch140",
+        "aditisrivastava07",
+        "AGuentherinWA",
         "alexbuckgit", 
+        "American-Dipper", 
         "beccarobins",
+        "claydetels19",
         "dstrome",
+        "garycentric",
+        "jborsecnik",
         "MarcoLodini",
         "padmagit77",
-        "aditisrivastava07",
-        "Ruchika-mittal01"
+        "rjagiewich",
+        "Ruchika-mittal01",
+        "shdyas", 
+        "Shipra-M09", 
+        "Stacyrch140",
+        "techtoons", 
+        "traya1"
       ]
     },
+    "rules": {
+      "filename-incomplete": { 
+        "exclude": [ 
+          "**/*.md", 
+          "**/*.yml" 
+        ] 
+      }, 
+      "image-name-incomplete": { 
+        "exclude": [ 
+          "**/*.gif", 
+          "**/*.jpeg", 
+          "**/*.jpg", 
+          "**/*.png", 
+          "**/*.svg" 
+        ]
+      }, 
+      "image-structure-incorrect": { 
+        "exclude": [ 
+          "**/*.gif", 
+          "**/*.jpeg", 
+          "**/*.jpg", 
+          "**/*.png", 
+          "**/*.svg" 
+        ] 
+      }, 
+      "include-structure-incorrect": { 
+        "exclude": [ 
+          "**/*.md", 
+          "**/*.yml"
+        ] 
+      }
+    }, 
     "fileMetadata": {},
     "template": [],
     "dest": "microsoft-365-copilot"

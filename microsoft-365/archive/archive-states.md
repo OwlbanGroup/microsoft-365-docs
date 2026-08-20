@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 04/12/2025
+ms.date: 06/12/2025
 ms.topic: article
 ms.service: microsoft-365-archive
 ms.custom: archive
@@ -18,10 +18,10 @@ description: Learn about the archive states and what they mean in Microsoft 365 
 
 # Archive states in Microsoft 365 Archive
 
-The following table describes the archive states and allowed operations.
+The following table describes the archive states and allowed operations. These states apply to both archived files and archived sites.
 
 |Archive state  |Description  |Allowed operations  |
 |---------|---------|---------|
-|Recently Archived    |This state is the first stage after a site is archived and is valid for seven days. A site in this stage can be reactivated without any cost and will be reactivated instantaneously.         |Reactivate, Delete         |
-|Archived    |The site enters this state after seven days after being archived. In this stage, reactivations will be charged, and might take a few hours.         |Reactivate, Delete         |
-|Reactivating     |If a site is reactivated from “Archived” state, it will be in this stage until reactivation is complete. After this, the site will be active, and will be available in Active sites page.         |None         |
+|Recently archived    |This state is the first stage after a site or file is archived and lasts for seven days. During this stage, reactivations are instantaneous.|Reactivate, Delete         |
+|Archived    |A site or file enters this state seven days after it is archived. In this stage, reactivations can take up to 24 hours.|Reactivate, Delete         |
+|Reactivating     |If a site or file is reactivated from the "*Archived*" state, it remains in this stage until reactivation completes. After reactivation, the content becomes active. When a site finishes reactivation, it appears on the Active sites page. Files that are reactivating remain in the same location after reactivation completes. | None for sites. Delete for files. |

@@ -1,6 +1,6 @@
----
+﻿---
 title: "Network connectivity in the Microsoft 365 Admin Center"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/02/2025
@@ -19,19 +19,18 @@ ms.collection:
 - m365initiative-coredeploy
 - must-keep
 description: "Overview of network connectivity in the Microsoft 365 Admin Center"
+ms.custom: network
 ---
 
 # Network connectivity in the Microsoft 365 Admin Center
 
 The Microsoft 365 Admin Center now includes aggregated network connectivity metrics collected from your Microsoft 365 tenant and available to view only by administrative users in your tenant.
 
-> [!div class="mx-imgBorder"]
-> ![Network connectivity test tool.](../media/m365-mac-perf/m365-mac-perf-admin-center.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-admin-center.png" alt-text="Screenshot of the Network connectivity test tool." border="true":::
 
 **Network assessments** and **network insights** are displayed in the Microsoft 365 Admin Center under **Health | Network connectivity**.
 
-> [!div class="mx-imgBorder"]
-> ![Network performance page.](../media/m365-mac-perf/m365-mac-perf-page-nav.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-page-nav.png" alt-text="Screenshot of the Network performance page." border="true":::
 
 > [!NOTE]
 > Network connectivity in the Admin Center supports tenants in WW Commercial and China (Operated by 21Vianet, released on 2024-09-23), but not GCC Moderate, GCC High, or DoD.
@@ -48,12 +47,11 @@ To get started, turn on your location opt-in setting to automatically collect da
 
 For this option, you must have at least two computers running at each office location that support the prerequisites. OneDrive for Windows version must be up-to-date and installed on each computer. Network tests are only run no more than once a day at a random time. Network measurements will be added to other Microsoft 365 client applications soon.
 
-Windows Location Service must be consented on the machines. You can test this by running the **Maps** app and locating yourself. It can be enabled on a single machine with **Settings | Privacy | Location** where the setting _Allow apps to access your location_ must be enabled. Windows Location Services consent can be deployed to PCs using MDM or Group Policy with the setting _LetAppsAccessLocation_.
+Windows Location Service must be consented on the machines. You can test this by running the **Maps** app and locating yourself. It can be enabled on a single machine with **Settings | Privacy | Location** where the setting *Allow apps to access your location* must be enabled. Windows Location Services consent can be deployed to PCs using MDM or Group Policy with the setting *LetAppsAccessLocation*.
 
 You don't need to add locations in the Admin Center with this method as they're automatically identified at the city resolution. Multiple office locations within the same city won't be shown when using Windows Location Services. Location information is rounded to the nearest 300 meters by 300 meters so that more precise location information isn't accessed. Use of Windows Location Services for network measurements is off by default for customers. You must enable it in the Network Connectivity Settings Location flyout.
 
-   > [!div class="mx-imgBorder"]
-   > ![Enable location](../media/m365-mac-perf/m365-mac-perf-location-enable.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-location-enable.png" alt-text="Screenshot of the Enable location." border="true":::
 
 The machines should have Wi-Fi networking rather than an ethernet cable. Machines with an ethernet cable don't have accurate location information.
 
@@ -80,7 +78,7 @@ All test measurements from client machines include the LAN subnet information, w
 
 ### 3. Manually gather test reports with the Microsoft 365 network connectivity test tool
 
-For this option, you need to identify a person who can run the test at each location. Ask them to browse to [Microsoft 365 network connectivity test](https://connectivity.office.com) on a Windows machine on which they have administrative permissions. On the web site, they need to sign in to their Microsoft 365 account for the same organization that you want to see the results. Then they should click **Run test**. During the test, there's a downloaded **Connectivity test EXE** file. They should open and execute the file. Once the tests are completed, the test result is uploaded to the Admin Center.
+For this option, you need to identify a person who can run the test at each location. Ask them to browse to [Microsoft 365 network connectivity test](https://connectivity.office.com) on a Windows machine on which they have administrative permissions. On the web site, they need to sign in to their Microsoft 365 account for the same organization that you want to see the results. Then they should select **Run test**. During the test, there's a downloaded **Connectivity test EXE** file. They should open and execute the file. Once the tests are completed, the test result is uploaded to the Admin Center.
 
 Test reports are linked to a location if it was added with LAN subnet information, otherwise they're shown at the discovered City location only.
 
@@ -91,7 +89,7 @@ Measurement samples and office locations should start to appear 2-3 minutes afte
 
 ## How do I use this information?
 
-**Network insights**, their related performance recommendations and network assessments are intended to help in designing network perimeters for your office locations. Each insight provides details about the performance characteristics for a specific common networking issue for each geographic location where users are accessing your tenant. **Performance recommendations** for each network insight offer specific network architecture design changes you can make to improve user experience related to Microsoft 365 network connectivity. The network assessment shows how network connectivity impacts user experience, allowing for comparison of different user location network connections.
+**Network insights**, their related performance recommendations, and network assessments are intended to help in designing network perimeters for your office locations. Each insight provides details about the performance characteristics for a specific common networking issue for each geographic location where users are accessing your tenant. **Performance recommendations** for each network insight offer specific network architecture design changes you can make to improve user experience related to Microsoft 365 network connectivity. The network assessment shows how network connectivity impacts user experience, allowing for comparison of different user location network connections.
 
 **Network assessments** distill an aggregate of many network performance metrics into a snapshot of your enterprise network health, represented by a points value from 0 - 100. Network assessments are scoped to both the entire tenant and for each geographic location from which users connect to your tenant, providing Microsoft 365 administrators with an easy way to instantly grasp a gestalt of the enterprise's network health and quickly drill down into a detailed report for any global office location.
 
@@ -99,8 +97,7 @@ Complex enterprises with multiple office locations and nontrivial network perime
 
 ## Enterprise network connectivity challenges
 
-> [!div class="mx-imgBorder"]
-> ![Customer network to cloud.](../media/m365-mac-perf/m365-mac-perf-first-last-mile.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-first-last-mile.png" alt-text="Screenshot of the Customer network to cloud." border="true":::
 
 Many enterprises have network perimeter configurations, which have grown over time and are primarily designed to accommodate employee Internet web site access where most web sites aren't known in advance and are untrusted. The prevailing and necessary focus is avoiding malware and phishing attacks from these unknown web sites. This network configuration strategy, while helpful for security purposes, can lead to degradation of Microsoft 365 user performance and user experience.
 
@@ -118,18 +115,15 @@ Microsoft has existing network measurements from several Office desktop and web 
 
 By default, approximate location information associated with the network measurements identifies the city where client devices are located. The network assessment at each location is shown with color and the relative number of users at each location is represented by the size of the circle.
 
-> [!div class="mx-imgBorder"]
-> ![Network insights overview map.](../media/m365-mac-perf/m365-mac-perf-overview-map.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-overview-map.png" alt-text="Screenshot of the Network insights overview map." border="true":::
 
 The overview page also shows the network assessment for the customer as a weighted average across all office locations.
 
-> [!div class="mx-imgBorder"]
-> ![Network assessment.](../media/m365-mac-perf/m365-mac-perf-overview-score.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-overview-score.png" alt-text="Screenshot of the Network assessment." border="true":::
 
 You can view a table view of the locations where they can be filtered, sorted, and edited in the **Locations** tab. Locations with specific recommendations might also include an estimated potential latency improvement. This is calculated by taking the median latency of your organization users at the location and subtracting the median latency for all organizations in the same city.
 
-> [!div class="mx-imgBorder"]
-> ![Network insights locations.](../media/m365-mac-perf/m365-mac-perf-locations.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-locations.png" alt-text="Screenshot of the Network insights locations." border="true":::
 
 ## Remote worker assessment and user connection metrics
 
@@ -143,8 +137,7 @@ Locations are auto classified as onsite or remote, however, you have the option 
 
 Selecting an office location opens a location-specific summary page showing details of the network egress that has been identified from measurements for that office location.
 
-> [!div class="mx-imgBorder"]
-> ![Network insights details by location.](../media/m365-mac-perf/m365-mac-perf-locations-plan-overview.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-locations-plan-overview.png" alt-text="Screenshot of the Network insights details by location." border="true":::
 
 A map of the perimeter network for your organization users at the location is shown with some or all of these elements:
 
@@ -165,8 +158,7 @@ Location names can be customized when adding a new location or editing an existi
 
 The details tab on the office location page shows the specific measurement results that were used to come up with any insights, recommendations, and the network assessment. This is provided so that network engineers can validate the recommendations and factor in any constraints or specifics in their environment. You'll also find the estimated number of users for collected samples at that office locations as well as the remote workers in that city.
 
-> [!div class="mx-imgBorder"]
-> ![Location-specific details.](../media/m365-mac-perf/m365-mac-perf-locations-plan-details-all.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-locations-plan-details-all.png" alt-text="Screenshot of the Location-specific details." border="true":::
 
 ## Sharing network assessment data with Microsoft
 
@@ -178,17 +170,11 @@ For LAN subnet office identification, you need to add each location in advance. 
 
 In the CSV file, a discovered city location shows in the userEntered column as blank, and a manually added office location shows as 1.
 
-1. In the main _Connectivity to Microsoft 365_ window, click the **Locations** tab.
-
-1. Click the **Import** button just above the locations list. The **Import office locations** flyout will appear.
-
-   > [!div class="mx-imgBorder"]
-   > ![CSV import message.](../media/m365-mac-perf/m365-mac-perf-import.png)
-
-1. Click the **Download current office locations (.csv)** link to export the current locations list to a CSV file, and save it to your local hard disk. This will provide you with a correctly formatted CSV with column headings to which you can add locations. You can leave the existing exported locations as they are; they won't be duplicated when you import the updated CSV. If you wish to change the address of an existing location, it's updated when you import the CSV. You can't change the address of a discovered city.
-
+1. In the main *Connectivity to Microsoft 365* window, select the **Locations** tab.
+1. Select the **Import** button just above the locations list. The **Import office locations** flyout will appear.
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import.png" alt-text="Screenshot of the CSV import message." border="true":::
+1. Select the **Download current office locations (.csv)** link to export the current locations list to a CSV file, and save it to your local hard disk. This will provide you with a correctly formatted CSV with column headings to which you can add locations. You can leave the existing exported locations as they are; they won't be duplicated when you import the updated CSV. If you wish to change the address of an existing location, it's updated when you import the CSV. You can't change the address of a discovered city.
 1. Open the CSV and add your locations by filling out the following fields on a new line for each location you want to add. Leave all other fields blank; values you enter in other fields will be ignored.
-
    1. **userEntered** (required): Must be 1 for a new LAN Subnet office location being added
    1. **Name** (required): The name of the office location
    1. **Address** (required): The physical address of the office
@@ -196,50 +182,29 @@ In the CSV file, a discovered city location shows in the userEntered column as b
    1. **Longitude** (optional): Populated from Bing maps lookup of the address if blank
    1. **Egress IP Address ranges 1-5** (optional): For each range, enter the circuit name followed by a space separated list of valid IPv4 CIDR addresses. These values are used to differentiate multiple office locations where you use the same LAN subnet IP Addresses. Egress IP Address ranges all must be /24 network size and the /24 isn't included in the input.
    1. **LanIps** (required): List the LAN subnet ranges in use at this office location. LAN subnet IDs need to have a CIDR network size included where the network size can be between /8 and /29. Multiple LAN subnet ranges can be separated by a comma or a semicolon.
-
 1. When you have added your office locations and saved the file, select the **Browse** button next to the **Upload the completed** field and select the saved CSV file.
-
-1. The file will be automatically validated. If there are validation errors, you'll see the error message: _There are some errors in the import file. Review the errors, correct the import file, and then try again._ Select **Open error details** for a list of specific field validation errors.
-
-   > [!div class="mx-imgBorder"]
-   > ![CSV import error message.](../media/m365-mac-perf/m365-mac-perf-import-error.png)
-
-1. If there are no errors in the file, you'll see the message: _The report is ready. Found x locations to add and x locations to update._ Select the **Import** button to upload the CSV.
-
-   > [!div class="mx-imgBorder"]
-   > ![CSV import ready message.](../media/m365-mac-perf/m365-mac-perf-import-ready.png)
+1. The file is automatically validated. If there are validation errors, you'll see the error message: *There are some errors in the import file. Review the errors, correct the import file, and then try again.* Select **Open error details** for a list of specific field validation errors.
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import-error.png" alt-text="Screenshot of the CSV import error message." border="true":::
+1. If there are no errors in the file, you'll see the message: *The report is ready. Found x locations to add and x locations to update.* Select the **Import** button to upload the CSV.
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import-ready.png" alt-text="Screenshot of the CSV import ready message." border="true":::
 
 ## CQD TSV Import for LAN subnet office locations
 
 If you've uploaded building data to your Call Quality Dashboard, you can add those locations here to start assessing their network connectivity. This won't affect your existing locations.
 
-Go to [Tenant Data Upload](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload) in the **Call Quality Dashboard (CQD)**. If you've uploaded your building data, you'll see an option to download it to a .tsv file. Download the .tsv file from Call Quality Dashboard, then upload it in the CQD flyout following the steps below. If you want to create the .tsv file manually, please align the schema with that in Upload building data file, or try the CSV Import for LAN subnet office locations instead.
+Go to [Tenant Data Upload](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload) in the **Call Quality Dashboard (CQD)**. If you've uploaded your building data, you'll see an option to download it to a .tsv file. Download the .tsv file from Call Quality Dashboard, then upload it in the CQD flyout following the steps below. If you want to create the .tsv file manually, align the schema with that in Upload building data file, or try the CSV Import for LAN subnet office locations instead.
 
 1. In the main Connectivity to Microsoft 365 window, select the **Locations** tab.
-
-2. Select the **Manage multiple locations** button just above the locations list.
-
-   > [!div class="mx-imgBorder"]
-   > ![Manage multiple locations menu.](../media/m365-mac-perf/m365-mac-perf-import-cqd-manage-multiple.png)
-
-3. Select the **Add locations from Call Quality Dashboard**, the **Add locations from Call Quality Dashboard** flyout will appear.
-
-   > [!div class="mx-imgBorder"]
-   > ![Add locations from Call Quality Dashboard flyout.](../media/m365-mac-perf/m365-mac-perf-import-cqd-add-locations.png)
-
-4. Select the **Browse** button next to the **Select a .tsv file to upload** field and select the saved TSV file. Make sure the value in the file is tab separated.
-
-5. The file will be automatically validated and parsed to the list of office locations. If there are validation errors, the **We couldn't upload your file** flyout appears to list the errors.
-
-   > [!div class="mx-imgBorder"]
-   > ![We couldnt upload your file flyout.](../media/m365-mac-perf/m365-mac-perf-import-cqd-couldnt-upload.png)
-
-6. If there are no errors in the file, you'll see the message: _Your file test.tsv is uploaded and ready. Select **Import** to upload your information._
-
-   > [!div class="mx-imgBorder"]
-   > ![Select a .tsc file to upload.](../media/m365-mac-perf/m365-mac-perf-import-cqd-select-tsv.png)
-
-7. Select **Upload** button at the bottom of the panel to upload the office locations.
+1. Select the **Manage multiple locations** button just above the locations list.
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import-cqd-manage-multiple.png" alt-text="Screenshot of the Manage multiple locations menu." border="true":::
+1. Select the **Add locations from Call Quality Dashboard**, the **Add locations from Call Quality Dashboard** flyout will appear.
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import-cqd-add-locations.png" alt-text="Screenshot of the Add locations from Call Quality Dashboard flyout." border="true":::
+1. Select the **Browse** button next to the **Select a .tsv file to upload** field and select the saved TSV file. Make sure the value in the file is tab separated.
+1. The file is automatically validated to the list of office locations. If there are validation errors, the **We couldn't upload your file** flyout appears to list the errors.
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import-cqd-couldnt-upload.png" alt-text="Screenshot of the we couldn't upload your file flyout." border="true":::
+1. If there are no errors in the file, you'll see the message: *Your file test.tsv is uploaded and ready. Select **Import** to upload your information.*
+      :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-import-cqd-select-tsv.png" alt-text="Screenshot shows the selecting of a .tsc file to upload." border="true":::
+1. Select **Upload** button at the bottom of the panel to upload the office locations.
 
 ## FAQ - Understanding test sampling
 
@@ -252,11 +217,11 @@ You'll need to sign in with an account that is a member of the Network Administr
 The Microsoft 365 service front door is an entry point on Microsoft's global network where Office clients and services terminate their network connection. For an optimal network connection to Microsoft 365, it's recommended that your network connection is terminated at the closest Microsoft 365 front door.
 
 > [!NOTE]
-> Microsoft 365 service front door has no direct relationship to the Azure Front Door Service product available in the Azure marketplace.
+> Microsoft 365 service front door has no direct relationship to the Azure Front Door Service product available in the Azure Marketplace.
 
 ### What is an optimal Microsoft 365 service front door?
 
-An optimal Microsoft 365 service front door is one that is closest to your network egress, generally in your city or metro area. Use the [Microsoft 365 connectivity test tool](office-365-network-mac-perf-onboarding-tool.md) to determine the location of your in-use Microsoft 365 service front door and optimal service front door. If the tool determines your in-use front door is optimal, you're optimally connecting to Microsoft's global network.
+An optimal Microsoft 365 service front door is one that's closest to your network egress, generally in your city or metropolitan area. Use the [Microsoft 365 connectivity test tool](office-365-network-mac-perf-onboarding-tool.md) to determine the location of your in-use Microsoft 365 service front door and optimal service front door. If the tool determines your in-use front door is optimal, you're optimally connecting to Microsoft's global network.
 
 ### What is an internet egress location?
 
@@ -266,12 +231,9 @@ The internet egress location is the location where your network traffic exits yo
 
 You require a license that provides access to the Microsoft 365 admin center.
 
-## Related articles
+## Related content
 
-[Microsoft 365 network insights](office-365-network-mac-perf-insights.md)
-
-[Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
-
-[Microsoft 365 connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
-
-[Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)
+- [Microsoft 365 network insights](office-365-network-mac-perf-insights.md)
+- [Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
+- [Microsoft 365 connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
+- [Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)

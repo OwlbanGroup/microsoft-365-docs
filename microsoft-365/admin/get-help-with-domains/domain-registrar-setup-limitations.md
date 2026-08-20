@@ -2,19 +2,20 @@
 title: "Domain registrars with setup limitations"
 f1.keywords:
 - CSH
-ms.author: pebaum
-author: pebaum
+ms.author: frankroj
+author: frankroj
 manager: scotv
-ms.date: 08/10/2021
+ms.date: 04/23/2026
 audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - scotvorg
 - M365-subscription-management
 - Adm_O365
-ms.custom: 
+- operations-pod
+ms.custom:
 - AdminSurgePortfolio
 - okr_smb
 - AdminTemplateSet
@@ -50,7 +51,7 @@ The Freenom website doesn't support adding SRV records, which means that several
 
 ## Create DNS records at MyDomain for Microsoft
 
-The MyDomain website doesn't support SRV records, which means several Teams and Email features won't work. No matter which Microsoft plan you use, there are significant service limitations if you manage your DNS records at MyDomain. You might want to switch to a different DNS hosting provider in this case. 
+The MyDomain website doesn't support SRV records, which means several Teams and Email features won't work. No matter which Microsoft plan you use, there are significant service limitations if you manage your DNS records at MyDomain. You might want to switch to a different DNS hosting provider in this case.
 
 ## Create DNS records for Microsoft using Windows-based DNS
 
@@ -145,7 +146,7 @@ The extra CNAME records in the following procedure enable Skype for Business Onl
 
     |Create Subdomain|Alias|
     |:----|:----|
-    |sip|sipdir.online.lync.com|  
+    |sip|sipdir.online.lync.com|
 
 1.  Select **Create Subdomain**.
 

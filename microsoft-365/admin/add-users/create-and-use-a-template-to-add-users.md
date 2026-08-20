@@ -2,24 +2,25 @@
 title: "Create and use a template to add users"
 f1.keywords:
 - NOCSH
-ms.author: efrene
-author: efrene
-manager: scotv
-ms.date: 06/04/2024
+ms.author: deniseb
+author: denisebmsft
+manager: dansimp
+ms.date: 04/23/2026
 audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business
+ms.service: microsoft-365-admin
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier1
 - scotvorg
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
 - must-keep
 ms.custom:
 - MSStore_Link
 - AdminSurgePortfolio
+- user-accounts
 search.appverid:
 - MET150
 - MOE150
@@ -28,11 +29,13 @@ description: "You can create and use a template to save time and standardize set
 
 # Create and use a template to add users
 
-You can create and use a template to save time and standardize settings when you're adding multiple users. Templates are particularly useful if you have users who share many common properties, like those who have the same role and work at the same location and those who require the same software. For example, you might have a team of support engineers who work in the same office.  
+You can create and use a template to save time and standardize settings when you're adding multiple users. Templates are useful if you have users who share many common properties, like for users who have the same role and work at the same location, and users who require the same software. For example, you might have a team of support engineers who work in the same office.  
 
 ## Create a template
 
-Templates are easy to create&mdash;you can select **Users** > **Active users** > **User templates**, and then select **Add a template** from the drop-down list, or you can add a new user and when you're finished, you have the option to save the entry as a template.
+1. In the [Microsoft 365 admin center](https://admin.microsoft.com), select **Users** > **Active users** > **User templates**.
+
+2. Select **Add a template** from the drop-down list. Or, add a new user, and when you're finished, you can save that entry as a template.
 
 When you create a template after adding a user, the values you choose for the following settings are saved in the template:
 
@@ -53,17 +56,17 @@ The following information is user-specific and isn't saved in the template:
 - Choice to send the password in email and who the password email is sent to
 - Mobile phone number
 
-If you choose not to enter information for a setting within a section, that value will be blank and that setting won't display in the template. For example, if you leave **Job title** blank, when you review your template and when you use your template, **Job title** won't appear at all. If you leave all the **Profile** section settings blank, the **Profile** section will display **None provided** in your final template.
+If you choose not to enter information for a setting within a section, that value is blank and that setting doesn't display in the template. For example, if you leave **Job title** blank, when you review your template and when you use your template, **Job title** doesn't appear at all. If you leave all the **Profile** section settings blank, the **Profile** section displays **None provided** in your final template.
 
-When you create a template by selecting the **Add a template** option, you can choose which values to complete. Anything that is left blank will appear as **None provided** in the template.
+When you create a template by selecting the **Add a template** option, you can choose which values to complete. Anything that is left blank appears as **None provided** in the template.
 
 ## Use a template to add a user
 
 To use an existing template to add a user:
 
-1. In the admin center, select **Users** > **Active users**.
+1. In the [Microsoft 365 admin center](https://admin.microsoft.com), select **Users** > **Active users**.
 
-2. Select **User templates**, and then select a template from the drop-down list. (The list will contain only the templates that you created, not those created by other admins.)
+2. Select **User templates**, and then select a template from the drop-down list. (The list contains only the templates that you created, not templates that were created by other admins.)
 
    > [!NOTE]
    > You can also use a template to add a user by selecting **User templates** > **Manage templates**, selecting a template, and then selecting **Use template**.
@@ -71,24 +74,25 @@ To use an existing template to add a user:
 3. Follow the steps to create a user from the template you selected.
 
    > [!NOTE]
-   > If you have insufficient licenses available for a user that you add, and your payment information is available, we will attempt to purchase another license using your existing payment information. If your payment information is unavailable, the user will be created as an unlicensed user.
+   > If you have insufficient licenses available for a user that you add, and your payment information is available, Microsoft attempts to purchase another license using your existing payment information. If your payment information is unavailable, the user is created as an unlicensed user.
 
 ## Manage templates
 
 You can only delete templates you no longer need and add new ones. To delete a template:
 
-1. In the admin center, select **Users** > **Active users**.
+1. In the [Microsoft 365 admin center](https://admin.microsoft.com), select **Users** > **Active users**.
 
 2. Select **Templates**, and then select **Manage templates** from the drop-down list.
 
-3. A list of templates will appear. You can delete a template by doing any of the following:
-    - Select one or more templates, and then select **Delete**.
-    - Select the three dots to the right of the template name, and then select **Delete**.
-    - Select the template name. When the template details appear on the right side of your screen, select **Delete template**.
+3. A list of templates appears. You can delete a template by taking any of the following actions:
+
+   - Select one or more templates, and then select **Delete**.
+   - Select the three dots to the right of the template name, and then select **Delete**.
+   - Select the template name. When the template details appear on the right side of your screen, select **Delete template**.
 
 ## Related articles
 
-[Add users and assign licenses at the same time](add-users.md)
+- [Add users and assign licenses at the same time](add-users.md)
 
-[Remove a former employee from Microsoft 365](remove-former-employee.md)
+- [Remove a former employee from Microsoft 365](remove-former-employee.md)
   

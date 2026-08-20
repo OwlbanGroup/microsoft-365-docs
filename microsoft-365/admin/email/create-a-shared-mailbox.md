@@ -2,20 +2,21 @@
 title: "Create a shared mailbox"
 f1.keywords:
 - NOCSH
-ms.author: kwekua
-author: kwekuako
-manager: scotv
-ms.date: 09/30/2024
+ms.author: dansimp
+author: dansimp
+manager: dansimp
+ms.date: 02/02/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: high
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
 - M365-subscription-management
 - Adm_O365
 - Adm_TOC
+- operations-pod
 ms.custom:
 - MSStore_Link
 - AdminSurgePortfolio
@@ -25,6 +26,7 @@ ms.custom:
 - business_assist
 - has-azure-ad-ps-ref
 - azure-ad-ref-level-one-done
+- user-accounts
 description: "Create a shared mailbox to enable multiple users in your business to share the responsibility of reading and answering email sent to one address."
 ---
 
@@ -40,9 +42,6 @@ Create shared mailboxes so a group of people can monitor and send email from a c
 Shared mailboxes include a shared calendar. Your team can use the shared calendar as a place for everyone to enter their appointments. For example, if you have 3 people who do customer visits, all can use the shared calendar to enter the customer visit information.
 
 Before creating a shared mailbox, be sure to read [About shared mailboxes](about-shared-mailboxes.md) for more information.
-
-> [!TIP]
-> If you need help with the steps in this topic, consider [working with a Microsoft small business specialist](https://go.microsoft.com/fwlink/?linkid=2186871). With Business Assist, you and your employees get around-the-clock access to small business specialists as you grow your business, from onboarding to everyday use.
 
 ## Create a shared mailbox and add members
   
@@ -61,14 +60,16 @@ Before creating a shared mailbox, be sure to read [About shared mailboxes](about
 ::: moniker-end
 
 3. On the **Shared mailboxes** page, select **+ Add a shared mailbox**. Enter a name for the shared mailbox. This chooses the email address, but you can edit it if needed.
-  
+
 4. Select **Save changes**. It may take a few minutes before you can add members.
 
 5. Under **Next steps**, select **Add members to this mailbox**. Members are the people who will be able to view the incoming mail to this shared mailbox, and the outgoing replies.
 
 6. Select the **Add members** button. Select the people who you want to use this shared mailbox, and then select **Add**. and then close.
 
-You have a shared mailbox and it includes a shared calendar. Go on to the next step: [Block sign-in for the shared mailbox account](#block-sign-in-for-the-shared-mailbox-account).
+> [!NOTE]
+> By default, every new shared mailbox has sign-in blocked.
+>For instructions on how to block sign-in for accounts using >[Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) (including many accounts at the same time), see [Block Microsoft 365 user accounts with PowerShell](../../enterprise/block-user-accounts-with-microsoft-365-powershell.md).
 
 ## Which permissions should you use?
 
@@ -78,7 +79,7 @@ You can use the following permissions with a shared mailbox:
 
 - **Send As**: The Send As permission lets a user impersonate the shared mailbox when sending mail. For example, if Katerina logs into the shared mailbox Marketing Department and sends an email, it will look like the Marketing Department sent the email.
 
-- **Send on Behalf**: The Send on Behalf permission lets a user send email on behalf of the shared mailbox. For example, if John logs into the shared mailbox Reception Building 32 and sends an email, it will look like the mail was sent by "John on behalf of Reception Building 32". You can't use the EAC to grant Send on Behalf permissions, you must use the **Set-Mailbox** cmdlet with the _GrantSendonBehalf_ parameter.
+- **Send on Behalf**: The Send on Behalf permission lets a user send email on behalf of the shared mailbox. For example, if John logs into the shared mailbox Reception Building 32 and sends an email, it will look like the mail was sent by "John on behalf of Reception Building 32". You can use the EAC to grant Send on Behalf permissions or you can use the **Set-Mailbox** cmdlet with the _GrantSendonBehalf_ parameter.
 
 > [!NOTE]
 > The **Send As** and **Send on Behalf** permissions do not work in the Outlook desktop client with the *HiddenFromAddressListsEnabled* parameter on the mailbox set to **True**, since they require the mailbox to be visible in Outlook via the Global Address List.
@@ -95,34 +96,6 @@ You can use the following permissions with a shared mailbox:
    > The Full Access permission allows a user to open the mailbox as well as create and modify items in it. The Send As permission allows anyone other than the mailbox owner to send email from this shared mailbox. Both permissions are required for successful shared mailbox operation.
 
 4. Select **Save** to save your changes.
-
-## Block sign-in for the shared mailbox account
-
-Every shared mailbox has a corresponding user account. Notice how you weren't asked to provide a password when you created the shared mailbox? The account has a password, but it's system-generated (unknown). You aren't supposed to use the account to log in to the shared mailbox.
-
-But what if an admin simply resets the password of the shared mailbox user account? Or what if an attacker gains access to the shared mailbox account credentials? This would allow the user account to log in to the shared mailbox and send email. To prevent this, you need to block sign-in for the account that's associated with the shared mailbox.
-
-::: moniker range="o365-worldwide"
-
-1. In the admin center, go to the **Users** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=834822" target="_blank">Active users</a> page.
-
-::: moniker-end
-
-::: moniker range="o365-21vianet"
-
-1. In the admin center, go to the **Users** \> <a href="https://go.microsoft.com/fwlink/p/?linkid=850628" target="_blank">Active users</a> page.
-::: moniker-end
-
-2. In the list of user accounts, find the account for the shared mailbox (for example, change the filter to **Unlicensed users**).
-
-3. Select the user to open their properties pane, and then select **Block sign-in**.
-
-   > [!NOTE]
-   > If the account is already blocked, **Sign in blocked** will appear at the top and the icon will read **Unblock this user**.
-
-4. On the **Block sign-in** page, select **Block the user from signing in**, and then select **Save changes**.
-
-For instructions on how to block sign-in for accounts using [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) (including many accounts at the same time), see [Block Microsoft 365 user accounts with PowerShell](../../enterprise/block-user-accounts-with-microsoft-365-powershell.md).
 
 ## Add the shared mailbox to Outlook
 

@@ -24,7 +24,7 @@ f1.keywords: NOCSH
 As an effort to further enable commercial utilization, Test Base started to support intunewin format for IT Pros who manages apps for their apps within Intune as the standard onboarding package format. The intunewin upload flow provides the experience for IT Pros to reuse their intunewin format packages, which contain the apps they deployed to their end devices via Intune to onboarding their apps and test configurations quickly to Test Base. 
 
 **Prerequisites**
-  - Currently Test Base support synchronizing via the same subscription between Intune account and Test Base account (you don’t have to have an Intune account to upload your intunewin package however if you’d like to synchronize the Intune configuration for the intunewin file’s corresponding apps from Intune, you'll need to make sure your Intune account is created under the same subscription as your Test Base account).
+  - Currently Test Base support synchronizing via the same subscription between Intune account and Test Base account (you don't have to have an Intune account to upload your intunewin package however if you'd like to synchronize the Intune configuration for the intunewin file's corresponding apps from Intune, you'll need to make sure your Intune account is created under the same subscription as your Test Base account).
   - Intunewin packages to be uploaded. 
 
 **Intunewin file Upload Flow (synchronized with Intune account)** <br/>
@@ -48,7 +48,7 @@ As an Intune customer who has an Intune package, which is onboarded to Intune po
     > ![Upload the intune package](Media/testintuneapplication02.png) 
 
 
-5. On the Step 1 page, you can see dependencies that listed under the Dependency section, you can either choose to upload the dependency’s install file or remove it from this step (if you plan to manage the dependency in Step 3 by self provide the related binaries). Selected dependencies in this section are preinstalled the same way as it is installed via Intune.
+5. On the Step 1 page, you can see dependencies that listed under the Dependency section, you can either choose to upload the dependency's install file or remove it from this step (if you plan to manage the dependency in Step 3 by self provide the related binaries). Selected dependencies in this section are preinstalled the same way as it is installed via Intune.
     
     > [!div class="mx-imgBorder"] 
     > ![Upload dependency package](Media/testintuneapplication03.png) 

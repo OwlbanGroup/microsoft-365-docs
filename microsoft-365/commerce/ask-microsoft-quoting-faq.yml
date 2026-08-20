@@ -1,0 +1,185 @@
+### YamlMime:FAQ
+metadata:
+  title: Ask Microsoft quoting FAQ
+  description: Frequently asked questions about the agent-led quoting experience in Ask Microsoft.
+  ms.topic: faq
+  ms.service: microsoft-365-business
+  ms.subservice: m365-commerce-marketplace
+  ms.author: tiaraquan
+  author: tiaraquan
+  ms.date: 03/06/2026
+  ms.localizationpriority: medium
+  ms.collection:
+    - m365-business
+
+
+title: Ask Microsoft quoting FAQ
+summary: |
+  Use this FAQ to learn how the agent-led quoting experience works, what products are supported, and what to expect after you create a quote in Ask Microsoft. Customers can access the agent-led quoting purchase experience through the Ask Microsoft web agent on customer-facing sites, offering an alternative to engaging Sales or purchasing directly online. Quoting is currently available in the U.S. for small and medium business customers purchasing [Microsoft 365 products](https://www.microsoft.com/microsoft-365/business/microsoft-365-plans-and-pricing). 
+
+sections:
+  - name: Getting started with quoting
+    questions:
+      - question: What are the benefits of quoting?
+        answer: |
+          Through quoting, you can save product selections, share pricing for internal review or approval, and complete the purchase later. It's especially useful for multi-product purchases because it combines items into a single checkout.
+
+      - question: Does quoting offer better pricing than buying online?
+        answer: |
+          No. Pricing is the same whether you request a quote or buy online. Quoting doesn't provide additional discounts.
+
+      - question: What's the difference between getting a quote and direct purchase?
+        answer: |
+          Through direct purchase, you complete the transaction immediately online. Through quoting, you can save selections, share pricing with others, and complete the purchase later. Quotes are helpful if you're buying multiple products and need time to finalize the decision. Pricing is the same for both options.
+
+      - question: When should I use quoting instead of direct purchase?
+        answer: |
+          Use direct purchase if you're ready to buy and don't need review or approval. Use quoting if you need approval, want to review pricing with others, or are purchasing multiple products.
+
+      - question: How long does it take to create a quote?
+        answer: |
+          Creating a quote takes only a few minutes. A sales representative follows up within 48 business hours.
+
+      - question: Can I request a quote if I'm not a Microsoft customer?
+        answer: |
+          Yes. New customers can request a quote. A sales representative confirms setup details and ensures the quote is applied correctly.
+
+  - name: Quote pricing, eligibility, and discounts
+    questions:
+      - question: Is nonprofit, education, or government pricing supported through quoting?
+        answer: |
+          No. This quoting experience doesn't support nonprofit, education, or government pricing. Check the [Microsoft 365 plan website](https://www.microsoft.com/microsoft-365/enterprise/nonprofit-plans-and-pricing) for eligibility and pricing.
+
+      - question: Are business discounts available through quoting?
+        answer: |
+          No. Quoting doesn't include additional discounts. Pricing matches the Microsoft website.
+
+      - question: Can I get a quote to upgrade from Business Basic to Business Premium?
+        answer: |
+          No. Plan upgrades aren't supported through quoting. You can upgrade directly in the Microsoft 365 admin center.
+
+      - question: Can I use quoting if my company works with a Microsoft partner?
+        answer: |
+          If you work with a Microsoft partner, contact them directly for purchasing support.
+
+      - question: Can I use quoting with an Enterprise Agreement or Microsoft Customer Agreement? Can I create a quote for internal review only?
+        answer: |
+          No. This quoting experience doesn't apply to Enterprise Agreement (EA) or Microsoft Customer Agreement (MCA) customers. Contact your Microsoft account manager for the correct quote and purchasing support for your agreement.
+
+      - question: What products are supported for quoting?
+        answer: |
+          Microsoft 365 Business suite products are supported.
+
+      - question: Can I include both Azure and Microsoft 365 products in the same quote?
+        answer: |
+          No, only Microsoft 365 suite products are supported. Azure products aren't supported through this quoting experience and must be purchased separately.
+
+      - question: Can I create multiple quotes with different products and quantities to compare options?
+        answer: |
+          Yes. You can create multiple quotes with different products or quantities for internal comparison. To create multiple quotes, repeat the quoting steps for each version you want to generate. However, Azure isn't supported; Azure must be purchased separately.
+
+      - question: Can I include Microsoft 365 and Power BI Pro in the same quote?
+        answer: |
+          Yes. You can include both products in the same quote.
+
+  - name: Quote details and managing quotes
+    questions:
+      - question: Does the quote include taxes?
+        answer: |
+          No. Taxes aren't finalized in the draft quote. Taxes are calculated at purchase based on your billing address and local tax rules.
+
+      - question: Is the quote price locked?
+        answer: |
+          No. The quote reflects current pricing, but pricing can change if the quote expires or pricing updates occur. A sales representative confirms final pricing before you purchase.
+
+      - question: Is the quote linked to my existing Microsoft account?
+        answer: |
+          Quotes are linked to the business details and purchase intent you provide during the quoting flow. A sales representative confirms whether the quote applies to your account.
+
+      - question: Can I retrieve my quote using a quote ID?
+        answer: |
+          No. Quotes aren't retrievable in chat. A copy is sent to the email address you provided.
+
+      - question: Can I change my quote after I receive it?
+        answer: |
+          Yes. After you receive the draft quote, you can request changes from the sales representative.
+
+      - question: Can I cancel a quote?
+        answer: |
+          Quotes can't be canceled in chat. You can ignore the quote or tell the sales representative you don't want to proceed. The sales representative contacts you within 48 hours.
+
+      - question: What if I no longer want a quote?
+        answer: |
+          Select **End this quote** to exit the quoting flow.
+
+  - name: Quote delivery and sharing
+    questions:
+      - question: Can I receive my quote in chat instead of email?
+        answer: |
+          No. Quotes are sent by email to protect your information and support sharing and follow-up.
+
+      - question: Why do you need my email address?
+        answer: |
+          Your email address is required to deliver the quote securely and allow sales follow-up.
+
+      - question: Can I download my quote as a PDF?
+        answer: |
+          Yes. The quote is sent by email as a PDF.
+
+      - question: Can I share my quote internally?
+        answer: |
+          Yes. You can forward the quote email for internal review or approval.
+
+  - name: Quoting payment and billing questions
+    questions:
+      - question: What payment methods are supported?
+        answer: |
+          Credit cards are the only payment method supported for quoting.
+
+      - question: Can I change billing frequency before submitting a quote?
+        answer: |
+          Yes. You can switch between monthly and annual billing before submitting your email address.
+
+      - question: Can I change billing frequency after the quote is created?
+        answer: |
+          No. Billing frequency can't be changed in chat after quote creation. A sales representative follows up and can help update your billing options.
+
+  - name: Next steps after you create a quote
+    questions:
+      - question: What happens after I create a quote?
+        answer: |
+          You receive a draft quote by email to review and share. You can reply with questions or request changes. After confirmation, a sales representative sends the final quote to complete your purchase.
+
+      - question: Why does a sales representative need to contact me?
+        answer: |
+          A sales representative confirms details and issues the final quote required to complete purchase. If you prefer, you can [purchase directly](https://www.microsoft.com/microsoft-365/microsoft-365-enterprise).
+
+      - question: When will the sales team contact me?
+        answer: |
+          A sales representative contacts you within 48 business hours.
+
+      - question: Can I request a phone call instead of email?
+        answer: |
+          The sales representative starts with email. You can request a phone call after they reach out.
+
+      - question: How long is my quote valid?
+        answer: |
+          Quotes expire 60 days after creation. A sales representative can refresh the quote if needed.
+
+      - question: What information does the sales representative receive?
+        answer: |
+          Sales representatives receive the details you entered, including products, quantities, and contact information.
+
+  - name: Quote troubleshooting
+    questions:
+      - question: I didn't receive the quote in my email. What should I do?
+        answer: |
+          Check your inbox and spam or junk folders. If you still don't see it, enter "Chat with sales" to connect with a sales representative who can resend it.
+
+      - question: I entered the wrong email address. Can it be corrected?
+        answer: |
+          A sales representative can update the email address and resend the quote. Enter "Chat with sales" to connect with a sales representative. You might need to restart the quoting flow. 
+
+      - question: I can't see my quote in chat anymore. How do I access it?
+        answer: |
+          For privacy reasons, quotes aren't available in chat after the session ends. Check your email for a copy of the quote.

@@ -4,20 +4,13 @@ ms.author: tracyp
 author: MSFTTracyP
 manager: dansimp
 ms.date: 08/15/2023
-audience: Admin
 ms.topic: article
 ms.service: microsoft-365-enterprise
 ms.subservice: administration
 ms.localizationpriority: medium
-f1.keywords:
-- CSH
 ms.custom: 
  - Adm_O365
  - seo-marvel-apr2020
-search.appverid:
-- MET150
-- MOE150
-- BCS160
 ms.assetid: 1492cb94-bd62-43e6-b8d0-2a61ed88ebae
 ms.collection:
 - scotvorg
@@ -202,7 +195,7 @@ The objective of these simple methods is to learn to take, understand, and prope
 ![Basic network with client, proxy, and cloud, and tools suggestions PSPing, TraceTCP, and network traces.](../media/627bfb77-abf7-4ef1-bbe8-7f8cbe48e1d2.png)
   
 > [!NOTE]
-> TraceTCP is included in this screen shot because it's a useful tool for showing, in milliseconds, how long a request takes to process, and how many network hops, or connections from one computer to the next, that the request takes to reach a destination. TraceTCP can also give the names of servers used during hops, which can be useful to a Microsoft Office 365 troubleshooter in Support. > TraceTCP commands can be very simple, such as: >  `tracetcp.exe outlook.office365.com:443`> Remember to include the port number in the command! > [TraceTCP](https://simulatedsimian.github.io/tracetcp_download.html) is a free download, but relies on Wincap. Wincap is a tool that is also used and installed by Netmon. We also use Netmon in the advanced methods section. 
+> TraceTCP is included in this screenshot because it's a useful tool for showing, in milliseconds, how long a request takes to process, and how many network hops, or connections from one computer to the next, that the request takes to reach a destination. TraceTCP can also give the names of servers used during hops, which can be useful to a Microsoft Office 365 troubleshooter in Support. > TraceTCP commands can be very simple, such as: >  `tracetcp.exe outlook.office365.com:443`> Remember to include the port number in the command! > [TraceTCP](https://simulatedsimian.github.io/tracetcp_download.html) is a free download, but relies on Wincap. Wincap is a tool that is also used and installed by Netmon. We also use Netmon in the advanced methods section. 
   
  If you have multiple offices, you'll need to keep a set of data from a client in each of those locations as well. This test measures latency, which, in this case, is a number value that describes the amount of time between a client sending a request to Office 365, and Office 365 responding to the request. The testing originates inside your domain on a client computer, and looks to measure a round trip from inside your network, out through an egress point, across the Internet to Office 365, and back. 
   
@@ -242,13 +235,13 @@ You have to use [PSPing](/sysinternals/downloads/psping) or another tool that do
   
 1. Run an elevated command prompt by completing these steps:
     
-1. Click **Start**.
+   1. Click **Start**.
+       
+   2. In the **Start Search** box, type cmd, and then press **CTRL+SHIFT+ENTER**.
+       
+   3. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
     
-2. In the **Start Search** box, type cmd, and then press CTRL+SHIFT+ENTER.
-    
-3. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
-    
-2. Navigate to the folder where the tool (in this case PsPing) is installed and test these Office 365 URLs:
+1. Navigate to the folder where the tool (in this case PsPing) is installed and test these Office 365 URLs:
     
   - psping admin.microsoft.com:443
     
@@ -270,29 +263,29 @@ If you're not familiar with proxy bypass, and prefer to take things step by step
   
 1. Run an elevated command prompt by completing these steps:
     
-1. Click **Start**.
-    
-2. In the **Start Search** box, type cmd, and then press CTRL+SHIFT+ENTER.
-    
-3. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
-    
-2. Type ping \<the name of the proxy server your browser uses, or the IP address of the proxy server\> and then press ENTER. If you have PsPing, or some other tool, installed, you can choose to use that tool instead. 
+   1. Click **Start**.
+       
+   2. In the **Start Search** box, type cmd, and then press **CTRL+SHIFT+ENTER**.
+       
+   3. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then click **Continue**.
+      
+1. Type `ping \<the name of the proxy server your browser uses, or the IP address of the proxy server\>` and then press **ENTER**. If you have PsPing, or some other tool, installed, you can choose to use that tool instead. 
     
     Your command might look like any of these examples: 
     
-  - ping ourproxy.ourdomain.industry.business.com
+    - `ping ourproxy.ourdomain.industry.business.com`
+      
+    - `ping 155.55.121.55`
+      
+    - `ping ourproxy`
+      
+    - `psping ourproxy.ourdomain.industry.business.com:80`
+      
+    - `psping 155.55.121.55:80`
+      
+    - `psping ourproxy:80`
     
-  - ping 155.55.121.55
-    
-  - ping ourproxy
-    
-  - psping ourproxy.ourdomain.industry.business.com:80
-    
-  - psping 155.55.121.55:80
-    
-  - psping ourproxy:80
-    
-3. When the trace stops sending test packets, you'll get a small summary that lists an average, in milliseconds, and that's the value you are after. Take a screenshot of the prompt and save it using your naming convention. At this point it might also help to fill in the diagram with the value.
+1. When the trace stops sending test packets, you'll get a small summary that lists an average, in milliseconds, and that's the value you are after. Take a screenshot of the prompt and save it using your naming convention. At this point it might also help to fill in the diagram with the value.
     
 Maybe you've taken a trace in the early morning, and your client can get to the proxy (or whatever egress server exits to the Internet) quickly. In this case, your numbers might look like this:
   
@@ -312,7 +305,7 @@ If you really want to know what is happening with your Internet requests to Offi
   
 Taking a performance baseline is the simple part of this method, and many of the steps are the same as when you troubleshoot a performance issue. The more advanced methods of creating baselines for performance require you to take and store network traces. Most of the examples in this article use SharePoint, but you should develop a list of common actions across the Office 365 services to which you subscribe to test and record. Here's a baseline example:
   
-- Baseline list for SPO - ** Step 1: ** Browse the home page of the SPO website and do a network trace. Save the trace. 
+- Baseline list for SPO - **Step 1:** Browse the home page of the SPO website and do a network trace. Save the trace. 
     
 - Baseline list for SPO - **Step 2:** Search for a term (such as your company name) via Enterprise Search and do a network trace. Save the trace. 
     
@@ -322,10 +315,10 @@ Taking a performance baseline is the simple part of this method, and many of the
     
 This list should include the most important common actions that users take against SharePoint. Notice that the last step, to trace going to OneDrive, builds-in a comparison between the load of the SharePoint home page (which is often customized by companies) and OneDrive home page, which is seldom customized. This is a basic test when it comes to a slow-loading SharePoint site. You can build a record of this difference into your testing.
   
-If you are in the middle of a performance problem, many of the steps are the same as when taking a baseline. Network traces become critical, so we'll handle  *how*  to take the important traces next. 
+If you are in the middle of a performance problem, many of the steps are the same as when taking a baseline. Network traces become critical, so we'll handle  *how* to take the important traces next. 
   
 To tackle a performance problem,  *right now*, you need to be taking a trace at the time you're experiencing the performance issue. You need to have the proper tools available to gather logs, and you need an action plan, that is, a list of troubleshooting actions to take to gather the best information that you can. The first thing to do is record the date and time of the test so that the files can be saved in a folder that reflect the timing. Next, narrow down to the problem steps themselves. These are the exact steps you'll use for testing. Don't forget the basics: if the issue is only with Outlook, make sure to record that the problem behavior happens in only one Office 365 service. Narrowing down the scope of this issue will help you to focus on something you can resolve. 
   
 ## See also
 
-[Managing Office 365 endpoints](https://support.office.com/article/99cab9d4-ef59-4207-9f2b-3728eb46bf9a)
+[Managing Office 365 endpoints](managing-office-365-endpoints.md)

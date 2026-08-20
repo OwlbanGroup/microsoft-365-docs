@@ -1,5 +1,5 @@
 ---
-title: "View your invoice in the Microsoft 365 admin center"
+title: View or download your invoice in the Microsoft 365 admin center
 f1.keywords:
 - NOCSH
 author: cmcatee-MSFT
@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 ms.collection:
 - Tier1
 - scotvorg
-- highpri  
+- highpri
 - M365-subscription-management
 - Adm_O365
 ms.custom:
@@ -29,19 +29,20 @@ ms.custom:
 - adminvideo
 - admindeeplinkMAC
 - GAUpdates
+service.tree.id: 95459a4b-434c-4f83-879b-aa5f509fc7fa
 search.appverid: MET150, GEA150
-description: "Learn how to find your invoice or billing statement for a Microsoft business subscription in the Microsoft 365 admin center."
-ms.date: 04/08/2025
+description: Learn how to find and view or download your invoice or billing statement for a Microsoft business subscription in the Microsoft 365 admin center.
+ms.date: 03/31/2026
 ---
 
-# View your invoice in the Microsoft 365 admin center
+# View or download your invoice in the Microsoft 365 admin center
 
 > [!NOTE]
 > This article only applies to Microsoft business subscriptions. If you have an app, game, or nonbusiness subscription, see [View your Microsoft Store order history](https://support.microsoft.com/account-billing/view-your-microsoft-store-order-history-aafefe88-3ec2-ce28-e0b6-eff1d5cc8170).
 
-You can view your invoice for your Microsoft business subscription in the Microsoft 365 admin center. If you need help with interpreting the charges that you see on your invoice, [find out what type of billing account you have](../manage-billing-accounts.md#view-my-billing-accounts). Then, for a detailed walkthrough of the billing statement, see either [Understand your invoice for your Microsoft MCA billing account](understand-your-invoice.md) or [Understand your invoice for your Microsoft MOSA billing account](understand-your-invoice2.md).
+You can view or download your invoice or billing statement for your Microsoft business subscription in the Microsoft 365 admin center. If you need help with interpreting the charges that you see on your invoice, [find out what type of billing account you have](../manage-billing-accounts.md#view-my-billing-accounts). Then, for a detailed walkthrough of the billing statement, see either [Understand your invoice for your Microsoft MCA billing account](understand-your-invoice.md) or [Understand your invoice for your Microsoft MOSA billing account](understand-your-invoice2.md).
 
-**Have a problem with your bill?** [Contact support for business products](../../admin/get-help-support.md).
+**Have a problem with your invoice?** [Contact support for business products](../../admin/get-help-support.md).
 
 > [!IMPORTANT]
 > Microsoft 365 services don't provide payment receipts. For credit or debit card payments, use the invoice and your credit or debit card billing statement to match your payment.
@@ -53,13 +54,13 @@ Check out all of our small business content on [Small business help & learning](
 - You must be at least a Billing Administrator to do the steps described in this article. For more information, see [About admin roles in the Microsoft 365 admin center](../../admin/add-users/about-admin-roles.md).
 - You must be able to sign in to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>. If you have trouble signing in, see [Microsoft 365 Administration troubleshooting](/microsoft-365/troubleshoot/o365-admin-welcome).
 
-## Watch: View, download, or print your bill
+## Watch: View, download, or print your bill or invoice
   
 Check out this video and others on our [YouTube channel](https://go.microsoft.com/fwlink/?linkid=2198016).
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=a03436f9-660b-4cb3-906d-bdcd86ee21d9]
 
-## View your bill or invoice
+## View or download your invoice
 
 1. Go to the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>.
 
@@ -118,16 +119,14 @@ You can download your tax receipt in certain jurisdictions from the **Billing** 
 ## Related tasks
 
 - Need to contact support? See [Get support for Microsoft 365 for business](../../admin/get-help-support.md)
-- Need to pay your invoice? See [Payment options for Microsoft business subscriptions](pay-for-your-subscription.md)
+- Need to pay your invoice? See [Pay your Microsoft business invoice by using a credit or debit card](pay-for-your-subscription.md) or [Pay your invoice by using a wire transfer](pay-by-wire-transfer.md).
 - Need to change who your invoice is sent to? See [Manage billing notifications and invoice attachment settings in the Microsoft 365 admin center](manage-billing-notifications.md).
 - Need to add or update a credit card? See [Manage payment methods for Microsoft business accounts](manage-payment-methods.md).
 - Need to cancel your subscription? See [Cancel your subscription in the Microsoft 365 admin center](../subscriptions/cancel-your-subscription.md).
 
 ## Related content
 
-[Understand your invoice for your Microsoft MCA billing account](understand-your-invoice.md) (article)\
-[Understand your invoice for your Microsoft MOSA billing account](understand-your-invoice2.md) (article)\
-[Payment options for your Microsoft business subscription](pay-for-your-subscription.md) (article)\
-[Manage payment methods](manage-payment-methods.md) (article)\
-[Billing information for Microsoft 365 for business in Mexico](mexico-billing-info.md) (article)\
+[Understand your invoice for your Microsoft MCA billing account](understand-your-invoice.md) (article)<br/>
+[Understand your invoice for your Microsoft MOSA billing account](understand-your-invoice2.md) (article)<br/>
+[Billing information for Microsoft 365 for business in Mexico](mexico-billing-info.md) (article)<br/>
 [Minecraft: Education Edition payment options](/education/windows/school-get-minecraft) (article)

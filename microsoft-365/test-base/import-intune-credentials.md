@@ -38,7 +38,7 @@ Test Base now provides an efficient way that allows you to validate your Intune 
 2. [*Grant Test Base managed identities to your Key Vault account*](https://aka.ms/testbase-doc-ManagedIdentity)
 3. *Prepare your Intune tenant:*
    - *Disable MFA for new created account (Conditional access policy)*
-   - *Enable Windows automatic enrollment*[*: Enable MDM automatic enrollment for Windows | Microsoft Learn*](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment)
+   - *Enable Windows automatic enrollment*[*: Enable MDM automatic enrollment for Windows | Microsoft Learn*](/intune/device-enrollment/windows/guide#windows-automatic-enrollment)
    - *Create dynamic group to include the new enrolled VM (Query: device.displayName -startsWith "exepipe")*
    - *Assign test apps and policies to newly created dynamic groups.*
 

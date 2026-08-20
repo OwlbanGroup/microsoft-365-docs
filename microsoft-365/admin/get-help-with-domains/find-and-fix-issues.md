@@ -2,16 +2,16 @@
 title: "Find and fix issues after adding your domain or DNS records"
 f1.keywords:
 - NOCSH
-ms.author: kvice
-author: kelleyvice-msft
+ms.author: frankroj
+author: frankroj
 manager: scotv
-ms.date: 04/02/2025
+ms.date: 04/23/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.subservice: m365-domains
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
 - highpri
@@ -20,11 +20,13 @@ ms.collection:
 - Adm_TOC
 - Adm_O365_Setup
 - must-keep
-ms.custom: 
+- operations-pod
+ms.custom:
 - VSBFY23
 - AdminSurgePortfolio
 - okr_smb
 - AdminTemplateSet
+- domains
 search.appverid:
 - BCS160
 - MET150
@@ -39,14 +41,14 @@ description: "Learn to track down any problems you run into while setting up a c
 Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
 
  **[Check the Domains FAQ](../setup/domains-faq.yml)** if you don't find what you're looking for.
-  
+
 Getting your domain set up to work with Microsoft 365 can be challenging. The DNS system is nit picky to work with, and the DNS setup for your domain affects important business activities, like email!
 
 > [!NOTE]
 > You can check for problems with your domain by checking its status. Go to **Setup** > **Domains** and view the notifications in the **Status** column. If you see an issue, select the three dots (more actions), and then choose **Check health**. The pane that opens will describe any issues occurring with your domain.
 
 [!INCLUDE [How to get tech support for SMB](../../includes/smb-how-to-get-tech-support.md)]
-  
+
 ## What's going on?
 
 - [Can't verify your domain?](#cant-verify-your-domain)
@@ -64,7 +66,7 @@ Getting your domain set up to work with Microsoft 365 can be challenging. The DN
 ## Can't verify your domain?
 
 There are a couple of common reasons that domain verification doesn't work as it should:
-  
+
 1. **The verification record value isn't quite correct.** Double-check that you've copied and pasted the exact value into the TXT verification record at your DNS host. One common issue is not including the "MS=" part of the record. We need that too!
 
 2. **The record hasn't been saved.** At some DNS hosts, you have to take an extra step to save the zone file (where the DNS record is stored) so that it will update across the Internet. Make sure you've saved your changes so Microsoft 365 can see and verify the record.
@@ -74,21 +76,21 @@ There are a couple of common reasons that domain verification doesn't work as it
 ## Outlook isn't working?
 
 If you've set up your MX record and other DNS records correctly for your domain, but mail doesn't work, let us help you [fix your Outlook problems](/exchange/troubleshoot/outlook-connectivity/outlook-connection-issues).
-  
+
 ## Everyone's email got switched to Microsoft 365 and you only wanted YOUR email to switch?
 <a name="BKMK_EmailSwitched"> </a>
 
 When you add your domain to Microsoft 365, typically your domain's MX record is updated (by you or Microsoft 365) to point to Microsoft 365, and ALL email sent to that domain will start coming to Microsoft 365. Make sure you've created mailboxes in Microsoft 365 for everyone who has email on your domain BEFORE you change the MX record.
-  
+
 What if you don't want to move email for everyone on your domain to Microsoft 365? You can take steps to [pilot Microsoft 365 with just a few email addresses instead](../setup/domains-faq.yml).
-  
+
 ## Can't confirm non-profit or school account status?
 <a name="BKMK_validateAcct"> </a>
 
 There are a couple of scenarios when you just need to verify your organization's domain and not set up any services. For example, to prove to Microsoft 365 that your organization qualifies for a school subscription.
-  
+
 Check out the guidance in [Verify your Microsoft 365 domain to prove ownership, nonprofit, or education status, or to activate Viva Engage](../setup/domains-faq.yml) to make sure you've completed all the required steps. It's a little different for each situation.
-  
+
 ## Services not working with your domain?
 
 We can help you track down issues with your domain's DNS setup. The domains troubleshooter in Microsoft 365 will show you any records that you need to fix, and exactly what the records need to be set to.
@@ -100,7 +102,7 @@ We can help you track down issues with your domain's DNS setup. The domains trou
 
 > [!TIP]
 > Got your DNS set up correctly, but mail doesn't work in Outlook on your desktop? Check out the [different mail flow scenarios you can have with Microsoft 365](/exchange/mail-flow-best-practices/mail-flow-best-practices) to make sure you've got things set up correctly for your business. Or get more troubleshooting help with email at [Fix Outlook problems](/exchange/troubleshoot/outlook-connectivity/outlook-connection-issues).
-  
+
 ## Accessing your website isn't working?
 
 If you've fixed any DNS issues and you're still having trouble, try one of the following.

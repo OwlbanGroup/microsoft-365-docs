@@ -1,8 +1,8 @@
----  
+﻿---  
 title: "Reviewing network connection failures for your tenant users when they connect to Microsoft 365 services"  
 description: Understanding Connection Error Rate and WSS Error Rate in Microsoft 365 Network Connectivity
 author: kelleyvice-msft
-ms.author: kvice  
+ms.author: scotv 
 manager: scotv
 ms.date: 12/04/2024  
 ms.topic: article
@@ -14,7 +14,9 @@ ms.collection:
 - Ent_O365
 - Strat_O365_Enterprise
 - must-keep
-ms.custom: QuickDraft
+ms.custom:
+- QuickDraft
+- network
 ms.reviewer: roshanp  
 search.appverid: MET150  
 f1.keywords: 
@@ -25,7 +27,7 @@ audience:
 
 In the network connectivity space, understanding failure rates is crucial for maintaining consistent connectivity and enhancing user experience. This article aims to explain two significant failure rates: the **Connection Error Rate** and the **WSS Error Rate**. Both metrics are prominently displayed on the new **Connection Blockers** page in Microsoft 365 network connectivity page in the admin center. This is a tenant level summarization of network connection failures experienced by your tenant users when they connect to Microsoft 365 services using Microsoft 365 apps on Windows devices with OneDrive for Business installed, the objective is to keep these failure rates low.
 
-:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-connection-blockers-main.png" alt-text="Microsoft 365 network connectivity connection blockers tool":::
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-connection-blockers-main.png" alt-text="Microsoft 365 network connectivity connection blockers tool.":::
  
 ## Connection Error Rate
 
@@ -50,8 +52,8 @@ For instance, if there are 50 failed connections out of 1000 attempts, the conne
 
 Various factors can contribute to a high connection error rate, including:
 
-- **DNS Issues**: Problems with domain name resolution can prevent successful connections. Ensure DNS resolvers are correctly configured to resolve names required for Microsoft 365 services as described in [Microsoft 365 URLs and IP address ranges](https://aka.ms/m365endpoints). 
-- **Proxy Restrictions**: Incorrectly configured web proxies can block traffic to specific domains. Ensure web proxies are configured to allow connections to required domains for Microsoft 365 like `*.cloud.microsoft`, `*.static.microsoft`, and `*.usercontent.microsoft`. Refer to [Microsoft 365 URLs and IP address ranges](https://aka.ms/m365endpoints) for the complete list. 
+- **DNS Issues**: Problems with domain name resolution can prevent successful connections. Ensure DNS resolvers are correctly configured to resolve names required for Microsoft 365 services as described in [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md). 
+- **Proxy Restrictions**: Incorrectly configured web proxies can block traffic to specific domains. Ensure web proxies are configured to allow connections to required domains for Microsoft 365 like `*.cloud.microsoft`, `*.static.microsoft`, and `*.usercontent.microsoft`. Refer to [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md) for the complete list. 
 - **Incorrect categorization of domain**: if the domain is incorrectly categorized, it can block legitimate traffic. Ensure domains and subdomains in `*.cloud.microsoft`, `*.static.microsoft`, and `*.usercontent.microsoft` are correctly categorized to avoid legitimate traffic being blocked.
 
 ## WSS Error Rate
@@ -84,9 +86,9 @@ The new Connection Blockers page in the Microsoft 365 admin center under Network
 
 To access the Connection Blockers page:
 
-- Sign in to the Microsoft 365 admin center.
-- Navigate to the **Network Connectivity** section under **Health**
-- Select **Connection Blockers** from the menu.
+1. Sign in to the Microsoft 365 admin center.
+1. Navigate to the **Network Connectivity** section under **Health**
+1. Select **Connection Blockers** from the menu.
 
 ### Interpreting the Data
 

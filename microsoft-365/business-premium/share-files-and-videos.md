@@ -1,24 +1,19 @@
 ---
 title: "Share files and videos in Microsoft Teams and SharePoint"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
 ms.audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business-security
+ms.service: microsoft-365-admin
 ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.collection:
 - M365-Campaigns
 - m365solution-smb
 - tier2
+- trust-pod
 ms.custom:
-search.appverid:
-- BCS160
-- MET150
-- MOE150
 description: "Share files and videos inside your campaign with Microsoft Teams and SharePoint. Microsoft 365 Business premium includes Teams, which is a great way to safely share files and videos."
 ---
 
@@ -40,7 +35,7 @@ Ensure your users use these methods to share files and videos securely:
 
 3. To share a file externally, add the user as a guest to your team, or use SharePoint to get a secure link to share just that file.
 
-4. Use Microsoft Stream to host videos you want your campaign to see.
+4. Use Microsoft OneDrive to host videos you want your campaign to see.
 
 5. Use Microsoft Teams or SharePoint to store video files you need your team to collaborate on or share.
 

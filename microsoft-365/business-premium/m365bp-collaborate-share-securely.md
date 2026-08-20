@@ -1,13 +1,10 @@
 ---
 title: "Collaborate and share securely with Microsoft 365 Business Premium"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-audience: Admin
 ms.topic: article
-ms.service: microsoft-365-business-security
+ms.service: microsoft-365-admin
 ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.collection:
@@ -15,12 +12,10 @@ ms.collection:
 - m365solution-smb
 - m365-security
 - tier2
+- trust-pod
 ms.custom:
 - MiniMaven
 - MSB365
-search.appverid:
-- BCS160
-- MET150
 description: "An overview on how to collaborate and share files and communicate securely using Teams in Microsoft 365 Business Premium. In the closed environment provide by Teams, files and communications are free from cyber threats and cyberattacks."
 ---
 
@@ -37,4 +32,4 @@ Your steps are to:
 - [Share files and videos](share-files-and-videos.md).
 - [Create a communication site](create-communications-site.md).
 
-Once you've achieved these steps, proceed to [Set up and secure managed devices](m365bp-protect-managed-devices.md).
+Once you've achieved these steps, proceed to [Set up and secure managed devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment).

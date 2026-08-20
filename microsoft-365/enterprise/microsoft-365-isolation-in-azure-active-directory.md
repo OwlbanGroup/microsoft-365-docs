@@ -1,6 +1,6 @@
 ---
 title: "Microsoft 365 Isolation and Access Control in Microsoft Entra ID"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 06/28/2024
@@ -19,7 +19,9 @@ ms.collection:
 f1.keywords:
 - NOCSH
 description: In this article, learn how Isolation and Access Control work to keep data for multiple tenants isolated from each other within Microsoft Entra ID.
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- tenant
 ---
 
 # Microsoft 365 Isolation and Access Control in Microsoft Entra ID

@@ -1,7 +1,7 @@
 ---
 title: "Requirements for Microsoft 365 Lighthouse"
 f1.keywords: CSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: crimora
@@ -38,7 +38,7 @@ In addition, each customer tenant must meet the following requirements to be act
     > [!NOTE]
     > Either granular delegated administrative privileges (GDAP) or a delegated administrative privileges (DAP) relationship is required to onboard customers to Lighthouse. An indirect reseller relationship is no longer required to onboard to Lighthouse. If DAP and GDAP coexist in a customer tenant, GDAP permissions take precedence for MSP technicians in GDAP-enabled security groups.
     > [!NOTE]
-    > To use Lighthouse to view opportunities in Sales Advisor, you don't need additional delegated access permissions from the customer.
+    > To use Lighthouse to view opportunities, you don't need additional delegated access permissions from the customer.
 - Must have at least one Enterprise, Business, Frontline, or Education subscription of Microsoft 365, Office 365, Exchange Online, Windows 365 Business, or Microsoft Defender for Business
 - Must have no more than 2500 licensed users
 - Must reside in the same geographic region (Americas, European Union, or Asia plus Australia) as the partner organization that manages them
@@ -49,8 +49,8 @@ Customer tenants that don't meet these requirements will have access to only a l
 
 To view customer tenant devices on the device management pages, an MSP must:
 
-- Enroll all customer devices in Microsoft Intune. For more information, see [Enroll devices in Microsoft Intune](/mem/intune/enrollment/).
-- Assign compliance policies to all customer devices. For more information, see [Create a compliance policy in Microsoft Intune](/mem/intune/protect/create-compliance-policy).
+- Enroll all customer devices in Microsoft Intune. For more information, see [Enroll devices in Microsoft Intune](/intune/device-enrollment/guide).
+- Assign compliance policies to all customer devices. For more information, see [Create a compliance policy in Microsoft Intune](/intune/device-security/compliance/create-policy).
 
 ## Requirements for enabling user management
 
@@ -60,16 +60,16 @@ For customer data to show up in reports on user management pages, including Risk
 
 To view customer tenant devices and threats on the threat management pages, you must enroll all customer tenant devices in Microsoft Intune and protect them by running Microsoft Defender Antivirus.
 
-For more information, see [Enroll devices in Microsoft Intune](/mem/intune/enrollment/).
+For more information, see [Enroll devices in Microsoft Intune](/intune/device-enrollment/guide).
 
 Microsoft Defender Antivirus is part of the Windows operating system and is enabled by default on devices running Windows 10.
 
 > [!NOTE]
 > If you're using a non-Microsoft antivirus solution and not Microsoft Defender Antivirus, Microsoft Defender Antivirus is disabled automatically. When you uninstall the non-Microsoft antivirus solution, Microsoft Defender Antivirus is activated automatically to protect your Windows devices from threats.
 
-## Requirements for enabling Sales Advisor
+## Requirements for enabling opportunities
 
-To use Sales Advisor to view customer opportunities, you must hold the Account Manager role in Lighthouse. If you don't hold the Account Manager role, reach out to someone who holds the Administrator role in Lighthouse and ask them to assign the role to you.
+To view opportunities, you must hold the Account Manager role in Lighthouse. If you don't hold the Account Manager role, reach out to someone who holds the Administrator role in Lighthouse and ask them to assign the role to you.
 
 For more information, see [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md).
 

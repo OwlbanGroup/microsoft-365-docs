@@ -1,0 +1,57 @@
+### YamlMime:FAQ
+metadata:
+  title: Room and Equipment Mailboxes FAQ
+  description: Find answers to common questions about room and equipment mailboxes in Microsoft 365, including booking, availability, and licensing. Read the FAQ.
+  ms.date: 04/08/2026
+  f1.keywords:
+  - NOCSH
+  ms.author: twerner
+  author: twernermsft
+  manager: scotv
+  audience: Admin
+  ms.topic: faq
+  ms.service: microsoft-365-business
+  ms.localizationpriority: medium
+  ms.collection:
+    - Tier2
+    - scotvorg
+    - M365-subscription-management
+    - Adm_O365
+    - Adm_TOC
+    - operations-pod
+  ms.custom: campaignIDs-batch2
+  search.appverid:
+   - MET150
+   - MOE150
+title: Room and equipment mailboxes FAQ
+summary: |
+
+  Use this FAQ to find quick answers to common questions about room and equipment mailboxes in Microsoft 365, including availability, booking, and licensing. For more information, see [Room and equipment mailboxes](room-and-equipment-mailboxes.md).
+
+sections:
+- name: Room and equipment mailboxes FAQ
+  questions:
+  - question: |
+      How can I tell when the room or equipment is available?
+    answer: |
+      Open Outlook and create a new meeting. Add the room or equipment to the meeting as if it were a person and select **Scheduling Assistant** to see a live calendar view of the room or equipment's availability. If the hour slot is clear, the slot is available. If the hour slot is blue, the slot is reserved.
+
+  - question: |
+      How do I cancel a room or equipment request?
+    answer: |
+      Open the meeting you scheduled in Outlook and then remove the room or equipment from the meeting like you would an attendee. Removing the room or equipment frees up the room for others to reserve.
+
+  - question: |
+      Does someone have to accept or decline every room or equipment request?
+    answer: |
+      No, you don't need someone to accept or decline requests. You can decide whether to let someone in your company automatically book or manage the room or equipment.
+
+  - question: |
+      Does a room mailbox or equipment mailbox need a product license?
+    answer: |
+      No. Room and equipment mailboxes are considered resource mailboxes. While most users in your organization need a license to use Microsoft 365, you don't need to assign a license for a room mailbox or equipment mailbox. For more information, see [Exchange Online limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits?source=docs).
+
+  - question: |
+      Do I need an owner in charge of booking the rooms or equipment?
+    answer: |
+      No, you don't need someone in charge of the room mailbox or equipment mailbox.

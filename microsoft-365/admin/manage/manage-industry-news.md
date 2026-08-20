@@ -2,22 +2,24 @@
 title: "Manage Industry news"
 f1.keywords:
 - NOCSH
-ms.author: efrene
-author: efrene
+ms.author: kwekua
+author: kwekuako
 manager: scotv
 ms.date: 09/24/2020
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
 - M365-subscription-management
-- Adm_TOC 
-ms.custom: 
+- Adm_TOC
+- operations-pod
+ms.custom:
 - AdminSurgePortfolio
 - admindeeplinkMAC
+- tenant
 search.appverid:
 - MET150
 description: "Provide your users with up-to-date news headlines about your industry and info from your organization, use the News service to enable a customized news feed for your organization."

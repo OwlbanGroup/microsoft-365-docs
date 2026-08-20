@@ -1,6 +1,6 @@
 ---
 title: "Manage Microsoft 365 identity governance"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 07/26/2024
@@ -14,6 +14,7 @@ f1.keywords:
 ms.custom: 
  - Adm_O365
  - seo-marvel-mar2020
+ - user-accounts
 ms.collection:
 - scotvorg
 - Ent_O365

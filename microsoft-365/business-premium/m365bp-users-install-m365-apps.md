@@ -1,25 +1,19 @@
 ---
 title: "Install Microsoft 365 Apps on your devices with Microsoft 365 Business Premium"
-f1.keywords:
-- NOCSH
 ms.author: chrisda
 author: chrisda
 manager: deniseb
-audience: Admin
 ms.topic: how-to
-ms.service: microsoft-365-business-security
+ms.service: microsoft-365-admin
 ms.date: 05/31/2024
 ms.localizationpriority: medium
 ms.collection:
 - M365-Campaigns
 - m365solution-smb
 - tier2
+- trust-pod
 ms.custom:
 - MiniMaven
-search.appverid:
-- BCS160
-- MET150
-- MOE150
 description: "How to install Microsoft 365 Apps also called Office apps on your devices in Microsoft 365 Business Premium."
 ---
 
@@ -30,7 +24,7 @@ Microsoft 365 Business Premium includes Microsoft 365 Apps, such as Word, PowerP
 > [!TIP]
 > This article applies primarily to unmanaged (or BYOD) devices. Microsoft 365 admins can manage Microsoft 365 installation options instead. To learn more, see the following articles:
 >
-> - [Managed and unmanaged devices](m365bp-managed-unmanaged-devices.md).
+> - [Managed and unmanaged devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment).
 > - [Manage Microsoft 365 installation options in the Microsoft 365 admin center](/DeployOffice/manage-software-download-settings-office-365).
 
 ## Watch: Install Microsoft 365 Apps
@@ -52,4 +46,4 @@ Here's how users can install their apps:
 
 ## Next step
 
-Set up protection for [unmanaged devices](m365bp-users-protect-unmanaged-devices.md).
+Set up protection for [unmanaged devices](/microsoft-365/admin/security-and-compliance/m365bp-devices-enrollment#more-options-for-mam).

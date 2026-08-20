@@ -1,6 +1,6 @@
 ---
 title: "Microsoft 365 cloud-only identity"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 09/26/2024
@@ -17,6 +17,7 @@ ms.custom:
 - 'O365M_AddUsersWithDirSync'
 - 'O365E_HRCSetupAADConnectAboutLM617031'
 - 'O365E_AddUsersWithDirSync'
+- identity-models
 ms.collection:
 - scotvorg
 - Ent_O365

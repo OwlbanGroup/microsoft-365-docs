@@ -1,6 +1,6 @@
 ---
 title: "Manage Microsoft 365 user accounts"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 09/05/2024
@@ -15,6 +15,7 @@ ms.custom:
  - Adm_O365
  - seo-marvel-mar2020
  - admindeeplinkMAC
+ - user-accounts
 ms.collection:
 - scotvorg
 - Ent_O365

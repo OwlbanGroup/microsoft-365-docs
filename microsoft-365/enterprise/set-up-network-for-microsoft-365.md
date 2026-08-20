@@ -1,9 +1,9 @@
 ---
 title: "Set up your network for Microsoft 365"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
-ms.date: 06/27/2024
+ms.date: 09/23/2025
 audience: ITPro
 ms.topic: install-set-up-deploy
 ms.service: microsoft-365-enterprise
@@ -21,7 +21,6 @@ f1.keywords:
 ms.custom:
 - Ent_TLGs
 - seo-marvel-apr2020
-ms.assetid: 
 description: Find links to articles with information to help you set up your network for Microsoft 365, including a network connectivity overview and list of endpoints.
 ---
 
@@ -47,8 +46,10 @@ For advice on enhancing performance, see [Network planning and performance tunin
 
 If you are a network equipment vendor, join the [Microsoft 365 Networking Partner Program](microsoft-365-networking-partner-program.md). Enroll in the program to build Microsoft 365 network connectivity principles into your products and solutions.
 
-## Microsoft 365 endpoints
+> [!NOTE]
+> The Microsoft 365 Network Provider program is no longer open for new network providers.
 
+## Microsoft 365 endpoints
 Endpoints are the set of destination IP addresses, DNS domain names, and URLs for Microsoft 365 traffic on the Internet.
 
 To optimize performance to Microsoft 365 cloud-based services, some endpoints need special handling by your client browsers and the devices in your edge network. These devices include firewalls, SSL Break and Inspect and packet inspection devices, and data loss prevention systems.
@@ -87,4 +88,4 @@ See these articles for information on the use of ExpressRoute for Microsoft 365 
 - [Azure ExpressRoute for Microsoft 365](azure-expressroute.md)
 
 > [!NOTE]
-> We **do not recommend** ExpressRoute for Microsoft 365 because it does not provide the best connectivity model for the service in most circumstances. As such, Microsoft authorization is required to use this connectivity model. We review every customer request and authorize ExpressRoute for Microsoft 365 only in the rare scenarios where it is necessary. Please read the [ExpressRoute for Microsoft 365 guide](https://aka.ms/erguide) for more information and following a comprehensive review of the document with your productivity, network, and security teams, work with your Microsoft account team to submit an exception if needed.
+> We **do not recommend** ExpressRoute for Microsoft 365 because it does not provide the best connectivity model for the service in most circumstances. As such, Microsoft authorization is required to use this connectivity model. We review every customer request and authorize ExpressRoute for Microsoft 365 only in the rare scenarios where it is necessary. Please read the [ExpressRoute for Microsoft 365 guide](https://www.microsoft.com/download/details.aspx?id=102899) for more information and following a comprehensive review of the document with your productivity, network, and security teams, work with your Microsoft account team to submit an exception if needed.

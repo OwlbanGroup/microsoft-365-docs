@@ -42,11 +42,7 @@ items:
         - name: Configure SMS text notifications and reminders
           href: bookings-sms.md
         - name: Configure service availability
-          href: configure-service-availability.md          
-        - name: Use buffer time to add prep time
-          href: set-buffer-time.md
-        - name: Hide services from your booking page
-          href: hide-service-on-booking-page.md
+          href: configure-service-availability.md
     - name: Manage your customers for Shared Bookings
       items:
         - name: Let customers manage their bookings
@@ -68,7 +64,7 @@ items:
         - name: Customize and publish your booking page
           href: customize-booking-page.md
         - name: Use the Shared Bookings Graph APIs
-          href: /graph/api/resources/booking-api-overview
+          href: /graph/api/resources/booking-api-overview?toc=/microsoft-365/bookings/toc.json&bc=/microsoft-365/bookings/breadcrumb/toc.json
         - name: Reporting info for Shared Bookings
           href: reporting-info.md
         - name: Use Power Automate connectors

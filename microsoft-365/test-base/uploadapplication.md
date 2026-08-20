@@ -3,7 +3,7 @@ title: 'Uploading a pre-built zip package'
 description: How to edit, upload, and test a pre-built .zip file on Test Base
 search.appverid: MET150
 author: mansipatel-usl
-ms.author: rshastri
+ms.author: scotv
 manager: rshastri
 audience: Software-Vendor
 ms.topic: troubleshooting
@@ -131,7 +131,7 @@ The Test matrix tab is for you to indicate the specific Windows update program o
    > ![Screenshot shows Set test matrix new package.](Media/settestmatrix01-newpackage.png)
 
 1. Choose **OS update type**
-   - Test Base provides scheduled testing to make sure your applications performance won’t break by the latest Windows updates. 
+   - Test Base provides scheduled testing to make sure your applications performance won't break by the latest Windows updates. 
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot shows Set test matrix choose osupdate.](Media/settestmatrix02-chooseosupdate.png)
@@ -153,7 +153,7 @@ The Test matrix tab is for you to indicate the specific Windows update program o
        (How to become a Full Access customer? Please refer to [Request to change access level | Microsoft Docs](accesslevel.md))
 
 3. Configure **Feature Update**
-   - To set up for feature updates, you must specify the target product and it’s preview channel from "Insider Channel" dropdown list.
+   - To set up for feature updates, you must specify the target product and it's preview channel from "Insider Channel" dropdown list.
 
    > [!div class="mx-imgBorder"]
    > ![Screenshot shows Set test matrix configure featureupdate.](Media/settestmatrix04-configurefeatureupdate.png)

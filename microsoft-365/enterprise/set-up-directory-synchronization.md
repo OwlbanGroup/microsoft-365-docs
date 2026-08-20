@@ -1,6 +1,6 @@
 ---
 title: "Set up directory synchronization for Microsoft 365"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 07/16/2024
@@ -11,7 +11,9 @@ ms.subservice: administration
 ms.localizationpriority: medium
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom: 
+- Adm_O365
+- identity-models
 ms.collection:
 - scotvorg
 - Ent_O365

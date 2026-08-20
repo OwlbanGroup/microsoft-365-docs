@@ -1,7 +1,7 @@
 ---
 title: IT Admins - Overview of external collaboration options in Microsoft 365
-author: DaniEASmith
-ms.author: danismith
+author: officedocspr5
+ms.author: odocspr
 manager: jtremper
 ms.date: 01/17/2024
 audience: ITPro
@@ -38,7 +38,7 @@ The following table shows the primary ways people from outside your organization
 
 People outside your organization don't have access unless a user in your organization initiates one of these activities. You can disable any of these settings if you don't want to allow that activity in your organization.
 
-If you have business processes or requirements around allowing collaboration with external organizations, see [Onboard trusted vendors to collaborate in Microsoft 365](/microsoft-365/solutions/trusted-vendor-onboarding).
+If you have business processes or requirements around allowing collaboration with external organizations, see [Onboard trusted vendors to collaborate in Microsoft 365](/previous-versions/microsoft-365/solutions/trusted-vendor-onboarding).
 
 ## Document, site, and team sharing with guest accounts
 
@@ -55,17 +55,17 @@ With guests you can:
 
 For information about how to plan for collaboration with guests in Microsoft 365, see the following references:
 
-- [Plan external collaboration](/microsoft-365/solutions/plan-external-collaboration)
+- [Plan external collaboration](/previous-versions/microsoft-365/solutions/plan-external-collaboration)
 
-- [Set up secure file sharing and collaboration with Microsoft Teams](/microsoft-365/solutions/setup-secure-collaboration-with-teams)
+- [Set up secure file sharing and collaboration with Microsoft Teams](/previous-versions/microsoft-365/solutions/setup-secure-collaboration-with-teams)
 
 For information about how to set up Microsoft 365 for collaboration with guests, see the following references:
 
-- [Collaborate with guests on a document](/microsoft-365/solutions/collaborate-on-documents)
+- [Collaborate with guests on a document](/previous-versions/microsoft-365/solutions/collaborate-on-documents)
 
-- [Collaborate with guests in a site](/microsoft-365/solutions/collaborate-in-site)
+- [Collaborate with guests in a site](/previous-versions/microsoft-365/solutions/collaborate-in-site)
 
-- [Collaborate with guests in a team](/microsoft-365/solutions/collaborate-as-team)
+- [Collaborate with guests in a team](/previous-versions/microsoft-365/solutions/collaborate-as-team)
 
 ## Shared channels
 
@@ -77,11 +77,11 @@ Sharing channels with people outside your organization requires that your organi
 
 For information about how to set up Microsoft 365 for external collaboration with shared channels, see the following references:
 
-- [Plan external collaboration](/microsoft-365/solutions/plan-external-collaboration)
+- [Plan external collaboration](/previous-versions/microsoft-365/solutions/plan-external-collaboration)
 
 - [Shared channels in Microsoft Teams](/MicrosoftTeams/shared-channels)
 
-- [Collaborate with external participants in a channel](/microsoft-365/solutions/collaborate-teams-direct-connect)
+- [Collaborate with external participants in a channel](/previous-versions/microsoft-365/solutions/collaborate-teams-direct-connect)
 
 ## External chat and meetings
 
@@ -125,7 +125,7 @@ For information about working with anonymous file and folder sharing, see the fo
 
 - [Manage sharing settings](/sharepoint/turn-external-sharing-on-or-off)
 
-- [Best practices for sharing files and folders with unauthenticated users](/microsoft-365/solutions/best-practices-anonymous-sharing)
+- [Best practices for sharing files and folders with unauthenticated users](/previous-versions/microsoft-365/solutions/best-practices-anonymous-sharing)
 
 ## Cross-cloud sharing and meetings
 
@@ -137,7 +137,7 @@ You can collaborate with users in other Microsoft Azure cloud environments (such
 
 Both options require that you enable connections to the other cloud environment and set up an organizational relationship with the specific organization with which you want to collaborate.
 
-For information about setting up cross-cloud guest access, see [Collaborate with guests from other Microsoft 365 cloud environments](/microsoft-365/solutions/collaborate-guests-cross-cloud).
+For information about setting up cross-cloud guest access, see [Collaborate with guests from other Microsoft 365 cloud environments](/previous-versions/microsoft-365/solutions/collaborate-guests-cross-cloud).
 
 For information about setting up cross-cloud meetings, see [Meet with people in other Microsoft 365 cloud environments](/microsoftteams/cross-cloud-meetings).
 
@@ -155,6 +155,6 @@ For information about how to set up a multitenant organization, see [Plan for mu
 
 [Use guest access and external access to collaborate with people outside your organization](/microsoftteams/communicate-with-users-from-other-organizations)
 
-[Limit organizations where users can have guest accounts](/microsoft-365/solutions/limit-organizations-where-users-have-guest-accounts)
+[Limit organizations where users can have guest accounts](/previous-versions/microsoft-365/solutions/limit-organizations-where-users-have-guest-accounts)
 
 [Control who can bypass the meeting lobby in Microsoft Teams](/microsoftteams/who-can-bypass-meeting-lobby)

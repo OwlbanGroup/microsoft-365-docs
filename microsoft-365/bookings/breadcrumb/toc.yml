@@ -1,4 +1,18 @@
+### 
+### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the Microsoft 365 docs team. 
+### 
 items:
-- name: Microsoft Bookings
-  tocHref: /bookings/
-  topicHref: /microsoft-365/bookings/
+- name: Microsoft 365
+  tocHref: /microsoft-365/
+  topicHref: /microsoft-365/index
+- name: Microsoft 365
+  tocHref: /graph/
+  topicHref: /microsoft-365/index  
+  items:
+  - name: Microsoft Bookings
+    tocHref: /bookings/
+    topicHref: /microsoft-365/bookings/
+  - name: Microsoft Bookings
+    tocHref: /graph/api/
+    topicHref: /microsoft-365/bookings/
+

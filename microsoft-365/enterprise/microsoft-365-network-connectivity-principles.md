@@ -1,6 +1,6 @@
----
+﻿---
 title: Microsoft 365 network connectivity principles
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/02/2025
@@ -18,7 +18,9 @@ ms.assetid: 76e7f232-917a-4b13-8fe2-4f8dbccfe041
 f1.keywords:
 - NOCSH
 description: This article provides the most recent guidance for securely optimizing Microsoft 365 network connectivity.
-ms.custom: seo-marvel-apr2020
+ms.custom:
+- seo-marvel-apr2020
+- network
 ---
 
 # Microsoft 365 network connectivity principles
@@ -44,7 +46,7 @@ In this article, you'll learn about:
 ## Microsoft 365 architecture
 <a name="BKMK_Architecture"> </a>
 
-Microsoft 365 is a distributed Software-as-a-Service (SaaS) cloud that provides productivity and collaboration scenarios through a diverse set of micro-services and applications. Examples include Exchange Online, SharePoint Online, Microsoft Teams, Exchange Online Protection, Office in a browser, and many others. While specific Microsoft 365 applications might have their unique features as it applies to customer network and connectivity to the cloud, they all share some key principals, goals, and architecture patterns. These principles and architecture patterns for connectivity are typical for many other SaaS clouds. At the same time, they're different from the typical deployment models of Platform-as-a-Service and Infrastructure-as-a-Service clouds, such as Microsoft Azure.
+Microsoft 365 is a distributed Software-as-a-Service (SaaS) cloud that provides productivity and collaboration scenarios through a diverse set of micro-services and applications. Examples include Exchange Online, SharePoint Online, Microsoft Teams, Office in a browser, and many others. While specific Microsoft 365 applications might have their unique features as it applies to customer network and connectivity to the cloud, they all share some key principals, goals, and architecture patterns. These principles and architecture patterns for connectivity are typical for many other SaaS clouds. At the same time, they're different from the typical deployment models of Platform-as-a-Service and Infrastructure-as-a-Service clouds, such as Microsoft Azure.
 
 One of the most significant architectural features of Microsoft 365 (that is often missed or misinterpreted by network architects) is that it's a truly global distributed service, in the context of how users connect to it. The location of the target Microsoft 365 tenant is important to understand the locality of where customer data is stored within the cloud. However, the user experience with Microsoft 365 doesn't involve connecting directly to disks containing the data. The user experience with Microsoft 365 (including performance, reliability, and other important quality characteristics) involves connectivity through highly distributed service front doors that are scaled out across hundreds of Microsoft locations worldwide. In most cases, the best user experience is achieved by allowing the customer network to route user requests to the closest Microsoft 365 service entry point. This is preferable rather than connecting to Microsoft 365 through an egress point in a central location or region.
   
@@ -60,9 +62,9 @@ The primary goal in the network design should be to minimize latency by reducing
 <a name="BKMK_P1"> </a>
 ### Identify and differentiate Microsoft 365 traffic
 
-![Identify Microsoft 365 traffic.](../media/621aaec9-971d-4f19-907a-1ae2ef6d72fc.png)
+:::image type="content" source="../media/621aaec9-971d-4f19-907a-1ae2ef6d72fc.png" alt-text="Screenshot that shows the Identify Microsoft 365 traffic.":::
   
-Identifying Microsoft 365 network traffic is the first step in being able to differentiate that traffic from generic Internet-bound network traffic. Microsoft 365 connectivity can be optimized by implementing a combination of approaches like network route optimization, firewall rules, browser proxy settings. Additionally, bypassing of network inspection devices for certain endpoints is also beneficial.
+Identifying Microsoft 365 network traffic is the first step in being able to differentiate that traffic from generic internet-bound network traffic. Microsoft 365 connectivity can be optimized by implementing a combination of approaches like network route optimization, firewall rules, browser proxy settings. Additionally, bypassing of network inspection devices for certain endpoints is also beneficial.
   
 For more information on Microsoft 365 optimization methods, see the [optimizing connectivity to Microsoft 365 services](#BKMK_OptmizeConnectivity) section.
   
@@ -71,21 +73,21 @@ Microsoft publishes all Microsoft 365 endpoints as a web service and provides gu
 <a name="BKMK_P2"> </a>
 ### Egress network connections locally
 
-![Egress network connections locally.](../media/b42a45be-1ab4-4073-a7dc-fbdfb4aedd24.png)
+:::image type="content" source="../media/b42a45be-1ab4-4073-a7dc-fbdfb4aedd24.png" alt-text="Screenshot that shows Egress network connections locally.":::
   
-Local DNS and Internet egress is of critical importance for reducing connection latency and ensuring that user connections are made to the nearest point of entry to Microsoft 365 services. In a complex network topology, it's important to implement both local DNS and local Internet egress together. For more information about how Microsoft 365 routes client connections to the nearest point of entry, see the article [Client Connectivity](https://support.office.com/article/client-connectivity-4232abcf-4ae5-43aa-bfa1-9a078a99c78b).
+Local DNS and internet egress is of critical importance for reducing connection latency and ensuring that user connections are made to the nearest point of entry to Microsoft 365 services. In a complex network topology, it's important to implement both local DNS and local internet egress together.
   
-Prior to the advent of cloud services such as Microsoft 365, end-user Internet connectivity as a design factor in network architecture was relatively simple. When Internet services and web sites are distributed around the globe, latency between corporate egress points and any given destination endpoint is largely a function of geographical distance.
+Prior to the advent of cloud services such as Microsoft 365, end-user internet connectivity as a design factor in network architecture was relatively simple. When internet services and web sites are distributed around the globe, latency between corporate egress points and any given destination endpoint is largely a function of geographical distance.
   
-In a traditional network architecture, all outbound Internet connections traverse the corporate network, and egress from a central location. As Microsoft's cloud offerings have matured, a distributed Internet-facing network architecture has become critical for supporting latency-sensitive cloud services. The Microsoft Global Network was designed to accommodate latency requirements with the Distributed Service Front Door infrastructure, a dynamic fabric of global entry points that routes incoming cloud service connections to the closest entry point. This is intended to reduce the length of the "last mile" for Microsoft cloud customers by effectively shortening the route between the customer and the cloud.
+In a traditional network architecture, all outbound internet connections traverse the corporate network, and egress from a central location. As Microsoft's cloud offerings have matured, a distributed internet-facing network architecture has become critical for supporting latency-sensitive cloud services. The Microsoft Global Network was designed to accommodate latency requirements with the Distributed Service Front Door infrastructure, a dynamic fabric of global entry points that routes incoming cloud service connections to the closest entry point. This is intended to reduce the length of the "last mile" for Microsoft cloud customers by effectively shortening the route between the customer and the cloud.
   
-Enterprise WANs are often designed to backhaul network traffic to a central company head office for inspection before egress to the Internet, usually through one or more proxy servers. The following diagram illustrates such a network topology.
+Enterprise WANs are often designed to backhaul network traffic to a central company head office for inspection before egress to the internet, usually through one or more proxy servers. The following diagram illustrates such a network topology.
   
-![Traditional enterprise network model.](../media/fc87b8fd-a191-47a7-9704-1e445599813a.png)
+:::image type="content" source="../media/fc87b8fd-a191-47a7-9704-1e445599813a.png" alt-text="Screenshot that shows traditional enterprise network model.":::
   
-Because Microsoft 365 runs on the Microsoft Global Network, which includes front-end servers around the world, there's often a front-end server close to the user's location. By providing local Internet egress and by configuring internal DNS servers to provide local name resolution for Microsoft 365 endpoints, network traffic destined for Microsoft 365 can connect to Microsoft 365 front end servers as close as possible to the user. The following diagram shows an example of a network topology that allows users connecting from main office, branch office, and remote locations to follow the shortest route to the closest Microsoft 365 entry point.
+Because Microsoft 365 runs on the Microsoft Global Network, which includes front-end servers around the world, there's often a front-end server close to the user's location. By providing local internet egress and by configuring internal DNS servers to provide local name resolution for Microsoft 365 endpoints, network traffic destined for Microsoft 365 can connect to Microsoft 365 front end servers as close as possible to the user. The following diagram shows an example of a network topology that allows users connecting from main office, branch office, and remote locations to follow the shortest route to the closest Microsoft 365 entry point.
   
-![WAN network model with regional egress points.](../media/4d4c07cc-a928-42b8-9a54-6c3741380a33.png)
+:::image type="content" source="../media/4d4c07cc-a928-42b8-9a54-6c3741380a33.png" alt-text="Screenshot that shows WAN network model with regional egress points.":::
   
 Shortening the network path to Microsoft 365 entry points in this way can improve connectivity performance and the end-user experience in Microsoft 365. It can also help to reduce the effect of future changes to the network architecture on Microsoft 365 performance and reliability.
   
@@ -93,7 +95,7 @@ Also, DNS requests can introduce latency if the responding DNS server is distant
   
 While regional egress can work well for Microsoft 365, the optimum connectivity model would be to always provide network egress at the user's location, regardless of whether it is on the corporate network or remote locations such as homes, hotels, coffee shops, and airports. This local direct egress model is represented in the following diagram.
   
-![Local egress network architecture.](../media/6bc636b0-1234-4ceb-a45a-aadd1044b39c.png)
+:::image type="content" source="../media/6bc636b0-1234-4ceb-a45a-aadd1044b39c.png" alt-text="Screenshot that shows local egress network architecture.":::
   
 Enterprises who have adopted Microsoft 365 can take advantage of the Microsoft Global Network's Distributed Service Front Door architecture by ensuring that user connections to Microsoft 365 take the shortest possible route to the nearest Microsoft Global Network entry point. The local egress network architecture does this by allowing Microsoft 365 traffic to be routed over the nearest egress, regardless of user location.
   
@@ -106,11 +108,11 @@ The local egress architecture has the following benefits over the traditional mo
 <a name="BKMK_P3"> </a>
 ### Avoid network hairpins
 
-![Avoid hairpins.](../media/ee53e8af-f57b-4292-a256-4f36733b263a.png)
+:::image type="content" source="../media/ee53e8af-f57b-4292-a256-4f36733b263a.png" alt-text="Screenshot that shows to avoid hairpins.":::
   
 As a general rule of thumb, the shortest, most direct route between user and closest Microsoft 365 endpoint offers the best performance. A network hairpin happens when WAN or VPN traffic bound for a particular destination is first directed to another intermediate location (such as security stack, cloud access broker, or cloud-based web gateway), introducing latency and potential redirection to a geographically distant endpoint. Network hairpins are also caused by routing/peering inefficiencies or suboptimal (remote) DNS lookups.
   
-To ensure that Microsoft 365 connectivity isn't subject to network hairpins even in the local egress case, check whether the ISP that is used to provide Internet egress for the user location has a direct peering relationship with the Microsoft Global Network in close proximity to that location. You might also want to configure egress routing to send trusted Microsoft 365 traffic directly. This is as opposed to proxying or tunneling through a third-party cloud or cloud-based network security vendor that processes your Internet-bound traffic. Local DNS name resolution of Microsoft 365 endpoints helps to ensure that in addition to direct routing, the closest Microsoft 365 entry points are being used for user connections.
+To ensure that Microsoft 365 connectivity isn't subject to network hairpins even in the local egress case, check whether the ISP that is used to provide internet egress for the user location has a direct peering relationship with the Microsoft Global Network in close proximity to that location. You might also want to configure egress routing to send trusted Microsoft 365 traffic directly. This is as opposed to proxying or tunneling through a third-party cloud or cloud-based network security vendor that processes your internet-bound traffic. Local DNS name resolution of Microsoft 365 endpoints helps to ensure that in addition to direct routing, the closest Microsoft 365 entry points are being used for user connections.
   
 If you use cloud-based network or security services for your Microsoft 365 traffic, ensure that the result of the hairpin is evaluated and its effect on Microsoft 365 performance is understood. This can be done by examining the number and locations of service provider locations through which the traffic is forwarded in relationship to number of your branch offices and Microsoft Global Network peering points, quality of the network peering relationship of the service provider with your ISP and Microsoft, and the performance effect of backhauling in the service provider infrastructure.
   
@@ -119,28 +121,28 @@ Due to the large number of distributed locations with Microsoft 365 entry points
 <a name="BKMK_P4"> </a>
 ### Assess bypassing proxies, traffic inspection devices, and duplicate security technologies
 
-![Bypass proxies, traffic inspection devices, and duplicate security technologies.](../media/0131930d-c6cb-4ae1-bbff-fe4cf6939a23.png)
+:::image type="content" source="../media/0131930d-c6cb-4ae1-bbff-fe4cf6939a23.png" alt-text="Screenshot that shows to bypass proxies, traffic inspection devices, and duplicate security technologies.":::
   
 Enterprise customers should review their network security and risk reduction methods specifically for Microsoft 365 bound traffic and use Microsoft 365 security features to reduce their reliance on intrusive, performance impacting, and expensive network security technologies for Microsoft 365 network traffic.
   
-Most enterprise networks enforce network security for Internet traffic using technologies like proxies, TLS inspection, packet inspection, and data loss prevention systems. These technologies provide important risk mitigation for generic Internet requests but can dramatically reduce performance, scalability, and the quality of end user experience when applied to Microsoft 365 endpoints.
+Most enterprise networks enforce network security for internet traffic using technologies like proxies, TLS inspection, packet inspection, and data loss prevention systems. These technologies provide important risk mitigation for generic internet requests but can dramatically reduce performance, scalability, and the quality of end user experience when applied to Microsoft 365 endpoints.
   
 <a name="BKMK_WebSvc"> </a>
 #### Microsoft 365 Endpoints web service
 
-Microsoft 365 administrators can use a script or REST call to consume a structured list of endpoints from the Microsoft 365 Endpoints web service and update the configurations of perimeter firewalls and other network devices. This ensures that traffic bound for Microsoft 365 is identified, treated appropriately and managed differently from network traffic bound for generic and often unknown Internet web sites. For more information on how to use the Microsoft 365 Endpoints web service, see the article [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md).
+Microsoft 365 administrators can use a script or REST call to consume a structured list of endpoints from the Microsoft 365 Endpoints web service and update the configurations of perimeter firewalls and other network devices. This ensures that traffic bound for Microsoft 365 is identified, treated appropriately and managed differently from network traffic bound for generic and often unknown internet web sites. For more information on how to use the Microsoft 365 Endpoints web service, see the article [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md).
   
 #### PAC (Proxy Automatic Configuration) scripts
 <a name="BKMK_WebSvc"> </a>
 
-Microsoft 365 administrators can create PAC (Proxy Automatic Configuration) scripts that can be delivered to user computers via WPAD or GPO. PAC scripts can be used to bypass proxies for Microsoft 365 requests from WAN or VPN users, allowing Microsoft 365 traffic to use direct Internet connections rather than traversing the corporate network.
+Microsoft 365 administrators can create PAC (Proxy Automatic Configuration) scripts that can be delivered to user computers via WPAD or GPO. PAC scripts can be used to bypass proxies for Microsoft 365 requests from WAN or VPN users, allowing Microsoft 365 traffic to use direct internet connections rather than traversing the corporate network.
 
 For more information on using PAC files to optimize network connectivity on client devices, see [Managing Microsoft 365 endpoints](managing-office-365-endpoints.md#use-a-pac-file-for-direct-routing-of-vital-microsoft-365-traffic).
 
 #### Microsoft 365 security features
 <a name="BKMK_WebSvc"> </a>
 
-Microsoft is transparent about datacenter security, operational security, and risk reduction around Microsoft 365 servers and the network endpoints that they represent. Microsoft 365 built-in security features are available for reducing network security risk, such as Microsoft Purview Data Loss Prevention, antivirus, Multifactor Authentication, Customer Lockbox, Defender for Microsoft 365, Microsoft 365 Threat Intelligence, Microsoft 365 Secure Score, Exchange Online Protection, and Network DDOS Security.
+Microsoft is transparent about datacenter security, operational security, and risk reduction around Microsoft 365 servers and the network endpoints that they represent. Microsoft 365 built-in security features are available for reducing network security risk, such as Microsoft Purview Data Loss Prevention, antivirus, Multifactor Authentication, Customer Lockbox, Defender for Office 365, Microsoft 365 Threat Intelligence, Microsoft 365 Secure Score, [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about), and Network DDOS Security.
 
 For more information on Microsoft datacenter and Global Network security, see the [Microsoft Trust Center](https://www.microsoft.com/trustcenter/security).
   
@@ -154,7 +156,7 @@ Microsoft 365 services are a collection of dynamic, interdependent, and deeply i
   - Exclusive use of cloud.microsoft root domain  for security isolation and specific functions. This enables customer network and security teams to trust Microsoft 365 domains, while improving connectivity to those endpoints and avoiding unnecessary network security processing. 
   - Certain endpoint definitions specify unique IP prefixes corresponding to their domains. This feature supports customers with intricate network structures, enabling them to apply precise network optimizations by utilizing IP prefix details.
 
-The following network configurations are recommended for all **“Required”** Microsoft 365 network endpoints (domains) and categories:
+The following network configurations are recommended for all **Required** Microsoft 365 network endpoints (domains) and categories:
 
 - Explicitly permitting Microsoft 365 network endpoints in the network devices and services that user connections go through (e.g., network perimeter security devices like proxies, firewalls, DNS, cloud-based network security solutions, etc.)
   - Bypass Microsoft 365 domains from TLS decryption, traffic interception, deep packet inspection, and network packet and content filtering. Note that many outcomes that customers are using these network technologies for in the context of untrusted/unmanaged applications can be achieved by Microsoft 365 security features natively.
@@ -163,20 +165,20 @@ The following network configurations are recommended for all **“Required”** 
   - Prioritize Microsoft 365 connections along the network path, ensuring capacity and quality of service for Microsoft 365 experiences.
   - Bypass traffic intermediation devices such as proxies and VPN services.
 
-Customers with complex network topologies, implementing network optimizations like custom routing, IP based proxy bypass, and split tunnel VPN may require IP prefix information in addition to domains. To facilitate these customer scenarios Microsoft 365 network endpoints are grouped into categories to prioritize and ease the configuration of these additional network optimizations. Network endpoints classified under the **“Optimize”** and **“Allow”** categories carry high traffic volumes and are sensitive to network latency and performance, and customers may want to optimize connectivity to those first. Network endpoints under the **“Optimize”** and **“Allow”** categories have IP addresses listed along with domains. Network endpoints classified under the **“Default”** category do not have IP addresses associated with them as they are more dynamic in nature and IP addresses change over time.
+Customers with complex network topologies, implementing network optimizations like custom routing, IP based proxy bypass, and split tunnel VPN may require IP prefix information in addition to domains. To facilitate these customer scenarios Microsoft 365 network endpoints are grouped into categories to prioritize and ease the configuration of these additional network optimizations. Network endpoints classified under the **Optimize** and **Allow** categories carry high traffic volumes and are sensitive to network latency and performance, and customers may want to optimize connectivity to those first. Network endpoints under the **Optimize** and **Allow** categories have IP addresses listed along with domains. Network endpoints classified under the **Default** category do not have IP addresses associated with them as they are more dynamic in nature and IP addresses change over time.
 
 ### Additional network considerations
 
 When optimizing connectivity to Microsoft 365, certain network configurations may have a negative impact on Microsoft 365 availability, interoperability, performance, and user experience. Microsoft has not tested the following network scenarios with our services, and they are known to cause connectivity issues.
 
-- TLS termination or deep packet inspection of any M365 domains with customer proxies or other types of network devices or services.
-- Blocking specific protocols or protocol versions such as QUIC, WebSocket’s, etc. by intermediate network infrastructure or service. 
+- TLS termination or deep packet inspection of any Microsoft 365 domains with customer proxies or other types of network devices or services.
+- Blocking specific protocols or protocol versions such as QUIC, WebSocket's, etc. by intermediate network infrastructure or service.
 - Forcing downgrade or failover of protocols (such as UDP --> TCP, TLS1.3 --> TLS1.2 --> TLS1.1) used between client applications and Microsoft 365 services.
 - Routing connections through network infrastructure applying its own authentication such as proxy authentication.
 
 We recommend that customers avoid using these network techniques to traffic destined to Microsoft 365 domains and bypass these for Microsoft 365 connections.
 
-Microsoft recommends setting up an automated system to download and apply the M365 network endpoint list regularly. Refer to [Change management for Microsoft 365 IP addresses and URLs](managing-office-365-endpoints.md#change-management-for-microsoft-365-ip-addresses-and-urls) for more information. 
+Microsoft recommends setting up an automated system to download and apply the Microsoft 365 network endpoint list regularly. Refer to [Change management for Microsoft 365 IP addresses and URLs](managing-office-365-endpoints.md#change-management-for-microsoft-365-ip-addresses-and-urls) for more information.
 
 ## Comparing network perimeter security with endpoint security
 <a name="BKMK_SecurityComparison"> </a>
@@ -232,34 +234,23 @@ You can approach optimization as an incremental process, applying each method su
   
 | Optimization method | Description | Impact |
 |:-----|:-----|:-----|
-|Local DNS resolution and Internet egress |Provision local DNS servers in each location and ensure that Microsoft 365 connections egress to the Internet as close as possible to the user's location. | Minimize latency  <br/>  Improve reliable connectivity to the closest Microsoft 365 entry point |
+|Local DNS resolution and internet egress |Provision local DNS servers in each location and ensure that Microsoft 365 connections egress to the internet as close as possible to the user's location. | Minimize latency  <br/>  Improve reliable connectivity to the closest Microsoft 365 entry point |
 |Add regional egress points |If your corporate network has multiple locations but only one egress point, add regional egress points to enable users to connect to the closest Microsoft 365 entry point. | Minimize latency  <br/>  Improve reliable connectivity to the closest Microsoft 365 entry point |
 |Bypass proxies and inspection devices |Configure browsers with PAC files that send Microsoft 365 requests directly to egress points.  <br/> Configure edge routers and firewalls to permit Microsoft 365 traffic without inspection. | Minimize latency  <br/>  Reduce load on network devices |
 |Enable direct connection for VPN users |For VPN users, enable Microsoft 365 connections to connect directly from the user's network rather than over the VPN tunnel by implementing split tunneling. | Minimize latency  <br/>  Improve reliable connectivity to the closest Microsoft 365 entry point |
 |Migrate from traditional WAN to SD-WAN |SD-WANs (Software Defined Wide Area Networks) simplify WAN management and improve performance by replacing traditional WAN routers with virtual appliances, similar to the virtualization of compute resources using virtual machines (VMs). | Improve performance and manageability of WAN traffic  <br/>  Reduce load on network devices |
 
-## Related articles
+## Related content
 
-[Microsoft 365 Network Connectivity Overview](microsoft-365-networking-overview.md)
-
-[Managing Microsoft 365 endpoints](managing-office-365-endpoints.md)
-
-[Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md)
-
-[Microsoft 365 IP Address and URL Web service](microsoft-365-ip-web-service.md)
-
-[Assessing Microsoft 365 network connectivity](assessing-network-connectivity.md)
-
-[Network planning and performance tuning for Microsoft 365](network-planning-and-performance.md)
-
-[Microsoft 365 performance tuning using baselines and performance history](performance-tuning-using-baselines-and-history.md)
-
-[Performance troubleshooting plan for Microsoft 365](performance-troubleshooting-plan.md)
-
-[Content Delivery Networks](content-delivery-networks.md)
-
-[Microsoft 365 connectivity test](https://aka.ms/netonboard)
-
-[How Microsoft builds its fast and reliable global network](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
-
-[Microsoft 365 Networking blog](https://techcommunity.microsoft.com/category/microsoft365/discussions/deploymentnetworking)
+- [Microsoft 365 Network Connectivity Overview](microsoft-365-networking-overview.md)
+- [Managing Microsoft 365 endpoints](managing-office-365-endpoints.md)
+- [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md)
+- [Microsoft 365 IP Address and URL Web service](microsoft-365-ip-web-service.md)
+- [Assessing Microsoft 365 network connectivity](assessing-network-connectivity.md)
+- [Network planning and performance tuning for Microsoft 365](network-planning-and-performance.md)
+- [Microsoft 365 performance tuning using baselines and performance history](performance-tuning-using-baselines-and-history.md)
+- [Performance troubleshooting plan for Microsoft 365](performance-troubleshooting-plan.md)
+- [Content Delivery Networks](content-delivery-networks.md)
+- [Microsoft 365 connectivity test](https://aka.ms/netonboard)
+- [How Microsoft builds its fast and reliable global network](https://azure.microsoft.com/blog/how-microsoft-builds-its-fast-and-reliable-global-network/)
+- [Microsoft 365 Networking blog](https://techcommunity.microsoft.com/category/microsoft365/discussions/deploymentnetworking)

@@ -8,17 +8,18 @@ brand: m365
 metadata:
   title: Microsoft 365 documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
   description: Find the solutions, scenarios, and resources you need to get started with Microsoft 365, including Office, for your business or organization. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: microsoft-365-enterprise #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: microsoft-365-admin #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   ms.collection: 
     - m365-security-compliance
     - EngageScoreNov2022
     - contentengagementFY23
   ms.custom: intro-hub-or-landing
-  author: samanro #Required; your GitHub user alias, with correct capitalization.
-  ms.author: samanro #Required; microsoft alias of author; optional team alias.
-  ms.date: 07/25/2023 #Required; mm/dd/yyyy format.
+  author: kwekuako #Required; your GitHub user alias, with correct capitalization.
+  ms.author: kwekua #Required; microsoft alias of author; optional team alias.
+  ms.date: 01/30/2026 #Required; mm/dd/yyyy format.
   ms.localizationpriority: high
+  adobe-target: true
 
 # highlightedContent section (optional)
 # Maximum of 8 items
@@ -38,17 +39,13 @@ highlightedContent:
       itemType: learn
       url: /training/m365/
     # Card
-    - title: Get your small business started with Microsoft 365
-      itemType: quickstart
-      url: business-video/index.yml
-    # Card
-    - title: Set up your infrastructure for hybrid work
-      itemType: how-to-guide
-      url: solutions/empower-people-to-work-remotely.md
-    # Card
-    - title: Learn from the experts - skill up for the era of AI at the Microsoft 365 Community Conference
+    - title: Microsoft 365 Community Conference - Learn from experts and MVPs, and expand your Intelligent Work skillset
       itemType: whats-new
-      url: https://aka.ms/MCAG/IPM/ML25002B
+      url: https://aka.ms/mcag/ipm/26004P
+    # Card
+    - title: Get your small business started with Microsoft 365
+      itemType: video
+      url: business-video/index.yml
 
 # conceptualContent section (optional)
 conceptualContent:
@@ -98,9 +95,6 @@ conceptualContent:
             - url: /purview/
               itemType: overview
               text: Microsoft Purview
-            - url: /microsoft-365/contentunderstanding/
-              itemType: overview
-              text: Microsoft Syntex
             - url: /viva/
               itemType: overview
               text: Microsoft Viva
@@ -113,6 +107,9 @@ conceptualContent:
             - url: /microsoft-365/places
               itemType: overview
               text: Microsoft Places
+            - url: /microsoft-365/whiteboard
+              itemType: overview
+              text: Microsoft Whiteboard
         # Card
         - title: Microsoft 365 Apps and Office
           links:
@@ -135,31 +132,7 @@ conceptualContent:
           footerLink:
             url: /microsoft-365-apps
             text: See more
-        # Card
-        - title: Solutions for your business
-          links:
-            - url: solutions/empower-people-to-work-remotely.md
-              itemType: how-to-guide
-              text: Set up your infrastructure for hybrid work
-            - url: solutions/setup-secure-collaboration-with-teams.md
-              itemType: how-to-guide
-              text: Set up secure collaboration
-            - url: solutions/deploy-threat-protection.md
-              itemType: how-to-guide
-              text: Deploy threat protection
-            - url: solutions/data-privacy-protection.md
-              itemType: how-to-guide
-              text: Manage data privacy and data protection
-            - url: business-premium/m365bp-overview.md
-              itemType: how-to-guide
-              text: Microsoft 365 for smaller businesses and campaigns
-            - url: solutions/productivity-illustrations.md
-              itemType: download
-              text: Microsoft 365 productivity illustrations
-          # footerLink (optional)
-          footerLink:
-            url: solutions/index.yml
-            text: See more
+
         # Card
         - title: Manage devices
           links:
@@ -169,7 +142,7 @@ conceptualContent:
             - url: ./managed-desktop/index.yml
               itemType: deploy
               text: Microsoft Managed Desktop
-            - url: /mem/intune/fundamentals/what-is-intune
+            - url: /intune/fundamentals/what-is-intune
               itemType: overview
               text: Device management with Microsoft Intune
         # Card

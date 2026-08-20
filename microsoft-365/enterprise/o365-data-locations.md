@@ -1,10 +1,10 @@
 ---
 title: "Microsoft 365 data locations"
-ms.author: kvice
-author: kelleyvice-msft
-manager: scotv
-ms.reviewer: deanw
-ms.date: 02/24/2025
+ms.author: v-fahasen
+author: fhasen-msft
+manager: Justin.Giammona
+ms.reviewer: jugiammo
+ms.date: 04/01/2026
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
@@ -19,59 +19,65 @@ ms.collection:
 ms.custom:
 - Ent_TLGs
 - admindeeplinkMAC
+- data-residency
 ms.assetid: 706d5449-45e5-4b0c-a012-ab60501899ad
 description: "Determine where your Microsoft 365 customer data is stored worldwide. Links in the article show this information for each workload."
 ---
 
 # Where your Microsoft 365 customer data is stored
 
-This article helps you to understand how you can determine current data residency and data residency commitments.
+This article explains data residency commitments for Microsoft 365 services and seeks to help organizations understand where their data is stored.
 
 > [!NOTE]
-> Viva Topics has been retired as of February 22, 2025. Therefore, Viva Topics is no longer a supported workload in ADR. For more details, please visit [aka.ms/TopicsFebSupport](https://aka.ms/TopicsFebSupport).
-
+> The **Denmark** _Local Region Geography_ launched on April 1, 2026. See [Advanced Data Residency](advanced-data-residency.md) if your organization requires the migration of your Microsoft 365 customer data to Denmark and data residency commitments for this region.
 > [!NOTE]
-> The **New Zealand** local data center region launched on December 1, 2024. If your organization requires the migration of your Microsoft 365 customer data to New Zealand, and data residency commitments for New Zealand, see [Advanced Data Residency](advanced-data-residency.md).
+> _Tenants_ in certain _Local Region Geographies_ have access to **[Advanced Data Residency](advanced-data-residency.md)** which provides additional data residency commitments for certain in scope services. These _Local Region Geographies_ are Australia, Austria, Brazil, Canada, Chile, Denmark, France, Germany, India, Indonesia, Israel, Italy, Japan, Malaysia, Mexico, New Zealand, Norway, Poland, Qatar, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, United Arab Emirates, and United Kingdom.
 
-> [!NOTE]
-> The **Taiwan** local data center region launched on November 1, 2024. If your organization requires the migration of your Microsoft 365 customer data to Taiwan, and data residency commitments for Taiwan, see [Advanced Data Residency](advanced-data-residency.md).
+Select the link for each of the Microsoft 365 services to understand the current data residency and data residency commitments.
 
-> [!NOTE]
-> For tenants in Australia, Brazil, Canada, France, Germany, India, Israel, Italy, Japan, Mexico, New Zealand, Norway, Poland, Qatar, South Africa, South Korea, Spain, Sweden, Switzerland, Taiwan, United Arab Emirates, and United Kingdom, more workloads are available for data residency commitments. For more information, see [Advanced Data Residency](advanced-data-residency.md).
+## ADR Eligible Microsoft 365 Services:
 
-See the following links to understand how you can determine current data residency and data residency commitments.
+- Exchange Online [Data Location](m365-dr-service-exo.md#how-can-i-determine-customer-data-location)
+- Microsoft 365 Copilot and Copilot Chat [Data Location](m365-dr-service-copilot.md#how-can-i-determine-customer-data-location)
+- Microsoft 365 web apps (formerly "Office for the Web") [Data Location](m365-dr-service-m365-web-apps.md#how-can-i-determine-customer-data-location)
+- Microsoft Defender for Office (MDO P1) [Data Location](m365-dr-service-mdo-p1.md#how-can-i-determine-customer-data-location)
+- Microsoft Purview (select services)  [Data Location](m365-dr-service-purview.md#how-can-i-determine-customer-data-location)
 
-- Exchange Online [Data Location](m365-dr-workload-exo.md#how-can-i-determine-customer-data-location)
-- SharePoint (ODSP) and OneDrive [Data Location](m365-dr-workload-spo.md#how-can-i-determine-customer-data-location)
-- Microsoft Teams [Data Location](m365-dr-workload-teams.md#how-can-i-determine-customer-data-location)
-- Microsoft 365 Copilot [Data Location](m365-dr-workload-copilot.md#how-can-i-determine-customer-data-location)
-- Microsoft Defender for Office (MDO P1)  [Data Location](m365-dr-workload-mdo-p1.md#how-can-i-determine-customer-data-location)
-- Office for the Web (Office Online)  [Data Location](m365-dr-workload-office-for-web.md#how-can-i-determine-customer-data-location)
-- Viva Connections [Data Location](m365-dr-workload-viva-connections.md#how-can-i-determine-customer-data-location)
-- Microsoft Purview (select services)  [Data Location](m365-dr-workload-purview.md#how-can-i-determine-customer-data-location)
-
-  - Data Loss Prevention
-  - Information Barriers
-  - Information Protection (MIP)
   - Audit (Standard)
   - Audit (Premium)
   - Data Lifecycle Management (DLM)
+  - Data Loss Prevention (DLP)
+  - Information Barriers
+  - Information Protection (MIP)
+
+- Microsoft Teams [Data Location](m365-dr-service-teams.md#how-can-i-determine-customer-data-location)
+- SharePoint and OneDrive [Data Location](m365-dr-service-spo.md#how-can-i-determine-customer-data-location)
+- Viva Connections [Data Location](m365-dr-service-viva-connections.md#how-can-i-determine-customer-data-location)
   
-- Microsoft Entra ID [Data Location](m365-dr-workload-other.md#azure-active-directory-aad)
-- Whiteboard [Data Location](m365-dr-workload-other.md#whiteboard)
-- Forms [Data Location](m365-dr-workload-other.md#forms)
-- Intune [Data Location](m365-dr-workload-other.md#intune)
-- Planner [Data Location](m365-dr-workload-other.md#planner)
-- Viva Glint [Data Location](m365-dr-workload-other.md#viva-glint)
-- Viva Goals [Data Location](m365-dr-workload-other.md#viva-goals)
-- Viva Insights – Advanced, Manager and leader [Data Location](m365-dr-workload-other.md#viva-insights--advanced-mgr-leader)
-- Viva Insights – Personal [Data Location](m365-dr-workload-other.md#viva-insights--personal)
-- Viva Learning [Data Location](m365-dr-workload-other.md#viva-learning)
-- Viva Pulse [Data Location](/viva/pulse/get-started/data-residency-for-viva-pulse)
-- Yammer [Data Location](m365-dr-workload-other.md#viva-engage)
-- Viva Engage [Data Location](m365-dr-workload-other.md#viva-engage)
-- Office for mobile [Data Location](m365-dr-workload-other.md#office-for-mobile)
-- OneNote Services [Data Location](m365-dr-workload-other.md#onenote-services)
-- Power Apps for Microsoft 365 [Data Location](m365-dr-workload-other.md#power-apps-for-microsoft-365)
-- Stream [Data Location](m365-dr-workload-other.md#stream)
+## Additional Microsoft 365 Services:
+
+- Forms [Data Location](m365-dr-service-other.md#forms)
+- Intune [Data Location](/intune/intune-service/protect/privacy-data-store-process#storage-locations)
+- Microsoft Entra ID [Data Location](m365-dr-service-other.md#microsoft-entra-id)
+- Office for mobile [Data Location](m365-dr-service-other.md#office-for-mobile)
+- OneNote Services [Data Location](m365-dr-service-other.md#onenote-services)
+- Planner [Data Location](m365-dr-service-other.md#planner)
+- Power Apps for Microsoft 365 [Data Location](m365-dr-service-other.md#power-apps-for-microsoft-365)
 - Shifts [Data Location](/microsoftteams/expand-teams-across-your-org/shifts/shifts-data-faq#where-is-shifts-data-stored)
+- Stream [Data Location](m365-dr-service-other.md#stream)
+- Viva Engage [Data Location](m365-dr-service-other.md#viva-engage)
+- Viva Glint [Data Location](m365-dr-service-other.md#viva-glint)
+- Viva Goals [Data Location](m365-dr-service-other.md#viva-goals) [Will be retired on December 31, 2025]
+- Viva Insights – Advanced, Manager, and leader [Data Location](m365-dr-service-other.md#viva-insights--advanced-mgr-leader)
+- Viva Insights – Personal [Data Location](m365-dr-service-other.md#viva-insights--personal)
+- Viva Learning [Data Location](m365-dr-service-other.md#viva-learning)
+- Viva Pulse [Data Location](/viva/pulse/get-started/data-residency-for-viva-pulse)
+- Whiteboard [Data Location](m365-dr-service-other.md#whiteboard)
+
+For more information on data location for non-Microsoft 365 Services, see the following service documentation pages:
+
+- [Data Residency in Azure](https://azure.microsoft.com/explore/global-infrastructure/data-residency/?msockid=17b6c7f9a50068231a1fd4dea4ba694a)
+- [Microsoft Dynamics 365 and Power Platform data residency documentation](/dynamics365/get-started/availability)
+
+For Microsoft services not listed, refer to [Microsoft Privacy - Where Data Is Stored and Located](https://www.microsoft.com/trust-center/privacy/data-location?msockid=17b6c7f9a50068231a1fd4dea4ba694a).
+

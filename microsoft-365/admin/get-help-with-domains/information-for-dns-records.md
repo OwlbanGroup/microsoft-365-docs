@@ -2,23 +2,24 @@
 title: "Gather the information you need to create DNS records"
 f1.keywords:
 - NOCSH
-ms.author: kvice
-author: kelleyvice-msft
+ms.author: frankroj
+author: frankroj
 manager: scotv
-ms.date: 04/02/2025
+ms.date: 04/23/2026
 audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.subservice: m365-domains
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier2
 - scotvorg
 - highpri
 - M365-subscription-management
 - Adm_O365
 - Adm_O365_Setup
-ms.custom: 
+- operations-pod
+ms.custom:
 - VSBFY23
 - AdminSurgePortfolio
 - AdminTemplateSet
@@ -36,13 +37,13 @@ description: "Gather the values/information you need to create DNS records to co
 
 Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
 
- **[Check the Domains FAQ](../setup/domains-faq.yml)** if you don't find what you're looking for. 
+ **[Check the Domains FAQ](../setup/domains-faq.yml)** if you don't find what you're looking for.
 
 [!INCLUDE [How to get tech support for SMB](../../includes/smb-how-to-get-tech-support.md)]
 
 > [!NOTE]
 > The procedures in this article assume that you have begun the process of [adding a domain](/admin/setup/add-domain#add-a-domain), but have not yet verified the domain.
-  
+
 ### Step 1: Find the TXT record value and verify
 
 ::: moniker range="o365-worldwide"
@@ -56,19 +57,19 @@ Check out all of our small business content on [Small business help & learning](
 1. In the admin center, go to the **Settings** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2007048" target="_blank">Domains</a> page.
 
 ::: moniker-end
-    
+
 2. On the **Domains** page, select your domain, then select **Continue setup**. You'll go back to the domains setup wizard to see the specific value you need to add.
-    
+
 3. On the **Domain Verification** page, select **Add a TXT record to the domain's DNS records**, then select **Continue**.
-    
-4. Copy the **TXT value** shown. It looks like this: **MS=msXXXXXXXX**. 
-    
+
+4. Copy the **TXT value** shown. It looks like this: **MS=msXXXXXXXX**.
+
 5. Go to [Add DNS records to connect your domain](create-dns-records-at-any-dns-hosting-provider.md), and follow the steps to add records at your DNS host's website.
-    
+
 6. Follow the steps for creating the TXT record (or MX record) at your DNS host, then verify the domain back in Microsoft 365.
 
 7. Remove the TXT record (or MX record) from your DNS host once the domain is verified in Microsoft 365.
-    
+
 ### Step 2: Find the MX record value for email and more
 
 ::: moniker range="o365-worldwide"
@@ -82,15 +83,15 @@ Check out all of our small business content on [Small business help & learning](
 1. In the admin center, go to the **Settings** > <a href="https://go.microsoft.com/fwlink/p/?linkid=2007048" target="_blank">Domains</a> page.
 
 ::: moniker-end
-    
+
 2. On the **Domains** page, select your domain.
-    
+
 3. Choose  **Manage DNS**, select **More Options** > **Add your own DNS** and select **Continue** to see the DNS records to add.
-    
+
     You'll want to keep this information available while you make changes at your DNS host, so you can copy and paste the values.
-    
+
     The groups of DNS records that are listed on the page depend on your choices listed under **Domain purpose**.
-    
+
 4. Go to [Add DNS records to connect your domain](create-dns-records-at-any-dns-hosting-provider.md), and follow the steps to add records at your DNS host's website.
 
 5. Follow the steps for creating the records at your DNS host.

@@ -1,6 +1,6 @@
 ---
 title: "Hybrid solutions"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 11/14/2024
@@ -20,6 +20,7 @@ f1.keywords:
 ms.custom: 
  - Ent_Solutions
  - seo-marvel-apr2020
+ - identity-models
 ms.assetid: e9b8e065-2750-4534-9d39-aafd51a2a4e2
 description: Provides a list of links to useful information for deploying Office Server workloads in Microsoft Azure.
 ---
@@ -36,8 +37,8 @@ With Microsoft Azure, you can deploy some Office Server workloads that were typi
   
 ## Related topics
 
-[Microsoft 365 solution and architecture center](../solutions/index.yml)
+[Microsoft 365 solution and architecture center](/previous-versions/microsoft-365/solutions/)
   
-[Microsoft cloud for enterprise architects illustrations](../solutions/cloud-architecture-models.md)
+[Microsoft cloud for enterprise architects illustrations](/previous-versions/microsoft-365/solutions/cloud-architecture-models)
   
 [Architectural models for SharePoint, Exchange, Skype for Business, and Lync](architectural-models-for-sharepoint-exchange-skype-for-business-and-lync.md)

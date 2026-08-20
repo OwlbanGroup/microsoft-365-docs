@@ -1,9 +1,109 @@
 {
-    "redirections":[
-       {
-         "source_path": "copilot/mutliple-account-access.md",
-         "redirect_url": "/copilot/microsoft-365/multiple-account-access",
+   "redirections": [
+      {
+         "source_path": "copilot/copilot-tuning-knowledge-selection.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/copilot-tuning-troubleshooting-mac.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/copilot-tuning-troubleshooting-guardrails.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-overview",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/copilot-tuning-summarization.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-document-summary-template",
          "redirect_document_id": true
-       }
-    ]
- }
+      },
+      {
+         "source_path": "copilot/copilot-tuning-troubleshooting-expert-qa.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-expert-answer-template#faq",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/copilot-tuning-troubleshooting-doc-generation.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-document-writing-template",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/copilot-tuning-doc-generation.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-document-writing-template",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "copilot/copilot-tuning-expert-qa.md",
+         "redirect_url": "/microsoft-365/copilot/copilot-tuning-expert-answers-template",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "copilot/mutliple-account-access.md",
+         "redirect_url": "/microsoft-365/copilot/multiple-account-access",
+         "redirect_document_id": true
+      },
+      {
+         "source_path": "copilot/microsoft-365-copilot-search-privacy.md",
+         "redirect_url": "/copilot/microsoft-365-copilot-search",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/pin-copilot.md",
+         "redirect_url": "/microsoft-365/copilot/pin-copilot-chat-navbar",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/copilot-tuning-responsible-ai-faq.md",
+         "redirect_url": "/copilot/responsible-ai/copilot-tuning-responsible-ai-faq",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/microsoft-365-early-access-program.yml",
+         "redirect_url": "/microsoft-365/copilot/",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/microsoft-365-copilot-transparency-note.md",
+         "redirect_url": "/microsoft-365/copilot/microsoft-365-copilot-application-card",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/microsoft-365-copilot-ai-security.md",
+         "redirect_url": "/microsoft-365/copilot/security-microsoft-365-copilot",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/microsoft-365-copilot-e3-guide.md",
+         "redirect_url": "/microsoft-365/copilot/configure-secure-governed-data-foundation-microsoft-365-copilot",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/microsoft-365-copilot-e5-guide.md",
+         "redirect_url": "/microsoft-365/copilot/configure-secure-governed-data-foundation-microsoft-365-copilot",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/microsoft-365-copilot-blueprint-oversharing.md",
+         "redirect_url": "/microsoft-365/copilot/secure-govern-copilot-foundational-deployment-guidance",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/configure-data-security-copilot.md",
+         "redirect_url": "/microsoft-365/copilot/configure-secure-governed-data-foundation-microsoft-365-copilot",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/provide-feedback.md",
+         "redirect_url": "/microsoft-365/copilot/microsoft-365-copilot-page#copilot-diagnostics-logs",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "copilot/connect-to-independent-model.md",
+         "redirect_url": "/microsoft-365/copilot/connect-to-ai-subprocessor",
+         "redirect_document_id": false
+      }      
+   ]
+}

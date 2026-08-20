@@ -1,6 +1,6 @@
----
+﻿---
 title: Managing Microsoft 365 endpoints
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 01/08/2025
@@ -17,8 +17,9 @@ ms.collection:
 f1.keywords:
 - CSH
 ms.custom: 
- - Adm_O365_Setup
- - seo-marvel-apr2020
+- network
+- Adm_O365_Setup
+- seo-marvel-apr2020
 search.appverid: MOE150
 ms.assetid: 99cab9d4-ef59-4207-9f2b-3728eb46bf9a
 description: Learn how to manage Microsoft 365 endpoints so that they work with your enterprise organization network architecture.
@@ -44,13 +45,13 @@ Microsoft is working with SD-WAN providers to enable automated configuration. Fo
 <a name="pacfiles"> </a>
 
 Use PAC or WPAD files to manage network requests that are associated with Microsoft 365 but don't have an IP address. Typical network requests that are sent through a proxy or perimeter device increase latency. While TLS Break and Inspect creates the largest latency, other services such as proxy authentication and reputation lookup can cause poor performance and a bad user experience. Additionally, these perimeter network devices need enough capacity to process all of the network connection requests. We recommend bypassing your proxy or inspection devices for direct Microsoft 365 network requests.
-  
+
 [PowerShell Gallery Get-PacFile](https://www.powershellgallery.com/packages/Get-PacFile) is a PowerShell script that reads the latest network endpoints from the Microsoft 365 IP Address and URL Web service and creates a sample PAC file. You can modify the script so that it integrates with your existing PAC file management.
 
 > [!NOTE]
 > For more information about the security and performance considerations of direct connectivity to Microsoft 365 endpoints, see [Microsoft 365 Network Connectivity Principles](microsoft-365-network-connectivity-principles.md).
 
-![Connecting to Microsoft 365 through firewalls and proxies.](../media/34d402f3-f502-42a0-8156-24a7c4273fa5.png)
+:::image type="content" source="../media/34d402f3-f502-42a0-8156-24a7c4273fa5.png" alt-text="Screenshot that shows connecting to Microsoft 365 through firewalls and proxies.":::
 
 **Figure 1 - Simple enterprise network perimeter**
 
@@ -58,7 +59,7 @@ The PAC file is deployed to web browsers at point 1 in Figure 1. When using a PA
 
 Separately if you choose to only do direct routing for the Optimize category endpoints, any required Allow category endpoints that you send to the proxy server needs to be listed in the proxy server to bypass further processing. For example, TLS break and Inspect and Proxy Authentication are incompatible with both the Optimize and Allow category endpoints. The proxy server is point 2 in Figure 1.
 
-The common configuration is to permit without processing all outbound traffic from the proxy server for the destination IP addresses for Microsoft 365 network traffic that hits the proxy server. For information about issues with TLS Break and Inspect, see [Using third-party network devices or solutions on Microsoft 365 traffic](https://support.microsoft.com/help/2690045/using-third-party-network-devices-or-solutions-with-office-365).
+The common configuration is to permit without processing all outbound traffic from the proxy server for the destination IP addresses for Microsoft 365 network traffic that hits the proxy server. For information about issues with TLS Break and Inspect, see [Using third-party network devices or solutions on Microsoft 365 traffic](/troubleshoot/microsoft-365-apps/office-suite-issues/office-365-third-party-network-devices).
 
 There are two types of PAC files that the Get-PacFile script generates.
 
@@ -93,7 +94,7 @@ Get-PacFile -Type 2 -Instance Worldwide -TenantName Contoso -ClientRequestId b10
 Where PAC files aren't used for direct outbound traffic, you still want to bypass processing on your network perimeter by configuring your proxy server. Some proxy server vendors have enabled automated configuration of this as described in the [Microsoft 365 Networking Partner Program](microsoft-365-networking-partner-program.md).
 
 If you do this manually, you need to get the Optimize and Allow endpoint category data from the Microsoft 365 IP Address and URL Web Service and configure your proxy server to bypass processing for these. It's important to avoid TLS Break and Inspect and Proxy Authentication for the Optimize and Allow category endpoints.
-  
+
 ## Change management for Microsoft 365 IP addresses and URLs
 <a name="bkmk_changes"> </a>
 
@@ -123,32 +124,32 @@ For information about a Power Automate sample and template, see [Use Power Autom
 <a name="FAQ"> </a>
 
 See these frequently asked questions about Microsoft 365 network connectivity.
-  
+
 ### How do I submit a question?
 
 Select the link at the bottom to indicate if the article was helpful or not and submit any more questions. We monitor the feedback and update the questions here with the most frequently asked.
-  
+
 ### How do I determine the location of my tenant?
 
- **Tenant location** is best determined using our [datacenter map](./o365-data-locations.md).
-  
+**Tenant location** is best determined using our [datacenter map](./o365-data-locations.md).
+
 ### Am I peering appropriately with Microsoft?
 
- **Peering locations** are described in more detail in [peering with Microsoft](https://www.microsoft.com/peering).
-  
+**Peering locations** are described in more detail in [peering with Microsoft](/azure/internet-peering/).
+
 With over 2500 ISP peering relationships globally and 70 points of presence, getting from your network to ours should be seamless. It can't hurt to spend a few minutes making sure your ISP's peering relationship is the most optimal, [here's a few examples](/archive/blogs/onthewire/__guidance) of good and not so good peering hand-offs to our network.
 
 ### I see network requests to IP addresses not on the published list, do I need to provide access to them?
 <a name="bkmk_MissingIP"> </a>
 
 We only provide IP addresses for the Microsoft 365 servers you should route directly to. This isn't a comprehensive list of all IP addresses you'll see network requests for. You'll see network requests to Microsoft and third-party owned, unpublished, IP addresses. These IP addresses are dynamically generated or managed in a way that prevents timely notice when they change. If your firewall can't allow access based on the FQDNs for these network requests, use a PAC or WPAD file to manage the requests.
-  
+
 See an IP associated with Microsoft 365 that you want more information on?
-  
+
 1. Check if the IP address is included in a larger published range using a CIDR calculator, such as these for [IPv4](https://www.ipaddressguide.com/cidr) or [IPv6](https://www.ipaddressguide.com/ipv6-cidr). For example, 40.96.0.0/13 includes the IP Address 40.103.0.1 despite 40.96 not matching 40.103.
-2. See if a partner owns the IP with a [whois query](https://dnsquery.org/). If it's Microsoft owned, it might be an internal partner. Many partner network endpoints are listed as belonging to the _default_ category, for which IP addresses aren't published.
-3. The IP address might not be part of Microsoft 365 or a dependency. Microsoft 365 network endpoint publishing doesn't include all of Microsoft network endpoints.
-4. Check the certificate. With a browser, connect to the IP address using `https://<IP_address>` and check the domains listed on the certificate to understand what domains are associated with the IP address. If it's a Microsoft-owned IP address and not on the list of Microsoft 365 IP addresses, it's likely the IP address is associated with a Microsoft CDN such as  *MSOCDN.NET*  or another Microsoft domain without published IP information. If you do find the domain on the certificate is one where we claim to list the IP address, please let us know.
+1. See if a partner owns the IP with a [whois query](https://dnsquery.org/). If it's Microsoft owned, it might be an internal partner. Many partner network endpoints are listed as belonging to the *default* category, for which IP addresses aren't published.
+1. The IP address might not be part of Microsoft 365 or a dependency. Microsoft 365 network endpoint publishing doesn't include all of Microsoft network endpoints.
+1. Check the certificate. With a browser, connect to the IP address using `https://<IP_address>` and check the domains listed on the certificate to understand what domains are associated with the IP address. If it's a Microsoft-owned IP address and not on the list of Microsoft 365 IP addresses, it's likely the IP address is associated with a Microsoft CDN such as  *MSOCDN.NET*  or another Microsoft domain without published IP information. If you do find the domain on the certificate is one where we claim to list the IP address, please let us know.
 
 ### Some Microsoft 365 URLs point to CNAME records instead of A records in the DNS. What do I have to do with the CNAME records?
 <a name="bkmk_cname"> </a>
@@ -169,13 +170,13 @@ Hard-coded configurations or using an allowlist based on indirect Microsoft 365 
 <a name="bkmk_akamai"> </a>
 
 Microsoft 365 and other Microsoft services use several third-party services such as Akamai and MarkMonitor to improve your Microsoft 365 experience. To keep giving you the best experience possible, we might change these services in the future. Third-party domains might host content, such as a CDN, or they might host a service, such as a geographical traffic management service. Some of the services currently in use include:
-  
+
 [MarkMonitor](https://www.markmonitor.com/) is in use when you see requests that include  *\*.nsatc.net*. This service provides domain name protection and monitoring to protect against malicious behavior.
-  
+
 [ExactTarget](https://www.marketingcloud.com/) is in use when you see requests to  *\*.exacttarget.com*. This service provides email link management and monitoring against malicious behavior.
-  
+
 [Akamai](https://www.akamai.com/) is in use when you see requests that include one of the following FQDNs. This service offers geo-DNS and content delivery network services.
-  
+
 ```console
 *.akadns.net
 *.akam.net
@@ -196,37 +197,33 @@ As Microsoft 365 is a suite of services built to function over the internet, the
 The Microsoft 365 suite is broken down into four major service areas representing the three primary workloads and a set of common resources. These service areas may be used to associate traffic flows with a particular application, however given that features often consume endpoints across multiple workloads, these service areas cannot effectively be used to restrict access.
 
 | Service Area | Description |
-|:-----|:-----|
-|**Exchange** <br/> |Exchange Online and Exchange Online Protection <br/> |
-|**SharePoint** <br/> |SharePoint Online and OneDrive for Business <br/> |
-|**Skype for Business Online and Microsoft Teams** <br/> |Skype for Business and Microsoft Teams <br/> |
-|**Common** <br/> |Microsoft 365 Pro Plus, Office in a browser, Microsoft Entra ID, and other common network endpoints <br/> |
+|---|---|
+|**Exchange**|Exchange Online and [the built-in security features for all cloud mailboxes](/defender-office-365/eop-about)|
+|**SharePoint**|SharePoint Online and OneDrive for Business|
+|**Skype for Business Online and Microsoft Teams**|Skype for Business and Microsoft Teams|
+|**Common**|Microsoft 365 apps in a browser, Microsoft Entra ID, and other common network endpoints|
 
-In addition to basic internet services, there are third-party services that are only used to integrate functionality. While these services are needed for integration, they're marked as optional in the Microsoft 365 endpoints article. This means core functionality of the service continues to function if the endpoint isn't accessible. Any network endpoint that is required has the required attribute set to true. Any network endpoint that is optional has the required attribute set to false and the notes attribute detail the missing functionality you should expect if connectivity is blocked.
+In addition to basic internet services, there are third-party services that are only used to integrate functionality. While these services are needed for integration, they're marked as optional in the Microsoft 365 endpoints article. This means core functionality of the service continues to function if the endpoint isn't accessible. Any network endpoint that is required has the required attribute set to true. Any network endpoint that's optional has the required attribute set to false and the notes attribute detail the missing functionality you should expect if connectivity is blocked.
   
 If you're trying to use Microsoft 365 and are finding third-party services aren't accessible, you want to [ensure all FQDNs marked required or optional in this article are allowed through the proxy and firewall](urls-and-ip-address-ranges.md).
   
 <a name="bkmk_consumer"> </a>
+
 ### How do I block access to Microsoft's consumer services?
 
 The tenant restrictions feature now supports blocking the use of all Microsoft consumer applications (MSA apps) such as OneDrive, Hotmail, and Xbox.com. This feature uses a separate header to the login.live.com endpoint. For more information, see [Use tenant restrictions to manage access to SaaS cloud applications](/azure/active-directory/manage-apps/tenant-restrictions#blocking-consumer-applications).
 
 <a name="bkmk_IPOnlyFirewall"> </a>
 
-### My firewall requires IP Addresses and cannot process URLs. How do I configure it for Microsoft 365?
+### My firewall requires IP Addresses and can't process URLs. How do I configure it for Microsoft 365?
 
 Microsoft 365 doesn't provide IP addresses of all required network endpoints. Some are provided as URLs only and are categorized as default. URLs in the default category that are required should be allowed through a proxy server. If you don't have a proxy server, look at how you have configured web requests for URLs that users type into the address bar of a web browser; the user doesn't provide an IP address either. The Microsoft 365 default category URLs that don't provide IP addresses should be configured in the same way.
 
-## Related articles
+## Related content
 
-[Microsoft 365 IP Address and URL Web service](microsoft-365-ip-web-service.md)
-
-[Microsoft Azure Datacenter IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653)
-  
-[Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602)
-  
-[Network infrastructure requirements for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints)
-  
-[Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md)
-  
-[Microsoft 365 Network Connectivity Principles](microsoft-365-network-connectivity-principles.md)
+- [Microsoft 365 IP Address and URL Web service](microsoft-365-ip-web-service.md)
+- [Microsoft Azure Datacenter IP Ranges](https://www.microsoft.com/download/details.aspx?id=41653)
+- [Microsoft Public IP Space](https://www.microsoft.com/download/details.aspx?id=53602)
+- [Network infrastructure requirements for Microsoft Intune](/intune/fundamentals/endpoints)
+- [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md)
+- [Microsoft 365 Network Connectivity Principles](microsoft-365-network-connectivity-principles.md)

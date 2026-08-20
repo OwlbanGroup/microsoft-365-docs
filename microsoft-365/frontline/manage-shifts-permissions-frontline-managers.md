@@ -27,7 +27,7 @@ appliesto:
   - Microsoft Teams
   - Microsoft 365 for frontline workers
 ms.custom: seo-marvel-mar2020
-ms.date: 02/28/2024
+ms.date: 10/24/2025
 ---
 
 # Manage Shifts permissions for frontline managers
@@ -120,7 +120,7 @@ To do this:
 
     {
       "enabled": true,
-      "timeZone": "America/Chicago”, 
+      "timeZone": "America/Chicago", 
       "timeClockEnabled": false
     }
     ```

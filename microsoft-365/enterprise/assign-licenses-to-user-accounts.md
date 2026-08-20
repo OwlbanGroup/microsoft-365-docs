@@ -1,6 +1,6 @@
 ---
 title: "Assign Microsoft 365 licenses to user accounts"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 03/12/2025
@@ -17,6 +17,7 @@ ms.custom:
 - 'O365M_AddUsersWithDirSync'
 - 'O365E_HRCSetupAADConnectAboutLM617031'
 - 'O365E_AddUsersWithDirSync'
+- user-accounts
 ms.collection:
 - scotvorg
 - Ent_O365

@@ -1,24 +1,25 @@
 ---
-title: "Install Microsoft 365 apps"
+title: Install Microsoft 365 apps
 f1.keywords:
 - NOCSH
-ms.author: efrene
-author: efrene
+ms.author: kwekua
+author: kwekuako
 manager: scotv
-ms.date: 05/28/2024
+ms.date: 02/17/2026
 audience: Admin
 ms.topic: install-set-up-deploy
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
-- Tier3
-- ContentEngagementFY23
-- scotvorg
-- highpri
-- M365-subscription-management 
-- Adm_O365
-- Adm_TOC
-- must-keep
+ms.collection:
+  - Tier3
+  - ContentEngagementFY23
+  - scotvorg
+  - highpri
+  - M365-subscription-management
+  - Adm_O365
+  - Adm_TOC
+  - must-keep
+  - operations-pod
 search.appverid:
 - MET150
 - MOE150
@@ -30,49 +31,75 @@ ms.custom:
 - okr_smb
 - AdminTemplateSet
 - adminvideo
-description: "Now that you've set up Microsoft 365, learn how to install individual apps on your Mac, PC, or mobile devices."
+description: After Microsoft 365 is set up, learn how to install Microsoft 365 apps on Windows, Mac, or mobile devices.
+#customer intent: Install Microsoft 365 apps on Windows, Mac, or mobile devices.
 ---
 
 # Install Microsoft 365 apps
 
-Check out all of our small business content on [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+After you set up Microsoft 365, install Microsoft 365 apps on your Mac, PC, or mobile devices.
 
-Check out [Microsoft 365 small business help](https://go.microsoft.com/fwlink/?linkid=2197659) on YouTube.
-
-Now that you've set up Microsoft 365, you can install individual apps on your Mac, PC, or mobile devices.
-  
 ## Watch: Install Microsoft 365 apps
+
+This video shows how to install Microsoft 365 apps on a Windows device.
 
 > [!VIDEO dc089097-90e3-4e20-a10b-985e58240101]
 
-Microsoft 365 productivity apps can be found on your  **Start** menu. If you don't see them, you can install them yourself.
+## Install Microsoft 365 apps in Windows
 
-1. Go to microsoft365.com. You might need to sign in with your work account.
-1. Select **Install and more**, then select **Install Microsoft 365 apps**.
-1. Open the file that is downloaded to your **Downloads** folder.
-1. On the **Do you want to allow this app to make changes to your device** page, select **Yes** to begin installation.
-1. The Microsoft 365 productivity apps are installed. The process may take several minutes. When it completes, select  **Close**.
+Microsoft 365 apps appear in your **Start** menu. If you don't see them, follow these steps to install Microsoft 365 apps in Windows:
 
-## Next steps
+1. Sign in to the [Microsoft 365 Apps](https://www.microsoft365.com/apps) by using your work account.
 
-Follow these links for information on how to:
-  
-- Install Microsoft 365:  [Download and install or reinstall Microsoft 365 or Office 2021 on a PC or Mac](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658)
+1. In the upper-right corner, select **Install apps**, and then select **Microsoft 365 apps**.
 
-- Install other apps: [Project](https://support.microsoft.com/office/install-project-7059249b-d9fe-4d61-ab96-5c5bf435f281), [Visio](https://support.microsoft.com/office/install-visio-f98f21e3-aa02-4827-9167-ddab5b025710), or [Skype for Business](https://support.microsoft.com/office/install-skype-for-business-8a0d4da8-9d58-44f9-9759-5c8f340cb3fb)
+1. The **My account** page opens. Under **Office apps & devices**, select **Install Office**.
 
-- Set up mobile devices: [Microsoft 365 mobile setup - Help](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f)
+1. **OfficeSetup.exe** downloads to your **Downloads** folder. After the download finishes, open **OfficeSetup.exe** to start the installation.
 
-- Set up email in Outlook: [Windows](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b) or [Mac](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b#PickTab=Outlook_for_Mac)
- 
-- [Upgrade users to the latest apps](upgrade-users-to-latest-office-client.md) 
+1. When prompted with **Do you want to allow this app to make changes to your device?**, select **Yes** to start the installation.
+
+1. The installation continues and might take several minutes to complete. When it completes, the **You're all set!** window displays. Select **Close**.
+
+1. After installation, the apps appear in the **Start** menu and are ready to use.
+
+## Learn more about installing Microsoft 365 apps
+
+The following articles have additional information on installing Microsoft 365 apps:
+
+### Microsoft 365 Apps
+
+- [Download and install or reinstall Microsoft 365 or Office 2024 on a PC or Mac](https://support.microsoft.com/office/4414eaaf-0478-48be-9c42-23adc4716658).
+
+### Microsoft Project, Microsoft Visio, Skype for Business
+
+- [Install Project](https://support.microsoft.com/office/install-project-7059249b-d9fe-4d61-ab96-5c5bf435f281).
+- [Install Visio or access Visio for the web](https://support.microsoft.com/office/install-visio-f98f21e3-aa02-4827-9167-ddab5b025710).
+- [Install Skype for Business](https://support.microsoft.com/office/install-skype-for-business-8a0d4da8-9d58-44f9-9759-5c8f340cb3fb).
+
+### Microsoft 365 on mobile devices
+
+- [Set up Office apps and email on a mobile device](https://support.microsoft.com/office/7dabb6cb-0046-40b6-81fe-767e0b1f014f).
+
+### Add email account in Microsoft Outlook
+
+- [Add an email account to Outlook for Windows](https://support.microsoft.com/office/6e27792a-9267-4aa4-8bb6-c84ef146101b).
+- [Add an email account to Outlook for Mac](https://support.microsoft.com/office/6aeec61b-86af-40af-8ffe-985d0fc82ddb).
+
+### Microsoft 365 for business
+
+- [Upgrade your Microsoft 365 for business users to the latest apps](upgrade-users-to-latest-office-client.md).
 
 ::: moniker range="o365-21vianet"
+
+### Microsoft Identity Manager
 
 If you purchased Microsoft Entra ID P1 or P2 (AADP) Plan 1 or Plan 2, you're eligible for Microsoft Identity Manager (MIM). To download MIM, go to the [Download Center](https://www.microsoft.com/zh-cn/download/details.aspx?id=58498).
 
 ::: moniker-end
 
 ## Related content
-  
-[Troubleshoot installing Office and Microsoft 365](https://support.microsoft.com/office/35ff2def-e0b2-4dac-9784-4cf212c1f6c2) (article)
+
+- [Troubleshoot installing Office and Microsoft 365](https://support.microsoft.com/office/35ff2def-e0b2-4dac-9784-4cf212c1f6c2).
+- [Small business help & learning](https://go.microsoft.com/fwlink/?linkid=2224585).
+- [Microsoft 365 small business help on YouTube](https://go.microsoft.com/fwlink/?linkid=2197659).

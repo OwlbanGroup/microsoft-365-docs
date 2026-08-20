@@ -5,7 +5,7 @@ author: chuckedmonson
 manager: jtremper
 audience: admin
 ms.reviewer: sreelakshmi
-ms.date: 03/05/2025
+ms.date: 06/05/2025
 ms.topic: article
 ms.service: microsoft-365-backup
 search.appverid: 
@@ -25,7 +25,7 @@ Microsoft is transparent about the specific policies, operational practices, and
 
 - None of your organization's data is used or transferred by Microsoft to train AI models, large-language models, or any other models.
 
-- Your data remains securely within your organization’s tenant.
+- Your data remains securely within your organization's tenant.
 
 ## Privacy
 
@@ -63,9 +63,13 @@ Data residency refers to the geographic location where data is stored at rest. T
 
 All data within Microsoft 365 Backup is stored within the customer tenant for any given service and follows the standard Microsoft 365 data storage guidelines by available geography. The metadata used for billing purposes is sent to Azure and includes: entitlement_id, event_id, usage_date_time, metered_resource_id, quantity, resourceUri, location, tags.isinternaltenant, tags.protectionunitid, tags.servicetype, tags.tenants, tags.applications, and azure_cloud.
 
+## Audit logs
+
+[Microsoft Purview auditing solutions](/purview/audit-get-started) provide an integrated solution to help organizations effectively respond to security events, forensic investigations, internal investigations, and compliance obligations. You can [search for audit events](/purview/audit-search) for [Backup activities](/purview/audit-log-activities) such as create policy or restore using PowerShell or Microsoft Purview Audit.
+
 ## Security
 
-Microsoft 365 Backup works with and integrates into Microsoft 365. This means that the Microsoft 365 security capabilities—such as identity and app management—apply to Microsoft 365 Backup. The bring-your-own-key (BYOK) feature seamlessly integrates with Microsoft 365 Backup to enhance data security.
+Microsoft 365 Backup works with and integrates into Microsoft 365. This means that the Microsoft 365 security capabilities-such as identity and app management-apply to Microsoft 365 Backup. The bring-your-own-key (BYOK) feature seamlessly integrates with Microsoft 365 Backup to enhance data security.
 
 ## Compliance
 
@@ -73,7 +77,7 @@ Microsoft offers a [comprehensive set of compliance offerings](/compliance) to h
 
 Microsoft 365 Backup is a Microsoft 365 service built on the same underlying infrastructure and follows the same compliance standards. Microsoft 365 Backup is covered by any or all of the standards (for example, ISO and SCO) and certifications listed on the [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-Microsoft 365 Backup directly supports the Digital Operational Resilience Act's (DORA) business continuity and recovery provisions, enhancing your organization’s overall operational resilience by enabling regulated entities to develop resilient operations and recover quickly from disruptions.
+Microsoft 365 Backup directly supports the Digital Operational Resilience Act's (DORA) business continuity and recovery provisions, enhancing your organization's overall operational resilience by enabling regulated entities to develop resilient operations and recover quickly from disruptions.
 
 > [!IMPORTANT]
 > Given that compliance tooling actions might destroy primary data, we administratively isolate those destructive actions from flowing through to backed up data automatically. In other words, **compliance actions that automatically delete your primary data will not automatically delete data from your backups**.
@@ -88,14 +92,14 @@ Microsoft 365 Backup is also covered under the [Microsoft Product Terms](https:/
 
 For more detailed information, see the following resources:
 
-- **Microsoft 365** – [Quick tasks for getting started with compliance in Microsoft Purview](/purview/compliance-quick-tasks)
+- **Microsoft 365** - [Quick tasks for getting started with compliance in Microsoft Purview](/purview/compliance-quick-tasks)
 
-- **Microsoft 365 Copilot** – [Data, privacy, and security for Microsoft 365 Copilot](/copilot/microsoft-365/microsoft-365-copilot-privacy)
+- **Microsoft 365 Copilot** - [Data, privacy, and security for Microsoft 365 Copilot](/microsoft-365/copilot/microsoft-365-copilot-privacy)
 
-- **Microsoft SharePoint** – [Plan compliance requirements for SharePoint and OneDrive](/SharePoint/compliant-environment)
+- **Microsoft SharePoint** - [Plan compliance requirements for SharePoint and OneDrive](/SharePoint/compliant-environment)
 
-- **Microsoft Graph** – [Use the Microsoft Graph compliance and privacy APIs](/graph/api/resources/complianceapioverview)
+- **Microsoft Graph** - [Use the Microsoft Graph compliance and privacy APIs](/graph/api/resources/complianceapioverview)
 
-- **Microsoft Entra ID** – [Microsoft Entra security baseline for Microsoft Entra ID](/security/benchmark/azure/baselines/aad-security-baseline)
+- **Microsoft Entra ID** - [Microsoft Entra security baseline for Microsoft Entra ID](/security/benchmark/azure/baselines/aad-security-baseline)
 
-- **Azure** – [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](/azure/compliance/offerings/)
+- **Azure** - [Azure, Dynamics 365, Microsoft 365, and Power Platform compliance offerings](/azure/compliance/offerings/)

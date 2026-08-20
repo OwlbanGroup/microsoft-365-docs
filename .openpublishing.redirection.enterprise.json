@@ -1032,8 +1032,8 @@
      },
      {
         "source_path":"microsoft-365/enterprise/move-sharepoint-between-geo-locations.md",
-        "redirect_url":"/microsoft-365/enterprise/m365-dr-workload-spo",
-        "redirect_document_id":true
+        "redirect_url":"/microsoft-365/enterprise/m365-dr-service-spo",
+        "redirect_document_id":false
      },
      {
         "source_path":"microsoft-365/enterprise/lang-service-health.md",
@@ -1332,7 +1332,7 @@
    },
    {
       "source_path": "microsoft-365/enterprise/move-onedrive-between-geo-locations.md",
-      "redirect_url": "/microsoft-365/enterprise/m365-dr-workload-spo#move-a-onedrive-site",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-spo#move-a-onedrive-site",
       "redirect_document_id": false
    },
    {
@@ -1444,6 +1444,81 @@
       "source_path": "microsoft-365/enterprise/manage-skype-for-business-online-policies-with-microsoft-365-powershell.md",
       "redirect_url": "/microsoftteams/assign-policies-users-and-groups",
       "redirect_document_id": false
+   },
+   {
+      "source_path": "microsoft-365/enterprise/microsoft-365-entra-monitoring.md",
+      "redirect_url": "/microsoft-365/enterprise/microsoft-entra-monitoring",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/microsoft-365-apps-monitoring.md",
+      "redirect_url": "/microsoft-365/enterprise/microsoft-365-monitoring",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/engineering-direct-portal.md",
+      "redirect_url": "/microsoft-365/enterprise/office-engineering-direct",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/configure-multi-geo-inregion-routing-preview.md",
+      "redirect_url": "/microsoft-365/enterprise/configure-multi-geo-in-region-routing",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-exo.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-exo",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-spo.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-spo",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-teams.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-teams",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-copilot.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-copilot",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-mdo-p1.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-mdo-p1",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-office-for-web.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-m365-web-apps",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-m365-web-apps.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-m365-web-apps",
+      "redirect_document_id": false
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-viva-connections.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-viva-connections",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-purview.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-purview",
+      "redirect_document_id": true
+   },
+   {
+      "source_path": "microsoft-365/enterprise/essentials-privacy.md",
+      "redirect_url": "https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA",
+      "redirect_document_id": false
+   },   
+   {
+      "source_path": "microsoft-365/enterprise/m365-dr-workload-other.md",
+      "redirect_url": "/microsoft-365/enterprise/m365-dr-service-other",
+      "redirect_document_id": true
    }
   ]
 }

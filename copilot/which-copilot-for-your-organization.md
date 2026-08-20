@@ -3,82 +3,98 @@ title: Decide which Copilot is right for you
 description: Microsoft has several Copilot AI virtual assistants, including Microsoft 365 Copilot Chat, Microsoft 365 Copilot, Microsoft Copilot, Microsoft Security Copilot, GitHub Copilot, and Copilot Studio. Decide which Copilot is right for you and your organization. Which Copilot is right for me?
 f1.keywords:
 - NOCSH
-ms.author: mandia
-author: MandiOhlinger
-manager: laurawi
-ms.date: 04/03/2025
+ms.author: efrene
+author: Efrene
+manager: scotv
+ms.date: 03/24/2026
+ms.update-cycle: 180-days
 ms.reviewer: 
 audience: Admin
 ms.topic: get-started
 ms.service: microsoft-365-copilot
+ms.subservice: admin
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - scotvorg
 - m365copilot
 - magic-ai-copilot
 - essentials-overview
+- operations-pod
 ms.custom: [copilot-learning-hub]
 appliesto:
-  - ✅ Microsoft 365 Copilot
+- ✅ Microsoft 365 Copilot
 ---
 
 # Which Copilot is right for me or my organization?
 
-Copilot is Microsoft's AI-powered virtual assistant. It uses large language models (LLMs) to answer your questions using a prompt and response interaction.
+Copilot is Microsoft's AI-powered virtual assistant. It uses large language models (LLMs) to answer your questions using a prompt-and-response interaction.
 
-There are different Copilots available.
+Microsoft 365 offers two variants based on licensing. The following image highlights their key differences:
 
-**If you're an admin**, this article describes the different Copilots and can help you decide the Copilots that are right for your organization.
+:::image type="content" source="media/microsoft-365-copilot-license-comparison.png" alt-text="A graphic that illustrates key capability differences between Copilot offered in Microsoft 365 licensing and the dedicated Microsoft 365 Copilot add on license." lightbox="media/microsoft-365-copilot-license-comparison.png":::
+
+**If you're an admin**, this article describes the different Copilots and can help you decide which Copilots are right for your organization.
 
 **If you're an end user**, have a Copilot installed, and not sure what Copilot you have, then this article can help you understand the Copilot that's installed on your device.
 
-## Microsoft 365 Copilot Chat
+## Microsoft 365
+Includes **Copilot Chat**: AI chat grounded in the web
 
 ✅ Secure with [enterprise data protection](enterprise-data-protection.md)  
-✅ Scalable with [pay-as-you-go](./pay-as-you-go/overview.md)  
-✅ Free to organizations with a Microsoft 365 license
+✅ Scalable with [pay-as-you-go](./pay-as-you-go/overview.md) agents
+✅ Included with a Microsoft 365 subscription
 
-**Microsoft 365 Copilot Chat** is an AI prompt and response experience that's [grounded in the web](/copilot/privacy-and-protections#privacy-and-security-of-generated-search-queries) and powered by [large language models (LLMs)](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-are-large-language-models-llms).
+**Copilot Chat** is an AI prompt-and-response experience that's [grounded in the web](/copilot/privacy-and-protections#privacy-and-security-of-generated-search-queries) and powered by [large language models (LLMs)](https://azure.microsoft.com/resources/cloud-computing-dictionary/what-are-large-language-models-llms).
 
-It's free to organizations that have a Microsoft 365 license. With Copilot Chat:
+Copilot Chat is automatically included and available to organizations that have a Microsoft 365 subscription. With Copilot Chat:
 
 - You can also create images and use [Copilot Pages](https://support.microsoft.com/topic/introducing-microsoft-365-copilot-pages-6674bd51-9ff5-42c4-9256-44d9428a726f) to save, edit, and share AI-generated content.
-- You can use for work and education, and know that you're protected with [enterprise data protection](enterprise-data-protection.md).
+- You can use for work and education, knowing that you're protected with [enterprise data protection](enterprise-data-protection.md).
 - You can manage it using [IT controls for admins](/copilot/manage).
 
-Microsoft 365 Copilot Chat is available on the web at [https://m365copilot.com](https://m365copilot.com), in the [Microsoft 365 Copilot app](https://apps.microsoft.com/detail/9wzdncrd29v9), and in Teams, Outlook, & Microsoft Edge.
+Copilot Chat is available on the web at [https://m365copilot.com](https://m365copilot.com), in the [Microsoft 365 Copilot app](https://apps.microsoft.com/detail/9wzdncrd29v9), and in Teams, Outlook, & Microsoft Edge. 
 
 > [!TIP]
-> If you [pin Copilot Chat](pin-copilot.md) in the Microsoft 365 Copilot app, when users go to `https://m365copilot.com`, then they're automatically redirected to `https://m365.cloud.microsoft/chat`.
+> If you [pin Copilot Chat](pin-copilot-chat-navbar.md) in the Microsoft 365 Copilot app, when users go to `https://m365copilot.com`, then they're automatically redirected to `https://m365.cloud.microsoft/chat`.
 
-If you want users in your organization to have prompt and response interchanges with information on the internet and [enterprise data protection](enterprise-data-protection.md), then use Microsoft 365 Copilot Chat.
+Use Copilot Chat if you want users in your organization to:
+
+- Use secure AI chat grounded on the web and powered by the latest models
+- Access to pay-as-you-go agents
+- Have built-in IT controls, enterprise data protection, and agent management
+- Use features like Copilot Pages, file upload, and image generation
+- Use AI chat directly in Microsoft 365 apps like Word, Excel, PowerPoint, OneNote, and Outlook
 
 To learn more, see:
 
-- [Learn more about Microsoft 365 Copilot Chat](/copilot/overview)
+- [Learn more about Copilot Chat](/copilot/overview)
 - [Read about Copilot for all: Introducing Microsoft 365 Copilot Chat - blog](https://www.microsoft.com/microsoft-365/blog/2025/01/15/copilot-for-all-introducing-microsoft-365-copilot-chat)
 
-## Microsoft 365 Copilot
+> [!NOTE]
+> Chat experiences in Word, Excel, PowerPoint vary depending on your tenant configuration and license. Learn more in [Microsoft 365 copilot overview](microsoft-365-copilot-overview.md#copilot-features-in-microsoft-365-apps).
+> If you'd like to enable users with priority access to these capabilities, learn more about [Microsoft 365 Copilot](https://www.microsoft.com/microsoft-365/microsoft-365-enterprise).
 
-✅ Use for work tasks  
+## Microsoft 365 Copilot license
+Added Copilot license: AI chat grounded in organizational data and the web
+
+✅ Optimized for work tasks  
 ✅ Licensed by your work organization  
-✅ Use for personal tasks, with caution. This Copilot accesses work data.  
-✅ Personally licensed by end users
+✅ Built-in and custom agents
 
 **Microsoft 365 Copilot** is licensed by your work organization. It includes features that can help end users and admins with work tasks, like:
 
-- Use Microsoft 365 Copilot Chat for web-based (internet) and work-based ([Microsoft Graph](/graph/overview)) chat.
-- Get in-app experiences in your Microsoft 365 apps, like Teams, Word, Excel, PowerPoint, and Outlook.
-- Create [Copilot Agents](/microsoft-365-copilot/extensibility/overview-declarative-agent).
-- Measure insights with [Copilot Analytics](https://techcommunity.microsoft.com/blog/microsoftvivablog/introducing-copilot-analytics-to-measure-ai-impact-on-your-business/4301717).
+- Use the licensed Microsoft 365 Copilot for both web-based (internet) and work-based ([Microsoft Graph](/graph/overview)) chat
+- Get in-app experiences in your Microsoft 365 apps, like Teams, Word, Excel, PowerPoint, and Outlook
+- Create [Copilot Agents](/microsoft-365-copilot/extensibility/overview-declarative-agent)
+- Measure insights with [Copilot Analytics](https://techcommunity.microsoft.com/blog/microsoftvivablog/introducing-copilot-analytics-to-measure-ai-impact-on-your-business/4301717)
 
-With a Microsoft 365 Copilot license, when you open Copilot Chat, it looks similar to the following image:
+With a Microsoft 365 Copilot license, when you open Copilot, it looks similar to the following image:
 
-:::image type="content" source="media/which-copilot-for-your-organization/microsoft-365-copilot-chat.png" alt-text="Screenshot that shows Microsoft 365 Copilot Chat and sample prompts that get information from the internet with web-based chat.":::
+:::image type="content" source="media/which-copilot-for-your-organization/microsoft-365-copilot-chat.png" alt-text="Screenshot that shows Microsoft 365 Copilot and sample prompts that get information from the internet with web-based chat.":::
 
-When users sign in with their Microsoft Entra work or school account (`user@contoso.com`), they can use Microsoft 365 Copilot Chat **work** or **web** version:
+When licensed users sign in with their Microsoft Entra work or school account (`user@contoso.com`), they can use Microsoft 365 Copilot in **work** or **web** mode:
 
-:::image type="content" source="media/which-copilot-for-your-organization/copilot-work-web.png" alt-text="Screenshot that shows Microsoft Entra users can select work or web in Microsoft 365 Copilot Chat.":::
+:::image type="content" source="media/which-copilot-for-your-organization/copilot-work-web.png" alt-text="Screenshot that shows Microsoft Entra users can select work or web in Microsoft 365 Copilot.":::
 
 - When users select **work**, Copilot Chat is a work-based ([Microsoft Graph](/graph/overview)) chat experience. It shows results that their Microsoft Entra work or school account can access.
 
@@ -86,8 +102,8 @@ When users sign in with their Microsoft Entra work or school account (`user@cont
 
   To learn about data privacy, see:
 
-  - [Data, privacy, and security for web search in Microsoft 365 Copilot and Microsoft 365 Copilot Chat](manage-public-web-access.md)
-  - [Enterprise data protection in Microsoft 365 Copilot and Microsoft 365 Copilot Chat](enterprise-data-protection.md)
+  - [Data, privacy, and security for web search in Microsoft 365 Copilot](manage-public-web-access.md)
+  - [Enterprise data protection in Microsoft 365 Copilot](enterprise-data-protection.md)
 
 Copilot accesses data that your Microsoft Entra account has access to, like your emails and files. So, you can use Microsoft 365 Copilot to:
 
@@ -106,15 +122,21 @@ Microsoft 365 Copilot is available at [https://m365.cloud.microsoft](https://m36
 
 End users can also purchase their own license that includes Microsoft 365 Copilot.
 
-If you want users in your organization to have prompt and response interchanges with work & internet information, and use AI features in their work apps, then use Microsoft 365 Copilot.
+Use Microsoft 365 Copilot if you want users in your organization to:
+
+- Use secure AI chat grounded on both the web and organizational data
+- Access built-in agents and create custom ones
+- Use Microsoft 365 Copilot Search for finding information across all their Microsoft 365 and third-party data sources
+- Access advanced lexical and semantic understanding of Microsoft Graph data 
+- Remain secure with advanced IT controls, enterprise data protection, and agent management
 
 To learn more, see:
 
 - [Microsoft 365 Copilot overview](microsoft-365-copilot-overview.md)
 - [Microsoft 365 Copilot architecture and how it works](microsoft-365-copilot-architecture.md)
-- [Copilot Prompt Gallery](https://copilot.cloud.microsoft/prompts)
+- [Copilot Prompt Gallery](https://m365.cloud.microsoft/copilot-prompts)
 - [Microsoft 365 Copilot plans](https://www.microsoft.com/microsoft-365/copilot)
-- [Add apps to Microsoft Intune](/mem/intune/apps/apps-add) and [assign apps to groups](/mem/intune/apps/apps-deploy)
+- [Add apps to Microsoft Intune](/intune/app-management/deployment/) and [assign apps to groups](/intune/app-management/deployment/assign-groups)
 
 ## Microsoft Copilot
 
@@ -195,7 +217,7 @@ To learn more, see:
 
 ✅ Licensed by your work organization
 
-**Microsoft Copilot Studio** is a low code graphical tool that you can use to create agents and connect to other data sources. Agents let you customize your organization's Copilot experience. They can automate & execute business processes, like help desk, change management, and managing guests in meetings.
+**Microsoft Copilot Studio** is a low-code graphical tool that you can use to create agents and connect to other data sources. Agents let you customize your organization's Copilot experience. They can automate and execute business processes, like help desk, change management, and managing guests in meetings.
 
 You can add existing agents and create your own agents.
 
@@ -218,4 +240,4 @@ To learn more, see:
 - [Microsoft 365 Copilot overview](microsoft-365-copilot-overview.md)
 - [Microsoft 365 Copilot adoption](https://adoption.microsoft.com/copilot/)
 - [Unified cloud.microsoft domain for Microsoft 365 apps](/microsoft-365/enterprise/cloud-microsoft-domain)
-- [Get your data ready for Microsoft 365 Copilot - Admin guide for E3 + SAM licenses](microsoft-365-copilot-e3-guide.md)
+- [Configure a secure and governed data foundation for Microsoft 365 Copilot](configure-secure-governed-data-foundation-microsoft-365-copilot.md)

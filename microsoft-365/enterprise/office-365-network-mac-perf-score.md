@@ -1,6 +1,6 @@
----
+﻿---
 title: "Microsoft 365 network assessment"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/05/2024
@@ -17,6 +17,7 @@ ms.collection:
 - Strat_O365_Enterprise
 - must-keep
 description: "Microsoft 365 network assessment"
+ms.custom: network
 ---
 
 # Microsoft 365 network assessment
@@ -25,8 +26,7 @@ In the Microsoft 365 Admin Center's network connectivity, **network assessments*
 
 The network assessment points value is from 0 to 100 and is an average of TCP latency, download speed, and UDP connection quality metrics. These metrics are compiled once a day. Performance metrics for Microsoft-owned networks are excluded from these measurements to ensure that assessment results are unambiguous and specific to the corporate network.
 
-> [!div class="mx-imgBorder"]
-> ![Network assessment value.](../media/m365-mac-perf/m365-mac-perf-overview-score-top.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-overview-score-top.png" alt-text="Screenshot of the Network assessment value." border="true":::
 
 A very low network assessment value suggests that Microsoft 365 clients will have significant problems connecting to the tenant or maintaining a responsive user experience. A high value indicates a properly configured network with few ongoing performance issues. A value of 80% represents a healthy baseline, above which you shouldn't expect to receive regular user complaints about Microsoft 365 connectivity or responsiveness due to network performance. As iterative network connectivity improvements are made, this value increases along with user experience.
 
@@ -43,8 +43,7 @@ A very low network assessment value suggests that Microsoft 365 clients will hav
 
 Each network assessment, whether scoped to the tenant or to a specific office location, shows a panel with details about the assessment. This panel shows a bar chart of the assessment both as a percentage and as the total points for each component workload including only workloads where measurement data was received. For an office location network assessment, we also show a comparison to the percent of Microsoft 365 customers in each of five quintiles that reported data in the same city as your office location.
 
-> [!div class="mx-imgBorder"]
-> ![Example network assessment value.](../media/m365-mac-perf/m365-mac-perf-overview-score.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-overview-score.png" alt-text="Screenshot that shows the example of the network assessment value." border="true":::
 
 The **Points breakdown** in the panel shows the assessment for each of the component workloads.
 
@@ -105,18 +104,15 @@ The SharePoint assessment is made using the following table. Any download speed 
 
 For Microsoft Teams the Network quality is measured as UDP latency, UDP jitter, and UDP packet loss. UDP is used for call and conferencing audio and video media connectivity for Microsoft Teams. This can be impacted by the same factors as for latency and download speed in addition to connectivity gaps in a network's UDP support since UDP is configured separately to the more common TCP protocol. The median (also known as the 50th percentile or P50 measure) is taken for all measurements over the previous three days.
 
-We calculate a mean opinion score from these UDP measurements for a scale from one to five. Then we map that to the 0-100 points scale for the Microsoft Teams network assessment.  Overall good is over 87.5 points and overall bad is below 50 points.
+We calculate a mean opinion score from these UDP measurements for a scale from one to five. Then we map that to the 0-100 points scale for the Microsoft Teams network assessment. Overall good is over 87.5 points and overall bad is below 50 points.
 
 ## Understanding test sampling
 
 Network test sampling doesn't include user or device identities and hence the size of offices and number of users in them is estimated. We use the number of test results from Exchange tests and the number of tests from SharePoint tests to do this. If no samples are received for the office location, then summary assessment information is still shown for up to 60 days but detailed information isn't shown, including the estimated number of users.
 
-## Related articles
+## Related content
 
-[Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
-
-[Microsoft 365 network performance insights](office-365-network-mac-perf-insights.md)
-
-[Microsoft 365 network connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
-
-[Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)
+- [Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
+- [Microsoft 365 network performance insights](office-365-network-mac-perf-insights.md)
+- [Microsoft 365 network connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
+- [Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)

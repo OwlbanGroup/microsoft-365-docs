@@ -14,10 +14,12 @@ ms.collection:
 - Adm_O365
 - scotvorg
 - must-keep
-ROBOTS: NOINDEX, NOFOLLOW 
+- operations-pod
+ROBOTS: NOINDEX, NOFOLLOW
 description: "Understand the Japanese katakana terms used in the Microsoft 365 admin center."
-ms.date: 03/13/2025
+ms.date: 04/16/2026
 ---
+
 <!-- DO NOT MAKE CHANGES TO THIS ARTICLE WITHOUT FIRST CONTACTING THE MS.AUTHOR AND MS.REVIEWER -->
 <!-- THIS CONTENT IS MACHINE TRANSLATED FROM THE ORIGINAL JAPANESE AND MUST REMAIN UNTOUCHED -->
 <!-- DO NOT MAKE CHANGES TO THIS ARTICLE WITHOUT FIRST CONTACTING THE MS.AUTHOR AND MS.REVIEWER -->
@@ -145,7 +147,7 @@ For customer support included in your support agreement, use the "Help and Suppo
 
 Settings to restrict the disclosure of files and information related to the protection of personal data. Choose from various disclosure levels, such as to make files and information available to all users within the organization (public) or to only specified users (private).
 
-[Manage data privacy and data protection with Microsoft Priva and Microsoft Purview](../solutions/data-privacy-protection.md)
+[Manage data privacy and data protection with Microsoft Priva and Microsoft Purview](/previous-versions/microsoft-365/solutions/data-privacy-protection)
 
 ## Private
 

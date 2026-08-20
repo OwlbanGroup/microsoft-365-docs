@@ -1,6 +1,6 @@
----
+﻿---
 title: "Network provider details and connectivity attribution in the Microsoft 365 Admin Center"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.reviewer: pandrew
@@ -19,6 +19,7 @@ ms.collection:
 - must-keep
 description: "Network provider details and connectivity attribution in the Microsoft 365 Admin Center"
 ROBOTS: NOINDEX, NOFOLLOW
+ms.custom: network
 ---
 
 # Network provider details and connectivity attribution in the Microsoft 365 Admin Center
@@ -61,32 +62,32 @@ When you navigate to the Network traffic tab, you'll see information about conne
 
 Network providers are identified as one of the following:
 
-* **ISP** – Internet Service Provider that provides data transmission media such as terrestrial ISP, cellular ISP, or satellite ISP
-* **Overlay** – An additional detected network provider providing other services such as VPN, Cloud Proxy, SD-WAN, and SASE
-* **Corporate** – The customer owns detection attributes for network providers
+- **ISP** - Internet Service Provider that provides data transmission media such as terrestrial ISP, cellular ISP, or satellite ISP
+- **Overlay** - An additional detected network provider providing other services such as VPN, Cloud Proxy, SD-WAN, and SASE
+- **Corporate** - The customer owns detection attributes for network providers
 
 The top five network providers by network requests from your users are shown on the left. On the right is a historical chart showing the performance assessment of each of the top five network providers over time. You can adjust the time range back as far as two years although the default is one month.
 
 In the lower part of the page shows a table of all significant detected network providers. It can show these attributes for each network provider:
 
-* **Network provider name** – The network provider name from public contributions
-* **Solution name** – Listed if a network provider has multiple network solutions which are measured separately
-* **Percent of requests** – The percentage of requests for the specific provider for all your users
-* **Performance** – The network assessment performance out of 100 attributed to this network provider
-* **Work type** – Shows either remote, onsite, or remote and onsite
-* **Type** – Shows either ISP, Overlay, or Corporate
-* **Exchange Performance** – Exchange network assessment out of 100
-* **SharePoint Performance** – SharePoint network assessment out of 100
-* **Teams Performance** – Teams network assessment out of 100
-* **SharePoint Throughput** – SharePoint throughput aggregate with error margin in Megabytes per second
-* **Exchange Latency** – Exchange TCP latency aggregate with error margin in milliseconds
-* **Teams packet loss** – Teams UDP Packet loss in percent aggregate with error margin
-* **Teams jitter** – Teams UDP Jitter with error margin in milliseconds
-* **Teams latency** – Teams UDL latency with error margin in milliseconds
-* **Availability** – The network availability as a percentage attributed to this network provider
-* **Exchange Availability** – Exchange specific availability
-* **SharePoint Availability** – SharePoint specific availability
-* **Teams Availability** – Teams specific availability
+- **Network provider name** - The network provider name from public contributions
+- **Solution name** - Listed if a network provider has multiple network solutions which are measured separately
+- **Percent of requests** - The percentage of requests for the specific provider for all your users
+- **Performance** - The network assessment performance out of 100 attributed to this network provider
+- **Work type** - Shows either remote, onsite, or remote and onsite
+- **Type** - Shows either ISP, Overlay, or Corporate
+- **Exchange Performance** - Exchange network assessment out of 100
+- **SharePoint Performance** - SharePoint network assessment out of 100
+- **Teams Performance** - Teams network assessment out of 100
+- **SharePoint Throughput** - SharePoint throughput aggregate with error margin in Megabytes per second
+- **Exchange Latency** - Exchange TCP latency aggregate with error margin in milliseconds
+- **Teams packet loss** - Teams UDP Packet loss in percent aggregate with error margin
+- **Teams jitter** - Teams UDP Jitter with error margin in milliseconds
+- **Teams latency** - Teams UDL latency with error margin in milliseconds
+- **Availability** - The network availability as a percentage attributed to this network provider
+- **Exchange Availability** - Exchange specific availability
+- **SharePoint Availability** - SharePoint specific availability
+- **Teams Availability** - Teams specific availability
 
 You can filter the table of network providers by connections from onsite corporate office locations or remote worker locations such as homes, cafés, hotels.
 
@@ -120,18 +121,15 @@ Below the NPI Chart is a list of network providers detected for your users at th
 
 :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-nppux-providers-at-location.png" alt-text="Image showing table of network providers detected for your users at this specific office location.":::
 
-* Network provider name
-* Solution name
-* Percent of requests
-* Availability
-* Performance
+- Network provider name
+- Solution name
+- Percent of requests
+- Availability
+- Performance
 
-## Related articles
+## Related content
 
-[Network connectivity in the Microsoft 365 admin center](office-365-network-mac-perf-overview.md)
-
-[Network provider program data calculations](office-365-network-mac-perf-nppdata.md)
-
-[Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
-
-[Microsoft 365 network connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)
+- [Network connectivity in the Microsoft 365 admin center](office-365-network-mac-perf-overview.md)
+- [Network provider program data calculations](office-365-network-mac-perf-nppdata.md)
+- [Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
+- [Microsoft 365 network connectivity test tool](office-365-network-mac-perf-onboarding-tool.md)

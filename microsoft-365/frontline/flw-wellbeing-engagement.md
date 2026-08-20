@@ -30,7 +30,7 @@ ms.date: 02/15/2024
 
 Nurture a sense of belonging among your frontline teams by empowering them to engage with your entire organization.
 
-Surveys like Microsoft’s [Work Trend Index Pulse Report](https://microsoft.com/worklab/work-trend-index) show that many frontline workers:
+Surveys like Microsoft's [Work Trend Index Pulse Report](https://microsoft.com/worklab/work-trend-index) show that many frontline workers:
 
 - Wish more was being done to support their mental health
 - Say leadership doesn't prioritize building culture
@@ -54,7 +54,7 @@ You can customize Viva Connections to give your frontline easy access to resourc
 The Viva Connections experience is composed of three main components: the feed, dashboard, and resources.
 
 - **Feed**: The feed aggregates content from multiple sources to display a personalized news and information stream.  [Learn more](/viva/connections/viva-connections-overview#viva-connections-feed).
-- **Dashboard**: The dashboard is your employee’s digital toolset that brings together the tools and resources they need. Prioritize cards that help your frontline accomplish daily tasks like clocking in and out of shifts or viewing assigned tasks. [Learn more](/viva/connections/viva-connections-overview#viva-connections-dashboard).
+- **Dashboard**: The dashboard is your employee's digital toolset that brings together the tools and resources they need. Prioritize cards that help your frontline accomplish daily tasks like clocking in and out of shifts or viewing assigned tasks. [Learn more](/viva/connections/viva-connections-overview#viva-connections-dashboard).
 - **Resources**: Resources surfaces links to popular SharePoint sites and other content. Link to popular SharePoint sites like HR benefits and training resources. [Learn more](/viva/connections/viva-connections-overview#viva-connections-resources).
 
 As you prioritize and align scenarios to support, consider how and where certain tools and resources should be located.

@@ -1,9 +1,9 @@
 ---
 title: "Microsoft 365 multitenant Organization People Search"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/09/2024
+ms.date: 09/30/2025
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
@@ -17,6 +17,7 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: Learn about People Search in multitenant Microsoft 365 organizations.
+ms.custom: tenant
 ---
 
 # Microsoft 365 Multitenant Organization People Search 

@@ -1,7 +1,7 @@
 ---
 title: "Configure Microsoft 365 Lighthouse portal security"
 f1.keywords: CSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: taylorau
@@ -43,7 +43,7 @@ To set up a GDAP relationship, see [Obtain granular admin permissions to manage 
 
 MSP technicians may also access Lighthouse by using Admin Agent or Helpdesk Agent roles via delegated administrative privileges (DAP).
 
-For non-customer tenant-related actions in Lighthouse (for example, onboarding, customer deactivating/reactivating, managing tags, reviewing logs), MSP technicians must have an assigned role in the partner tenant. See [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md) for more details on partner tenant roles.
+For non-customer tenant-related actions in Lighthouse (for example, onboarding, customer deactivating/reactivating, managing tags, reviewing audit logs), MSP technicians must have an assigned role in the partner tenant. See [Overview of permissions in Microsoft 365 Lighthouse](m365-lighthouse-overview-of-permissions.md) for more details on partner tenant roles.
 
 <a name='set-up-azure-ad-privileged-identity-management-pim'></a>
 
@@ -58,7 +58,7 @@ The following steps elevate partner tenant users to time-scoped higher privilege
 
 1. Create a role-assignable group as described in the article [Create a group for assigning roles in Microsoft Entra ID](/azure/active-directory/roles/groups-create-eligible).
 
-2. Go to [Microsoft Entra ID – All Groups](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) and add the new group as a member of a security group for high-privilege roles (for example, Admin Agents security group for DAP or a similarly respective security group for GDAP roles).
+2. Go to [Microsoft Entra ID - All Groups](https://portal.azure.com/#blade/Microsoft_AAD_IAM/GroupsManagementMenuBlade/AllGroups) and add the new group as a member of a security group for high-privilege roles (for example, Admin Agents security group for DAP or a similarly respective security group for GDAP roles).
 
 3. Set up privileged access to the new group as described in the article [Assign eligible owners and members for privileged access groups](/azure/active-directory/privileged-identity-management/groups-assign-member-owner).
 

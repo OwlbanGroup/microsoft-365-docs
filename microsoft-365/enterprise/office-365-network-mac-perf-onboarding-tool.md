@@ -1,6 +1,6 @@
----
+﻿---
 title: "Microsoft 365 network connectivity test tool"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 04/02/2025
@@ -18,6 +18,7 @@ ms.collection:
 - Strat_O365_Enterprise
 - must-keep
 description: "Microsoft 365 network connectivity test tool"
+ms.custom: network
 ---
 
 # Microsoft 365 network connectivity test tool
@@ -25,33 +26,32 @@ description: "Microsoft 365 network connectivity test tool"
 The Microsoft 365 network connectivity test tool is located at <https://connectivity.m365.cloud.microsoft>. It's an adjunct tool to the network assessment and network insights available in the Microsoft 365 admin center under the **Health | Connectivity** menu. [https://admin.cloud.microsoft/#/networkperformance](https://admin.cloud.microsoft/#/networkperformance) 
 
 > [!NOTE]
-> This document refers to the URL (<https://connectivity.m365.cloud.microsoft>), the global version of this tool. For other versions, please refer to the table below for the corresponding URLs.
+> This document refers to the URL (<https://connectivity.m365.cloud.microsoft>), the global version of this tool. For other versions, refer to the table for the corresponding URLs.
 
 |Feature|Global service <br/><https://connectivity.m365.cloud.microsoft>|US Government (GCC)  <br/><https://connectivity.m365.cloud.microsoft>| China operated by 21Vianet <br/><https://connectivity.sovcloud.cn>|
 |:--|:--|:--|:--|
-|Anonymous test|✅|✅|✅|
-|Print report | ✅|✅|✅|
-|Login| ✅|✖️|✅|
-|Save report |  ✅|✖️|✅|
-|View report |  ✅|✖️|✅|
-|Share report in tenant | ✅|✖️|✅|
-|Share report to public |  ✅|✖️|✅|
-|Network health status | ✅|✅|✅|
-|Tests for Microsoft 365 Copilot | ✅|✖️|✖️|
-|Multi-languages support: English, Chinese Simplified, Chinese Traditional, Japanese| ✅|✅|✅|
-|Testing from the command line|  ✅|✖️|✅|
-|FAQ|  ✅|✅|✅|
-|Community forum|  ✅|✅|✅|
+|Anonymous test|Yes|Yes|Yes|
+|Print report | Yes|Yes|Yes|
+|Login| Yes|Yes|Yes|
+|Save report |  Yes|Yes|Yes|
+|View report |  Yes|Yes|Yes|
+|Share report in tenant | Yes|Yes|Yes|
+|Share report to public |  Yes|✖ (GCC is government cloud, we disable public sharing to ensure privacy)|Yes|
+|Network health status | Yes|Yes|Yes|
+|Tests for Microsoft 365 Copilot | Yes|Yes|No|
+|Multi-languages support: English, Chinese Simplified, Chinese Traditional, Japanese| Yes|Yes|Yes|
+|Testing from the command line|  Yes|Yes|Yes|
+|FAQ|  Yes|Yes|Yes|
+|Community forum|  Yes|Yes|Yes|
 
 > [!IMPORTANT]
-> It's important to sign in to your Microsoft 365 tenant as all test reports are shared with your administrator and uploaded to the tenant while you are signed in.
+> It's important to sign in to your Microsoft 365 tenant as all test reports are shared with your administrator and uploaded to the tenant while you're signed in.
 
-> [!div class="mx-imgBorder"]
-> ![Connectivity test tool.](../media/m365-mac-perf/m365-mac-perf-test-tool-page.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-test-tool-page.png" alt-text="Screenshot of the Connectivity test tool.":::
 
 Network insights in the Microsoft 365 admin center [https://admin.cloud.microsoft/#/networkperformance](https://admin.cloud.microsoft/#/networkperformance) are based on regular in-product measurements for your Microsoft 365 tenant, aggregated each day. In comparison, network insights from the Microsoft 365 network connectivity test tool [https://connectivity.m365.cloud.microsoft](https://connectivity.m365.cloud.microsoft/)are run locally in the tool.
 
-In-product testing is limited, and running tests local to the user collects more data resulting in deeper insights. Network insights in the Microsoft 365 admin center show that there's a networking problem at a specific office location. When you use the Microsoft 365 connectivity test tool at a specific office location it can help to identify the root cause of that networking problem reported in the admin center and provide a targeted performance improvement action.
+In-product testing is limited, and running tests local to the user collects more data resulting in deeper insights. Network insights in the Microsoft 365 admin center show that there's a networking problem at a specific office location. When you use the Microsoft 365 connectivity test tool at a specific office location, it can help to identify the root cause of that networking problem reported in the admin center and provide a targeted performance improvement action.
 
 We recommend that these insights be used together where networking quality status can be assessed for each office location in the Microsoft 365 admin center. 
 
@@ -63,21 +63,21 @@ Here are some example scenarios for using the Microsoft 365 network connectivity
 
 A user complains about being unable to access Microsoft 365 Copilot, and you suspect WebSocket protocol may be blocked for the user. You need to quickly validate if the WebSocket connection is successful for the user. You can ask the user to go to [the network connectivity test tool](https://connectivity.m365.cloud.microsoft/) and select **Run test**. This triggers a set of basic tests including a WebSocket connection test for Copilot, and the user will find the results of the test in the details pane. If WebSocket was blocked for the user, you wouldn't see a green tick but instead a warning to show that the WebSocket connection is blocked. 
 
-![Connectivity test - web socket pass](media/office-365-network-mac-perf-onboarding-tool/websocketpass.jpg)
+:::image type="content" source="media/office-365-network-mac-perf-onboarding-tool/websocketpass.jpg" alt-text="Screenshot that shows the Connectivity test - web socket pass.":::
 
-![Connectivity test - WSS fail](media/office-365-network-mac-perf-onboarding-tool/wssfail.jpg)
+:::image type="content" source="media/office-365-network-mac-perf-onboarding-tool/wssfail.jpg" alt-text="Screenshot that shows the Connectivity test - WSS fail.":::
 
 #### Scenario 2
 
-You receive complaints from users in a branch office that they experience slow connection to Microsoft 365 services. You suspect this could be due to some recent network infrastructure changes at the branch office that results in higher network latency for the users. You can ask the users at the branch office to go to [the network connectivity test tool](https://connectivity.m365.cloud.microsoft/) and select **Run test**. This triggers a set of basic tests including tests to show the distance to network egress and network latency experienced by the user for Exchange online service. In the following screenshot you will notice that the user is based in Washington state and the network egress is in Arizona. This increases the network latency for the user and the result also shows that 33% of users in Washington state have better a network connection. 
+You receive complaints from users in a branch office that they experience slow connection to Microsoft 365 services. You suspect this could be due to some recent network infrastructure changes at the branch office that results in higher network latency for the users. You can ask the users at the branch office to go to [the network connectivity test tool](https://connectivity.m365.cloud.microsoft/) and select **Run test**. This triggers a set of basic tests including tests to show the distance to network egress and network latency experienced by the user for Exchange online service. In the following screenshot you'll notice that the user is based in Washington state and the network egress is in Arizona. This increases the network latency for the user and the result also shows that 33% of users in Washington state have better a network connection. 
 
-![Connectivity test - network egress far away](media/office-365-network-mac-perf-onboarding-tool/networkegressfaraway.jpg)
+:::image type="content" source="media/office-365-network-mac-perf-onboarding-tool/networkegressfaraway.jpg" alt-text="Screenshot of the Connectivity test - network egress far away.":::
 
 #### Scenario 3
 
-You receive complaints from users in an office location that they experience broken page load while visiting SharePoint sites or Outlook web access or Microsoft admin center web pages. You suspect this could be due to some recent network infrastructure changes at the office location that results in blocked network connections to unified domains like `*.static.microsoft` or `*.usercontent.microsoft` domains. You can ask the users at the branch office to go to [the network connectivity test tool](https://connectivity.m365.cloud.microsoft/) and run the advanced diagnostics test by downloading and running the exe. The results will show you if there are any network connections blocked for the required Microsoft 365 domains published in the article [Microsoft 365 URLs and IP address ranges](https://aka.ms/m365endpoints).
+You receive complaints from users in an office location that they experience broken page load while visiting SharePoint sites or Outlook web access or Microsoft admin center web pages. You suspect this could be due to some recent network infrastructure changes at the office location that results in blocked network connections to unified domains like `*.static.microsoft` or `*.usercontent.microsoft` domains. You can ask the users at the branch office to go to [the network connectivity test tool](https://connectivity.m365.cloud.microsoft/) and run the advanced diagnostics test by downloading and running the exe. The results will show you if there are any network connections blocked for the required Microsoft 365 domains published in the article [Microsoft 365 URLs and IP address ranges](urls-and-ip-address-ranges.md).
 
-![Connectivity test - unified domains blocked](media/office-365-network-mac-perf-onboarding-tool/unifieddomainsblocked.jpg)
+:::image type="content" source="media/office-365-network-mac-perf-onboarding-tool/unifieddomainsblocked.jpg" alt-text="Screenshot that shows the Connectivity test - unified domains are blocked.":::
 
 ## What happens at each test step
 
@@ -97,8 +97,7 @@ There are two parts to the Microsoft 365 network connectivity test: the web site
 
 You'll be prompted to download the advanced client test application from the web site after the web browser tests have completed. Open and run the file when prompted.
 
-> [!div class="mx-imgBorder"]
-> ![Advanced tests client application.](../media/m365-mac-perf/m365-mac-perf-open-run-file.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-open-run-file.png" alt-text="Screenshot of the Advanced tests client application.":::
 
 ### Start the advanced tests client application
 
@@ -124,27 +123,23 @@ Test reports (excluding any personal identification) are shared with Microsoft e
 
 You can choose users to share your report with. Being able to choose is enabled by default, but it can be disabled by your administrator.
 
-> [!div class="mx-imgBorder"]
-> ![Sharing a link to your test results with a user.](../media/m365-mac-perf/m365-mac-perf-share-to-user.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-share-to-user.png" alt-text="Screenshot that shows the sharing a link to your test results with a user.":::
 
 ### Sharing with anyone using a ReportID link
 
 You can share your test report with anyone by providing access to a ReportID link. This link generates a URL that you can send to someone so that they can bring up the test report without signing in. This sharing is disabled by default and must be enabled by your administrator.
 
-> [!div class="mx-imgBorder"]
-> ![Sharing a link to your test results.](../media/m365-mac-perf/m365-mac-perf-share-link.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-share-link.png" alt-text="Screenshot that shows the sharing a link to your test results.":::
 
 ## Network Connectivity Test Results
 
 The results are shown in the **Summary** and **Details** tabs. The summary tab shows a map of the detected network perimeter and a comparison of the network assessment to other Microsoft 365 customers nearby. It also allows for sharing of the test report. Here's what the summary results view looks like:
 
-> [!div class="mx-imgBorder"]
-> ![Network connectivity test tool summary results.](../media/m365-mac-perf/m365-mac-perf-summary-page.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-summary-page.png" alt-text="Screenshot of the network connectivity test tool summary results.":::
 
 Here's an example of the details tab output. On the details tab, we show a green circle check mark if the result was compared favorably. We show a red triangle exclamation point if the result exceeded a threshold indicating a network insight. The following sections describe each of the details tab results rows and explain the thresholds used for network insights.
 
-> [!div class="mx-imgBorder"]
-> ![Network connectivity test tool example test results.](../media/m365-mac-perf/m365-mac-perf-all-details.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-all-details.png" alt-text="Screenshot of the network connectivity test tool example test results.":::
 
 ### Your location information
 
@@ -162,7 +157,7 @@ We identify the network egress IP address on the server side. Location databases
 
 #### Your distance from the network egress location
 
-We determine the distance from that location to the office location. This distance is shown as a network insight if the distance is greater than **500 miles** (800 kilometers) since that is likely to increase the TCP latency by more than 25 ms and might affect user experience.
+We determine the distance from that location to the office location. This distance is shown as a network insight if the distance is greater than **500 miles** (800 kilometers) since that's likely to increase the TCP latency by more than 25 ms and might affect user experience.
 
 The map shows the network egress location in relation to the user office location indicating the network backhaul inside of the enterprise WAN.
 
@@ -170,7 +165,7 @@ Implement local and direct network egress from user office locations to the Inte
 
 #### Proxy server information
 
-We identify whether proxy server(s) are configured on the local machine to pass Microsoft 365 network traffic in the **Optimize** category. We identify the distance from the user office location to the proxy servers.
+We identify whether proxy servers are configured on the local machine to pass Microsoft 365 network traffic in the **Optimize** category. We identify the distance from the user office location to the proxy servers.
 
 The distance is tested first by ICMP ping. If that fails, we test with TCP ping and finally we look up the proxy server IP address in an IP address location database. We show a network insight if the proxy server is further than **500 miles** (800 kilometers) away from the user office location.
 
@@ -184,7 +179,7 @@ Each **Optimize** category route for Exchange Online, SharePoint Online, and Mic
 
 #### Customers in your metropolitan area with better performance
 
-Network latency between the user office location and the Exchange Online service is compared to other Microsoft 365 customers in the same metro area. A network insight is shown if 10% or more of customers in the same metro area have better performance. This means their users have better performance in the Microsoft 365 user interface.
+Network latency between the user office location and the Exchange Online service is compared to other Microsoft 365 customers in the same metropolitan area. A network insight is shown if 10% or more of customers in the same metropolitan area have better performance. This means their users have better performance in the Microsoft 365 user interface.
 
 This network insight is generated on the basis that all users in a city have access to the same telecommunications infrastructure and the same proximity to Internet circuits and Microsoft's network.
 
@@ -204,21 +199,21 @@ This network insight affects the selection of the Exchange Online service front 
 
 ### Microsoft 365 Copilot
 
-The tests for Microsoft 365 Copilot generally available worldwide from 2025-3-25. The feature allow users to test the network connectivity, websocket enablement and latency of the major endpoints of Microsoft 365 Copilot, and also supports mobile device testing.
+The tests for Microsoft 365 Copilot generally available worldwide from 2025-3-25. The feature allows users to test the network connectivity, websocket enablement and latency of the major endpoints of Microsoft 365 Copilot, and also supports mobile device testing.
 
-You can read more about the network requirements for Microsoft 365 Copilot in [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements).
+You can read more about the network requirements for Microsoft 365 Copilot in [Microsoft 365 Copilot requirements](/microsoft-365/copilot/microsoft-365-copilot-requirements#network-requirements).
 
 #### Microsoft 365 Copilot HTTP Connectivity  
 
-We will test the HTTP connectivity for specific endpoints to ensure your connection to Microsoft 365 Copilot services is functioning properly. If you are on a managed network, please contact your IT or network administrator to add `*.cloud.microsoft` and `*.office.com` to the allow list. For more information, refer to the [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements).  
+We'll test the HTTP connectivity for specific endpoints to ensure your connection to Microsoft 365 Copilot services is functioning properly. If you are on a managed network, contact your IT or network administrator to add `*.cloud.microsoft` and `*.office.com` to the allow list. For more information, see the [Microsoft 365 Copilot requirements](/microsoft-365/copilot/microsoft-365-copilot-requirements#network-requirements).  
 
 #### Microsoft 365 Copilot Web Socket Enablement  
 
-Microsoft 365 Copilot uses WebSocket (WSS) as its communication protocol. If you are on a managed network, please contact your IT or network administrator to enable WebSocket (WSS) connectivity for Microsoft 365 Copilot domains. For additional details, see the [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements).  
+Microsoft 365 Copilot uses WebSocket (WSS) as its communication protocol. If you are on a managed network, contact your IT or network administrator to enable WebSocket (WSS) connectivity for Microsoft 365 Copilot domains. For more information, see the [Microsoft 365 Copilot requirements](/microsoft-365/copilot/microsoft-365-copilot-requirements#network-requirements).  
 
 #### Microsoft 365 Copilot Latency  
 
-We will measure the average latency for Microsoft 365 Copilot endpoints. Please ensure WebSocket support is enabled. If the latency exceeds 250ms, it may result in a slower experience with Microsoft 365 Copilot. For more information, refer to the [Microsoft 365 Copilot requirements](/copilot/microsoft-365/microsoft-365-copilot-requirements#network-requirements).  
+We'll measure the average latency for Microsoft 365 Copilot endpoints. Ensure WebSocket support is enabled. If the latency exceeds 250ms, it may result in a slower experience with Microsoft 365 Copilot. For more information, see the [Microsoft 365 Copilot requirements](/microsoft-365/copilot/microsoft-365-copilot-requirements#network-requirements).  
 
 
 ### Exchange Online
@@ -233,7 +228,7 @@ Not using one of the best Exchange service front doors could be caused by networ
 
 We calculate a potential improvement in TCP latency (ms) to the Exchange service front door. This is done by looking at the tested user office location network latency and subtracting the network latency from the current location to the closets Exchange service front door. The difference represents the potential opportunity for improvement.
 
-#### Best Exchange service front door(s) for your location
+#### Best Exchange service front doors for your location
 
 This lists the best Exchange service front door locations by city for your location.
 
@@ -283,17 +278,17 @@ Shows the measured UDP jitter, which should be lower than **30ms**.
 
 #### Connectivity
 
-We test for HTTP connectivity from the user office location to all of the required Microsoft 365 network endpoints. These are published at [https://aka.ms/o365ip](./urls-and-ip-address-ranges.md). A network insight is shown for any required network endpoints, which can't be connected to.
+We test for HTTP connectivity from the user office location to all of the required Microsoft 365 network endpoints. These are published at [Microsoft 365 URLs and IP address ranges](./urls-and-ip-address-ranges.md). A network insight is shown for any required network endpoints, which can't be connected to.
 
 Connectivity might be blocked by a proxy server, a firewall, or another network security device on the enterprise network perimeter. Connectivity to TCP port 80 is tested with an HTTP request and connectivity to TCP port 443 is tested with an HTTPS request. If there's no response the FQDN is marked as a failure. If there's an HTTP response code 407 the FQDN is marked as a failure. If there's an HTTP response code 403, then we check the Server attribute of the response and if it appears to be a proxy server we mark this as a failure. You can simulate the tests we perform with the Windows command-line tool curl.exe.
 
-We test the TLS/SSL certificate at each required Microsoft 365 network endpoint that is in the optimize or allow category as defined at [https://aka.ms/o365ip](./urls-and-ip-address-ranges.md). If any tests don't find a Microsoft TLS/SSL certificate, then the encrypted network connected must have been intercepted by an intermediary network device. A network insight is shown on any intercepted encrypted network endpoints.
+We test the TLS/SSL certificate at each required Microsoft 365 network endpoint that is in the optimize or allow category as defined at [Microsoft 365 URLs and IP address ranges](./urls-and-ip-address-ranges.md). If any tests don't find a Microsoft TLS/SSL certificate, then the encrypted network connected must have been intercepted by an intermediary network device. A network insight is shown on any intercepted encrypted network endpoints.
 
-Where an TLS/SSL certificate is found that isn't provided by Microsoft, we show the FQDN for the test and the in-use TLS/SSL certificate owner. This TLS/SSL certificate owner might be a proxy server vendor, or it might be an enterprise self-signed certificate.
+Where a TLS/SSL certificate is found that isn't provided by Microsoft, we show the FQDN for the test and the in-use TLS/SSL certificate owner. This TLS/SSL certificate owner might be a proxy server vendor, or it might be an enterprise self-signed certificate.
 
 #### Network path
 
-This section shows the results of an ICMP traceroute to the Exchange Online service front door, the SharePoint service front door, and the Microsoft Teams service front door. It's provided for information only and there's no associated network insight. There are three traceroutes provided. A traceroute to _outlook.office365.com_, a traceroute to the customers SharePoint front end or to _microsoft.sharepoint.com_ if one wasn't provided, and a traceroute to _world.tr.teams.microsoft.com_.
+This section shows the results of an ICMP traceroute to the Exchange Online service front door, the SharePoint service front door, and the Microsoft Teams service front door. It's provided for information only and there's no associated network insight. There are three traceroutes provided. A traceroute to *outlook.office365.com*, a traceroute to the customers SharePoint front end or to *microsoft.sharepoint.com* if one wasn't provided, and a traceroute to *world.tr.teams.microsoft.com*.
 
 > [!NOTE]
 > In reports generated in different versions, the addresses you see above may also vary slightly.
@@ -305,8 +300,7 @@ This section shows the results of an ICMP traceroute to the Exchange Online serv
 
 When you're signed in you can review previous reports that you have run. You can also share them or delete them from the list.
 
-> [!div class="mx-imgBorder"]
-> ![Reports.](../media/m365-mac-perf/m365-mac-perf-reports-list.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-reports-list.png" alt-text="Screenshot that shows the list of reports.":::
 
 ## Network health status
 
@@ -323,17 +317,17 @@ The command line test tool can be downloaded here: [Command Line Tool](https://c
 
 You can run it by double clicking the executable in Windows File Explorer, or you can start it from a command prompt, or you can schedule it with task scheduler.
 
-The first time you launch the executable you'll be prompted to accept the end user license agreement (EULA) before testing is performed. If you have already read and accepted the EULA, you can create an empty file called Microsoft-365-Network-Connectivity-Test-EULA-accepted.txt in the current working directory for the executable process when it's launched. To accept the EULA, you can type 'y' and press enter in the command line window when prompted.
+The first time you launch the executable you'll be prompted to accept the end user license agreement (EULA) before testing is performed. If you have already read and accepted the EULA, you can create an empty file called Microsoft-365-Network-Connectivity-Test-EULA-accepted.txt in the current working directory for the executable process when it's launched. To accept the EULA, you can type 'y' and press **Enter** in the command line window when prompted.
 
-The executable accepts the following  command line parameters:
+The executable accepts the following command line parameters:
 
-- -h to show a link to this help documentation
-- -testlist &lt;test&gt; Specifies tests to run. By default only basic tests are run. Valid test names include: all, dnsConnectivityPerf, dnsResolverIdentification, bufferBloat, traceroute, proxy, vpn, skype, connectivity, networkInterface
-- -filepath &lt;filedir&gt; Directory path of test result files. Allowed value is absolute or relative path of an accessible directory
-- -city &lt;city&gt; For the city, state, and country/region fields the specified value will be used if provided. If not provided then Windows Location Services (WLS) will be queried. If WLS fails the location will be detected from the machines network egress
-- -state &lt;state&gt;
-- -country &lt;country&gt;
-- -proxy &lt;account&gt; &lt;password&gt; Proxy account name and password can be provided if you require a proxy to access the Internet
+- `-h` to show a link to this help documentation
+- `-testlist &lt;test&gt;` Specifies tests to run. By default only basic tests are run. Valid test names include: all, dnsConnectivityPerf, dnsResolverIdentification, bufferBloat, traceroute, proxy, vpn, skype, connectivity, networkInterface
+- `-filepath &lt;filedir&gt;` Directory path of test result files. Allowed value is absolute or relative path of an accessible directory
+- `-city &lt;city&gt;` For the city, state, and country/region fields the specified value will be used if provided. If not provided then Windows Location Services (WLS) will be queried. If WLS fails the location will be detected from the machines network egress
+- `-state &lt;state&gt;`
+- `-country &lt;country&gt;`
+- `-proxy &lt;account&gt; &lt;password&gt;` Proxy account name and password can be provided if you require a proxy to access the Internet
 
 ### Results
 
@@ -345,7 +339,7 @@ You can double select on the executable to start the testing and a command promp
 
 ### Launching from the Command Prompt
 
-In a CMD.EXE command prompt window, you can type the path and name of the executable to run it. The filename is MicrosoftConnectivityTest.exe.
+In a `CMD.EXE` command prompt window, you can type the path and name of the executable to run it. The filename is `MicrosoftConnectivityTest.exe`.
 
 ### Launching from Windows Task Scheduler
 
@@ -359,7 +353,7 @@ The commandline tool attempts to install the .NET Framework if it isn't already 
 
 ## Test using the Microsoft Support and Recovery Assistant
 
-[Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_home) (Assistant) automates all the steps required to execute the command-line version of the Microsoft 365 network connectivity test tool on a user’s machine and creates a report similar to the one created by the web version of the connectivity test tool. Note, the Assistant runs the command line version of Microsoft 365 network connectivity test tool to produce the same JSON result file, but the JSON file is converted into .CSV file format.  
+[Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_home) (Assistant) automates all the steps required to execute the command-line version of the Microsoft 365 network connectivity test tool on a user's machine and creates a report similar to the one created by the web version of the connectivity test tool. Note, the Assistant runs the command line version of Microsoft 365 network connectivity test tool to produce the same JSON result file, but the JSON file is converted into .CSV file format.  
 
 You can [download and run the Assistant here](https://aka.ms/SaRA-NetworkConnectivity-Learn).
 
@@ -369,20 +363,17 @@ Reports can be accessed in the following ways:
 
 The reports are available on the below screen once the Assistant has finished scanning the user's machine. To access these reports, simply select on the &#8220;View log&#8221; option to view them.
 
-> [!div class="mx-imgBorder"]
-> ![Microsoft Support and Recovery Assistant wizard.](../media/m365-mac-perf/m365-mac-perf-sara1.png)
+:::image type="content" source="../media/m365-mac-perf/m365-mac-perf-sara1.png" alt-text="Screenshot of the Microsoft Support and Recovery Assistant wizard.":::
 
 Connectivity test results and Telemetry data are collected and uploaded to the **uploadlogs** folder. To access this folder, use one of the following methods:
 
 - Open Run (**Windows logo key + R**), and run the **%localappdata%/saralogs/uploadlogs** command as follows:
 
-> [!div class="mx-imgBorder"]
-> ![Run dialog for locating output.](../media/m365-mac-perf/m365-mac-perf-sara2.png)
+  :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-sara2.png" alt-text="Screenshot that shows the Run dialog for locating output.":::
 
 - In File Explorer, type C:\Users\<UserName>\AppData\Local\saralogs\uploadlogs and press **Enter** as follows:
 
-> [!div class="mx-imgBorder"]
-> ![Windows Explorer Address Bar for output.](../media/m365-mac-perf/m365-mac-perf-sara3.png)
+  :::image type="content" source="../media/m365-mac-perf/m365-mac-perf-sara3.png" alt-text="Screenshot that shows the Windows Explorer Address Bar for output.":::
 
 **Note:** &lt;UserName&gt; is the user's Windows profile name.
 To view the information about the test results and telemetry, double-click and open the files.
@@ -395,7 +386,7 @@ To view the information about the test results and telemetry, double-click and o
 Microsoft Support and Recovery Assistant creates two files:
 
 1. Network Connectivity Report (CSV)
-This report runs the raw JSON file against a rule engine to make sure defined thresholds are being met and if they aren't met a &#8220;warning&#8221; or &#8220;error&#8221; is displayed in the output column of the CSV file. You can view the NetworkConnectivityReport.csv file to be informed about any detected issues or defects. See [What happens at each test step](office-365-network-mac-perf-onboarding-tool.md#what-happens-at-each-test-step) for details on each test and the thresholds for warnings.
+This report runs the raw JSON file against a rule engine to make sure defined thresholds are being met and if they aren't met a &#8220;warning&#8221; or &#8220;error&#8221; is displayed in the output column of the CSV file. You can view the `NetworkConnectivityReport.csv` file to be informed about any detected issues or defects. See [What happens at each test step](office-365-network-mac-perf-onboarding-tool.md#what-happens-at-each-test-step) for details on each test and the thresholds for warnings.
 
 1. Network Connectivity Scan Report (JSON)
 This file provides the raw output test results from the command-line version of the Microsoft 365 network connectivity test tool (MicrosoftConnectivityTest.exe).
@@ -408,29 +399,26 @@ Here are answers to some of our frequently asked questions.
 
 The advanced test client requires .NET 6.0 Runtime. If you run the advanced test client without that installed you'll be directed to [the .NET 6.0 installer page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime?utm_source=getdotnetcore). Be sure to install from the Run desktop apps column for Windows. Administrator permissions on the machine are required to install .NET 6.0 Runtime.
 
-The advanced test client uses SignalR to communicate to the web page. For this, you must ensure that TCP port 443 connectivity to **connectivity.service.signalr.net** is open. This URL isn't published in the <https://aka.ms/o365ip> because that connectivity isn't required for a Microsoft 365 client application user. If you're using an HTTP proxy for connection to FQDN connectivity.office.com and encounter the error **SignalR proxy configuration is different than origin.**, ensure connection to FQDN connectivity.service.signalr.net is allowed through the proxy. If a PAC file is being used to push proxy configuration settings, ensure the PAC file will return the same proxy settings for FQDN's connectivity.office.com and connectivity.service.signalr.net.
+The advanced test client uses SignalR to communicate to the web page. For this, you must ensure that TCP port 443 connectivity to **connectivity.service.signalr.net** is open. This URL isn't published in the [Microsoft 365 URLs and IP address ranges](./urls-and-ip-address-ranges.md) because that connectivity isn't required for a Microsoft 365 client application user. If you're using an HTTP proxy for connection to FQDN connectivity.office.com and encounter the error **SignalR proxy configuration is different than origin.**, ensure connection to FQDN connectivity.service.signalr.net is allowed through the proxy. If a PAC file is being used to push proxy configuration settings, ensure the PAC file will return the same proxy settings for FQDN's connectivity.office.com and connectivity.service.signalr.net.
 
 ### What is Microsoft 365 service front door?
 
-The Microsoft 365 service front door is an entry point on Microsoft's global network where Office clients and services terminate their network connection. For an optimal network connection to Microsoft 365, It's recommended that your network connection is terminated into the closest Microsoft 365 front door in your city or metro.
+The Microsoft 365 service front door is an entry point on Microsoft's global network where Microsoft 365 clients and services terminate their network connection. For an optimal network connection to Microsoft 365, It's recommended that your network connection is terminated into the closest Microsoft 365 front door in your city or metropolitan area.
 
 > [!NOTE]
 > Microsoft 365 service front door has no direct relationship to the **Azure Front Door Service** product available in the Azure marketplace.
 
 ### What is the best Microsoft 365 service front door?
 
-A best Microsoft 365 service front door (formerly known as an optimal service front door) is one that is closest to your network egress, generally in your city or metro area. Use the Microsoft 365 network performance tool to determine location of your in-use Microsoft 365 service front door and the best service front door(s). If the tool determines your in-use front door is one of the best ones, then you should expect great connectivity into Microsoft's global network.
+A best Microsoft 365 service front door (formerly known as an optimal service front door) is one that is closest to your network egress, generally in your city or metropolitan area. Use the Microsoft 365 network performance tool to determine location of your in-use Microsoft 365 service front door and the best service front door(s). If the tool determines your in-use front door is one of the best ones, then you should expect great connectivity into Microsoft's global network.
 
 ### What is an internet egress location?
 
 The internet egress Location is the location where your network traffic exits your enterprise network and connects to the Internet. This is also identified as the location where you have a Network Address Translation (NAT) device and usually where you connect with an Internet Service Provider (ISP). If you see a long distance between your location and your internet egress location, then this might identify a significant WAN backhaul.
 
-## Related articles
+## Related content
 
-[Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
-
-[Microsoft 365 network performance insights](office-365-network-mac-perf-insights.md)
-
-[Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
-
-[Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)
+- [Network connectivity in the Microsoft 365 Admin Center](office-365-network-mac-perf-overview.md)
+- [Microsoft 365 network performance insights](office-365-network-mac-perf-insights.md)
+- [Microsoft 365 network assessment](office-365-network-mac-perf-score.md)
+- [Microsoft 365 Network Connectivity Location Services](office-365-network-mac-location-services.md)

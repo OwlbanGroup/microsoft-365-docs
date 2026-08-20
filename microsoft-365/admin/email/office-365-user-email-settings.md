@@ -9,12 +9,15 @@ ms.date: 10/01/2024
 audience: Admin
 ms.topic: overview
 ms.service: microsoft-365-business
-ms.collection: 
+ms.collection:
 - Tier1
 - scotvorg
 - Adm_O365
 - Adm_TOC
-ms.custom: AdminSurgePortfolio
+- operations-pod
+ms.custom: 
+- AdminSurgePortfolio
+- user-accounts
 ms.localizationpriority: medium
 search.appverid:
 - MET150

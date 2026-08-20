@@ -10,19 +10,21 @@ audience: Admin
 ms.topic: how-to
 ms.service: microsoft-365-business
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - Tier3
 - scotvorg
 - highpri
-- M365-subscription-management 
+- M365-subscription-management
 - Adm_O365
 - Adm_TOC
-ms.custom: 
+- operations-pod
+ms.custom:
 - VSBFY23
 - AdminSurgePortfolio
 - okr_smb
 - AdminTemplateSet
-search.appverid:
+- tenant
+search.appverid: 
 description: "Customize the Microsoft 365 sign-in page by using the Microsoft Entra ID. You can add an illustration, a logo, and text to the sign-in page."
 ---
 

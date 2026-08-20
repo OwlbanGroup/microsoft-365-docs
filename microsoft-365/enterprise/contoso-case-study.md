@@ -3,7 +3,7 @@ title: "Microsoft 365 for enterprise for the Contoso Corporation"
 author: kelleyvice-msft
 f1.keywords:
 - NOCSH
-ms.author: kvice
+ms.author: scotv
 manager: scotv
 ms.date: 09/06/2024
 audience: ITPro
@@ -69,11 +69,11 @@ See these articles for the details:
 
 See these additional IT scenarios and configurations:
 
-- [COVID-19 response and infrastructure for remote and onsite work](../solutions/contoso-remote-onsite-work.md)
+- [COVID-19 response and infrastructure for remote and onsite work](/previous-versions/microsoft-365/solutions/contoso-remote-onsite-work)
 
   Learn how Contoso updated their remote access capability and their new installs and updates infrastructure for remote and onsite workers.
 
-- [Team for a top-secret project](../solutions/contoso-team-for-top-secret-project.md)
+- [Team for a top-secret project](/previous-versions/microsoft-365/solutions/contoso-team-for-top-secret-project)
 
   To create a secure collaboration environment for a top-secret project, Contoso used a team with security isolation.
 

@@ -1,6 +1,6 @@
 ---
 title: "Connect an on-premises network to a Microsoft Azure virtual network"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 12/18/2023
@@ -21,6 +21,7 @@ f1.keywords:
 ms.custom: 
 - Ent_Solutions
 - seo-marvel-apr2020
+- identity-models
 ms.assetid: 81190961-5454-4a5c-8b0e-6ae75b9fb035
 description: "Summary: Learn how to configure a cross-premises Azure virtual network for Office server workloads with a site-to-site VPN connection."
 ---

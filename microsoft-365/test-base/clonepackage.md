@@ -57,7 +57,7 @@ On the **Manage packages** page, you can clone a package by selecting on the **'
 > [!div class="mx-imgBorder"]
 > [ ![Manage packages page](Media/clonepackage04_manage_packages.png) ](Media/clonepackage04_manage_packages.png#lightbox)
 
-Or you can go to the **Package overview** page of the specific package you’ve selected from the **Manage packages** page and select on the **Clone package** icon in the top action menu.
+Or you can go to the **Package overview** page of the specific package you've selected from the **Manage packages** page and select on the **Clone package** icon in the top action menu.
 
 > [!div class="mx-imgBorder"]
 > [ ![Clone from overview page](Media/clonepackage05_overview.png) ](Media/clonepackage05_overview.png#lightbox)

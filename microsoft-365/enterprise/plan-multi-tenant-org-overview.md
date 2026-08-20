@@ -1,9 +1,9 @@
 ---
 title: Plan for multitenant organizations in Microsoft 365
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
-ms.date: 04/02/2025
+ms.date: 03/31/2026
 audience: ITPro
 ms.topic: article
 ms.service: microsoft-365-enterprise
@@ -14,6 +14,7 @@ search.appverid:
 f1.keywords:
 - NOCSH
 description: Learn how to plan for multitenant organizations in Microsoft 365.
+ms.custom: tenant
 ---
 
 # Plan for multitenant organizations in Microsoft 365
@@ -80,7 +81,7 @@ External access is required for chats and calls between tenants. External access
 
 ## Shared channels in multitenant organizations
 
-Using [shared channels in Teams](/microsoftteams/shared-channels) with other tenants in a multitenant organization works the same as using shared channels with any other external organization. While the organizational relationship in Microsoft Entra ID is configured as part of multitenant organization configuration, you must still enable shared channels in Teams and configure the B2B direct connect settings in Microsoft Entra ID. For details, see [Collaborate with external participants in a shared channel](/microsoft-365/solutions/collaborate-teams-direct-connect).
+Using [shared channels in Teams](/microsoftteams/shared-channels) with other tenants in a multitenant organization works the same as using shared channels with any other external organization. While the organizational relationship in Microsoft Entra ID is configured as part of multitenant organization configuration, you must still enable shared channels in Teams and configure the B2B direct connect settings in Microsoft Entra ID. For details, see [Collaborate with external participants in a shared channel](/previous-versions/microsoft-365/solutions/collaborate-teams-direct-connect).
 
 ## License requirements
 Use of the multitenant organization feature requires Microsoft Entra ID P1 licenses or above in all multitenant organization tenants. For additional details, see [Entra multitenant organization licensing requirements](/entra/identity/multi-tenant-organizations/multi-tenant-organization-overview#license-requirements). If you plan on utilizing [Entra cross-tenant sync](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview) via the Microsoft 365 admin center or Microsoft Entra ID, also see [Entra cross-tenant sync licensing requirements](/entra/identity/multi-tenant-organizations/cross-tenant-synchronization-overview#license-requirements).
@@ -90,11 +91,12 @@ Use of the multitenant organization feature requires Microsoft Entra ID P1 licen
 The following are limitations of the multitenant organizations in Microsoft 365:
 
 - A maximum of 100 tenants in the multitenant organization is supported.
-- Teams on the web, Microsoft Teams Rooms (MTR), and VDI/AVD aren't supported.
+- Microsoft Teams Rooms (MTR) aren't supported.
+
 - The ability to grant or revoke permission to receive notifications from other tenants and to switch between tenants isn't supported on mobile.
 - *People in your organization* links may not work for users from another tenant if their account had originally been a guest and they had previously accessed SharePoint resources.
 - It might take up to seven days for a user to appear in search once they've been synchronized. Contact Microsoft support if users aren't searchable after seven days.
-- Support for a guest UserType of member in Power BI is currently in preview. For more information, see [Distribute Power BI content to external guest users with Microsoft Entra B2B](/power-bi/enterprise/service-admin-azure-ad-b2b#who-can-you-invite).
+- Support for a guest UserType of member in Power BI is currently in preview. For more information, see [Distribute Power BI content to external guest users with Microsoft Entra B2B](/fabric/enterprise/powerbi/service-admin-entra-b2b#who-can-you-invite).
 
 If you want to add more than 100 tenants, contact Microsoft support.
 

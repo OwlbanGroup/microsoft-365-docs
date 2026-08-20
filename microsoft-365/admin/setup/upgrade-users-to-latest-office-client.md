@@ -14,6 +14,7 @@ ms.collection:
 - scotvorg
 - Adm_O365
 - Adm_TOC
+- operations-pod
 search.appverid:
 - BCS160
 - MET150
@@ -24,6 +25,7 @@ ms.custom:
 - seo-marvel-may2020
 - fwlink 824861; CampaignID O365_Comm_SR_UpgradeOffice
 - AdminSurgePortfolio
+- user-accounts
 description: Learn about how to upgrade Microsoft Office to the latest apps for users in your organization.
 ms.topic: upgrade-and-migration-article
 ---

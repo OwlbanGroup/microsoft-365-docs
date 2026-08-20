@@ -1,7 +1,7 @@
 ---
 title: "Mitigate threats in Microsoft 365 Lighthouse with Microsoft Defender Antivirus"
 f1.keywords: NOCSH
-ms.author: sharik
+ms.author: dansimp
 author: SKjerland
 manager: scotv
 ms.reviewer: prpath
@@ -28,9 +28,9 @@ Microsoft 365 Lighthouse lets you investigate and mitigate threats across all yo
 
 ## Before you begin
 
-- Microsoft 365 Lighthouse is deployed in the partner tenant only—not in the customer tenants, but make sure you and your customer tenants meet the requirements listed in [Microsoft 365 Lighthouse requirements](m365-lighthouse-requirements.md).
+- Microsoft 365 Lighthouse is deployed in the partner tenant only-not in the customer tenants, but make sure you and your customer tenants meet the requirements listed in [Microsoft 365 Lighthouse requirements](m365-lighthouse-requirements.md).
 
-- Users must be running Microsoft Defender Antivirus (included with Windows). Lighthouse does not support non-Microsoft antivirus software. For more information, see [Turn on Microsoft Defender Antivirus](/mem/intune/user-help/turn-on-defender-windows).
+- Users must be running Microsoft Defender Antivirus (included with Windows). Lighthouse does not support non-Microsoft antivirus software. For more information, see [Turn on Microsoft Defender Antivirus](/intune/user-help/compliance/update-settings-windows).
 
 - You must hold at least one of the following Microsoft Entra roles for the customer tenants whose data you want to read:
     - Security Reader
@@ -103,7 +103,7 @@ To update Microsoft Defender Antivirus on a single device:
 
 To get updates for multiple devices, select the checkbox next to each device name in the list, and then select **Update antivirus**.
 
-If you need to create a new policy, select **Update policy** in the device details pane. Lighthouse will redirect you to the Microsoft Intune admin center. For more information about creating a policy, see [Create a compliance policy in Microsoft Intune](/mem/intune/protect/create-compliance-policy).
+If you need to create a new policy, select **Update policy** in the device details pane. Lighthouse will redirect you to the Microsoft Intune admin center. For more information about creating a policy, see [Create a compliance policy in Microsoft Intune](/intune/device-security/compliance/create-policy).
 
 ## Check pending antivirus actions on a device
 
@@ -135,6 +135,6 @@ To restart multiple devices, select the checkbox next to each device name in the
 
 [Requirements for Microsoft 365 Lighthouse](m365-lighthouse-requirements.md) (article)\
 [Overview of the Threat management page in Microsoft 365 Lighthouse](m365-lighthouse-threat-management-page-overview.md) (article)\
-[Create a compliance policy in Microsoft Intune](/mem/intune/protect/create-compliance-policy) (article)\
+[Create a compliance policy in Microsoft Intune](/intune/device-security/compliance/create-policy) (article)\
 [Enable and configure Microsoft Defender Antivirus always-on protection](/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus) (article)\
 [Microsoft Security Intelligence](https://www.microsoft.com/wdsi/threats) (web page)

@@ -4,9 +4,9 @@ f1.keywords: CSH
 ms.author: cmcatee
 author: cmcatee-MSFT
 manager: scotv
-ms.reviewer: mijeffer, nicholak
+ms.reviewer: mijeffer, jobailey
 audience: Admin
-ms.topic: article
+ms.topic: concept-article
 ms.service: microsoft-365-business
 ms.subservice: m365-commerce-acquisition
 ms.localizationpriority: medium
@@ -19,11 +19,12 @@ ms.custom:
 - commerce_subscriptions
 - AdminTemplateSet
 - admindeeplinkMAC
-- campaignIDs-batch1                                         
+- campaignIDs-batch1
+service.tree.id: 84a24b9c-ce0c-4b4b-b837-45bc5ee4bef0
 search.appverid: MET150
-robots: NOINDEX NOFOLLOW
+robots: NOINDEX, NOFOLLOW
 description: "Learn about cloud subscriptions and how to view them in the Microsoft 365 admin center."
-ms.date: 12/18/2024
+ms.date: 03/09/2026
 ---
 
 # What are cloud subscriptions?
@@ -51,7 +52,7 @@ Cloud subscriptions are different from standard subscriptions in the following w
 
 ## Manage your cloud subscriptions
 
-You can use cloud subscriptions to manage the products and services that you buy from us. You can view your list of cloud subscriptions and other details in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>. From there, you can link to the <a href="https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2" target="_blank">Azure portal</a> where you can manage the cloud subscriptions for your organization. For information about common cloud subscription tasks, see the following articles:
+You can use cloud subscriptions to manage the products and services that you buy from us. You can view your list of cloud subscriptions and other details in the <a href="https://go.microsoft.com/fwlink/p/?linkid=2024339" target="_blank">Microsoft 365 admin center</a>. From there, you can link to the <a href="https://portal.azure.com/#view/Microsoft_Azure_Billing/SubscriptionsBladeV2" target="_blank">Azure portal</a> where you can manage the cloud subscriptions for your organization. For information about common cloud subscription tasks, [read our FAQ](/azure/cost-management-billing/manage/cloud-subscription) or see the following articles:
 
 ### Create and manage cloud subscriptions
 

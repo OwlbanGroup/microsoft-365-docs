@@ -1,14 +1,14 @@
 ---
 title: Create a Microsoft 365 Group with a specific preferred data location
-ms.reviewer:
-ms.date: 05/01/2024
-ms.author: kvice
-author: kelleyvice-msft
-manager: scotv
+ms.reviewer: jugiammo
+ms.date: 05/09/2025
+ms.author: v-fahasen
+author: fhasen-msft
+manager: Justin.Giammona
 audience: ITPro
 ms.topic: how-to
 ms.service: microsoft-365-enterprise
-ms.subservice: multi-tenant
+ms.subservice: multi-geo-capabilities
 f1.keywords:
 - NOCSH
 ms.collection: 
@@ -20,6 +20,7 @@ description: Learn how to create a Microsoft 365 group with a specified preferre
 ms.custom: 
 - seo-marvel-apr2020
 - admindeeplinkSPO
+- data-residency
 ---
 
 # Create a Microsoft 365 group with a specific preferred data location
@@ -63,3 +64,4 @@ New-UnifiedGroup -DisplayName MultiGeoEUR -Alias "MultiGeoEUR" -AccessType Publi
 [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell)
 
 [Create groups with a specific preferred data location using Graph API](/graph/api/group-post-groups)
+

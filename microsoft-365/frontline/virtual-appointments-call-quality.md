@@ -20,7 +20,7 @@ description: Learn how to use the Call Quality Dashboard for Virtual Appointment
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 02/20/2024
+ms.date: 11/13/2025
 ---
 # Microsoft Teams Virtual Appointments in Call Quality Dashboard
 
@@ -51,7 +51,7 @@ Before you begin analyzing organizational call quality data, [install](https://a
 
 After you install the connector, you can access your CQD data in Power BI.
 
-[![Example screenshot of CQD data in Power BI.](media/call-quality-dashboard.png)](media/call-quality-dashboard-big.png)
+:::image type="content" source="media/call-quality-dashboard-big.png" alt-text="Example screenshot of CQD data in Power BI." lightbox="media/call-quality-dashboard-big.png":::
 
 > [!TIP]
 > You can get a head start by using the [CQD Power BI template files](/microsoftteams/cqd-data-and-reports#import-the-cqd-report-templates). The template files are already connected to the CQD data source. You still need to have the connector installed to use the template files.
@@ -80,7 +80,7 @@ You can also use CQD to gather and analyze data specific to Virtual Appointments
 
 You can view the point of origin of a scheduled call by using the **Scheduling Source App ID** column. You can find this in the **Fields** list. Then drag and drop the slicer onto the canvas.
 
-[![Screenshot of example CQD data in Power BI with the Scheduling Source App ID column.](media/cqd-app-source.png)](media/cqd-app-source-big.png)
+:::image type="content" source="media/cqd-app-source-big.png" alt-text="Screenshot of example CQD data in Power BI with the Scheduling Source App ID column." lightbox="media/cqd-app-source-big.png":::
 
 EHR connector appointments have the ID e97edbaf-39b2-4546-ba61-0a24e1bef890.
 Bookings appointments have the ID 0eaa6b95-4a35-4a5d-9919-e4fc61fb4bdb.

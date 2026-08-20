@@ -20,23 +20,41 @@ ms.collection:
 appliesto: 
   - Microsoft Teams
   - Microsoft 365 for frontline workers
-ms.date: 03/22/2024
+ms.date: 1/21/2026
 ---
 
 # Get started with Microsoft 365 for frontline workers
 
 ## What is Microsoft 365 for frontline workers?
 
-Frontline workers are employees whose primary function is to work directly with customers or the general public providing services, support, and selling products, or employees directly involved in the manufacturing and distribution of products and services. Microsoft 365 for frontline workers helps support employee experiences in the following areas so that your frontline workers can do their best work and help your customers:
+Microsoft 365 for frontline workers is a unified, AI-powered platform that supports your employees so they can do their best work and deliver exceptional customer outcomes. Microsoft 365 for frontline workers optimizes workforce and customer interactions in the following areas:
 
 - [Enhance communications and collaboration](#enhance-communications-and-collaboration)
 - [Transform employee experiences](#transform-employee-experiences)
 - [Increase frontline operational efficiency](#increase-frontline-operational-efficiency)
-- Helps [safeguard your business](#safeguard-your-business) with security and compliance offerings, including providing support for modern devices
+- [Simplify frontline work with an AI agent](#simplify-frontline-work-with-an-ai-agent)
+- [Safeguard your business](#safeguard-your-business) with enterprise-grade security and compliance, including support for modern and shared devices
+
+### Enhance communications and collaboration
+
+Streamline team and one-on-one communication across your entire organization with Microsoft 365 for frontline workers capabilities. To ensure every worker feels connected to your organization, you can enrich and expand corporate communications with Viva Connections and targeted announcements. Empower your workforce to seamlessly communicate with Teams chats, notifications, walkie talkie, and AI-powered translation and Copilot chat-enabling real-time, inclusive communication across locations and languages.
+
+### Increase frontline operational efficiency
+
+Microsoft 365 includes apps like Lists, Planner, and Approvals to streamline operations and digitize paper-based processes. Enhance efficiency with automation and AI-powered workflows using Power Automate, Power Apps, and Microsoft Power BI from the Power Platform. Reduce repetitive tasks so frontline workers can focus on what matters most. Copilot and SharePoint agents provide instant answers and automate routine processes in the flow of work. Workforce management is simplified with Shifts in Teams, which integrates with major WFM systems and supports open shifts, swap requests, and compliance tracking across locations.
 
 The following image shows the employee experiences that are key to frontline workers, and common areas where Microsoft 365 can improve experiences for frontline workers:
 
 :::image type="content" source="media/flw-pillars.png" alt-text="Diagram of employee experience wheel with methods to connect & engage with frontline workers, enhance workforce management, and increase operational efficiency.":::
+
+### Simplify frontline work with an AI Agent
+
+Frontline Agent keeps frontline workers and managers aligned, informed, and productive by:
+- Reducing time spent searching for information and instructions across SharePoint and Teams chat and channel messages
+- Summarizing key updates and action items at the start of your shift
+- Helping draft end-of-shift handovers
+
+Frontline Agent is rolling out in Microsoft 365 Copilot and currently available in Microsoft Teams just like any other teammate. Frontline Agent helps frontline workers and managers stay aligned, informed, and productive. Built on Microsoft 365, Frontline Agent operates within your existing security, compliance, and device management framework. Learn more about [setting up Frontline Agent in your organization](setupfrontlineagent.md).
 
 ### Licensing for your frontline workers
 
@@ -44,7 +62,7 @@ The following image shows the employee experiences that are key to frontline wor
 
 Microsoft 365 for frontline workers refers to the Microsoft 365 F3 and F1 licenses, but you can also use an Enterprise license (E3, E5) to implement any of the frontline scenarios. Learn more about [licensing options for frontline workers](flw-licensing-options.md) and which license types you should use for different types of users in your organization.
 
-Some features are available for F3 licenses, but not F1, such as Power Apps and Power Automate. For a detailed comparison of what's included in Microsoft 365  plans for enterprises, see the [Modern work plan comparison](https://go.microsoft.com/fwlink/p/?linkid=2139145) table.
+Some features are available for F3 licenses, but not F1, such as Power Apps and Power Automate. For a detailed comparison of Microsoft 365 plans for enterprises, see the [Modern work plan comparison](https://go.microsoft.com/fwlink/p/?linkid=2139145) table.
 
 ## Enhance communications and collaboration
 
@@ -65,7 +83,7 @@ Foster an inclusive company culture and increase employee wellbeing while making
 
 ## Increase frontline operational efficiency
 
-Microsoft 365 includes apps like Lists, Planner, and Approvals that can help you streamline operations and bring them from paper-based to digitally tracked processes. You can enhance these by adding workflow automation, custom apps, and business data tracking with Power Automate, Power Apps, and Power BI from the Power Platform. Extend even further with solutions provided by our partners in the digital ecosystem.
+Microsoft 365 includes apps like Lists, Planner, and Approvals that can help you streamline operations from paper-based processes to digitally tracked processes. You can also enhance these apps by adding workflow automation, custom apps, and business data tracking with Power Automate, Power Apps, and Power BI from the Power Platform. Extend even further with solutions provided by our partners in the digital ecosystem.
 
 Enhance workforce management with [Shifts](shifts-for-teams-landing-page.md), the schedule management tool in Teams that keeps your frontline workforce connected and in sync. [Shifts connectors](shifts-connectors.md) enable you to integrate Shifts with your workforce management (WFM) system. After you set up a connection, your frontline workers can seamlessly view and manage their schedules in your WFM system from within Shifts.
 
@@ -75,6 +93,13 @@ Enhance workforce management with [Shifts](shifts-for-teams-landing-page.md), th
 |:::image type="icon" source="/office/media/icons/task-checklist-planning-teams.png":::| [Digitize your business processes](flw-choose-scenarios.md#digitized-processes) | Drive operational efficiency by digitizing paper-based processes, and automating routine, repetitive steps. |
 |:::image type="icon" source="/office/media/icons/share-teams.png":::| [Digital ecosystem](flw-choose-scenarios.md#more-scenarios-and-solutions-with-the-digital-ecosystem) | Unite the technology your frontline workforce depends on behind a single pane of glass for a seamless end-to-end experience. Include partner solutions and take advantage of integrations that help streamline processes. |
 
+## AI-powered productivity
+
+|Capability |More information |
+|-----------|---------------------|
+|Learn about Frontline Agent scenarios |[What scenarios does Frontline Agent enable?](setupfrontlineagent.md)|
+|Set up Frontline Agent|[Prerequisites](setupfrontlineagent.md)|
+
 ## Safeguard your business
 
 Safeguard your business with best-in-class security and compliance features. Microsoft 365 for frontline workers offers identity and access management, threat and information protection, and security management.
@@ -82,7 +107,7 @@ Safeguard your business with best-in-class security and compliance features. Mic
 |Capability |More information |
 |-----------|---------------------|
 |Manage identities and access |<ul><li>[Microsoft Entra ID overview](/entra/fundamentals/whatis)</li></ul>|
-|Secure endpoints and apps across device types and operating systems |<ul><li>[Overview of device management for frontline workers](flw-devices.md)</li><li>[Manage shared devices](flw-shared-devices.md)</li><li>[Microsoft Intune overview](/mem/intune/fundamentals/what-is-intune)</li><li>[Frontline worker device management overview in Microsoft Intune](/mem/solutions/frontline-worker/frontline-worker-overview)</li><li>[Manage devices with Intune overview](/microsoft-365/solutions/manage-devices-with-intune-overview)</li></ul>|
+|Secure endpoints and apps across device types and operating systems |<ul><li>[Overview of device management for frontline workers](flw-devices.md)</li><li>[Manage shared devices](flw-shared-devices.md)</li><li>[Microsoft Intune overview](/intune/fundamentals/what-is-intune)</li><li>[Frontline worker device management overview in Microsoft Intune](/intune/solutions/frontline-worker/)</li><li>[Manage devices with Intune overview](/previous-versions/microsoft-365/solutions/manage-devices-with-intune-overview)</li></ul>|
 
 ## Deploy and manage at scale
 
@@ -91,7 +116,7 @@ Deploy your frontline teams and give your frontline workforce access to the righ
 |Solution area|More information|
 |---------|---------|
 |Frontline teams|When deploying your frontline teams, you can choose between dynamic team membership, static team membership, or a combination of both. <ul><li>[Deploy frontline dynamic teams at scale](deploy-dynamic-teams-at-scale.md)</li><li>[Deploy frontline static teams at scale](deploy-teams-at-scale.md)</li></ul>Learn more about [how to determine the best frontline team solution for your organization](frontline-team-options.md). |
-|Frontline operational hierarchy|Set up a [frontline operational hierarchy](deploy-frontline-operational-hierarchy.md) to map your organization’s structure of frontline teams and locations to a hierarchy in the Teams admin center.|
+|Frontline operational hierarchy|Set up a [frontline operational hierarchy](deploy-frontline-operational-hierarchy.md) to map your organization's structure of frontline teams and locations to a hierarchy in the Teams admin center.|
 |Frontline apps |Standardize Shifts settings across all your frontline teams and manage them centrally by [deploying Shifts to your frontline teams at scale](deploy-shifts-at-scale.md).|
 |Teams policy packages |Use [Teams policy packages for frontline workers](/microsoftteams/policy-packages-flw) to streamline and help provide consistency when managing policies for your frontline.|
 

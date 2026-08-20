@@ -1,6 +1,6 @@
----
+﻿---
 title: "Office 365 Content Delivery Network (CDN) Quickstart"
-ms.author: kvice
+ms.author: scotv
 author: kelleyvice-msft
 manager: scotv
 ms.date: 02/28/2025
@@ -17,7 +17,9 @@ ms.collection:
 - must-keep
 f1.keywords:
 - CSH
-ms.custom: Adm_O365
+ms.custom:
+- Adm_O365
+- network
 search.appverid:
 - MET150
 - SPO160
@@ -31,7 +33,7 @@ You can use the built-in **Office 365 Content Delivery Network (CDN)** to host s
 For more detailed information, see [Use the Office 365 Content Delivery Network (CDN) with SharePoint](use-microsoft-365-cdn-with-spo.md).
 
 >[!NOTE]
->The Office 365 CDN is only available to tenants in the production (worldwide) cloud. Tenants in the US Government, China and Germany clouds don't currently support the Office 365 CDN.
+>The Office 365 CDN is only available to tenants in the production (worldwide) cloud. Tenants in the US Government, China, and Germany clouds don't currently support the Office 365 CDN.
 
 ## Use the Page Diagnostics for SharePoint tool to identify items not in CDN
 
@@ -41,23 +43,23 @@ The **Page Diagnostics for SharePoint tool** is a browser extension for the new 
 
 When you run the Page Diagnostics for SharePoint tool on a SharePoint in Microsoft 365 page, you can select the **Diagnostic Tests** tab to see a list of assets not being hosted by the CDN. These assets are listed under the heading **Content Delivery Network (CDN) check** as shown in the screenshot following.
 
-![Page diagnostics.](../media/page-diagnostics-for-spo/pagediag-results-general.PNG)
+:::image type="content" source="../media/page-diagnostics-for-spo/pagediag-results-general.png" alt-text="Screenshot that shows the page diagnostics for SharePoint.":::
 
 >[!NOTE]
 >The Page Diagnostics tool only works for SharePoint in Microsoft 365, and can't be used on a SharePoint system page.
 
 ## CDN Overview
 
-The Office 365 CDN is designed to optimize performance for users by distributing frequently accessed objects like images and JavaScript files over a high-speed global network, reducing page load time and providing access to hosted objects as close as possible to the user. The CDN fetches your assets from a location called an _origin_. An origin can be a SharePoint site, document library, or folder that is accessible by a URL.
+The Office 365 CDN is designed to optimize performance for users by distributing frequently accessed objects like images and JavaScript files over a high-speed global network, reducing page load time and providing access to hosted objects as close as possible to the user. The CDN fetches your assets from a location called an *origin*. An origin can be a SharePoint site, document library, or folder that's accessible by a URL.
 
 The Office 365 CDN supports:
 
-- **Public CDN**, which is designed to be used for JS (JavaScript), CSS (Style Sheets), Web Font File (WOFF, WOFF2) and non-proprietary images like company logos.
+- **Public CDN**, which is designed to be used for JS (JavaScript), CSS (Style Sheets), Web Font File (WOFF, WOFF2), and nonproprietary images like company logos.
 
 You can choose public origins for your organization [Choose public origins](use-microsoft-365-cdn-with-spo.md).
 
 ## How to enable Public CDN with the default configuration
-Before you make changes to the tenant CDN settings, you should verify that it meets compliance, security and privacy policies of your organization.
+Before you make changes to the tenant CDN settings, you should verify that it meets compliance, security, and privacy policies of your organization.
 
 For more detailed configuration settings, or if you have already enabled CDN and want to add additional locations (origins), see the section [Set up and configure the Office 365 CDN by using the SharePoint Management Shell](use-microsoft-365-cdn-with-spo.md#set-up-and-configure-the-office-365-cdn-by-using-the-sharepoint-online-management-shell)
 
@@ -73,14 +75,10 @@ To enable your organization to use  public origin with the default configuration
 Set-SPOTenantCdnEnabled -CdnType Public -Enable $true
 ```
 
-## See also
+## Related content
 
-[Use the Page Diagnostics tool for SharePoint](./page-diagnostics-for-spo.md)
-
-[Use the Office 365 Content Delivery Network (CDN) with SharePoint](use-microsoft-365-cdn-with-spo.md)
-
-[Content Delivery Networks](./content-delivery-networks.md)
-
-[Network planning and performance tuning for Office 365](./network-planning-and-performance.md)
-
-[SharePoint Performance Series - Office 365 CDN video series](https://www.youtube.com/playlist?list=PLR9nK3mnD-OWMfr1BA9mr5oCw2aJXw4WA)
+- [Use the Page Diagnostics tool for SharePoint](./page-diagnostics-for-spo.md)
+- [Use the Office 365 Content Delivery Network (CDN) with SharePoint](use-microsoft-365-cdn-with-spo.md)
+- [Content Delivery Networks](./content-delivery-networks.md)
+- [Network planning and performance tuning for Office 365](./network-planning-and-performance.md)
+- [SharePoint Performance Series - Office 365 CDN video series](https://www.youtube.com/playlist?list=PLR9nK3mnD-OWMfr1BA9mr5oCw2aJXw4WA)
